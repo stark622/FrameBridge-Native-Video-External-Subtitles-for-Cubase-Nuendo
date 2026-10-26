@@ -1,0 +1,59 @@
+FrameBridge — Native Video for Cubase & Nuendo
+END-USER LICENSE - v4 Beta
+============================================
+
+1. SCOPE
+
+This End-User License applies to the proprietary FrameBridge files in this
+package. FFmpeg and all other third-party components are excluded from the
+proprietary terms below and remain governed by their own licenses.
+
+2. LICENSE GRANT
+
+After lawful acquisition, the FrameBridge rightsholder grants the acquiring user
+a non-exclusive right to install and use FrameBridge. No ownership or copyright
+in FrameBridge is transferred to the user.
+
+3. BACKUP COPY
+
+The user may keep a backup copy of the lawfully acquired FrameBridge package.
+
+4. PROPRIETARY BINARY DISTRIBUTION
+
+The proprietary, closed-source FrameBridge binaries may not be copied,
+redistributed, sublicensed or made available to third parties without permission
+from the FrameBridge rightsholder, except where applicable law expressly permits
+it. This restriction does not apply to third-party components distributed under
+their own licenses.
+
+5. THIRD-PARTY AND OPEN-SOURCE COMPONENTS
+
+FFmpeg and the other third-party materials listed in LICENSE_AND_NOTICE.txt and
+_runtime\ffmpeg\LICENSES are licensed directly under their respective licenses.
+Those licenses control the use, copying, modification and distribution of those
+components. If this End-User License conflicts with a third-party license, the
+third-party license controls for that component.
+
+Nothing in this End-User License restricts rights granted under LGPL 2.1 or later.
+The user may replace the corresponding FFmpeg shared libraries with compatible
+versions, exercise the LGPL rights to modify the work for the user's own use, and
+perform reverse engineering permitted by the LGPL for debugging such
+modifications or replacements. These rights also remain subject to any broader
+rights that cannot be restricted under applicable law.
+
+6. NO STEINBERG AFFILIATION
+
+FrameBridge is independent software and is not affiliated with, sponsored by or
+endorsed by Steinberg. "Cubase" and "Nuendo" are trademarks of their respective
+owner.
+
+7. BETA SOFTWARE; WARRANTY
+
+FrameBridge v4 Beta is provided "as is" and may contain defects. To the maximum
+extent permitted by applicable law, no warranty is given that it will be
+error-free, uninterrupted or suitable for every particular purpose. Nothing in
+this license excludes or limits statutory consumer rights, mandatory warranties,
+remedies, or liability that cannot lawfully be excluded or limited.
+
+LICENSE_AND_NOTICE.txt forms part of the package's licensing information and
+identifies the applicable third-party licenses and source materials.
