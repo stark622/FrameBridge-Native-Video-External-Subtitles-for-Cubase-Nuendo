@@ -2,6 +2,10 @@
 
 ![FrameBridge running on the native Nuendo video track](poster.png)
 
+[![Click to play the FrameBridge video demonstration](video_preview.jpg)](video_test.mp4?raw=1)
+
+*Click the preview to play the full demonstration.*
+
 FrameBridge extends the native video engine in selected Windows x64 versions of Cubase and Nuendo. It enables a broader range of supported video formats and automatically loads supported external subtitle sidecars, without preliminary transcoding of supported media.
 
 ## Key benefits
@@ -27,10 +31,6 @@ VVC/H.266 is intentionally unsupported in this beta. See [COMPATIBILITY.txt](COM
 ## Supported Cubase and Nuendo versions
 
 FrameBridge has been tested only on the specific Cubase and Nuendo builds listed in [COMPATIBILITY.txt](COMPATIBILITY.txt). Compatibility with every release in the 10–15 product generations is not promised.
-
-## Video demonstration
-
-[Watch the FrameBridge demonstration on YouTube](https://youtu.be/NjNHtkc8-OE)
 
 ## Platform and status
 
