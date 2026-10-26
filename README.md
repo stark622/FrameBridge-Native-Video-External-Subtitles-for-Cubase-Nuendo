@@ -2,7 +2,7 @@
 
 ![FrameBridge running on the native Nuendo video track](poster.png)
 
-[![Click to play the FrameBridge video demonstration](video_preview.jpg)](video_test.mp4?raw=1)
+[![Click to play the FrameBridge video demonstration](video_preview.jpg)](https://youtu.be/NjNHtkc8-OE)
 
 *Click the preview to play the full demonstration.*
 
