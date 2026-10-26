@@ -38,6 +38,17 @@ FrameBridge has been tested only on the specific Cubase and Nuendo builds listed
 
 Purchase information coming soon.
 
+**Pricing:** Pay what you want — 29 USD minimum,  
+59 USD suggested. One-time purchase.
+
+**Support:** stark622ukr.net
+
+**Legal:**
+
+- [Privacy Policy](PRIVACY_POLICY.md)
+- [Terms of Service](TERMS_OF_SERVICE.md)
+- [End-User License](END_USER_LICENSE.txt)
+
 ## Licensing
 
 FrameBridge is commercial software. The proprietary product terms are provided in [END_USER_LICENSE.txt](END_USER_LICENSE.txt). Third-party licensing details, including the terms applicable to the packaged FFmpeg shared libraries, are provided in [LICENSE_AND_NOTICE.txt](LICENSE_AND_NOTICE.txt).
