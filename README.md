@@ -41,7 +41,7 @@ Purchase information coming soon.
 **Pricing:** Pay what you want — 29 USD minimum,  
 59 USD suggested. One-time purchase.
 
-**Support:** stark622ukr.net
+**Support:** stark622@ukr.net
 
 **Legal:**
 
