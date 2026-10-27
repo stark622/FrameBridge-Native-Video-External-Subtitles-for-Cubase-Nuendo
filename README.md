@@ -1,4 +1,4 @@
-# FrameBridge — Native Video for Cubase & Nuendo
+# FrameBridge — Native Video & External Subtitles for Cubase & Nuendo
 
 ![FrameBridge running on the native Nuendo video track](poster.png)
 
