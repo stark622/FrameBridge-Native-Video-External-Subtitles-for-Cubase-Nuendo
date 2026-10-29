@@ -10,7 +10,7 @@ FrameBridge v4 Beta is Windows x64 software intended to expand native video-form
 
 ## Purchase and delivery
 
-FrameBridge is a commercial digital download. Purchases, when enabled, are handled through Creem, which provides checkout and purchase fulfilment. The current intended pricing is a one-time **pay-what-you-want** purchase with a **US$29 minimum** and **US$59 suggested amount**; applicable taxes and the final charge are shown at checkout. The software is delivered as a downloadable RAR archive following a successful purchase.
+FrameBridge is a commercial digital download. Purchases, when enabled, are handled through Creem, which provides checkout and purchase fulfilment. The current intended pricing is a one-time **pay-what-you-want** purchase with a **US$29 minimum** and **US$59 suggested amount**; applicable taxes and the final charge are shown at checkout. The software is delivered as a downloadable ZIP archive following a successful purchase.
 
 ## Software licence
 

@@ -36,12 +36,11 @@ installation, MKV playback with external subtitles, and restoration by uninstall
 This does not mean all heavy media play smoothly on that PC.
 
 Nearby or older unlisted Cubase/Nuendo builds may also be compatible: the
-installer can offer them when its engine/ABI probe confirms the required native
-interfaces. This includes possible Nuendo 7-9 builds, but they have not been
-tested and are not guaranteed. A failed probe leaves the host untouched.
+installer offers them only when its compatibility check of the installed video
+engine passes. This includes possible Nuendo 7-9 builds, but they have not been
+tested and are not guaranteed. A failed check leaves the installation untouched.
 
-The verified hosts share the FFmpeg decode path and subtitle renderer. Cubase
-8/9 additionally use a dedicated legacy VideoROT compatibility adapter.
+All verified hosts share the same FFmpeg decoding and subtitle rendering.
 One observed UI difference is that Nuendo 13 can open its full-screen video
 window about 300 ms more slowly, without affecting playback.
 
@@ -109,8 +108,8 @@ Multiple compatible hosts require an explicit numbered selection for install and
 rollback. With no compatible registered host, the standard Windows executable or
 folder picker is offered. Cancelling performs no file or registry changes.
 
-Original engines are matched by exact SHA-256/PE identity or by the compatibility
-probe, backed up per installation, bound to product state, and restored by atomic
+Original engines are matched by exact SHA-256 identity or by the compatibility
+check, backed up per installation, bound to product state, and restored by atomic
 replacement. For Cubase 8/9 only, the installer also makes checked local copies
 of the customer's existing QuickTime helper EXEs alongside the backed-up engine;
 its own copies are removed on rollback. These EXEs are not distributed in this

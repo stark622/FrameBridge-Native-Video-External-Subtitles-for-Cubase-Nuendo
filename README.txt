@@ -10,7 +10,7 @@ required.
 FrameBridge has been tested on selected Cubase 8-15 and Nuendo 10-15 builds.
 See COMPATIBILITY.txt for the exact verified versions. Other builds, including
 nearby releases and older Nuendo editions, may also work if their video engine
-passes the compatibility probe; this is not a guarantee of host compatibility.
+passes the installer's compatibility check; this is not a guarantee.
 
 MAIN FEATURES
 -------------

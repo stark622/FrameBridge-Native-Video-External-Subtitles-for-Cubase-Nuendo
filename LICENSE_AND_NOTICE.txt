@@ -4,8 +4,8 @@
 ================================================================================
 
 FRAMEBRIDGE PROPRIETARY FILES
-  The FrameBridge proxy modules (_runtime\videoengine.dll, _runtime\mxfhandler.dll), the
-  compatibility probe and the installation scripts are independently developed
+  The FrameBridge modules (_runtime\videoengine.dll, _runtime\mxfhandler.dll), the
+  compatibility checker and the installation scripts are independently developed
   compatibility software. End-user terms for these proprietary files are in
   END_USER_LICENSE.txt. This notice supplements that license with technical and
   third-party licensing information; it does not independently grant rights to
@@ -19,7 +19,7 @@ FRAMEBRIDGE PROPRIETARY FILES
 STEINBERG FILES
   No Steinberg DLL or EXE is distributed in this package. INSTALL.cmd temporarily
   replaces Components\videoengine.dll in the customer's local Cubase/Nuendo
-  installation with the FrameBridge proxy and, where applicable, also replaces
+  installation with the FrameBridge module and, where applicable, also replaces
   Components\MXFHandler\mxfhandler.dll. Before replacement it saves each exact
   original locally and binds its SHA-256 and host path in the installation state;
   UNINSTALL.cmd verifies that state before restoring the original. For Cubase 8/9,
@@ -29,12 +29,8 @@ STEINBERG FILES
   files stay in Components. No original Steinberg binaries are included in or
   redistributed with the FrameBridge download.
 
-  At run time the proxy registers with the preserved original engine through the
-  engine's own registries and data structures. Additional container extensions
-  are added to the engine-owned container-format map; on Cubase 10.5/11 the
-  corresponding import types are added through the host's own FileType registry.
-  The original engine owns and destroys those entries. No original executable
-  instruction, import table or vtable is patched.
+  At run time FrameBridge works alongside the preserved original engine of the
+  customer's installation. No Steinberg executable code is modified or patched.
 
 THIRD-PARTY COMPONENT INCLUDED - FFmpeg (LGPL 2.1 or later)
   _runtime\ffmpeg contains FFmpeg 9.0.2 as separate shared libraries
