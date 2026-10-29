@@ -2,7 +2,7 @@
 
 ![FrameBridge running on the native Nuendo video track](poster.png)
 
-[Watch the FrameBridge demonstration on YouTube](https://youtu.be/NjNHtkc8-OE)
+**Website: [framebridge.cc](https://framebridge.cc)** · [Watch the FrameBridge demonstration on YouTube](https://youtu.be/NjNHtkc8-OE)
 
 FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Modern video formats open on the native video track and play in the built-in Video Player, and external subtitle files are shown over the picture automatically — without transcoding the media and without burning subtitles into the video.
 
@@ -57,7 +57,7 @@ Playback speed depends on the media and the hardware. Heavy 4K 10-bit video (HEV
 - FrameBridge Beta
 - Commercial, proprietary software
 
-Purchase information coming soon.
+**Website and purchase:** [framebridge.cc](https://framebridge.cc) (online checkout opens soon).
 
 **Pricing:** Pay what you want — 29 USD minimum,  
 59 USD suggested. One-time purchase.
