@@ -54,7 +54,7 @@ Playback speed depends on the media and the hardware. Heavy 4K 10-bit video (HEV
 ## Platform and status
 
 - Windows x64
-- FrameBridge v4 Beta
+- FrameBridge Beta
 - Commercial, proprietary software
 
 Purchase information coming soon.

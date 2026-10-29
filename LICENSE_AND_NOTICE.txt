@@ -1,6 +1,6 @@
 ================================================================================
   FrameBridge — Native Video for Cubase & Nuendo
-  LICENSE AND THIRD-PARTY NOTICE - v4 Beta
+  LICENSE AND THIRD-PARTY NOTICE - Beta
 ================================================================================
 
 FRAMEBRIDGE PROPRIETARY FILES

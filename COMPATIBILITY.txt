@@ -1,5 +1,5 @@
 FrameBridge — Native Video for Cubase & Nuendo
-v4 Beta
+Beta
 COMPATIBILITY AND KNOWN LIMITATIONS - 2026-10-28
 ================================================
 

@@ -6,7 +6,7 @@ These terms describe the public FrameBridge product page and the purchase and de
 
 ## Product
 
-FrameBridge v4 Beta is Windows x64 software intended to expand native video-format and external-subtitle support in selected Steinberg Cubase and Nuendo builds. The exact tested versions and known limitations are listed in [COMPATIBILITY.txt](COMPATIBILITY.txt). Compatibility with every host version, video file or hardware configuration is not promised.
+FrameBridge Beta is Windows x64 software intended to expand native video-format and external-subtitle support in selected Steinberg Cubase and Nuendo builds. The exact tested versions and known limitations are listed in [COMPATIBILITY.txt](COMPATIBILITY.txt). Compatibility with every host version, video file or hardware configuration is not promised.
 
 ## Purchase and delivery
 

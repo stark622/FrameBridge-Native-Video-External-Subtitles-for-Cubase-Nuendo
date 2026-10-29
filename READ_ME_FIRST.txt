@@ -1,4 +1,4 @@
-﻿FrameBridge — Native Video for Cubase & Nuendo — v4 Beta
+﻿FrameBridge — Native Video for Cubase & Nuendo — Beta
 ========================================================
 
 INSTALL

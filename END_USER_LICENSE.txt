@@ -1,5 +1,5 @@
 FrameBridge — Native Video for Cubase & Nuendo
-END-USER LICENSE - v4 Beta
+END-USER LICENSE - Beta
 ============================================
 
 1. SCOPE
@@ -49,7 +49,7 @@ owner.
 
 7. BETA SOFTWARE; WARRANTY
 
-FrameBridge v4 Beta is provided "as is" and may contain defects. To the maximum
+FrameBridge Beta is provided "as is" and may contain defects. To the maximum
 extent permitted by applicable law, no warranty is given that it will be
 error-free, uninterrupted or suitable for every particular purpose. Nothing in
 this license excludes or limits statutory consumer rights, mandatory warranties,

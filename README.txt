@@ -1,5 +1,5 @@
 FrameBridge — Native Video for Cubase & Nuendo
-v4 Beta
+Beta
 ================================================
 
 FrameBridge adds an FFmpeg-based native video path to selected Windows x64
