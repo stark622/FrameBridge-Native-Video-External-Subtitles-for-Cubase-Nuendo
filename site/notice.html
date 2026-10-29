@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>License and Third-Party Notice — FrameBridge</title>
+  <meta name="description" content="FrameBridge licensing and third-party notices, including FFmpeg (LGPL).">
+  <link rel="canonical" href="https://framebridge.cc/notice">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo.png" alt="" width="34" height="34">FrameBridge</a>
+    <nav class="nav">
+      <a href="/#features">Features</a>
+      <a href="/#formats">Formats</a>
+      <a href="/#compatibility">Compatibility</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="/#pricing">Buy</a>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <h1>License and Third-Party Notice</h1>
+    <p class="meta">The same text is included in the FrameBridge download package.</p>
+    <pre>================================================================================
+  FrameBridge — Native Video for Cubase &amp; Nuendo
+  LICENSE AND THIRD-PARTY NOTICE - Beta
+================================================================================
+
+FRAMEBRIDGE PROPRIETARY FILES
+  The FrameBridge modules (_runtime\videoengine.dll, _runtime\mxfhandler.dll), the
+  compatibility checker and the installation scripts are independently developed
+  compatibility software. End-user terms for these proprietary files are in
+  END_USER_LICENSE.txt. This notice supplements that license with technical and
+  third-party licensing information; it does not independently grant rights to
+  redistribute FrameBridge&#x27;s proprietary binaries.
+
+  FrameBridge&#x27;s proprietary code contains no code from FFmpeg, LAV Filters,
+  VSFilter/DirectVobSub, libass or Steinberg. Third-party components included in
+  the package remain governed exclusively by their own licenses, as described
+  below and in _runtime\ffmpeg\LICENSES.
+
+STEINBERG FILES
+  No Steinberg DLL or EXE is distributed in this package. INSTALL.cmd temporarily
+  replaces Components\videoengine.dll in the customer&#x27;s local Cubase/Nuendo
+  installation with the FrameBridge module and, where applicable, also replaces
+  Components\MXFHandler\mxfhandler.dll. Before replacement it saves each exact
+  original locally and binds its SHA-256 and host path in the installation state;
+  UNINSTALL.cmd verifies that state before restoring the original. For Cubase 8/9,
+  installation also makes verified local copies of the customer&#x27;s existing
+  videodecode.exe, videooutput.exe and videopreload.exe beside that host&#x27;s saved
+  engine, then removes its own copies on rollback. The customer&#x27;s original helper
+  files stay in Components. No original Steinberg binaries are included in or
+  redistributed with the FrameBridge download.
+
+  At run time FrameBridge works alongside the preserved original engine of the
+  customer&#x27;s installation. No Steinberg executable code is modified or patched.
+
+THIRD-PARTY COMPONENT INCLUDED - FFmpeg (LGPL 2.1 or later)
+  _runtime\ffmpeg contains FFmpeg 9.0.2 as separate shared libraries
+  (avcodec-dsr-63.dll, avformat-dsr-63.dll, avutil-dsr-61.dll,
+  swscale-dsr-10.dll, swresample-dsr-7.dll). The libraries identify their license
+  as GNU Lesser General Public License version 2.1 or later. The complete LGPL
+  text is at _runtime\ffmpeg\LICENSES\COPYING.LGPLv2.1. Their embedded configure
+  data contains no --enable-gpl, --enable-version3 or --enable-nonfree option.
+  FFmpeg is a trademark of Fabrice Bellard, originator of the FFmpeg project.
+
+  - Source code: _runtime\ffmpeg\SOURCE contains ffmpeg-9.0.2.tar.xz, its detached
+    signature, the configure options recorded by the packaged DLLs, and a rebuild
+    script using the same feature and licensing options. BUILD.txt explains the
+    one build-step detail that cannot be confirmed from the retained artifacts.
+    FFmpeg source releases are also available from https://ffmpeg.org.
+  - Replacement: the libraries are loaded at run time from
+    &lt;program folder&gt;\_dsreader\ffmpeg. The user may replace them with compatible
+    shared libraries using the required file names and ABI.
+  - FrameBridge calls the public FFmpeg API and does not modify FFmpeg source.
+  - Nothing in END_USER_LICENSE.txt limits rights granted by LGPL 2.1 or later.
+    In particular, LGPL 2.1 section 6 rights to modify the work for the user&#x27;s own
+    use and to reverse-engineer it for debugging those modifications are preserved
+    where needed to use modified or replaced FFmpeg libraries.
+
+  Additional third-party material used by the FFmpeg libraries:
+  - dav1d 1.5.4 (AV1 decoder) - BSD 2-Clause; LICENSES\dav1d-COPYING and
+    LICENSES\dav1d-PATENTS (Alliance for Open Media patent license).
+  - zlib 1.3.2 - zlib license; LICENSES\zlib-LICENSE.
+  - MinGW-w64 winpthreads - MIT-style license; LICENSES\winpthreads-COPYING.
+  - GCC runtime support code - GPL v3 with the GCC Runtime Library Exception 3.1;
+    LICENSES\gcc-COPYING.RUNTIME and LICENSES\gcc-COPYING3.
+
+  Codec patents are not covered by these copyright licenses. Use of patented
+  formats such as H.264 or HEVC may require patent licenses in some countries.
+
+NOT USED / NOT INCLUDED
+  LAV Filters, K-Lite Codec Pack, VSFilter/DirectVobSub and libass are not used,
+  loaded or required. Subtitle rendering uses Windows system APIs (DirectWrite,
+  Direct2D and WIC); text in PGS/SUP and VobSub pictures is recognised with the
+  Windows system OCR API (Windows.Media.Ocr). No OCR engine or language data is
+  shipped in this package.
+
+NO AFFILIATION
+  FrameBridge is not affiliated with or endorsed by Steinberg. &quot;Cubase&quot; and
+  &quot;Nuendo&quot; are trademarks of their respective owner.
+
+WARRANTY
+  FrameBridge warranty terms are stated in END_USER_LICENSE.txt. Mandatory rights
+  and remedies under applicable law are not excluded. Keep the complete package
+  so UNINSTALL.cmd and the included third-party notices remain available.
+================================================================================</pre>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/eula">End-User License</a>
+      <a href="/notice">Third-party notices</a>
+      <a href="/compatibility">Compatibility</a>
+      <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p>Support: <a href="mailto:stark622@ukr.net">stark622@ukr.net</a></p>
+    <p>FrameBridge is independent software and is not affiliated with, sponsored by, or endorsed by Steinberg. Cubase and Nuendo are trademarks of their respective owner. FFmpeg is a trademark of Fabrice Bellard.</p>
+    <p>© 2026 FrameBridge</p>
+  </div>
+</footer>
+
+</body>
+</html>

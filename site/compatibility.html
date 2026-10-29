@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compatibility and Known Limitations — FrameBridge</title>
+  <meta name="description" content="Verified Cubase and Nuendo builds, formats and known limitations of FrameBridge.">
+  <link rel="canonical" href="https://framebridge.cc/compatibility">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo.png" alt="" width="34" height="34">FrameBridge</a>
+    <nav class="nav">
+      <a href="/#features">Features</a>
+      <a href="/#formats">Formats</a>
+      <a href="/#compatibility">Compatibility</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="/#pricing">Buy</a>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <h1>Compatibility and Known Limitations</h1>
+    <p class="meta">The same text is included in the FrameBridge download package.</p>
+    <pre>FrameBridge — Native Video for Cubase &amp; Nuendo
+Beta
+COMPATIBILITY AND KNOWN LIMITATIONS - 2026-10-28
+================================================
+
+PLATFORM
+--------
+
+Windows x64.
+
+VERIFIED HOSTS
+--------------
+
+Cubase:
+  8.0.10 (LE AI Elements)
+  9.0.0 (LE AI Elements)
+  10.5.0.68
+  11
+  12.0.10 / 12.0.51 / 12.0.52
+  13.0.21
+  14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40
+  15.0.5 / 15.0.21 / 15.0.30
+
+Nuendo:
+  10
+  12.0.52
+  13.0.10 / 13.0.50
+  14.0.32 / 14.0.40
+  15.0.21 / 15.0.30
+
+These are specifically tested builds, not a claim for every release in the
+Cubase 8-15 or Nuendo 10-15 generations. Cubase 9 passed the user&#x27;s full video
+and subtitle test collection; Cubase 8 passed three previously unsupported video
+formats. Cubase Pro 12.0.51 was independently verified on a weak Windows 11 PC:
+installation, MKV playback with external subtitles, and restoration by uninstall.
+This does not mean all heavy media play smoothly on that PC.
+
+Nearby or older unlisted Cubase/Nuendo builds may also be compatible: the
+installer offers them only when its compatibility check of the installed video
+engine passes. This includes possible Nuendo 7-9 builds, but they have not been
+tested and are not guaranteed. A failed check leaves the installation untouched.
+
+All verified hosts share the same FFmpeg decoding and subtitle rendering.
+One observed UI difference is that Nuendo 13 can open its full-screen video
+window about 300 ms more slowly, without affecting playback.
+
+VERIFIED VIDEO MATRIX
+---------------------
+
+Container coverage:
+  MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS/VOB and OGV.
+
+Codec coverage:
+  APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main/High10/B-frames/
+  VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo,
+  VP8, VP9 10-bit and Xvid.
+
+The supported regression matrix passes 31/31 files. Long real-world HEVC, HDR
+and DCP samples were also opened through the common path. HDR-to-SDR conversion
+was visually verified; no quantitative color-accuracy claim is made.
+
+VVC/H.266 is excluded from this beta and is rejected before decoder opening.
+
+SUBTITLES
+---------
+
+Supported external subtitle formats:
+  SRT, ASS, SSA, VTT, SMI/SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC,
+  DCP XML, PGS/SUP and VobSub.
+
+Text and bitmap subtitle paths are active across the verified video formats.
+All formats share the SRT look. PGS/SUP and VobSub are read as text with the
+Windows OCR (test SUP against its SRT: 73/76 lines identical, the rest differ by
+spacing/one dot; italics 560/561 words; a full Blu-ray episode: 792 of 795 cues as
+text in 3.2 s). Unreadable lines and languages without a Windows OCR pack keep the
+original pictures. Supported sidecars are
+loaded automatically, so they do not need to be burned into the source video in
+advance.
+
+WORKFLOW
+--------
+
+Supported files use the native Cubase/Nuendo video track and built-in Video
+Player. They do not require preliminary transcoding or a separate external
+video player.
+
+PERFORMANCE NOTES
+-----------------
+
+CineForm and FFV1 use the verified first-pass seek optimization. AV1 keeps the
+verified preroll path. Heavy intra, AV1, VP9 10-bit, ProRes 4444 and other
+software-decoded media can be difficult on low-end hardware. On the independent
+Cubase 12.0.51 test PC (i5-2550K / GTX 660), 4K HEVC Main10 and H.264 High10
+were too demanding for smooth playback; audio could continue while video froze.
+For weak PCs, disabling video thumbnails in the host is recommended where
+available. FrameBridge automatically pauses thumbnail generation under sustained
+player delay to reduce CPU contention; this does not make unsupported hardware
+decode 4K 10-bit video in real time. No Vulkan dependency is required.
+
+INSTALLER SAFETY
+----------------
+
+Automatic discovery is limited to Windows App Paths, Windows uninstall records,
+and product state for rollback/status. There is no whole-drive, Program Files,
+Desktop, archive, or unrelated test-copy scan.
+
+Multiple compatible hosts require an explicit numbered selection for install and
+rollback. With no compatible registered host, the standard Windows executable or
+folder picker is offered. Cancelling performs no file or registry changes.
+
+Original engines are matched by exact SHA-256 identity or by the compatibility
+check, backed up per installation, bound to product state, and restored by atomic
+replacement. For Cubase 8/9 only, the installer also makes checked local copies
+of the customer&#x27;s existing QuickTime helper EXEs alongside the backed-up engine;
+its own copies are removed on rollback. These EXEs are not distributed in this
+package. Existing unknown FFmpeg DLLs or unknown hashes cause install refusal;
+rollback removes only known product hashes. Product cleanup is limited to
+%ProgramData%\CubaseNuendoDirectShow and exact extension values previously recorded
+by this product. Projects, preferences, plug-ins and unrelated data are outside
+the installer scope.</pre>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/eula">End-User License</a>
+      <a href="/notice">Third-party notices</a>
+      <a href="/compatibility">Compatibility</a>
+      <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p>Support: <a href="mailto:stark622@ukr.net">stark622@ukr.net</a></p>
+    <p>FrameBridge is independent software and is not affiliated with, sponsored by, or endorsed by Steinberg. Cubase and Nuendo are trademarks of their respective owner. FFmpeg is a trademark of Fabrice Bellard.</p>
+    <p>© 2026 FrameBridge</p>
+  </div>
+</footer>
+
+</body>
+</html>
