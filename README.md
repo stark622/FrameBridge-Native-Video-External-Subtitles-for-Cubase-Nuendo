@@ -57,7 +57,7 @@ Playback speed depends on the media and the hardware. Heavy 4K 10-bit video (HEV
 - FrameBridge Beta
 - Commercial, proprietary software
 
-**Website and purchase:** [framebridge.cc](https://framebridge.cc) (online checkout opens soon).
+**[Buy FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Website: [framebridge.cc](https://framebridge.cc)
 
 **Pricing:** Pay what you want — 29 USD minimum,  
 59 USD suggested. One-time purchase.
