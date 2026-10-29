@@ -4,7 +4,7 @@
 ================================================================================
 
 FRAMEBRIDGE PROPRIETARY FILES
-  The FrameBridge proxy modules (videoengine.dll, _runtime\mxfhandler.dll), the
+  The FrameBridge proxy modules (_runtime\videoengine.dll, _runtime\mxfhandler.dll), the
   compatibility probe and the installation scripts are independently developed
   compatibility software. End-user terms for these proprietary files are in
   END_USER_LICENSE.txt. This notice supplements that license with technical and
@@ -17,13 +17,17 @@ FRAMEBRIDGE PROPRIETARY FILES
   below and in _runtime\ffmpeg\LICENSES.
 
 STEINBERG FILES
-  No Steinberg DLL is distributed in this package. INSTALL.cmd temporarily
+  No Steinberg DLL or EXE is distributed in this package. INSTALL.cmd temporarily
   replaces Components\videoengine.dll in the customer's local Cubase/Nuendo
   installation with the FrameBridge proxy and, where applicable, also replaces
   Components\MXFHandler\mxfhandler.dll. Before replacement it saves each exact
   original locally and binds its SHA-256 and host path in the installation state;
-  UNINSTALL.cmd verifies that state before restoring the original. Original
-  Steinberg binaries are never copied into or redistributed with this package.
+  UNINSTALL.cmd verifies that state before restoring the original. For Cubase 8/9,
+  installation also makes verified local copies of the customer's existing
+  videodecode.exe, videooutput.exe and videopreload.exe beside that host's saved
+  engine, then removes its own copies on rollback. The customer's original helper
+  files stay in Components. No original Steinberg binaries are included in or
+  redistributed with the FrameBridge download.
 
   At run time the proxy registers with the preserved original engine through the
   engine's own registries and data structures. Additional container extensions
@@ -69,7 +73,9 @@ THIRD-PARTY COMPONENT INCLUDED - FFmpeg (LGPL 2.1 or later)
 NOT USED / NOT INCLUDED
   LAV Filters, K-Lite Codec Pack, VSFilter/DirectVobSub and libass are not used,
   loaded or required. Subtitle rendering uses Windows system APIs (DirectWrite,
-  Direct2D and WIC).
+  Direct2D and WIC); text in PGS/SUP and VobSub pictures is recognised with the
+  Windows system OCR API (Windows.Media.Ocr). No OCR engine or language data is
+  shipped in this package.
 
 NO AFFILIATION
   FrameBridge is not affiliated with or endorsed by Steinberg. "Cubase" and

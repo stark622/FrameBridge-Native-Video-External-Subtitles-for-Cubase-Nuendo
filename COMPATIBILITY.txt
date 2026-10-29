@@ -1,6 +1,6 @@
 FrameBridge — Native Video for Cubase & Nuendo
 v4 Beta
-COMPATIBILITY AND KNOWN LIMITATIONS - 2026-10-26
+COMPATIBILITY AND KNOWN LIMITATIONS - 2026-10-28
 ================================================
 
 PLATFORM
@@ -12,9 +12,11 @@ VERIFIED HOSTS
 --------------
 
 Cubase:
+  8.0.10 (LE AI Elements)
+  9.0.0 (LE AI Elements)
   10.5.0.68
   11
-  12.0.10 / 12.0.52
+  12.0.10 / 12.0.51 / 12.0.52
   13.0.21
   14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40
   15.0.5 / 15.0.21 / 15.0.30
@@ -26,14 +28,22 @@ Nuendo:
   14.0.32 / 14.0.40
   15.0.21 / 15.0.30
 
-These are the specific tested builds. The list does not claim compatibility with
-every Cubase or Nuendo release in the 10-15 product generations. Unlisted builds
-are not declared incompatible unless separately established by testing.
+These are specifically tested builds, not a claim for every release in the
+Cubase 8-15 or Nuendo 10-15 generations. Cubase 9 passed the user's full video
+and subtitle test collection; Cubase 8 passed three previously unsupported video
+formats. Cubase Pro 12.0.51 was independently verified on a weak Windows 11 PC:
+installation, MKV playback with external subtitles, and restoration by uninstall.
+This does not mean all heavy media play smoothly on that PC.
 
-All verified hosts use the same proxy, FFmpeg video decode path and subtitle
-renderer. A fix in that common path applies across the verified host line.
-Nuendo 13 has the only observed UI difference: full-screen video-window opening
-can be about 300 ms slower, without affecting playback.
+Nearby or older unlisted Cubase/Nuendo builds may also be compatible: the
+installer can offer them when its engine/ABI probe confirms the required native
+interfaces. This includes possible Nuendo 7-9 builds, but they have not been
+tested and are not guaranteed. A failed probe leaves the host untouched.
+
+The verified hosts share the FFmpeg decode path and subtitle renderer. Cubase
+8/9 additionally use a dedicated legacy VideoROT compatibility adapter.
+One observed UI difference is that Nuendo 13 can open its full-screen video
+window about 300 ms more slowly, without affecting playback.
 
 VERIFIED VIDEO MATRIX
 ---------------------
@@ -60,7 +70,11 @@ Supported external subtitle formats:
   DCP XML, PGS/SUP and VobSub.
 
 Text and bitmap subtitle paths are active across the verified video formats.
-PGS/SUP uses the corrected smooth scaling/rendering path. Supported sidecars are
+All formats share the SRT look. PGS/SUP and VobSub are read as text with the
+Windows OCR (test SUP against its SRT: 73/76 lines identical, the rest differ by
+spacing/one dot; italics 560/561 words; a full Blu-ray episode: 792 of 795 cues as
+text in 3.2 s). Unreadable lines and languages without a Windows OCR pack keep the
+original pictures. Supported sidecars are
 loaded automatically, so they do not need to be burned into the source video in
 advance.
 
@@ -76,8 +90,13 @@ PERFORMANCE NOTES
 
 CineForm and FFV1 use the verified first-pass seek optimization. AV1 keeps the
 verified preroll path. Heavy intra, AV1, VP9 10-bit, ProRes 4444 and other
-software-decoded media can still be less comfortable on low-end hardware,
-especially during cold marker jumps. No Vulkan dependency is required.
+software-decoded media can be difficult on low-end hardware. On the independent
+Cubase 12.0.51 test PC (i5-2550K / GTX 660), 4K HEVC Main10 and H.264 High10
+were too demanding for smooth playback; audio could continue while video froze.
+For weak PCs, disabling video thumbnails in the host is recommended where
+available. FrameBridge automatically pauses thumbnail generation under sustained
+player delay to reduce CPU contention; this does not make unsupported hardware
+decode 4K 10-bit video in real time. No Vulkan dependency is required.
 
 INSTALLER SAFETY
 ----------------
@@ -92,7 +111,10 @@ folder picker is offered. Cancelling performs no file or registry changes.
 
 Original engines are matched by exact SHA-256/PE identity or by the compatibility
 probe, backed up per installation, bound to product state, and restored by atomic
-replacement. Existing unknown FFmpeg DLLs or unknown hashes cause install refusal;
+replacement. For Cubase 8/9 only, the installer also makes checked local copies
+of the customer's existing QuickTime helper EXEs alongside the backed-up engine;
+its own copies are removed on rollback. These EXEs are not distributed in this
+package. Existing unknown FFmpeg DLLs or unknown hashes cause install refusal;
 rollback removes only known product hashes. Product cleanup is limited to
 %ProgramData%\CubaseNuendoDirectShow and exact extension values previously recorded
 by this product. Projects, preferences, plug-ins and unrelated data are outside
