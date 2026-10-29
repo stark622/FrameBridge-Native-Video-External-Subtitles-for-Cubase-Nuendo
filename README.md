@@ -47,6 +47,12 @@ VVC/H.266 is intentionally unsupported in this beta.
 
 Full instructions are in [READ_ME_FIRST.txt](READ_ME_FIRST.txt) and [README.txt](README.txt).
 
+## Release file check
+
+- Current release: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
+- SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
+- [VirusTotal report](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection): 1/62 — a single generic heuristic from one engine (MaxSecure); Microsoft Defender, ESET, Malwarebytes, Sophos, Symantec and the other completed engines report no detection.
+
 ## Performance
 
 Playback speed depends on the media and the hardware. Heavy 4K 10-bit video (HEVC Main10, H.264 High10) needs a capable CPU/GPU: on an older test PC (Intel Core i5-2550K + GeForce GTX 660) it stuttered heavily, because a GPU of that generation cannot decode these formats in hardware. On weak PCs, switching off video thumbnails in the DAW and using H.264 8-bit working copies up to 1080p is recommended. Known issues are listed in [READ_ME_FIRST.txt](READ_ME_FIRST.txt).
