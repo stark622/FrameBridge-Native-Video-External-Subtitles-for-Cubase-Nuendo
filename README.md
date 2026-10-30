@@ -24,6 +24,8 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 
 **Nearby builds very likely work.** The video engine barely changes within one product generation, so if, for example, Nuendo 12.0.52 is verified, 12.0.20 or 12.0.70 will very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered for installation, an incompatible one is not listed and nothing is changed. This is not a guarantee. Older editions with the same engine generation (for example Nuendo 7–9, Cubase 8.5 / 9.5) may also qualify but have not been tested.
 
+On Cubase 8 and 9, FrameBridge also supplies the audio of the files it opens (for example MKV), so "Extract audio from video" works for them as in newer versions.
+
 Cubase Pro, Artist, Elements, AI and LE editions are found the same way. See [COMPATIBILITY.txt](COMPATIBILITY.txt) for the full matrix.
 
 ## Verified media support

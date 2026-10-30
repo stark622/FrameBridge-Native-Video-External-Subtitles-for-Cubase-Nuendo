@@ -12,6 +12,10 @@ See COMPATIBILITY.txt for the exact verified versions. Other builds, including
 nearby releases and older Nuendo editions, may also work if their video engine
 passes the installer's compatibility check; this is not a guarantee.
 
+On Cubase 8 and 9, FrameBridge also supplies the audio of the files it opens
+(for example MKV), so "Extract audio from video" works for them as in newer
+versions.
+
 MAIN FEATURES
 -------------
 
