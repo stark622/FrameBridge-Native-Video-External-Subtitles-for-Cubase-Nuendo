@@ -12,7 +12,6 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 - Extended container and codec support through packaged FFmpeg libraries (LGPL).
 - External subtitle sidecars are loaded automatically and shown over the picture; edits to the subtitle file are picked up live. The video file itself is never changed.
 - Every subtitle format is drawn in one clean look (the SRT look). Blu-ray PGS/SUP and DVD VobSub pictures are read as text with the Windows built-in OCR.
-- Audio of the video file is available on import ("Extract audio from video").
 - No separate video player, codec pack or LAV Filters required.
 - Visually verified HDR-to-SDR conversion for supported HDR media. No quantitative color-accuracy claim is made.
 

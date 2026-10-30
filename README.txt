@@ -20,8 +20,6 @@ MAIN FEATURES
   - Automatic loading and rendering of supported external subtitle sidecars, all
     in one look (the SRT look); PGS/SUP and VobSub pictures are read as text with
     the Windows OCR.
-  - Audio of the video file on import ("Extract audio from video"), Cubase 8-15
-    and Nuendo 10-15.
   - Supported files can be used without preliminary transcoding.
   - No separate external video player.
   - No need to burn subtitles into the source video in advance.
