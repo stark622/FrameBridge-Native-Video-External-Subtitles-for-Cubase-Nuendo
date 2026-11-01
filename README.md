@@ -1,6 +1,6 @@
 # FrameBridge — Native Video & External Subtitles for Cubase & Nuendo
 
-![FrameBridge running on the native Nuendo video track](poster.png)
+[![FrameBridge running on the native Nuendo video track — click to watch the demo](poster.png)](https://youtu.be/NjNHtkc8-OE)
 
 **Website: [framebridge.cc](https://framebridge.cc)** · [Watch the FrameBridge demonstration on YouTube](https://youtu.be/NjNHtkc8-OE)
 
