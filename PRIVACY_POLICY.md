@@ -8,7 +8,7 @@ This policy explains how information is handled in connection with the FrameBrid
 
 The FrameBridge website (framebridge.cc) is hosted on Cloudflare Pages. When you visit it, Cloudflare processes technical connection data (such as your IP address, browser type and the pages requested) to deliver and protect the site, under its own privacy terms. The FrameBridge website itself uses no analytics, advertising or tracking scripts and sets no cookies of its own; Cloudflare may set strictly necessary security cookies.
 
-Links to YouTube and GitHub open those external services, which process information under their own privacy terms.
+The demo video on the home page is embedded from YouTube (youtube-nocookie.com) and loads only after you press play; YouTube then processes information under its own privacy terms. Links to YouTube and GitHub open those external services, which process information under their own privacy terms.
 
 ## Purchases and payment processing
 

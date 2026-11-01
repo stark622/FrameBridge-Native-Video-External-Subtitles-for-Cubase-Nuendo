@@ -41,7 +41,7 @@
       <p class="lead">FrameBridge extends the built-in video engine of Cubase and Nuendo on Windows. Modern video formats open on the native video track, and external subtitle files appear over the picture automatically — without transcoding and without burning subtitles into the video.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1">Buy FrameBridge</a>
-        <a class="btn btn-ghost" href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Watch the demo</a>
+        <a class="btn btn-ghost" href="#demo" data-play>Watch the demo</a>
       </div>
       <p class="price-note">One-time purchase · pay what you want from US$29</p>
     </div>
@@ -49,7 +49,7 @@
 
   <div class="showcase">
     <div class="wrap">
-      <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener" aria-label="Watch the FrameBridge demonstration on YouTube">
+      <a id="demo" class="player" href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener" data-yt="NjNHtkc8-OE" aria-label="Play the FrameBridge demonstration video">
         <img src="/poster.jpg" alt="FrameBridge running on the native Nuendo video track with external subtitles over the picture" width="1600" height="900">
         <span class="play">▶ Watch the real-time demo</span>
       </a>
@@ -228,5 +228,29 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var p = document.getElementById('demo');
+  if (!p) return;
+  function play() {
+    if (p.querySelector('iframe')) return;
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + p.getAttribute('data-yt') + '?autoplay=1&rel=0';
+    f.title = 'FrameBridge demonstration video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    p.innerHTML = '';
+    p.appendChild(f);
+    p.removeAttribute('href');
+  }
+  p.addEventListener('click', function (e) { e.preventDefault(); play(); });
+  var b = document.querySelector('[data-play]');
+  if (b) b.addEventListener('click', function (e) {
+    e.preventDefault();
+    p.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    play();
+  });
+})();
+</script>
 </body>
 </html>
