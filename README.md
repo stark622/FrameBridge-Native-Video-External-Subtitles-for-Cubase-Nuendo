@@ -1,8 +1,8 @@
 # FrameBridge — Native Video & External Subtitles for Cubase & Nuendo
 
-[![FrameBridge running on the native Nuendo video track — click to watch the demo](poster.png)](https://youtu.be/NjNHtkc8-OE)
+[![FrameBridge running on the native Nuendo video track — click to watch the demo](poster.png)](https://youtu.be/cbiwzzz_Zpk)
 
-**Website: [framebridge.cc](https://framebridge.cc)** · [Watch the FrameBridge demonstration on YouTube](https://youtu.be/NjNHtkc8-OE)
+**Website: [framebridge.cc](https://framebridge.cc)** · [Watch the FrameBridge demonstration on YouTube](https://youtu.be/cbiwzzz_Zpk)
 
 FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Modern video formats open on the native video track and play in the built-in Video Player, and external subtitle files are shown over the picture automatically — without transcoding the media and without burning subtitles into the video.
 
