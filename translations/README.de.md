@@ -1,0 +1,85 @@
+# FrameBridge — natives Video & externe Untertitel für Cubase & Nuendo
+
+[English](../README.md) · **Deutsch** · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
+
+[![FrameBridge auf der nativen Videospur von Nuendo — klicken, um die Demo anzusehen](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+
+**Website: [framebridge.cc](https://framebridge.cc/de/)** · [Demovideo von FrameBridge auf YouTube ansehen](https://youtu.be/qJqN0ybHV8E)
+
+FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Windows x64. Moderne Videoformate öffnen sich auf der nativen Videospur und laufen im integrierten Video-Player, und externe Untertiteldateien werden automatisch über dem Bild angezeigt — ohne Transcodierung des Materials und ohne Einbrennen der Untertitel ins Video.
+
+## Die wichtigsten Vorteile
+
+- Arbeitet mit der nativen Videospur und dem integrierten Video-Player von Cubase/Nuendo.
+- Erweiterte Container- und Codec-Unterstützung durch mitgelieferte FFmpeg-Bibliotheken (LGPL).
+- Externe Untertiteldateien werden automatisch geladen und über dem Bild angezeigt; Änderungen an der Untertiteldatei werden live übernommen. Die Videodatei selbst wird nie verändert.
+- Jedes Untertitelformat wird in einem einheitlichen Look dargestellt (dem SRT-Look). Blu-ray-PGS/SUP- und DVD-VobSub-Bilder werden mit der in Windows integrierten Texterkennung (OCR) als Text gelesen.
+- Kein separater Videoplayer, kein Codec-Pack und keine LAV Filters nötig.
+- Visuell geprüfte HDR-zu-SDR-Umwandlung für unterstütztes HDR-Material. Eine messtechnische Aussage zur Farbgenauigkeit wird nicht getroffen.
+
+## Unterstützte Versionen von Cubase und Nuendo
+
+**Geprüfte Versionen**
+
+- **Cubase:** 8.0.10 und 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30
+- **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
+
+**Benachbarte Versionen funktionieren sehr wahrscheinlich.** Die Video-Engine ändert sich innerhalb einer Produktgeneration kaum: Ist zum Beispiel Nuendo 12.0.52 geprüft, funktionieren 12.0.20 oder 12.0.70 sehr wahrscheinlich ebenfalls. Das Installationsprogramm prüft die Video-Engine jeder Installation selbst: Eine kompatible wird zur Installation angeboten, eine inkompatible erscheint nicht in der Liste, und nichts wird verändert. Eine Garantie ist das nicht. Ältere Editionen mit derselben Engine-Generation (zum Beispiel Nuendo 7–9, Cubase 8.5 / 9.5) können ebenfalls infrage kommen, wurden aber nicht getestet.
+
+In Cubase 8 und 9 liefert FrameBridge zusätzlich den Ton der geöffneten Dateien (zum Beispiel MKV), sodass „Audio aus Videodatei extrahieren“ dort wie in neueren Versionen funktioniert.
+
+Die Editionen Cubase Pro, Artist, Elements, AI und LE werden auf dieselbe Weise erkannt. Die vollständige Matrix steht in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (Englisch).
+
+## Geprüfte Medienunterstützung
+
+**Container:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB und OGV.
+
+**Videocodecs und Profile:** APV, AV1 8-Bit, AV1 10-Bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-Frames / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10-Bit und Xvid.
+
+**Externe Untertitel:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP und VobSub (das Paar .idx + .sub). Legen Sie die Untertiteldatei mit gleichem Namen neben das Video (zum Beispiel `film.mkv` + `film.srt`).
+
+Die Texterkennung von PGS/SUP und VobSub nutzt die in Windows installierten OCR-Sprachen (meist die Systemsprache und Englisch; weitere lassen sich in den Windows-Einstellungen hinzufügen). Fehlt die benötigte Sprache, werden die ursprünglichen Untertitelbilder angezeigt.
+
+VVC/H.266 wird in dieser Beta bewusst nicht unterstützt.
+
+## Installation und Wiederherstellung
+
+- Cubase und Nuendo schließen und `INSTALL.cmd` ausführen. Registrierte Installationen werden automatisch gefunden; andernfalls die EXE-Datei oder den Programmordner auswählen.
+- `UNINSTALL.cmd` stellt die originalen Programmdateien aus einer geprüften Sicherung wieder her (Byte für Byte). Projekte, Einstellungen und Plug-ins bleiben unberührt.
+- Im Paket wird keine Steinberg-Datei mitgeliefert; das Installationsprogramm arbeitet nur mit den Dateien Ihrer eigenen Installation.
+
+Die vollständige Anleitung steht in [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) und [README.txt](../README.txt) (Englisch).
+
+## Prüfung der Release-Datei
+
+- Aktuelles Release: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
+- SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
+- [VirusTotal-Bericht](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (Stand 31. Oktober 2026): 1/63 — eine einzelne generische Heuristik eines einzigen Scanners (MaxSecure); Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec und die übrigen abgeschlossenen Scanner melden nichts.
+
+## Leistung
+
+Die Wiedergabegeschwindigkeit hängt vom Material und von der Hardware ab. Anspruchsvolles 4K-10-Bit-Video (HEVC Main10, H.264 High10) braucht eine leistungsfähige CPU/GPU: Auf einem älteren Test-PC (Intel Core i5-2550K + GeForce GTX 660) ruckelte es stark, weil eine GPU dieser Generation diese Formate nicht in Hardware decodieren kann. Auf schwachen PCs empfiehlt es sich, die Video-Thumbnails in der DAW abzuschalten und mit H.264-8-Bit-Arbeitskopien bis 1080p zu arbeiten. Bekannte Probleme sind in [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) aufgeführt.
+
+## Plattform und Status
+
+- Windows x64
+- FrameBridge Beta
+- Kommerzielle, proprietäre Software
+
+**[FrameBridge kaufen](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Website: [framebridge.cc](https://framebridge.cc/de/)
+
+**Preis:** frei wählbar — mindestens 29 USD, empfohlen 59 USD. Einmalkauf.
+
+**Support:** stark622@ukr.net
+
+**Rechtliches (Englisch; maßgeblich ist die englische Fassung):**
+
+- [Datenschutzerklärung](../PRIVACY_POLICY.md)
+- [Nutzungsbedingungen](../TERMS_OF_SERVICE.md)
+- [Endbenutzerlizenz](../END_USER_LICENSE.txt)
+
+## Lizenzierung
+
+FrameBridge ist kommerzielle Software. Die Bedingungen für das proprietäre Produkt stehen in [END_USER_LICENSE.txt](../END_USER_LICENSE.txt). Angaben zur Lizenzierung von Drittkomponenten, einschließlich der Bedingungen für die mitgelieferten FFmpeg-Bibliotheken (LGPL 2.1 oder später, Quellcode im Paket enthalten), stehen in [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
+
+FrameBridge ist unabhängige Software und steht in keiner Verbindung zu Steinberg, wird von Steinberg weder gesponsert noch unterstützt. Cubase und Nuendo sind Marken ihres jeweiligen Inhabers.
