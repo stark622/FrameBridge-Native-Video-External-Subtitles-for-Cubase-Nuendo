@@ -1,12 +1,12 @@
 # FrameBridge Privacy Policy
 
-**Effective date:** 29 October 2026
+**Effective date:** 29 October 2026 · **Updated:** 4 November 2026
 
 This policy explains how information is handled in connection with the FrameBridge website, purchase process and customer support.
 
 ## Website
 
-The FrameBridge website (framebridge.cc) is hosted on Cloudflare Pages. When you visit it, Cloudflare processes technical connection data (such as your IP address, browser type and the pages requested) to deliver and protect the site, under its own privacy terms. The FrameBridge website itself uses no analytics, advertising or tracking scripts and sets no cookies of its own; Cloudflare may set strictly necessary security cookies. The website shows its pages in the language of your browser settings; if you choose a language yourself, that choice is saved only in your browser’s local storage and is never sent to us.
+The FrameBridge website (framebridge.cc) is hosted on Cloudflare Pages. When you visit it, Cloudflare processes technical connection data (such as your IP address, browser type and the pages requested) to deliver and protect the site, under its own privacy terms. The FrameBridge website uses no advertising or third-party tracking and sets no cookies of its own; Cloudflare may set strictly necessary security cookies. The website keeps anonymous visit statistics on Cloudflare: pages viewed, clicks on site controls (such as Buy, the video, FAQ items and the language menu), time on the page and scroll depth, operating system, browser and device type, country, and the referring website. No IP address, cookie or persistent identifier is stored; a random number kept in your browser’s session storage only links the events of one visit and is deleted when you close the tab. Browsers that send Global Privacy Control or Do Not Track are not counted. The website shows its pages in the language of your browser settings; if you choose a language yourself, that choice is saved only in your browser’s local storage and is never sent to us.
 
 The demo video on the home page is embedded from YouTube (youtube-nocookie.com) and loads only after you press play; YouTube then processes information under its own privacy terms. Links to YouTube and GitHub open those external services, which process information under their own privacy terms.
 
