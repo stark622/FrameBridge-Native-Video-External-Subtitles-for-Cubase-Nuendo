@@ -1,4 +1,4 @@
-// Private statistics report: /api/stats?key=<STATS_KEY>&days=7   (&format=json for raw aggregates)
+// Private statistics report: /api/stats?key=<STATS_KEY>&days=7|all   (&format=json for aggregates, &full=1 adds every visit and event)
 import { ensureTable } from './e.js';
 
 const FAQ = ['Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Mac version?', 'Which subtitle file'];
@@ -16,8 +16,9 @@ export async function onRequestGet({ request, env }) {
   if (!env.DB) return new Response('D1 binding DB is not configured', { status: 500 });
   await ensureTable(env.DB);
 
-  const days = Math.min(Math.max(parseInt(url.searchParams.get('days') || '7', 10) || 7, 1), 365);
-  const since = Date.now() - days * 86400000;
+  const allTime = url.searchParams.get('days') === 'all';
+  const days = allTime ? 'all' : Math.min(Math.max(parseInt(url.searchParams.get('days') || '7', 10) || 7, 1), 365);
+  const since = allTime ? 0 : Date.now() - days * 86400000;
   const { results } = await env.DB.prepare(
     'SELECT rowid, ts, sid, path, lang, ev, val, os, br, dev, country, ref, bot FROM events WHERE ts >= ? ORDER BY ts, rowid LIMIT 200000'
   ).bind(since).all();
@@ -82,7 +83,19 @@ export async function onRequestGet({ request, env }) {
   };
 
   if (url.searchParams.get('format') === 'json') {
+    const full = url.searchParams.get('full') === '1';
+    const num = new Map(human.map((s, i) => [s.sid, i + 1]));
     return Response.json({
+      ...(full ? {
+        visits: human.map((s) => ({
+          visit: num.get(s.sid), start: new Date(s.t0).toISOString(), end: new Date(s.t1).toISOString(), country: s.country,
+          os: s.os, br: s.br, dev: s.dev, lang: s.lang, ref: s.ref, pages: [...s.pages], active_s: s.time, scroll: s.scroll,
+          actions: s.acts, buy: s.buy, play: s.play, sections: [...s.sees], trail: s.trail,
+        })),
+        event_log: results.filter((r) => num.has(r.sid)).map((r) => ({
+          visit: num.get(r.sid), time: new Date(r.ts).toISOString(), path: r.path, ev: r.ev, val: r.ev === 'pv' ? r.ref : r.val,
+        })),
+      } : {}),
       summary, per_day: perDay, os: by('os'), browser: by('br'), device: by('dev'), country: by('country'),
       language: by('lang'), referrer: by('ref'), events: ev, buy_from: buyFrom, faq, lang_switch: langSw, outbound: out, sections_seen: seen,
       recent: human.slice(-200).reverse().map((s) => ({
@@ -105,9 +118,9 @@ h1{margin:0 0 4px}h2{margin:28px 0 8px;font-size:18px}.muted{color:#9fb0c8}
 th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-align:top}th{color:#9fb0c8;font-weight:600}
 .grid{display:flex;flex-wrap:wrap;gap:24px}.trail{color:#9fb0c8;font-size:13px}a{color:#2ea8ff}</style></head><body>
 <h1>FrameBridge — visit statistics</h1>
-<div class="muted">Last ${days} day(s) · counted only from real browsers that ran the page script ·
+<div class="muted">${allTime ? 'All time' : `Last ${days} day(s)`} · counted only from real browsers that ran the page script ·
 <a href="?key=${esc(url.searchParams.get('key'))}&days=1">1 day</a> · <a href="?key=${esc(url.searchParams.get('key'))}&days=7">7 days</a> ·
-<a href="?key=${esc(url.searchParams.get('key'))}&days=30">30 days</a> · <a href="?key=${esc(url.searchParams.get('key'))}&days=365">all</a></div>
+<a href="?key=${esc(url.searchParams.get('key'))}&days=30">30 days</a> · <a href="?key=${esc(url.searchParams.get('key'))}&days=all">all</a></div>
 <div class="tiles">
 <div class="tile"><b>${human.length}</b>visits (browsers)</div>
 <div class="tile"><b>${engaged.length}</b>engaged visits<br><span class="muted">clicked, read 2+ sections or stayed 15 s+</span></div>
