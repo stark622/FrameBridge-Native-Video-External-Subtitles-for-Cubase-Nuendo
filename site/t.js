@@ -70,20 +70,21 @@
     });
   }
 
-  // active time and scroll depth, sent when the tab is hidden or closed
-  var active = 0, last = Date.now(), visible = !document.hidden, maxScroll = 0, left = false;
+  // active time and scroll depth, sent once each time the page is hidden or closed (values are cumulative per page load)
+  var active = 0, last = Date.now(), visible = !document.hidden, maxScroll = 0, reported = false;
   function tick() { if (visible) active += Date.now() - last; last = Date.now(); }
+  function bye() {
+    tick(); visible = false;
+    if (!reported) { reported = true; ev('leave', Math.round(active / 1000) + 's/' + maxScroll + '%'); }
+    send(true);
+  }
   window.addEventListener('scroll', function () {
     var h = document.documentElement.scrollHeight - innerHeight;
-    if (h > 0) maxScroll = Math.max(maxScroll, Math.round(100 * scrollY / h));
+    if (h > 0) maxScroll = Math.min(100, Math.max(maxScroll, Math.round(100 * scrollY / h)));
   }, { passive: true });
   document.addEventListener('visibilitychange', function () {
-    tick(); visible = !document.hidden;
-    if (document.hidden) { ev('leave', Math.round(active / 1000) + 's/' + maxScroll + '%'); send(true); }
+    if (document.hidden) bye();
+    else { last = Date.now(); visible = true; reported = false; }
   });
-  window.addEventListener('pagehide', function () {
-    if (left) return; left = true; tick();
-    if (!document.hidden) ev('leave', Math.round(active / 1000) + 's/' + maxScroll + '%');
-    send(true);
-  });
+  window.addEventListener('pagehide', bye);
 })();

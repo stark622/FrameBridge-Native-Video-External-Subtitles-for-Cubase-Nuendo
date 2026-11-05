@@ -29,16 +29,20 @@ export async function onRequestGet({ request, env }) {
     let s = S.get(r.sid);
     if (!s) {
       s = { sid: r.sid, t0: r.ts, t1: r.ts, os: r.os, br: r.br, dev: r.dev, country: r.country, ref: '', lang: r.lang,
-            bot: r.bot, pages: new Set(), trail: [], acts: 0, sees: new Set(), time: 0, scroll: 0, buy: 0, play: 0 };
+            bot: r.bot, pages: new Set(), trail: [], acts: 0, sees: new Set(), time: 0, scroll: 0, buy: 0, play: 0, views: [] };
       S.set(r.sid, s);
     }
     s.t1 = r.ts;
     s.pages.add(r.path);
+    // one entry per page load; 'leave' values are cumulative within a page load, so keep the largest
+    if (r.ev === 'pv' || !s.views.length) s.views.push({ t0: r.ts, t1: r.ts, leave: 0 });
+    const v = s.views[s.views.length - 1];
+    v.t1 = r.ts;
     if (r.ev === 'pv') { if (r.ref && !s.ref) s.ref = r.ref; s.trail.push('open ' + r.path); continue; }
     if (r.ev === 'see') { s.sees.add(r.val); continue; }
     if (r.ev === 'leave') {
       const m = /^(\d+)s\/(\d+)%$/.exec(r.val || '');
-      if (m) { s.time += +m[1]; s.scroll = Math.max(s.scroll, +m[2]); }
+      if (m) { v.leave = Math.max(v.leave, +m[1]); s.scroll = Math.min(100, Math.max(s.scroll, +m[2])); }
       continue;
     }
     s.acts++;
@@ -46,6 +50,8 @@ export async function onRequestGet({ request, env }) {
     if (r.ev === 'play') s.play++;
     s.trail.push(r.ev === 'faq' ? 'faq: ' + (FAQ[+r.val - 1] || r.val) : (r.val ? r.ev + ':' + r.val : r.ev));
   }
+  // active time: measured value per page load; when the browser sent none (tab killed), the span of its events
+  for (const s of S.values()) s.time = s.views.reduce((a, v) => a + (v.leave || Math.round((v.t1 - v.t0) / 1000)), 0);
   const sessions = [...S.values()];
   const human = sessions.filter((s) => !s.bot);
   const engaged = human.filter((s) => s.acts > 0 || s.sees.size >= 2 || s.time >= 15);
