@@ -5,6 +5,89 @@ const FAQ = ['Changes video files?', 'How to remove', 'Steinberg files?', 'Antiv
 const OWNER_COUNTRIES = ['UA'];
 const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
 
+// Every visitor Cloudflare saw (it keeps request details for 31 days), including those before this counter existed.
+// A person = a browser that loaded the site's stylesheet; bots, data-centre crawlers, faked Chrome strings and
+// "farms" (4+ countries in the same minute) are left out; VPN/server networks are shown as uncertain.
+// Needs the Pages secret CF_API_TOKEN (read-only analytics token). IP addresses only group requests and are not shown.
+const ZONE = 'd2f096ab8dda3ff2f77cab796160b463';
+const SITE_START = Date.UTC(2026, 9, 29);
+const BOT_UA = /bot|spider|crawl|checker|validator|inspectiontool|google-|headless|lighthouse|preview|curl|wget|python|go-http/i;
+const CLOUD = /google|amazon|aws|microsoft|azure|akamai|oracle|alibaba|tencent|huawei/i;
+const VPN = /digitalocean|ovh|hetzner|linode|scaleway|vultr|choopa|contabo|leaseweb|ionos|hostinger|datacamp|m247|powerhouse|gsl networks|zenlayer|g-core|psychz|cdn77|packethub|tzulo|hostroyale|sondatech|clouvider|performive|quadranet|servers\.com|hosting|server|gthost|estnoc/i;
+
+async function cfQuery(token, parts) {
+  const r = await fetch('https://api.cloudflare.com/client/v4/graphql', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: `query($z:String!){viewer{zones(filter:{zoneTag:$z}){${parts.join(' ')}}}}`, variables: { z: ZONE } }),
+  });
+  const j = await r.json();
+  if (j.errors && j.errors.length) throw new Error(j.errors.map((e) => e.message).join('; '));
+  return Object.values(j.data.viewer.zones[0]).flat().filter(Boolean).sort((a, b) => (a.datetime < b.datetime ? -1 : 1));
+}
+
+// one alias per UTC day: on wider windows Cloudflare returns only a sample
+function dayParts(days, filter, fields) {
+  return days.map(([a, b], i) => `d${i}:httpRequestsAdaptive(limit:10000,filter:{datetime_geq:"${new Date(a).toISOString()}",datetime_lt:"${new Date(b).toISOString()}",${filter}}){${fields}}`);
+}
+
+async function cfVisitors(token, sinceMs, showOwner) {
+  const now = Date.now();
+  const from = Math.max(sinceMs, now - 31 * 86400000 + 600000, SITE_START);
+  const days = [];
+  for (let t = from; t < now; t = Math.floor(t / 86400000) * 86400000 + 86400000) days.push([t, Math.min(Math.floor(t / 86400000) * 86400000 + 86400000, now)]);
+  if (!days.length) return { visits: [], bots: 0, farm: 0, owner: 0 };
+
+  const rows = await cfQuery(token, dayParts(days, 'clientRequestPath:"/style.css"',
+    'datetime clientIP clientCountryName clientASNDescription userAgentOS userAgentBrowser userAgent'));
+  for (const r of rows) {
+    const ua = r.userAgent || '', net = r.clientASNDescription || '';
+    const fakeChrome = /Chrome\//.test(ua) && (!/KHTML, like Gecko/.test(ua) || /Chrome\/\d+(\.\d+)? /.test(ua));
+    r.k = BOT_UA.test(ua) || BOT_UA.test(r.userAgentBrowser || '') || fakeChrome || CLOUD.test(net) ? 'bot'
+      : !showOwner && OWNER_COUNTRIES.includes(r.clientCountryName) ? 'owner' : VPN.test(net) ? 'vpn' : 'human';
+  }
+  const perMinute = {};
+  for (const r of rows) if (r.k === 'human' || r.k === 'vpn') (perMinute[r.datetime.slice(0, 16)] ||= new Set()).add(r.clientCountryName);
+  let farm = 0;
+  for (const r of rows) if ((r.k === 'human' || r.k === 'vpn') && perMinute[r.datetime.slice(0, 16)].size >= 4) { r.k = 'bot'; farm++; }
+
+  const visits = [], last = {};
+  for (const r of rows) {
+    if (r.k !== 'human' && r.k !== 'vpn') continue;
+    const t = Date.parse(r.datetime);
+    if (last[r.clientIP] && t - last[r.clientIP] < 7200000) continue; // same visit
+    last[r.clientIP] = t;
+    visits.push({ t, ip: r.clientIP, k: r.k, country: r.clientCountryName, net: r.clientASNDescription, sys: `${r.userAgentOS} / ${r.userAgentBrowser}` });
+  }
+  const result = { visits, bots: rows.filter((r) => r.k === 'bot').length, farm, owner: rows.filter((r) => r.k === 'owner').length };
+  if (!visits.length) return result;
+
+  // pages of those visitors: only the days they came on, only their addresses
+  const byDay = {};
+  for (const v of visits) for (const t of [v.t, v.t + 7200000]) {
+    const d = Math.floor(t / 86400000) * 86400000;
+    if (d < now) (byDay[d] ||= new Set()).add(v.ip);
+  }
+  const parts = Object.entries(byDay).map(([d, ips], i) => `p${i}:httpRequestsAdaptive(limit:10000,filter:{datetime_geq:"${new Date(+d).toISOString()}",datetime_lt:"${new Date(Math.min(+d + 86400000, now)).toISOString()}",clientIP_in:${JSON.stringify([...ips])},OR:[{edgeResponseContentTypeName:"html"},{clientRequestPath:"/api/e"}]}){datetime clientIP clientRequestPath edgeResponseStatus edgeResponseContentTypeName}`);
+  const req = await cfQuery(token, parts);
+  for (const v of visits) {
+    const mine = req.filter((q) => q.clientIP === v.ip && Date.parse(q.datetime) >= v.t - 600000 && Date.parse(q.datetime) < v.t + 7200000);
+    const pages = [];
+    for (const q of mine) {
+      if (q.edgeResponseContentTypeName !== 'html' || (q.edgeResponseStatus !== 200 && q.edgeResponseStatus !== 304) || q.clientRequestPath === '/api/stats') continue;
+      if (pages[pages.length - 1] !== q.clientRequestPath) pages.push(q.clientRequestPath);
+    }
+    const counter = mine.some((q) => q.clientRequestPath === '/api/e');
+    const sec = mine.length ? Math.round((Date.parse(mine[mine.length - 1].datetime) - Date.parse(mine[0].datetime)) / 1000) : 0;
+    // reading time is visible only when the visitor moved between pages or this counter was running (from 4 Nov)
+    v.time = pages.length <= 1 && !counter && sec < 60 ? 'unknown' : sec < 60 ? `${sec} s` : `${Math.round(sec / 60)} min`;
+    v.pages = pages;
+    v.counter = counter;
+    delete v.ip;
+  }
+  return result;
+}
+
 function esc(s) {
   return String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
@@ -97,6 +180,11 @@ export async function onRequestGet({ request, env }) {
     video_play_sessions: human.filter((s) => s.play).length, avg_active_seconds_engaged: avgTime,
   };
 
+  let cf = null, cfError = '';
+  if (env.CF_API_TOKEN) {
+    try { cf = await cfVisitors(env.CF_API_TOKEN, since, showOwner); } catch (e) { cfError = String((e && e.message) || e); }
+  }
+
   if (url.searchParams.get('format') === 'json') {
     const full = url.searchParams.get('full') === '1';
     const num = new Map(human.map((s, i) => [s.sid, i + 1]));
@@ -111,6 +199,7 @@ export async function onRequestGet({ request, env }) {
           visit: num.get(r.sid), time: new Date(r.ts).toISOString(), path: r.path, ev: r.ev, val: r.ev === 'pv' ? r.ref : r.val,
         })),
       } : {}),
+      cf_visitors: cf ? cf.visits.map((v) => ({ ...v, start: new Date(v.t).toISOString() })) : null, cf_error: cfError || undefined,
       summary, per_day: perDay, os: by('os'), browser: by('br'), device: by('dev'), country: by('country'),
       language: by('lang'), referrer: by('ref'), events: ev, buy_from: buyFrom, faq, lang_switch: langSw, outbound: out, sections_seen: seen,
       recent: human.slice(-200).reverse().map((s) => ({
@@ -163,6 +252,15 @@ ${table('FAQ opened', sorted(faq), ['Question', 'Count'])}
 ${table('Language switched to', sorted(langSw), ['Language', 'Count'])}
 ${table('Outbound links', sorted(out), ['Site', 'Count'])}
 </div>
+${!env.CF_API_TOKEN
+    ? '<h2>All visitors seen by Cloudflare</h2><p class="muted">Add the Pages secret CF_API_TOKEN (read-only analytics token) to list here every visitor of the last 31 days, including those before this counter.</p>'
+    : cfError
+      ? `<h2>All visitors seen by Cloudflare</h2><p class="muted">Cloudflare error: ${esc(cfError)}</p>`
+      : table('All visitors seen by Cloudflare, also before this counter (newest first, UTC; Cloudflare keeps 31 days)',
+          cf.visits.slice().reverse().map((v) => [new Date(v.t).toISOString().slice(5, 16).replace('T', ' '), v.k === 'vpn' ? 'VPN/server?' : 'person',
+            v.country, v.net, v.sys, v.time, v.pages.length ? v.pages.join(' → ') : '—', v.counter ? 'yes' : '']),
+          ['Start', 'Type', 'Country', 'Network', 'System', 'On site', 'Pages', 'In this counter']) +
+        `<div class="muted" style="margin-top:6px">${cf.visits.filter((v) => v.k === 'human').length} people · ${cf.visits.filter((v) => v.k === 'vpn').length} via VPN/servers (person or bot, unclear) · left out: ${cf.bots} bot loads (${cf.farm} from farms: 4+ countries in one minute), ${cf.owner} own (${OWNER_COUNTRIES.join(', ')}) · "unknown" time = one page, reading time not recorded before 4 Nov · Buy clicks and video plays are only in this counter</div>`}
 ${table('Recent visits (newest first, UTC)', human.slice(-100).reverse().map((s) => [
     new Date(s.t0).toISOString().slice(5, 16).replace('T', ' '), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
     `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : ''),
