@@ -97,7 +97,10 @@ function sorted(m) { return Object.entries(m).sort((a, b) => b[1] - a[1]); }
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   const statsKey = String(env.STATS_KEY || '').trim(); // tolerate a space or newline pasted into the secret
-  if (!statsKey || (url.searchParams.get('key') || '').trim() !== statsKey) return new Response('Not found', { status: 404 });
+  if (!statsKey || (url.searchParams.get('key') || '').trim() !== statsKey) {
+    // says only why (no secret / different value and its length), never the key itself
+    return new Response('Not found', { status: 404, headers: { 'X-Stats-Key': statsKey ? 'mismatch, length ' + statsKey.length : 'missing' } });
+  }
   if (!env.DB) return new Response('D1 binding DB is not configured', { status: 500 });
   await ensureTable(env.DB);
 
