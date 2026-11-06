@@ -96,7 +96,8 @@ function sorted(m) { return Object.entries(m).sort((a, b) => b[1] - a[1]); }
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
-  if (!env.STATS_KEY || url.searchParams.get('key') !== env.STATS_KEY) return new Response('Not found', { status: 404 });
+  const statsKey = String(env.STATS_KEY || '').trim(); // tolerate a space or newline pasted into the secret
+  if (!statsKey || (url.searchParams.get('key') || '').trim() !== statsKey) return new Response('Not found', { status: 404 });
   if (!env.DB) return new Response('D1 binding DB is not configured', { status: 500 });
   await ensureTable(env.DB);
 
@@ -182,7 +183,7 @@ export async function onRequestGet({ request, env }) {
 
   let cf = null, cfError = '';
   if (env.CF_API_TOKEN) {
-    try { cf = await cfVisitors(env.CF_API_TOKEN, since, showOwner); } catch (e) { cfError = String((e && e.message) || e); }
+    try { cf = await cfVisitors(String(env.CF_API_TOKEN).trim(), since, showOwner); } catch (e) { cfError = String((e && e.message) || e); }
   }
 
   if (url.searchParams.get('format') === 'json') {
