@@ -15,6 +15,7 @@ FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x6
 - Zewnętrzne pliki napisów są wczytywane automatycznie i wyświetlane na obrazie; zmiany w pliku napisów są uwzględniane na bieżąco. Sam plik wideo nigdy nie jest zmieniany.
 - Każdy format napisów jest wyświetlany w jednym stylu (takim jak SRT). Obrazy napisów PGS/SUP z Blu-ray i VobSub z DVD są odczytywane jako tekst przez wbudowane w Windows OCR.
 - Nie potrzeba osobnego odtwarzacza wideo, pakietu kodeków ani LAV Filters.
+- To nie jest wtyczka VST: w projekcie nie trzeba niczego ładować — FrameBridge rozszerza sam natywny silnik wideo.
 - Sprawdzona wizualnie konwersja HDR do SDR dla obsługiwanych materiałów HDR. Nie deklarujemy pomiarowej wierności kolorów.
 
 ## Obsługiwane wersje Cubase i Nuendo
@@ -29,6 +30,8 @@ FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x6
 W Cubase 8 i 9 FrameBridge dostarcza też dźwięk otwieranych plików (na przykład MKV), dzięki czemu „Extract Audio From Video” działa tam tak jak w nowszych wersjach.
 
 Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pełna tabela jest w pliku [COMPATIBILITY.txt](../COMPATIBILITY.txt) (po angielsku).
+
+**Czy zadziała po aktualizacji Cubase lub Nuendo?** FrameBridge jest sprawdzony z wersjami wymienionymi wyżej, do Cubase i Nuendo 15.0.30, i przeznaczony do działania w całej wersji 15: instalator sam sprawdza silnik wideo każdej instalacji. Jeśli po aktualizacji w obrębie wersji 15 FrameBridge przestanie działać, uruchom ponownie INSTALL.cmd – aktualizacja mogła zastąpić plik programu. Nowa główna wersja, np. Cubase lub Nuendo 16, może zmienić silnik wideo i nie jest objęta tą betą.
 
 ## Sprawdzone formaty
 
@@ -60,15 +63,23 @@ Pełna instrukcja jest w plikach [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) i [RE
 
 Płynność odtwarzania zależy od materiału i sprzętu. Wymagające wideo 4K 10-bit (HEVC Main10, H.264 High10) potrzebuje wydajnego CPU/GPU: na starszym komputerze testowym (Intel Core i5-2550K + GeForce GTX 660) mocno się zacinało, bo GPU tej generacji nie dekoduje tych formatów sprzętowo. Na słabszych komputerach zalecamy wyłączenie miniatur wideo w DAW i pracę na kopiach roboczych H.264 8-bit w rozdzielczości do 1080p. Znane problemy opisano w [READ_ME_FIRST.txt](../READ_ME_FIRST.txt).
 
+## Kto tworzy FrameBridge
+
+Nazywam się Roman Aksonov, jestem realizatorem dźwięku w dubbingu i nagraniach lektorskich oraz twórcą FrameBridge. Zrobiłem go do własnej pracy: wideo od klientów często przychodzi w formatach, których Cubase nie otwiera, a napisy w osobnych plikach – i konwertowanie każdej dostawy albo wypalanie napisów w obrazie kosztuje czas. Pytania i opinie trafiają prosto do mnie: stark622@ukr.net.
+
+Również na: [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+
 ## Platforma i status
 
 - Windows x64
-- FrameBridge Beta
+- FrameBridge Beta 1 · wydanie 29 października 2026
 - Oprogramowanie komercyjne, zamknięte
 
 **[Kup FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Strona: [framebridge.cc](https://framebridge.cc/pl/)
 
 **Cena:** płacisz, ile chcesz — minimum 29 USD, sugerowane 59 USD. Zakup jednorazowy.
+
+Napisz na stark622@ukr.net w ciągu 14 dni od zakupu. Jeśli FrameBridge nie zainstaluje się lub nie będzie działać z Twoim Cubase albo Nuendo, otrzymasz pełny zwrot pieniędzy.
 
 **Wsparcie:** stark622@ukr.net
 

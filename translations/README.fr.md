@@ -15,6 +15,7 @@ FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows x64. 
 - Les fichiers de sous-titres externes sont chargés automatiquement et affichés sur l’image ; les modifications du fichier de sous-titres sont prises en compte en direct. Le fichier vidéo lui-même n’est jamais modifié.
 - Tous les formats de sous-titres sont affichés dans un même style (celui du SRT). Les images PGS/SUP (Blu-ray) et VobSub (DVD) sont lues comme du texte grâce à l’OCR intégré à Windows.
 - Aucun lecteur vidéo séparé, pack de codecs ou LAV Filters n’est nécessaire.
+- Ce n’est pas un plug-in VST : rien à charger dans le projet — FrameBridge étend directement le moteur vidéo natif.
 - Conversion HDR vers SDR vérifiée visuellement pour les médias HDR pris en charge. Aucune mesure quantitative de la fidélité des couleurs n’est revendiquée.
 
 ## Versions de Cubase et Nuendo prises en charge
@@ -29,6 +30,8 @@ FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows x64. 
 Sous Cubase 8 et 9, FrameBridge fournit aussi le son des fichiers qu’il ouvre (par exemple MKV), si bien que « Extraire l’audio de la vidéo » y fonctionne comme dans les versions plus récentes.
 
 Les éditions Cubase Pro, Artist, Elements, AI et LE sont détectées de la même manière. La matrice complète se trouve dans [COMPATIBILITY.txt](../COMPATIBILITY.txt) (en anglais).
+
+**Fonctionnera-t-il après une mise à jour de Cubase ou Nuendo ?** FrameBridge est vérifié avec les versions listées ci-dessus, jusqu’à Cubase et Nuendo 15.0.30, et prévu pour fonctionner sur toute la version 15 : l’installateur vérifie lui-même le moteur vidéo de chaque installation. Si FrameBridge ne fonctionne plus après une mise à jour au sein de la version 15, relancez INSTALL.cmd : la mise à jour a pu remplacer le fichier du programme. Une nouvelle version majeure, comme Cubase ou Nuendo 16, peut modifier le moteur vidéo et n’est pas couverte par cette bêta.
 
 ## Médias vérifiés
 
@@ -60,15 +63,23 @@ Les instructions complètes se trouvent dans [READ_ME_FIRST.txt](../READ_ME_FIRS
 
 La fluidité de lecture dépend du média et du matériel. La vidéo 4K 10 bits exigeante (HEVC Main10, H.264 High10) demande un CPU/GPU performant : sur un ancien PC de test (Intel Core i5-2550K + GeForce GTX 660), elle saccadait fortement, car un GPU de cette génération ne peut pas décoder ces formats matériellement. Sur les PC modestes, il est conseillé de désactiver les miniatures vidéo dans la DAW et de travailler avec des copies de travail H.264 8 bits jusqu’en 1080p. Les problèmes connus sont listés dans [READ_ME_FIRST.txt](../READ_ME_FIRST.txt).
 
+## Qui développe FrameBridge
+
+Je suis Roman Aksonov, ingénieur du son en doublage et voice-over, et développeur de FrameBridge. Je l’ai créé pour mon propre travail : les vidéos des clients arrivent souvent dans des formats que Cubase n’ouvre pas, avec les sous-titres dans des fichiers séparés, et convertir chaque livraison ou incruster les sous-titres dans l’image fait perdre du temps. Questions et retours m’arrivent directement : stark622@ukr.net.
+
+Également sur : [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+
 ## Plateforme et statut
 
 - Windows x64
-- FrameBridge Beta
+- FrameBridge Beta 1 · sortie le 29 octobre 2026
 - Logiciel commercial et propriétaire
 
 **[Acheter FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Site web : [framebridge.cc](https://framebridge.cc/fr/)
 
 **Prix :** prix libre — 29 USD minimum, 59 USD suggérés. Achat unique.
+
+Écrivez à stark622@ukr.net dans les 14 jours suivant l’achat. Si FrameBridge ne s’installe pas ou ne fonctionne pas avec votre Cubase ou Nuendo, vous êtes intégralement remboursé.
 
 **Assistance :** stark622@ukr.net
 

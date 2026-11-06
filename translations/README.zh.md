@@ -15,6 +15,7 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 - 外挂字幕文件自动加载并显示在画面上；修改字幕文件后会即时生效。视频文件本身永远不会被修改。
 - 所有字幕格式均以统一样式（与 SRT 相同）显示。蓝光 PGS/SUP 和 DVD VobSub 图形字幕通过 Windows 内置 OCR 识别为文本。
 - 无需单独的视频播放器、解码器包或 LAV Filters。
+- 不是 VST 插件：无需在工程中加载任何东西，FrameBridge 直接扩展原生视频引擎。
 - 对受支持的 HDR 素材进行 HDR 到 SDR 的转换，效果经过目视验证。不对色彩准确度作任何量化声明。
 
 ## 支持的 Cubase 和 Nuendo 版本
@@ -29,6 +30,8 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 在 Cubase 8 和 9 中，FrameBridge 还会提供所打开文件（例如 MKV）的音频，因此“从视频中提取音频”可以像在新版本中一样使用。
 
 Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完整列表请参阅 [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英文）。
+
+**升级 Cubase 或 Nuendo 后还能用吗？** FrameBridge 已在上方列出的版本（最高至 Cubase 和 Nuendo 15.0.30）上验证，设计为在整个 15 版本系列中工作：安装程序会自行检查每个安装的视频引擎。如果在 15 版本内升级后 FrameBridge 不再工作，请重新运行 INSTALL.cmd——升级可能替换了程序文件。新的主版本（例如 Cubase 或 Nuendo 16）可能会更改视频引擎，不在本测试版的支持范围内。
 
 ## 已验证的媒体
 
@@ -60,15 +63,23 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 播放流畅度取决于素材和硬件。高负载的 4K 10 位视频（HEVC Main10、H.264 High10）需要性能足够的 CPU/GPU：在一台较旧的测试电脑（Intel Core i5-2550K + GeForce GTX 660）上播放明显卡顿，因为这一代显卡无法对这些格式进行硬件解码。在性能较弱的电脑上，建议在 DAW 中关闭视频缩略图，并使用 1080p 及以下的 H.264 8 位工作副本。已知问题列于 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt)。
 
+## FrameBridge 的开发者
+
+我是 Roman Aksonov，配音与旁白录音工程师，也是 FrameBridge 的开发者。我为自己的工作开发了它：客户发来的视频经常是 Cubase 打不开的格式，字幕又是单独的文件；每次交付都要转码，或把字幕压进画面，非常耗时。问题和反馈会直接发到我这里：stark622@ukr.net。
+
+另见： [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+
 ## 平台与状态
 
 - Windows x64
-- FrameBridge Beta
+- FrameBridge Beta 1 · 2026 年 10 月 29 日发布
 - 商业专有软件
 
 **[购买 FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · 网站：[framebridge.cc](https://framebridge.cc/zh/)
 
 **价格：** 自定价格——最低 29 USD，建议 59 USD。一次性购买。
+
+请在购买后 14 天内发邮件至 stark622@ukr.net。如果 FrameBridge 无法在您的 Cubase 或 Nuendo 上安装或运行，将为您全额退款。
 
 **支持：** stark622@ukr.net
 

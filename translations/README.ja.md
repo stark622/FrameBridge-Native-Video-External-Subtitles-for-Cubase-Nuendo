@@ -15,6 +15,7 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 - 外部字幕ファイルを自動で読み込み、映像の上に表示します。字幕ファイルの変更もその場で反映されます。ビデオファイル自体は一切変更されません。
 - どの字幕フォーマットも統一された表示（SRT と同じ見た目）で描画されます。Blu-ray の PGS/SUP や DVD の VobSub の画像字幕は、Windows 内蔵の OCR でテキストとして読み取ります。
 - 別のビデオプレーヤー、コーデックパック、LAV Filters は不要です。
+- VST プラグインではありません。プロジェクトに何かを読み込む必要はなく、FrameBridge が標準のビデオエンジン自体を拡張します。
 - 対応する HDR 素材の HDR から SDR への変換を目視で確認済みです。色再現の正確さについて定量的な保証はしていません。
 
 ## 対応する Cubase / Nuendo のバージョン
@@ -29,6 +30,8 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 Cubase 8 と 9 では、FrameBridge が開いたファイル（MKV など）の音声も提供するため、「ビデオからオーディオを抽出」が新しいバージョンと同じように使えます。
 
 Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英語）をご覧ください。
+
+**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase / Nuendo 15.0.30 まで）で検証済みで、バージョン 15 全体での動作を想定しています。インストーラーが各インストールのビデオエンジンを自ら確認します。バージョン 15 内のアップデート後に動作しなくなった場合は、INSTALL.cmd をもう一度実行してください。アップデートでプログラムファイルが置き換えられた可能性があります。Cubase / Nuendo 16 のような新しいメジャーバージョンではビデオエンジンが変わる可能性があり、このベータの対象外です。
 
 ## 検証済みのメディア
 
@@ -60,15 +63,23 @@ VVC/H.266 は、このベータ版では意図的にサポートしていませ�
 
 再生のスムーズさは素材とハードウェアによって異なります。重い 4K 10 ビット映像（HEVC Main10、H.264 High10）には高性能な CPU/GPU が必要です。古いテスト用 PC（Intel Core i5-2550K + GeForce GTX 660）では、この世代の GPU がこれらのフォーマットをハードウェアでデコードできないため、大きくカクつきました。性能の低い PC では、DAW のビデオサムネイルをオフにし、1080p までの H.264 8 ビットの作業用コピーを使うことをおすすめします。既知の問題は [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) に記載しています。
 
+## FrameBridge の開発者
+
+吹き替え・ボイスオーバーのエンジニアで、FrameBridge の開発者の Roman Aksonov です。自分の仕事のために作りました。クライアントから届くビデオは Cubase で開けないフォーマットであることが多く、字幕も別ファイルです。納品のたびに変換したり、字幕を映像に焼き込んだりするのは時間がかかります。ご質問やご意見は直接私に届きます：stark622@ukr.net。
+
+関連ページ： [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+
 ## プラットフォームとステータス
 
 - Windows x64
-- FrameBridge Beta
+- FrameBridge Beta 1 · 2026年10月29日リリース
 - 商用のプロプライエタリソフトウェア
 
 **[FrameBridge を購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web サイト：[framebridge.cc](https://framebridge.cc/ja/)
 
 **価格：** 価格は自由に設定 — 最低 29 USD、推奨 59 USD。買い切りです。
+
+購入から14日以内に stark622@ukr.net までご連絡ください。FrameBridge がお使いの Cubase / Nuendo にインストールできない、または動作しない場合は全額返金します。
 
 **サポート：** stark622@ukr.net
 

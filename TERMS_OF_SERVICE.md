@@ -24,7 +24,9 @@ FrameBridge is beta software and may contain defects. Check the compatibility do
 
 ## Refunds and statutory rights
 
-For a purchase or refund request, contact the support address above or Creem through its customer support channels. Refunds and remedies are subject to applicable law and the relevant checkout terms. Nothing here excludes non-waivable consumer rights.
+**14-day refund:** if FrameBridge does not install or work with your Cubase or Nuendo, write to **stark622@ukr.net** within 14 days of purchase and you get a full refund.
+
+For any other purchase or refund request, contact the support address above or Creem through its customer support channels. Refunds and remedies are subject to applicable law and the relevant checkout terms. Nothing here excludes non-waivable consumer rights.
 
 ## Independence
 
