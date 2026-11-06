@@ -2,6 +2,7 @@
 import { ensureTable } from './e.js';
 
 const FAQ = ['Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update'];
+const OWNER_COUNTRIES = ['UA'];
 const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
 
 function esc(s) {
@@ -53,7 +54,15 @@ export async function onRequestGet({ request, env }) {
   // active time: measured value per page load; when the browser sent none (tab killed), the span of its events
   for (const s of S.values()) s.time = s.views.reduce((a, v) => a + (v.leave || Math.round((v.t1 - v.t0) / 1000)), 0);
   const sessions = [...S.values()];
-  const human = sessions.filter((s) => !s.bot);
+  for (const s of sessions) {
+    // behaviour no person shows: several pages in no time, or 3+ sections "seen" within 2 seconds
+    if (!s.bot && ((s.views.length >= 3 && s.time === 0 && !s.acts) || (s.time <= 2 && s.sees.size >= 3))) s.bot = 1;
+  }
+  // the owner tests the site from Ukraine, so those visits are left out of the report (rows stay stored; &owner=1 shows them)
+  const showOwner = url.searchParams.get('owner') === '1';
+  const owner = sessions.filter((s) => !s.bot && !showOwner && OWNER_COUNTRIES.includes(s.country));
+  const human = sessions.filter((s) => !s.bot && !owner.includes(s));
+  const keep = new Set(human.map((s) => s.sid));
   const engaged = human.filter((s) => s.acts > 0 || s.sees.size >= 2 || s.time >= 15);
 
   const by = (key) => {
@@ -72,7 +81,7 @@ export async function onRequestGet({ request, env }) {
   }
   const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {};
   for (const r of results) {
-    if (r.bot) continue;
+    if (!keep.has(r.sid)) continue;
     if (r.ev === 'faq') inc(faq, FAQ[+r.val - 1] || r.val);
     else if (r.ev === 'lang') inc(langSw, r.val);
     else if (r.ev === 'out') inc(out, r.val);
@@ -84,7 +93,7 @@ export async function onRequestGet({ request, env }) {
 
   const summary = {
     days, sessions_all: sessions.length, sessions_real_browser: human.length, sessions_engaged: engaged.length,
-    sessions_flagged_bot: sessions.length - human.length, buy_click_sessions: human.filter((s) => s.buy).length,
+    sessions_flagged_bot: sessions.filter((s) => s.bot).length, sessions_owner_excluded: owner.length, buy_click_sessions: human.filter((s) => s.buy).length,
     video_play_sessions: human.filter((s) => s.play).length, avg_active_seconds_engaged: avgTime,
   };
 
@@ -134,6 +143,7 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 <div class="tile"><b>${summary.video_play_sessions}</b>visits played the video</div>
 <div class="tile"><b>${avgTime} s</b>avg active time (engaged)</div>
 <div class="tile"><b>${summary.sessions_flagged_bot}</b>flagged as bots<br><span class="muted">excluded</span></div>
+<div class="tile"><b>${owner.length}</b>own visits (${OWNER_COUNTRIES.join(', ')})<br><span class="muted">${showOwner ? 'shown' : 'excluded'}</span></div>
 </div>
 ${table('Per day (UTC)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
 <div class="grid">

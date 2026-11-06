@@ -28,7 +28,10 @@ function parseUA(ua) {
   else if (/Chrome\//.test(ua)) br = 'Chrome';
   else if (/Safari\//.test(ua)) br = 'Safari';
   const dev = /iPad|Tablet/.test(ua) ? 'tablet' : (/Mobi|iPhone|Android/.test(ua) ? 'mobile' : 'desktop');
-  const bot = /bot|crawl|spider|slurp|headless|lighthouse|preview|python|curl|wget|phantom|puppeteer|playwright/i.test(ua) ? 1 : 0;
+  const named = /bot|crawl|spider|slurp|headless|lighthouse|preview|inspectiontool|google-|python|curl|wget|phantom|puppeteer|playwright|selenium/i.test(ua);
+  // a real Chrome always sends "KHTML, like Gecko" and a four-part version; scrapers often fake a short one
+  const fakeChrome = /Chrome\//.test(ua) && (!/KHTML, like Gecko/.test(ua) || /Chrome\/\d+\.\d+ /.test(ua));
+  const bot = named || fakeChrome ? 1 : 0;
   return { os, br, dev, bot };
 }
 
