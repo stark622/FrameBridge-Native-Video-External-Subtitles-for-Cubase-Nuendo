@@ -256,6 +256,10 @@ ${table('FAQ opened', sorted(faq), ['Question', 'Count'])}
 ${table('Language switched to', sorted(langSw), ['Language', 'Count'])}
 ${table('Outbound links', sorted(out), ['Site', 'Count'])}
 </div>
+${table('Recent visits (newest first, UTC)', human.slice(-100).reverse().map((s) => [
+    new Date(s.t0).toISOString().slice(5, 16).replace('T', ' '), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
+    `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : ''),
+  ]), ['Start', 'Country', 'System', 'Lang', 'From', 'Active · scroll', 'What they did'])}
 ${!env.CF_API_TOKEN
     ? '<h2>All visitors seen by Cloudflare</h2><p class="muted">Add the Pages secret CF_API_TOKEN (read-only analytics token) to list here every visitor of the last 31 days, including those before this counter.</p>'
     : cfError
@@ -265,10 +269,6 @@ ${!env.CF_API_TOKEN
             v.country, v.net, v.sys, v.time, v.pages.length ? v.pages.join(' → ') : '—', v.counter ? 'yes' : '']),
           ['Start', 'Type', 'Country', 'Network', 'System', 'On site', 'Pages', 'In this counter']) +
         `<div class="muted" style="margin-top:6px">${cf.visits.filter((v) => v.k === 'human').length} people · ${cf.visits.filter((v) => v.k === 'vpn').length} via VPN/servers (person or bot, unclear) · left out: ${cf.bots} bot loads (${cf.farm} from farms: 4+ countries in one minute), ${cf.owner} own (${OWNER_COUNTRIES.join(', ')}) · "unknown" time = one page, reading time not recorded before 4 Nov · Buy clicks and video plays are only in this counter</div>`}
-${table('Recent visits (newest first, UTC)', human.slice(-100).reverse().map((s) => [
-    new Date(s.t0).toISOString().slice(5, 16).replace('T', ' '), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
-    `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : ''),
-  ]), ['Start', 'Country', 'System', 'Lang', 'From', 'Active · scroll', 'What they did'])}
 </body></html>`;
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
 }
