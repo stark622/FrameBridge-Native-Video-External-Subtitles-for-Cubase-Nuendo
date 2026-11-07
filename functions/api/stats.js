@@ -213,8 +213,8 @@ export async function onRequestGet({ request, env }) {
     }, { headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
   }
 
-  const table = (title, rows, head) => `<h2>${esc(title)}</h2><table><tr>${head.map((h) => `<th>${esc(h)}</th>`).join('')}</tr>${
-    rows.length ? rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('') : `<tr><td colspan="${head.length}">—</td></tr>`}</table>`;
+  const table = (title, rows, head) => `<div class="box"><h2>${esc(title)}</h2><table><tr>${head.map((h) => `<th>${esc(h)}</th>`).join('')}</tr>${
+    rows.length ? rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('') : `<tr><td colspan="${head.length}">—</td></tr>`}</table></div>`;
   const pct = (n) => (human.length ? Math.round((100 * n) / human.length) + '%' : '—');
 
   const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -224,7 +224,7 @@ h1{margin:0 0 4px}h2{margin:28px 0 8px;font-size:18px}.muted{color:#9fb0c8}
 .tiles{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}.tile{background:#101a2e;border:1px solid #1d2a44;border-radius:12px;padding:12px 16px;min-width:150px}
 .tile b{display:block;font-size:26px}table{border-collapse:collapse;background:#101a2e;border:1px solid #1d2a44;border-radius:10px;min-width:320px}
 th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-align:top}th{color:#9fb0c8;font-weight:600}
-.grid{display:flex;flex-wrap:wrap;gap:24px}.trail{color:#9fb0c8;font-size:13px}a{color:#2ea8ff}</style></head><body>
+.grid{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}.box{min-width:0}.trail{color:#9fb0c8;font-size:13px}a{color:#2ea8ff}</style></head><body>
 <h1>FrameBridge — visit statistics</h1>
 <div class="muted">${allTime ? 'All time' : `Last ${days} day(s)`} · counted only from real browsers that ran the page script ·
 <a href="?key=${esc(url.searchParams.get('key'))}&days=1">1 day</a> · <a href="?key=${esc(url.searchParams.get('key'))}&days=7">7 days</a> ·
