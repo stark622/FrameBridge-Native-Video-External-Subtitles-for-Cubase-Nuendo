@@ -67,7 +67,7 @@ Playback speed depends on the media and the hardware. Heavy 4K 10-bit video (HEV
 
 I'm Roman Aksonov, a dubbing and voice-over engineer and the developer of FrameBridge. I made it for my own work: client videos often arrive in formats Cubase does not open, with subtitles as separate files, and converting every delivery or burning subtitles into the picture costs time. Questions and feedback come straight to me: stark622@ukr.net.
 
-Also on: [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+Also on: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
 ## Platform and status
 

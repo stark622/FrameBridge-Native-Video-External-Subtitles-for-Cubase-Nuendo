@@ -67,7 +67,7 @@ A fluidez da reprodução depende da mídia e do hardware. Vídeo 4K de 10 bits 
 
 Sou Roman Aksonov, engenheiro de dublagem e locução e desenvolvedor do FrameBridge. Eu o criei para o meu próprio trabalho: os vídeos dos clientes costumam chegar em formatos que o Cubase não abre, com as legendas em arquivos separados, e converter cada entrega ou gravar as legendas na imagem custa tempo. Dúvidas e opiniões chegam direto para mim: stark622@ukr.net.
 
-Também em: [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+Também em: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
 ## Plataforma e status
 

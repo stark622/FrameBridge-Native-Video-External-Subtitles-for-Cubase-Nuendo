@@ -67,7 +67,7 @@ Oynatma akıcılığı medyaya ve donanıma bağlıdır. Ağır 4K 10-bit video 
 
 Ben Roman Aksonov; dublaj ve seslendirme mühendisiyim, FrameBridge’in de geliştiricisiyim. Onu kendi işim için yaptım: müşterilerden gelen videolar çoğu zaman Cubase’in açmadığı formatlarda, altyazılar ise ayrı dosyalar halinde geliyor; her teslimatı dönüştürmek ya da altyazıyı görüntüye gömmek zaman kaybettiriyor. Sorular ve geri bildirimler doğrudan bana ulaşır: stark622@ukr.net.
 
-Ayrıca: [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+Ayrıca: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
 ## Platform ve durum
 

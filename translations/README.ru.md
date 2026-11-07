@@ -67,7 +67,7 @@ VVC/H.266 в этой бете намеренно не поддерживает�
 
 Я Роман Аксёнов, звукорежиссёр дубляжа и озвучания, разработчик FrameBridge. Сделал его для своей работы: видео от клиентов часто приходят в форматах, которые Cubase не открывает, а субтитры — отдельными файлами, и конвертировать каждую поставку или вшивать субтитры в картинку — это потеря времени. Вопросы и отзывы приходят напрямую мне: stark622@ukr.net.
 
-Также на: [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+Также на: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
 ## Платформа и статус
 

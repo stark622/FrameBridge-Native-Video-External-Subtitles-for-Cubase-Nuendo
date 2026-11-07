@@ -67,7 +67,7 @@ VVC/H.266 у цій беті навмисно не підтримується.
 
 Я Роман Аксьонов, звукорежисер дубляжу та озвучення, розробник FrameBridge. Зробив його для своєї роботи: відео від клієнтів часто надходять у форматах, які Cubase не відкриває, а субтитри — окремими файлами, і конвертувати кожну поставку чи вшивати субтитри в картинку — це втрата часу. Питання та відгуки надходять напряму мені: stark622@ukr.net.
 
-Також на: [KVR Audio](https://www.kvraudio.com/news/stark622-releases-framebridge-beta-for-native-video-playback-and-external-subtitles-in-cubase-and-nuendo-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
+Також на: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
 ## Платформа та статус
 
