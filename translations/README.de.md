@@ -45,7 +45,7 @@ Die Texterkennung von PGS/SUP und VobSub nutzt die in Windows installierten OCR-
 
 VVC/H.266 wird in dieser Beta bewusst nicht unterstützt.
 
-**Cubase oder Nuendo meldet „Datei ist entweder fehlerhaft oder Medientyp wird nicht unterstützt!“ – öffnet FrameBridge das Video?** Oft ja. Cubase und Nuendo zeigen diese Meldung, wenn die integrierte Video-Engine Container oder Codec der Datei nicht lesen kann – etwa MKV, WebM, MXF, HEVC von Smartphones wie dem iPhone oder Video mit variabler Bildrate. FrameBridge liest solche Dateien mit einem eigenen Decoder; die geprüften Formate stehen oben. Öffnet sich Ihre Datei trotzdem nicht, erhalten Sie innerhalb von 14 Tagen den vollen Kaufpreis zurück.
+**Cubase oder Nuendo meldet „Datei ist entweder fehlerhaft oder Medientyp wird nicht unterstützt!“ – öffnet FrameBridge das Video?** Oft ja. Cubase und Nuendo zeigen diese Meldung, wenn die integrierte Video-Engine mit Container, Codec oder Bildrate der Datei nicht zurechtkommt – etwa MKV, WebM, MXF, HEVC von Smartphones wie dem iPhone oder Video mit variabler Bildrate. FrameBridge liest solche Dateien mit einem eigenen Decoder; die geprüften Formate stehen oben. Öffnet sich Ihre Datei trotzdem nicht, erhalten Sie innerhalb von 14 Tagen den vollen Kaufpreis zurück.
 
 ## Installation und Wiederherstellung
 

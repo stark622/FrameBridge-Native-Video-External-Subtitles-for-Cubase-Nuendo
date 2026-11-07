@@ -45,7 +45,7 @@ Rozpoznawanie tekstu PGS/SUP i VobSub korzysta z języków OCR zainstalowanych w
 
 VVC/H.266 celowo nie jest obsługiwany w tej becie.
 
-**Cubase lub Nuendo pokazuje „Invalid or not supported file!” — czy FrameBridge otworzy to wideo?** Często tak. Cubase i Nuendo pokazują ten komunikat, gdy wbudowany silnik wideo nie potrafi odczytać kontenera lub kodeka pliku — na przykład MKV, WebM, MXF, HEVC z telefonów takich jak iPhone albo wideo o zmiennej liczbie klatek. FrameBridge odczytuje takie pliki własnym dekoderem; sprawdzone formaty są wymienione wyżej. Jeśli Twój plik nadal się nie otworzy, otrzymasz pełny zwrot pieniędzy w ciągu 14 dni.
+**Cubase lub Nuendo pokazuje „Invalid or not supported file!” — czy FrameBridge otworzy to wideo?** Często tak. Cubase i Nuendo pokazują ten komunikat, gdy wbudowany silnik wideo nie radzi sobie z kontenerem, kodekiem lub liczbą klatek pliku — na przykład MKV, WebM, MXF, HEVC z telefonów takich jak iPhone albo wideo o zmiennej liczbie klatek. FrameBridge odczytuje takie pliki własnym dekoderem; sprawdzone formaty są wymienione wyżej. Jeśli Twój plik nadal się nie otworzy, otrzymasz pełny zwrot pieniędzy w ciągu 14 dni.
 
 ## Instalacja i przywracanie
 

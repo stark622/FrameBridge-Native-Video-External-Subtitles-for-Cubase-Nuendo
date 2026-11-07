@@ -45,7 +45,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 本测试版有意不支持 VVC/H.266。
 
-**Cubase 或 Nuendo 提示“无效或不支持的文件！”——FrameBridge 能打开这个视频吗？** 很多情况下可以。当内置视频引擎无法读取文件的容器或编码时，Cubase 和 Nuendo 就会显示这条提示，例如 MKV、WebM、MXF、iPhone 等手机拍摄的 HEVC，或可变帧率的视频。FrameBridge 用自己的解码器读取这类文件；已验证的格式见上文。如果您的文件仍然无法打开，14 天内全额退款。
+**Cubase 或 Nuendo 提示“无效或不支持的文件！”——FrameBridge 能打开这个视频吗？** 很多情况下可以。当内置视频引擎无法处理文件的容器、编码或帧率时，Cubase 和 Nuendo 就会显示这条提示，例如 MKV、WebM、MXF、iPhone 等手机拍摄的 HEVC，或可变帧率的视频。FrameBridge 用自己的解码器读取这类文件；已验证的格式见上文。如果您的文件仍然无法打开，14 天内全额退款。
 
 ## 安装与还原
 
