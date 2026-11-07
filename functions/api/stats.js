@@ -13,7 +13,7 @@ const ZONE = 'd2f096ab8dda3ff2f77cab796160b463';
 const SITE_START = Date.UTC(2026, 9, 29);
 const BOT_UA = /bot|spider|crawl|checker|validator|inspectiontool|google-|headless|lighthouse|preview|curl|wget|python|go-http/i;
 const CLOUD = /google|amazon|aws|microsoft|azure|akamai|oracle|alibaba|tencent|huawei/i;
-const VPN = /digitalocean|ovh|hetzner|linode|scaleway|vultr|choopa|contabo|leaseweb|ionos|hostinger|datacamp|m247|powerhouse|gsl networks|zenlayer|g-core|psychz|cdn77|packethub|tzulo|hostroyale|sondatech|clouvider|performive|quadranet|servers\.com|hosting|server|gthost|estnoc/i;
+const VPN = /digitalocean|ovh|hetzner|linode|scaleway|vultr|choopa|contabo|leaseweb|ionos|hostinger|datacamp|m247|powerhouse|gsl networks|zenlayer|g-core|psychz|cdn77|packethub|tzulo|hostroyale|sondatech|clouvider|performive|quadranet|servers\.com|hosting|server|gthost|estnoc|custodian|datacent/i;
 
 async function cfQuery(token, parts) {
   const r = await fetch('https://api.cloudflare.com/client/v4/graphql', {
@@ -42,7 +42,7 @@ async function cfVisitors(token, sinceMs, showOwner) {
     'datetime clientIP clientCountryName clientASNDescription userAgentOS userAgentBrowser userAgent'));
   for (const r of rows) {
     const ua = r.userAgent || '', net = r.clientASNDescription || '';
-    const fakeChrome = /Chrome\//.test(ua) && (!/KHTML, like Gecko/.test(ua) || /Chrome\/\d+(\.\d+)? /.test(ua));
+    const fakeChrome = /Chrome\//.test(ua) && (!/KHTML, like Gecko/.test(ua) || /Chrome\/\d+(\.\d+)? /.test(ua) || (/Windows NT/.test(ua) && !/Win64|WOW64/.test(ua)));
     r.k = BOT_UA.test(ua) || BOT_UA.test(r.userAgentBrowser || '') || fakeChrome || CLOUD.test(net) ? 'bot'
       : !showOwner && OWNER_COUNTRIES.includes(r.clientCountryName) ? 'owner' : VPN.test(net) ? 'vpn' : 'human';
   }
@@ -82,9 +82,13 @@ async function cfVisitors(token, sinceMs, showOwner) {
     // reading time is visible only when the visitor moved between pages or this counter was running (from 4 Nov)
     v.time = pages.length <= 1 && !counter && sec < 60 ? 'unknown' : sec < 60 ? `${sec} s` : `${Math.round(sec / 60)} min`;
     v.pages = pages;
+    const langs = new Set(pages.filter((x) => /^\/[a-z]{2}(-[a-z]{2})?\/$/.test(x) || x === '/'));
+    v.crawler = langs.size >= 5 || pages.length > 12;
     v.counter = counter;
     delete v.ip;
   }
+  result.bots += visits.filter((v) => v.crawler).length;
+  result.visits = visits.filter((v) => !v.crawler);
   return result;
 }
 
