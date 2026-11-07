@@ -1,7 +1,7 @@
 // Private statistics report: /api/stats?key=<STATS_KEY>&days=7|all   (&format=json for aggregates, &full=1 adds every visit and event)
 import { ensureTable } from './e.js';
 
-const FAQ = ['Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update'];
+const FAQ = ['Invalid or not supported file', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update'];
 const OWNER_COUNTRIES = ['UA'];
 const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
 

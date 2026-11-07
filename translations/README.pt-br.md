@@ -45,6 +45,8 @@ O reconhecimento de texto de PGS/SUP e VobSub usa os idiomas de OCR instalados n
 
 O VVC/H.266 não é suportado nesta beta, por decisão intencional.
 
+**O Cubase ou o Nuendo mostra “Arquivo inválido ou não suportado.” — o FrameBridge vai abrir o vídeo?** Muitas vezes, sim. O Cubase e o Nuendo mostram essa mensagem quando o mecanismo de vídeo nativo não consegue ler o contêiner ou o codec do arquivo — por exemplo MKV, WebM, MXF, HEVC de celulares como o iPhone ou vídeo com taxa de quadros variável. O FrameBridge lê esses arquivos com seu próprio decodificador; os formatos verificados estão listados acima. Se o seu arquivo ainda assim não abrir, você recebe o reembolso integral em até 14 dias.
+
 ## Instalação e restauração
 
 - Feche o Cubase e o Nuendo e execute o `INSTALL.cmd`. As instalações registradas são encontradas automaticamente; caso contrário, escolha o EXE ou a pasta do programa.

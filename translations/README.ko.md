@@ -45,6 +45,8 @@ PGS/SUP와 VobSub의 텍스트 인식에는 Windows에 설치된 OCR 언어가 �
 
 VVC/H.266은 이번 베타에서 의도적으로 지원하지 않습니다.
 
+**Cubase나 Nuendo에서 “Invalid or not supported file!”이라고 나옵니다. FrameBridge로 열 수 있나요?** 대부분 가능합니다. 이 메시지는 기본 비디오 엔진이 파일의 컨테이너나 코덱을 읽지 못할 때 표시됩니다. 예를 들어 MKV, WebM, MXF, iPhone 같은 스마트폰으로 촬영한 HEVC, 가변 프레임 레이트 비디오 등입니다. FrameBridge는 자체 디코더로 이러한 파일을 읽습니다. 검증된 포맷은 위에 나와 있습니다. 그래도 파일이 열리지 않으면 14일 이내에 전액 환불해 드립니다.
+
 ## 설치 및 복원
 
 - Cubase와 Nuendo를 닫고 `INSTALL.cmd`를 실행하세요. 등록된 설치는 자동으로 찾아지며, 찾지 못하면 프로그램의 EXE 파일이나 폴더를 선택하면 됩니다.
