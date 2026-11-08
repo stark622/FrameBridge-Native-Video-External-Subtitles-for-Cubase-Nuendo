@@ -31,7 +31,7 @@ In Cubase 8 und 9 liefert FrameBridge zusätzlich den Ton der geöffneten Dateie
 
 Die Editionen Cubase Pro, Artist, Elements, AI und LE werden auf dieselbe Weise erkannt. Die vollständige Matrix steht in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (Englisch).
 
-**Funktioniert es nach einem Update von Cubase oder Nuendo?** FrameBridge ist mit den oben aufgeführten Versionen bis Cubase und Nuendo 15.0.30 geprüft und für die gesamte Version 15 ausgelegt: Das Installationsprogramm prüft die Video-Engine jeder Installation selbst. Funktioniert FrameBridge nach einem Update innerhalb von Version 15 nicht mehr, führen Sie INSTALL.cmd erneut aus – das Update hat möglicherweise die Programmdatei ersetzt. Eine neue Hauptversion wie Cubase oder Nuendo 16 kann die Video-Engine ändern und ist von dieser Beta nicht abgedeckt.
+**Funktioniert es nach einem Update von Cubase oder Nuendo?** FrameBridge ist mit den oben aufgeführten Versionen bis Cubase und Nuendo 15.0.30 geprüft und dürfte in der gesamten Version 15 weiter funktionieren, eine Garantie gibt es dafür aber nicht. Eine neue Hauptversion wie Cubase oder Nuendo 16 kann die Video-Engine ändern – die Nutzung von FrameBridge damit erfolgt auf eigenes Risiko. Funktioniert FrameBridge nach einem Update nicht mehr, schreiben Sie dem Support.
 
 ## Geprüfte Medienunterstützung
 
@@ -68,7 +68,7 @@ Die Wiedergabegeschwindigkeit hängt vom Material und von der Hardware ab. Anspr
 
 ## Wer FrameBridge entwickelt
 
-Ich bin Roman Aksonov, Toningenieur für Synchronisation und Voice-over und Entwickler von FrameBridge. Ich habe es für meine eigene Arbeit gebaut: Videos von Kunden kommen oft in Formaten, die Cubase nicht öffnet, die Untertitel als separate Dateien – und jede Lieferung zu konvertieren oder Untertitel ins Bild einzubrennen kostet Zeit. Fragen und Feedback landen direkt bei mir: stark622@ukr.net.
+Ich bin stark622, Toningenieur für Synchronisation und Voice-over und Entwickler von FrameBridge. Ich habe es für meine eigene Arbeit gebaut: Videos von Kunden kommen oft in Formaten, die Cubase nicht öffnet, die Untertitel als separate Dateien – und jede Lieferung zu konvertieren oder Untertitel ins Bild einzubrennen kostet Zeit. Fragen und Feedback landen direkt bei mir: stark622@ukr.net.
 
 Auch auf: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 

@@ -4,7 +4,7 @@ FrameBridge Beta is installed by `INSTALL.cmd` and removed by `UNINSTALL.cmd`. T
 
 ## What the installer changes
 
-Only in the Cubase or Nuendo installations you select, and only if the program is a genuine Steinberg Cubase/Nuendo whose video engine is a supported version. Anything else is not offered and not changed.
+Only in the Cubase or Nuendo installations you select, and only if the program is recognised as Steinberg Cubase/Nuendo and its video engine is a supported version. Anything else is not offered and not changed.
 
 | Location | Change |
 |---|---|
@@ -28,7 +28,7 @@ The installer asks for administrator rights (Windows UAC) only because the Stein
 - Every original file is copied to `_dsreader` and checked by SHA-256 **before** anything is replaced, and that record is written to disk first. If the installation is interrupted at any point (crash, power loss, closed window), `UNINSTALL.cmd` can always restore the original.
 - Files are replaced in one step and checked by SHA-256 after copying.
 - `UNINSTALL.cmd` restores the original files byte for byte and checks them again. It refuses to change anything it does not recognise: if a Cubase/Nuendo update has meanwhile installed a new original, uninstall leaves it alone instead of putting an old file back.
-- After a Cubase/Nuendo update within the same version (for example 15.0.x), run `INSTALL.cmd` again if FrameBridge no longer works.
+- If FrameBridge stops working after a Cubase/Nuendo update, write to support (address below). The updated program itself keeps working with its own video engine.
 
 ## Local diagnostic log
 

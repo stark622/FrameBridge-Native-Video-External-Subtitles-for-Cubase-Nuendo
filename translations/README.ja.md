@@ -31,7 +31,7 @@ Cubase 8 と 9 では、FrameBridge が開いたファイル（MKV など）の�
 
 Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英語）をご覧ください。
 
-**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase / Nuendo 15.0.30 まで）で検証済みで、バージョン 15 全体での動作を想定しています。インストーラーが各インストールのビデオエンジンを自ら確認します。バージョン 15 内のアップデート後に動作しなくなった場合は、INSTALL.cmd をもう一度実行してください。アップデートでプログラムファイルが置き換えられた可能性があります。Cubase / Nuendo 16 のような新しいメジャーバージョンではビデオエンジンが変わる可能性があり、このベータの対象外です。
+**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase / Nuendo 15.0.30 まで）で検証済みで、バージョン 15 の間はおそらく動作し続けますが、保証はありません。Cubase / Nuendo 16 のような新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。
 
 ## 検証済みのメディア
 
@@ -68,7 +68,7 @@ VVC/H.266 は、このベータ版では意図的にサポートしていませ�
 
 ## FrameBridge の開発者
 
-吹き替え・ボイスオーバーのエンジニアで、FrameBridge の開発者の Roman Aksonov です。自分の仕事のために作りました。クライアントから届くビデオは Cubase で開けないフォーマットであることが多く、字幕も別ファイルです。納品のたびに変換したり、字幕を映像に焼き込んだりするのは時間がかかります。ご質問やご意見は直接私に届きます：stark622@ukr.net。
+吹き替え・ボイスオーバーのエンジニアで、FrameBridge の開発者の stark622 です。自分の仕事のために作りました。クライアントから届くビデオは Cubase で開けないフォーマットであることが多く、字幕も別ファイルです。納品のたびに変換したり、字幕を映像に焼き込んだりするのは時間がかかります。ご質問やご意見は直接私に届きます：stark622@ukr.net。
 
 関連ページ： [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 

@@ -31,7 +31,7 @@ W Cubase 8 i 9 FrameBridge dostarcza też dźwięk otwieranych plików (na przyk
 
 Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pełna tabela jest w pliku [COMPATIBILITY.txt](../COMPATIBILITY.txt) (po angielsku).
 
-**Czy zadziała po aktualizacji Cubase lub Nuendo?** FrameBridge jest sprawdzony z wersjami wymienionymi wyżej, do Cubase i Nuendo 15.0.30, i przeznaczony do działania w całej wersji 15: instalator sam sprawdza silnik wideo każdej instalacji. Jeśli po aktualizacji w obrębie wersji 15 FrameBridge przestanie działać, uruchom ponownie INSTALL.cmd – aktualizacja mogła zastąpić plik programu. Nowa główna wersja, np. Cubase lub Nuendo 16, może zmienić silnik wideo i nie jest objęta tą betą.
+**Czy zadziała po aktualizacji Cubase lub Nuendo?** FrameBridge jest sprawdzony z wersjami wymienionymi wyżej, do Cubase i Nuendo 15.0.30, i najpewniej będzie działać w całej wersji 15, choć nie jest to gwarantowane. Nowa główna wersja, np. Cubase lub Nuendo 16, może zmienić silnik wideo — korzystasz z FrameBridge w niej na własne ryzyko. Jeśli po aktualizacji FrameBridge przestanie działać, napisz do wsparcia.
 
 ## Sprawdzone formaty
 
@@ -68,7 +68,7 @@ Płynność odtwarzania zależy od materiału i sprzętu. Wymagające wideo 4K 1
 
 ## Kto tworzy FrameBridge
 
-Nazywam się Roman Aksonov, jestem realizatorem dźwięku w dubbingu i nagraniach lektorskich oraz twórcą FrameBridge. Zrobiłem go do własnej pracy: wideo od klientów często przychodzi w formatach, których Cubase nie otwiera, a napisy w osobnych plikach – i konwertowanie każdej dostawy albo wypalanie napisów w obrazie kosztuje czas. Pytania i opinie trafiają prosto do mnie: stark622@ukr.net.
+Tu stark622, jestem realizatorem dźwięku w dubbingu i nagraniach lektorskich oraz twórcą FrameBridge. Zrobiłem go do własnej pracy: wideo od klientów często przychodzi w formatach, których Cubase nie otwiera, a napisy w osobnych plikach – i konwertowanie każdej dostawy albo wypalanie napisów w obrazie kosztuje czas. Pytania i opinie trafiają prosto do mnie: stark622@ukr.net.
 
 Również na: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 

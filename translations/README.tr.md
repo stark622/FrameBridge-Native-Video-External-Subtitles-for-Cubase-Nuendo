@@ -31,7 +31,7 @@ Cubase 8 ve 9’da FrameBridge, açtığı dosyaların sesini de sağlar (örne�
 
 Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../COMPATIBILITY.txt) dosyasındadır (İngilizce).
 
-**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve 15 sürümünün tamamında çalışacak şekilde tasarlanmıştır: yükleyici her kurulumun video motorunu kendisi kontrol eder. 15 sürümü içindeki bir güncellemeden sonra FrameBridge çalışmayı bırakırsa INSTALL.cmd’yi yeniden çalıştırın; güncelleme program dosyasını değiştirmiş olabilir. Cubase veya Nuendo 16 gibi yeni bir ana sürüm video motorunu değiştirebilir ve bu beta kapsamında değildir.
+**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve büyük olasılıkla 15 sürümünün tamamında çalışmaya devam edecektir, ancak bu garanti edilmez. Cubase veya Nuendo 16 gibi yeni bir ana sürüm video motorunu değiştirebilir; FrameBridge’i onunla kullanmak sizin sorumluluğunuzdadır. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
 ## Doğrulanmış medya desteği
 
@@ -68,7 +68,7 @@ Oynatma akıcılığı medyaya ve donanıma bağlıdır. Ağır 4K 10-bit video 
 
 ## FrameBridge’i kim geliştiriyor
 
-Ben Roman Aksonov; dublaj ve seslendirme mühendisiyim, FrameBridge’in de geliştiricisiyim. Onu kendi işim için yaptım: müşterilerden gelen videolar çoğu zaman Cubase’in açmadığı formatlarda, altyazılar ise ayrı dosyalar halinde geliyor; her teslimatı dönüştürmek ya da altyazıyı görüntüye gömmek zaman kaybettiriyor. Sorular ve geri bildirimler doğrudan bana ulaşır: stark622@ukr.net.
+Ben stark622; dublaj ve seslendirme mühendisiyim, FrameBridge’in de geliştiricisiyim. Onu kendi işim için yaptım: müşterilerden gelen videolar çoğu zaman Cubase’in açmadığı formatlarda, altyazılar ise ayrı dosyalar halinde geliyor; her teslimatı dönüştürmek ya da altyazıyı görüntüye gömmek zaman kaybettiriyor. Sorular ve geri bildirimler doğrudan bana ulaşır: stark622@ukr.net.
 
 Ayrıca: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
