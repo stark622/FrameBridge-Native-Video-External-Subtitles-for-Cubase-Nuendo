@@ -148,8 +148,8 @@ export async function onRequestGet({ request, env }) {
   for (const s of sessions) {
     // behaviour no person shows: several pages in no time, or 3+ sections "seen" within 2 seconds
     if (!s.bot && ((s.views.length >= 3 && s.time === 0 && !s.acts) || (s.time <= 2 && s.sees.size >= 3))) s.bot = 1;
-    // 0 seconds on the page and nothing done: not a person reading the site
-    if (!s.bot && s.time === 0 && !s.acts && !s.sees.size) s.bot = 1;
+    // under 4 seconds and no click at all (Buy, video, YouTube, links, language, FAQ): not a person reading the site
+    if (!s.bot && s.time < 4 && !s.acts) s.bot = 1;
   }
   // the owner tests the site from Ukraine, so those visits are left out of the report (rows stay stored; &owner=1 shows them)
   const showOwner = url.searchParams.get('owner') === '1';
