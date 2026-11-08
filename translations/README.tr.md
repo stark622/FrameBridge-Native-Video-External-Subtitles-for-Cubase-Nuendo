@@ -60,6 +60,7 @@ Ayrıntılı talimatlar [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) ve [README.txt
 - Güncel sürüm: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
 - SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
 - [VirusTotal raporu](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (31 Ekim 2026 itibarıyla): 1/63 — tek bir motordan (MaxSecure) gelen tek bir genel sezgisel tespit; Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec ve taramayı tamamlayan diğer motorlar hiçbir şey bulmadı.
+- Yükleyicinin bilgisayarınızda neyi değiştirdiği ve bunu kendiniz nasıl kontrol edeceğiniz: [SECURITY.md](../SECURITY.md)
 
 ## Performans
 

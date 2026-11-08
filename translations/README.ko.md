@@ -60,6 +60,7 @@ VVC/H.266은 이번 베타에서 의도적으로 지원하지 않습니다.
 - 현재 릴리스: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
 - SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
 - [VirusTotal 보고서](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection)(2026년 10월 31일 기준): 1/63 — 엔진 하나(MaxSecure)의 일반적인 휴리스틱 탐지 1건뿐입니다. Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec 등 검사를 마친 나머지 엔진에서는 아무것도 탐지되지 않았습니다.
+- 설치 프로그램이 PC에서 무엇을 변경하는지, 직접 확인하는 방법: [SECURITY.md](../SECURITY.md)
 
 ## 성능
 

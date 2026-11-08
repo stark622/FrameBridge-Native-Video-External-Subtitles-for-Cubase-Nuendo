@@ -1,6 +1,6 @@
 # FrameBridge Privacy Policy
 
-**Effective date:** 29 October 2026 · **Updated:** 4 November 2026
+**Effective date:** 29 October 2026 · **Updated:** 8 November 2026
 
 This policy explains how information is handled in connection with the FrameBridge website, purchase process and customer support.
 
@@ -26,7 +26,7 @@ Information received through orders or support is used for order fulfilment, res
 
 ## The software
 
-FrameBridge runs locally on your computer. It does not send usage data, telemetry or your media files anywhere. Subtitle text recognition uses the OCR built into Windows on your own computer.
+FrameBridge runs locally on your computer. It does not send usage data, telemetry or your media files anywhere. Subtitle text recognition uses the OCR built into Windows on your own computer. To help diagnose problems, FrameBridge writes a local technical log, `%TEMP%\cubase_dsreader.log` (for example program and media file paths, video format and timing details). It stays on your computer, is never sent anywhere and can be deleted at any time. To help diagnose problems, FrameBridge writes a local technical log, `%TEMP%\cubase_dsreader.log` (for example program and media file paths, video format and timing details). It stays on your computer, is never sent anywhere and can be deleted at any time.
 
 ## Third-party services
 

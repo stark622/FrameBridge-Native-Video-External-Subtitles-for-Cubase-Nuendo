@@ -60,6 +60,7 @@ Pełna instrukcja jest w plikach [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) i [RE
 - Aktualne wydanie: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
 - SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
 - [Raport VirusTotal](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (stan na 31 października 2026): 1/63 — pojedyncza ogólna heurystyka jednego silnika (MaxSecure); Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec i pozostałe silniki, które ukończyły skanowanie, niczego nie wykrywają.
+- Co instalator zmienia na komputerze i jak samodzielnie to sprawdzić: [SECURITY.md](../SECURITY.md)
 
 ## Wydajność
 

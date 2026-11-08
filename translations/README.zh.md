@@ -60,6 +60,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 - 当前版本：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
 - SHA-256：`c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
 - [VirusTotal 报告](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection)（截至 2026 年 10 月 31 日）：1/63——仅有一个引擎（MaxSecure）给出一条通用启发式检测；Microsoft Defender、Kaspersky、BitDefender、ESET、Malwarebytes、Sophos、Symantec 以及其他完成扫描的引擎均未检出。
+- 安装程序会在您的电脑上更改什么，以及如何自行核实: [SECURITY.md](../SECURITY.md)
 
 ## 性能
 

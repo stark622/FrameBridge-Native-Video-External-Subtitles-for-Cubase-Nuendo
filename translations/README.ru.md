@@ -60,6 +60,7 @@ VVC/H.266 в этой бете намеренно не поддерживает�
 - Текущий релиз: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
 - SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
 - [Отчёт VirusTotal](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (по состоянию на 31 октября 2026 года): 1/63 — единственное общее эвристическое срабатывание одного движка (MaxSecure); Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec и остальные завершившие проверку движки ничего не находят.
+- Что именно установщик меняет на компьютере и как проверить это самому: [SECURITY.md](../SECURITY.md)
 
 ## Производительность
 
