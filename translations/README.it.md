@@ -31,7 +31,7 @@ In Cubase 8 e 9 FrameBridge fornisce anche l’audio dei file che apre (ad esemp
 
 Le edizioni Cubase Pro, Artist, Elements, AI e LE vengono rilevate allo stesso modo. La matrice completa è in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (in inglese).
 
-**Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase e Nuendo 15.0.30, e molto probabilmente continuerà a funzionare per tutta la versione 15, anche se non è garantito. Una nuova versione principale, come Cubase o Nuendo 16, può cambiare il motore video: usarla con FrameBridge è a tuo rischio. Se dopo un aggiornamento FrameBridge smette di funzionare, scrivi all’assistenza.
+**Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase e Nuendo 15.0.30, e molto probabilmente continuerà a funzionare per tutta la versione 15, anche se non è garantito. Una nuova versione principale, come Cubase o Nuendo 16, può cambiare il motore video: usarla con FrameBridge è a tuo rischio. Per aggiornare Cubase o Nuendo, esegui prima UNINSTALL.cmd, installa l’aggiornamento e poi esegui di nuovo INSTALL.cmd. Se dopo un aggiornamento FrameBridge smette di funzionare, scrivi all’assistenza.
 
 ## Formati verificati
 

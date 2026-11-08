@@ -28,7 +28,7 @@ The installer asks for administrator rights (Windows UAC) only because the Stein
 - Every original file is copied to `_dsreader` and checked by SHA-256 **before** anything is replaced, and that record is written to disk first. If the installation is interrupted at any point (crash, power loss, closed window), `UNINSTALL.cmd` can always restore the original.
 - Files are replaced in one step and checked by SHA-256 after copying.
 - `UNINSTALL.cmd` restores the original files byte for byte and checks them again. It refuses to change anything it does not recognise: if a Cubase/Nuendo update has meanwhile installed a new original, uninstall leaves it alone instead of putting an old file back.
-- If FrameBridge stops working after a Cubase/Nuendo update, write to support (address below). The updated program itself keeps working with its own video engine.
+- **Updating Cubase/Nuendo:** run `UNINSTALL.cmd` first, then install the Steinberg update, then run `INSTALL.cmd` again. If you update without uninstalling first, the updated program keeps working with its own new video engine, but `INSTALL.cmd` stops because the saved original no longer matches — in that case write to support (address below).
 
 ## Local diagnostic log
 

@@ -31,7 +31,7 @@ Cubase 8 ve 9’da FrameBridge, açtığı dosyaların sesini de sağlar (örne�
 
 Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../COMPATIBILITY.txt) dosyasındadır (İngilizce).
 
-**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve büyük olasılıkla 15 sürümünün tamamında çalışmaya devam edecektir, ancak bu garanti edilmez. Cubase veya Nuendo 16 gibi yeni bir ana sürüm video motorunu değiştirebilir; FrameBridge’i onunla kullanmak sizin sorumluluğunuzdadır. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
+**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve büyük olasılıkla 15 sürümünün tamamında çalışmaya devam edecektir, ancak bu garanti edilmez. Cubase veya Nuendo 16 gibi yeni bir ana sürüm video motorunu değiştirebilir; FrameBridge’i onunla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
 ## Doğrulanmış medya desteği
 
