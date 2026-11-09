@@ -55,8 +55,8 @@ Codec coverage:
   VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo,
   VP8, VP9 10-bit and Xvid.
 
-The supported regression matrix passes 31/31 files. Long real-world HEVC, HDR
-and DCP samples were also opened through the common path. HDR-to-SDR conversion
+The supported regression matrix passes 31/31 files. Long real-world HEVC and
+HDR samples were also opened through the common path. HDR-to-SDR conversion
 was visually verified; no quantitative color-accuracy claim is made.
 
 VVC/H.266 is excluded from this beta and is rejected before decoder opening.

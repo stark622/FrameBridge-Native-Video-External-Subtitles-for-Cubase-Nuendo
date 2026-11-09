@@ -28,7 +28,7 @@ FrameBridge расширяет штатный видеодвижок Cubase и N
 
 **Соседние сборки с высокой вероятностью работают.** Видеодвижок почти не меняется в пределах одного поколения продукта: если, например, проверена Nuendo 12.0.52, то 12.0.20 или 12.0.70 с высокой вероятностью тоже будут работать. Установщик сам проверяет видеодвижок каждой установки: совместимая предлагается к установке, несовместимая не попадает в список, и ничего не меняется. Это не гарантия. Более старые редакции с тем же поколением движка (например, Nuendo 7–9, Cubase 8.5 / 9.5) тоже могут подойти, но не тестировались.
 
-Миниатюры на видеотреке: Cubase и Nuendo 12 и новее. В Cubase 8–11 и Nuendo 10 видео играет без миниатюр.
+Миниатюры на видеотреке есть во всех проверенных версиях, кроме Cubase 10.5–11 и Nuendo 10 — там видео играет без миниатюр.
 
 Редакции Cubase Pro, Artist, Elements, AI и LE определяются так же. Полная таблица — в [COMPATIBILITY.txt](../COMPATIBILITY.txt) (на английском).
 
@@ -38,9 +38,9 @@ FrameBridge расширяет штатный видеодвижок Cubase и N
 
 **Контейнеры:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, WMV / ASF и OGV.
 
-**Видеокодеки и профили:** APV, AV1 8 бит, AV1 10 бит, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-кадры / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10 бит, WMV 8 и Xvid.
+**Видеокодеки и профили:** APV, AV1 8 бит, AV1 10 бит, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-кадры / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10 бит, WMV 8 и Xvid.
 
-Проверено на тяжёлом реальном материале: 4K HDR Blu-ray remux (HEVC, ~25 ГБ) в проекте с 8 дорожками актёров и множеством плагинов, 4K HEVC эпизод со стриминга (~7 ГБ) и 2K ProRes DCP (~180 ГБ) — плавное воспроизведение и перемотка.
+Проверено на тяжёлом реальном материале: 4K HDR Blu-ray remux (HEVC, ~25 ГБ) в проекте с 8 дорожками актёров и множеством плагинов и 4K HEVC эпизод со стриминга (~7 ГБ) — плавное воспроизведение и перемотка.
 
 **Внешние субтитры:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP и VobSub (пара .idx + .sub). Положите файл субтитров рядом с видео под тем же именем (например, `film.mkv` + `film.srt`).
 
@@ -53,7 +53,7 @@ VVC/H.266 в этой бете намеренно не поддерживает�
 
 **Контейнеры:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
 
-**Видеокодеки:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+**Видеокодеки:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, H.263, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
 
 Их декодирует тот же FFmpeg 9.0.2 внутри FrameBridge. Обычно они открываются и вполне могут играть плавно, но плавное воспроизведение и перемотка проверены только для форматов выше. Действует возврат за 14 дней.
 

@@ -28,7 +28,7 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 
 **Le versioni vicine molto probabilmente funzionano.** Il motore video cambia pochissimo all’interno della stessa generazione di prodotto: se, ad esempio, Nuendo 12.0.52 è verificato, molto probabilmente funzioneranno anche 12.0.20 o 12.0.70. Il programma di installazione controlla da sé il motore video di ogni installazione: quella compatibile viene proposta per l’installazione, quella incompatibile non compare nell’elenco e non viene modificato nulla. Non è una garanzia. Anche edizioni più vecchie con la stessa generazione di motore (ad esempio Nuendo 7–9, Cubase 8.5 / 9.5) potrebbero essere idonee, ma non sono state testate.
 
-Miniature sulla traccia video: Cubase e Nuendo 12 e successivi. In Cubase 8–11 e Nuendo 10 il video viene riprodotto senza miniature.
+Le miniature sulla traccia video compaiono in tutte le versioni verificate, tranne Cubase 10.5–11 e Nuendo 10, dove il video viene riprodotto senza miniature.
 
 Le edizioni Cubase Pro, Artist, Elements, AI e LE vengono rilevate allo stesso modo. La matrice completa è in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (in inglese).
 
@@ -38,9 +38,9 @@ Le edizioni Cubase Pro, Artist, Elements, AI e LE vengono rilevate allo stesso m
 
 **Contenitori:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, WMV / ASF e OGV.
 
-**Codec video e profili:** APV, AV1 8 bit, AV1 10 bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frame / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10 bit, WMV 8 e Xvid.
+**Codec video e profili:** APV, AV1 8 bit, AV1 10 bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frame / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10 bit, WMV 8 e Xvid.
 
-Testato su materiale reale e pesante: un remux Blu-ray 4K HDR (HEVC, ~25 GB) in un progetto con 8 tracce di dialogo e molti plugin, un episodio 4K HEVC da streaming (~7 GB) e un DCP ProRes 2K (~180 GB), con riproduzione e spostamento fluidi.
+Testato su materiale reale e pesante: un remux Blu-ray 4K HDR (HEVC, ~25 GB) in un progetto con 8 tracce di dialogo e molti plugin e un episodio 4K HEVC da streaming (~7 GB), con riproduzione e spostamento fluidi.
 
 **Sottotitoli esterni:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP e VobSub (la coppia .idx + .sub). Metti il file di sottotitoli accanto al video, con lo stesso nome (ad esempio `film.mkv` + `film.srt`).
 
@@ -53,7 +53,7 @@ VVC/H.266 non è supportato di proposito in questa beta.
 
 **Contenitori:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
 
-**Codec video:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+**Codec video:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, H.263, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
 
 Decodificati dallo stesso FFmpeg 9.0.2 incluso in FrameBridge. Di solito si aprono e possono benissimo essere riprodotti in modo fluido, ma solo i formati sopra sono verificati per riproduzione e spostamento fluidi. Vale il rimborso entro 14 giorni.
 
