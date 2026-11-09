@@ -12,10 +12,11 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 
 - 使用 Cubase/Nuendo 原生视频轨和内置视频播放器。
 - 通过随附的 FFmpeg 库（LGPL）扩展对封装格式和编解码器的支持。
-- 外挂字幕文件自动加载并显示在画面上；修改字幕文件后会即时生效。视频文件本身永远不会被修改。
+- 外挂字幕文件自动加载并显示在画面上；修改字幕文件后会即时生效；即使字幕文件是在导入之后才添加或改名的，也无需重新导入。视频文件本身永远不会被修改。
 - 所有字幕格式均以统一样式（与 SRT 相同）显示。蓝光 PGS/SUP 和 DVD VobSub 图形字幕通过 Windows 内置 OCR 识别为文本。
 - 无需单独的视频播放器、解码器包或 LAV Filters。
-- 不是 VST 插件：无需在工程中加载任何东西，FrameBridge 直接扩展原生视频引擎。
+- 不是 VST 插件：不占插件槽位，无需在每个工程中加载任何东西，也不需要 MTC 同步，FrameBridge 直接扩展原生视频引擎。
+- 音频通过标准的“从视频中提取音频”导入——包括 Cubase 和 Nuendo 自身无法打开的 MKV 等文件。
 - 对受支持的 HDR 素材进行 HDR 到 SDR 的转换，效果经过目视验证。不对色彩准确度作任何量化声明。
 
 ## 支持的 Cubase 和 Nuendo 版本
@@ -27,7 +28,7 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 
 **相近版本很可能同样可以使用。** 同一代产品中的视频引擎几乎不变：例如 Nuendo 12.0.52 已经过验证，那么 12.0.20 或 12.0.70 很可能同样可以使用。安装程序会自行检查每个安装的视频引擎：兼容的会列出供安装，不兼容的不会出现在列表中，也不会做任何更改。这并不构成保证。具有相同引擎世代的旧版本（例如 Nuendo 7–9、Cubase 8.5 / 9.5）也可能适用，但尚未测试。
 
-在 Cubase 8 和 9 中，FrameBridge 还会提供所打开文件（例如 MKV）的音频，因此“从视频中提取音频”可以像在新版本中一样使用。
+视频轨缩略图：Cubase 和 Nuendo 12 及更高版本。在 Cubase 8–11 和 Nuendo 10 中，视频播放时不显示缩略图。
 
 Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完整列表请参阅 [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英文）。
 
@@ -35,15 +36,28 @@ Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完�
 
 ## 已验证的媒体
 
-**封装格式：** MKV / WebM、FLV、M2TS / MTS / TS、MOV / MP4、AVI、MXF、MPEG-PS / VOB 和 OGV。
+**封装格式：** MKV / WebM、FLV、M2TS / MTS / TS、MOV / MP4、AVI、MXF、MPEG-PS / VOB、WMV / ASF 和 OGV。
 
-**视频编解码器和配置：** APV、AV1 8 位、AV1 10 位、CineForm、DNxHR、FFV1、H.264 Main / High10 / B 帧 / VFR、HEVC Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、Theora、UtVideo、VP8、VP9 10 位和 Xvid。
+**视频编解码器和配置：** APV、AV1 8 位、AV1 10 位、CineForm、DNxHR、FFV1、H.264 Main / High10 / B 帧 / VFR、HEVC Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、Theora、UtVideo、VP8、VP9 10 位、WMV 8和 Xvid。
+
+已在高负载的真实素材上测试：在含 8 条对白轨和大量插件的工程中播放 4K HDR 蓝光原盘重封装（HEVC，约 25 GB）、4K HEVC 流媒体剧集（约 7 GB）以及 2K ProRes DCP（约 180 GB）——播放和定位都很流畅。
 
 **外挂字幕：** SRT、ASS、SSA、VTT、SMI / SAMI、MicroDVD、TTML、DFXP、IMSC、EBU STL、SCC、DCP XML、PGS / SUP 和 VobSub（.idx + .sub 一对文件）。将字幕文件以相同的文件名放在视频旁边（例如 `film.mkv` + `film.srt`）。
 
 PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（通常为系统语言和英语；可在 Windows 设置中添加更多语言）。如果缺少所需语言，则显示原始字幕图像。
 
 本测试版有意不支持 VVC/H.266。
+
+<details>
+<summary>这些格式很可能也能播放</summary>
+
+**封装格式:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
+
+**视频编解码器:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+
+由 FrameBridge 内置的同一个 FFmpeg 9.0.2 解码。这些格式通常可以打开，也很可能流畅播放，但只有上面列出的格式经过了流畅播放和定位的验证。适用 14 天退款。
+
+</details>
 
 **Cubase 或 Nuendo 提示“无效或不支持的文件！”——FrameBridge 能打开这个视频吗？** 很多情况下可以。当内置视频引擎无法处理文件的容器、编码或帧率时，Cubase 和 Nuendo 就会显示这条提示，例如 MKV、WebM、MXF、iPhone 等手机拍摄的 HEVC，或可变帧率的视频。FrameBridge 用自己的解码器读取这类文件；已验证的格式见上文。如果您的文件仍然无法打开，14 天内全额退款。
 

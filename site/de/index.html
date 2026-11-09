@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/de/", "inLanguage": "de", "description": "FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Windows: moderne Videoformate und externe Untertitel ohne Transcodierung.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 1", "datePublished": "2026-10-29", "image": "https://framebridge.cc/og.jpg", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261105">
+  <link rel="stylesheet" href="/style.css?v=20261109">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -112,12 +112,12 @@
         <div class="card">
           <div class="step-num">2</div>
           <h3>Video importieren</h3>
-          <p>MKV, MOV, MP4, MXF, AVI und weitere Formate öffnen sich auf der nativen Videospur und laufen im integrierten Video-Player, mit Thumbnails in der Zeitleiste.</p>
+          <p>MKV, MOV, MP4, MXF, AVI und weitere Formate öffnen sich auf der nativen Videospur und laufen im integrierten Video-Player, mit Thumbnails in der Zeitleiste ab Cubase und Nuendo 12.</p>
         </div>
         <div class="card">
           <div class="step-num">3</div>
           <h3>Untertitel erscheinen von selbst</h3>
-          <p>Legen Sie die Untertiteldatei mit gleichem Namen neben das Video (film.mkv + film.srt). Sie wird über dem Bild angezeigt; Änderungen werden live übernommen.</p>
+          <p>Legen Sie die Untertiteldatei mit gleichem Namen neben das Video (film.mkv + film.srt). Sie wird über dem Bild angezeigt; Änderungen werden live übernommen – auch eine Datei, die erst nach dem Import hinzugefügt oder umbenannt wird, ohne erneuten Import.</p>
         </div>
       </div>
     </div>
@@ -140,6 +140,7 @@
           <ul class="checks">
             <li>Blu-ray-PGS/SUP- und DVD-VobSub-Bilder werden mit der in Windows integrierten Texterkennung (OCR) als Text gelesen.</li>
             <li>Visuell geprüfte HDR-zu-SDR-Umwandlung für unterstütztes HDR-Material.</li>
+            <li>Der Ton kommt über das normale „Audio aus Videodatei extrahieren“ – auch aus MKV und anderen Dateien, die Cubase und Nuendo allein nicht öffnen.</li>
             <li><strong>UNINSTALL.cmd</strong> stellt die originalen Programmdateien Byte für Byte aus einer geprüften Sicherung wieder her. Projekte, Einstellungen und Plug-ins bleiben unberührt.</li>
           </ul>
         </div>
@@ -155,13 +156,13 @@
         <div class="card">
           <h3>Container</h3>
           <div class="chips">
-            <span class="chip">MKV / WebM</span><span class="chip">MOV / MP4</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">M2TS / MTS / TS</span><span class="chip">FLV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">OGV</span>
+            <span class="chip">MKV / WebM</span><span class="chip">MOV / MP4</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">M2TS / MTS / TS</span><span class="chip">FLV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">WMV / ASF</span><span class="chip">OGV</span>
           </div>
         </div>
         <div class="card">
           <h3>Videocodecs</h3>
           <div class="chips">
-            <span class="chip">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip">ProRes 422 HQ / 4444</span><span class="chip">DNxHR</span><span class="chip">CineForm</span><span class="chip">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 10-bit</span><span class="chip">APV</span><span class="chip">FFV1</span><span class="chip">HuffYUV</span><span class="chip">UtVideo</span><span class="chip">Theora</span><span class="chip">Xvid</span>
+            <span class="chip">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip">ProRes 422 HQ / 4444</span><span class="chip">DNxHR</span><span class="chip">CineForm</span><span class="chip">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 10-bit</span><span class="chip">APV</span><span class="chip">FFV1</span><span class="chip">HuffYUV</span><span class="chip">UtVideo</span><span class="chip">Theora</span><span class="chip">WMV 8</span><span class="chip">Xvid</span>
           </div>
         </div>
         <div class="card">
@@ -171,6 +172,21 @@
           </div>
         </div>
       </div>
+      <p class="note">Getestet mit schwerem echtem Material: ein 4K-HDR-Blu-ray-Remux (HEVC, ~25 GB) in einem Projekt mit 8 Dialogspuren und vielen Plug-ins, eine 4K-HEVC-Streaming-Folge (~7 GB) und ein 2K-ProRes-DCP (~180 GB) – flüssige Wiedergabe und flüssiges Spulen.</p>
+      <details class="likely">
+        <summary>Läuft wahrscheinlich auch</summary>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Container</h3>
+            <div class="chips"><span class="chip chip-dim">3GP / 3G2</span><span class="chip chip-dim">M4V</span><span class="chip chip-dim">F4V</span><span class="chip chip-dim">DivX</span><span class="chip chip-dim">RM / RMVB</span><span class="chip chip-dim">MOD / TOD</span><span class="chip chip-dim">WTV / DVR-MS</span><span class="chip chip-dim">OGM</span><span class="chip chip-dim">MK3D</span><span class="chip chip-dim">EVO</span></div>
+          </div>
+          <div class="card">
+            <h3>Videocodecs</h3>
+            <div class="chips"><span class="chip chip-dim">DNxHD</span><span class="chip chip-dim">XDCAM HD / EX / IMX</span><span class="chip chip-dim">XAVC / AVC-Intra</span><span class="chip chip-dim">HEVC 4:2:2 / 4:4:4</span><span class="chip chip-dim">DVCPRO HD</span><span class="chip chip-dim">JPEG 2000</span><span class="chip chip-dim">Avid Meridian / 1:1</span><span class="chip chip-dim">HAP / HAP Q</span><span class="chip chip-dim">NotchLC</span><span class="chip chip-dim">Canopus HQ / HQX / Lossless</span><span class="chip chip-dim">SheerVideo</span><span class="chip chip-dim">SpeedHQ (NDI)</span><span class="chip chip-dim">Apple Intermediate</span><span class="chip chip-dim">Uncompressed (v210, r210, R10k)</span><span class="chip chip-dim">QuickTime Animation</span><span class="chip chip-dim">PNG</span><span class="chip chip-dim">TIFF</span><span class="chip chip-dim">Lagarith</span><span class="chip chip-dim">MagicYUV</span><span class="chip chip-dim">FFVHuff</span><span class="chip chip-dim">WMV 7 / 9</span><span class="chip chip-dim">VC-1</span><span class="chip chip-dim">DivX / MS MPEG-4</span><span class="chip chip-dim">MPEG-1</span><span class="chip chip-dim">VP9 8-bit</span><span class="chip chip-dim">Sorenson Spark</span><span class="chip chip-dim">VP6</span><span class="chip chip-dim">RealVideo</span><span class="chip chip-dim">TechSmith / Camtasia</span><span class="chip chip-dim">Fraps</span><span class="chip chip-dim">CamStudio</span><span class="chip chip-dim">Cinepak</span><span class="chip chip-dim">Indeo</span><span class="chip chip-dim">Sorenson Video</span><span class="chip chip-dim">Microsoft Video 1</span></div>
+          </div>
+        </div>
+        <p class="note">Dekodiert vom selben FFmpeg 9.0.2 in FrameBridge. Diese Formate öffnen sich meist und laufen oft auch flüssig; auf flüssige Wiedergabe und flüssiges Spulen geprüft sind jedoch nur die Formate oben. Es gilt die Rückerstattung innerhalb von 14 Tagen.</p>
+      </details>
       <p class="note">Die Texterkennung von PGS/SUP und VobSub nutzt die in Windows installierten OCR-Sprachen; fehlt die benötigte Sprache, werden die ursprünglichen Untertitelbilder angezeigt. VVC/H.266 wird in dieser Beta bewusst nicht unterstützt.</p>
     </div>
   </section>
@@ -188,6 +204,7 @@
             <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
           </dl>
           <p class="note" style="margin-top:0">Die Editionen Pro, Artist, Elements, AI und LE werden auf dieselbe Weise erkannt.</p>
+          <p class="note" style="margin-top:10px">Thumbnails auf der Videospur: ab Cubase und Nuendo 12. In Cubase 8–11 und Nuendo 10 läuft das Video ohne Thumbnails.</p>
         </div>
         <div class="card">
           <h3>Benachbarte Versionen</h3>
@@ -251,7 +268,7 @@
       </details>
       <details>
         <summary>Ist es ein VST-Plug-in? Gibt es eine Mac-Version?</summary>
-        <p>Beides nein. FrameBridge ist kein Plug-in: Es erweitert die native Video-Engine von Cubase und Nuendo, das Video läuft also im integrierten Video-Player, und im Projekt muss nichts geladen werden. FrameBridge gibt es nur für Windows x64.</p>
+        <p>Beides nein. FrameBridge ist kein Plug-in: Es erweitert die native Video-Engine von Cubase und Nuendo, das Video läuft also im integrierten Video-Player – kein Plug-in-Slot, nichts in jedem Projekt zu laden, keine MTC-Synchronisation. FrameBridge gibt es nur für Windows x64.</p>
       </details>
       <details>
         <summary>Welche Untertiteldatei wird geladen?</summary>

@@ -386,6 +386,39 @@ ul.checks li::before {
 .chip:hover { border-color: rgba(58, 168, 255, 0.55); background: rgba(58, 168, 255, 0.1); color: #fff; }
 .note { color: var(--muted); font-size: 15px; margin-top: 18px; }
 
+/* Formats: "likely to play" — collapsed, lighter chips */
+details.likely { margin-top: 18px; }
+details.likely summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  border: 1px solid var(--hair-2);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 14.5px;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s;
+}
+details.likely summary::-webkit-details-marker { display: none; }
+details.likely summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: -4px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.3s var(--ease), border-color 0.2s;
+}
+details.likely summary:hover { border-color: rgba(58, 168, 255, 0.55); background: rgba(58, 168, 255, 0.08); }
+details.likely[open] summary::after { transform: rotate(225deg); margin-top: 3px; border-color: var(--accent); }
+details.likely .grid { margin-top: 16px; align-items: start; }
+@media (min-width: 901px) { details.likely .grid { grid-template-columns: 1fr 2fr; } }
+.chip-dim { background: transparent; border-style: dashed; color: var(--muted); }
+
 .versions dt { font-weight: 700; margin-top: 4px; }
 .versions dd { margin: 4px 0 14px; color: var(--muted); }
 

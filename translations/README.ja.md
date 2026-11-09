@@ -12,10 +12,11 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 
 - Cubase/Nuendo 標準のビデオトラックと内蔵ビデオプレーヤーで動作します。
 - 同梱の FFmpeg ライブラリ（LGPL）により、対応コンテナとコーデックを拡張します。
-- 外部字幕ファイルを自動で読み込み、映像の上に表示します。字幕ファイルの変更もその場で反映されます。ビデオファイル自体は一切変更されません。
+- 外部字幕ファイルを自動で読み込み、映像の上に表示します。字幕ファイルの変更もその場で反映されます。読み込み後に追加・名前変更したファイルも、読み込み直さずに表示されます。ビデオファイル自体は一切変更されません。
 - どの字幕フォーマットも統一された表示（SRT と同じ見た目）で描画されます。Blu-ray の PGS/SUP や DVD の VobSub の画像字幕は、Windows 内蔵の OCR でテキストとして読み取ります。
 - 別のビデオプレーヤー、コーデックパック、LAV Filters は不要です。
-- VST プラグインではありません。プロジェクトに何かを読み込む必要はなく、FrameBridge が標準のビデオエンジン自体を拡張します。
+- VST プラグインではありません。プラグインスロットは不要で、プロジェクトごとに何かを読み込む必要も、MTC 同期も要りません。FrameBridge が標準のビデオエンジン自体を拡張します。
+- 標準の「ビデオからオーディオを抽出」でオーディオも読み込めます。Cubase や Nuendo 単体では開けない MKV などのファイルからも可能です。
 - 対応する HDR 素材の HDR から SDR への変換を目視で確認済みです。色再現の正確さについて定量的な保証はしていません。
 
 ## 対応する Cubase / Nuendo のバージョン
@@ -27,7 +28,7 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 
 **近いバージョンでも動作する可能性が非常に高いと考えられます。** ビデオエンジンは同じ製品世代の中ではほとんど変わりません。たとえば Nuendo 12.0.52 で検証済みなら、12.0.20 や 12.0.70 でも動作する可能性が非常に高いです。インストーラーは各インストールのビデオエンジンを自ら確認し、互換性があればインストール候補として表示し、互換性がなければ一覧に表示せず、何も変更しません。動作を保証するものではありません。同じ世代のエンジンを持つ古いエディション（Nuendo 7–9、Cubase 8.5 / 9.5 など）も対象になる場合がありますが、テストはしていません。
 
-Cubase 8 と 9 では、FrameBridge が開いたファイル（MKV など）の音声も提供するため、「ビデオからオーディオを抽出」が新しいバージョンと同じように使えます。
+ビデオトラックのサムネイル：Cubase と Nuendo 12 以降。Cubase 8～11 と Nuendo 10 では、サムネイルなしで再生されます。
 
 Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英語）をご覧ください。
 
@@ -35,15 +36,28 @@ Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法
 
 ## 検証済みのメディア
 
-**コンテナ：** MKV / WebM、FLV、M2TS / MTS / TS、MOV / MP4、AVI、MXF、MPEG-PS / VOB、OGV
+**コンテナ：** MKV / WebM、FLV、M2TS / MTS / TS、MOV / MP4、AVI、MXF、MPEG-PS / VOB、WMV / ASF、OGV
 
-**ビデオコーデックとプロファイル：** APV、AV1 8 ビット、AV1 10 ビット、CineForm、DNxHR、FFV1、H.264 Main / High10 / B フレーム / VFR、HEVC Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、Theora、UtVideo、VP8、VP9 10 ビット、Xvid
+**ビデオコーデックとプロファイル：** APV、AV1 8 ビット、AV1 10 ビット、CineForm、DNxHR、FFV1、H.264 Main / High10 / B フレーム / VFR、HEVC Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、Theora、UtVideo、VP8、VP9 10 ビット、WMV 8、Xvid
+
+重い実素材でテスト済み：8 本のダイアログトラックと多数のプラグインを使ったプロジェクトでの 4K HDR Blu-ray リマックス（HEVC、約 25 GB）、4K HEVC の配信エピソード（約 7 GB）、2K ProRes DCP（約 180 GB）。再生もシークもスムーズです。
 
 **外部字幕：** SRT、ASS、SSA、VTT、SMI / SAMI、MicroDVD、TTML、DFXP、IMSC、EBU STL、SCC、DCP XML、PGS / SUP、VobSub（.idx + .sub の組）。字幕ファイルはビデオと同じ名前で同じ場所に置いてください（例：`film.mkv` + `film.srt`）。
 
 PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します（通常はシステムの言語と英語。その他の言語は Windows の設定で追加できます）。必要な言語がない場合は、元の字幕画像がそのまま表示されます。
 
 VVC/H.266 は、このベータ版では意図的にサポートしていません。
+
+<details>
+<summary>これらもおそらく再生できます</summary>
+
+**コンテナ:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
+
+**ビデオコーデック:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+
+FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。通常は開くことができ、スムーズに再生できる可能性も十分ありますが、スムーズな再生とシークを確認済みなのは上記の形式だけです。14 日間の返金保証が適用されます。
+
+</details>
 
 **Cubase や Nuendo で「形式が不適切であるか、対応していないファイルです。」と表示されます。FrameBridge なら開けますか？** 多くの場合、開けます。このメッセージは、標準のビデオエンジンがファイルのコンテナ、コーデック、フレームレートに対応できないときに表示されます。たとえば MKV、WebM、MXF、iPhone などのスマートフォンで撮影した HEVC、可変フレームレートのビデオです。FrameBridge は独自のデコーダーでこれらのファイルを読み込みます。検証済みのフォーマットは上記のとおりです。それでもファイルが開けない場合は、14日以内なら全額返金します。
 

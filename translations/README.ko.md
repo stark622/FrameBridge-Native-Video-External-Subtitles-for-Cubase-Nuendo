@@ -12,10 +12,11 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 
 - Cubase/Nuendo 기본 비디오 트랙과 내장 비디오 플레이어에서 작동합니다.
 - 함께 제공되는 FFmpeg 라이브러리(LGPL)로 컨테이너와 코덱 지원을 확장합니다.
-- 외부 자막 파일을 자동으로 불러와 화면 위에 표시하며, 자막 파일을 수정하면 바로 반영됩니다. 비디오 파일 자체는 절대 변경되지 않습니다.
+- 외부 자막 파일을 자동으로 불러와 화면 위에 표시하며, 자막 파일을 수정하면 바로 반영됩니다. 가져오기 후에 추가하거나 이름을 바꾼 파일도 다시 가져올 필요 없이 표시됩니다. 비디오 파일 자체는 절대 변경되지 않습니다.
 - 모든 자막 포맷이 하나의 모양(SRT와 같은 모양)으로 표시됩니다. 블루레이 PGS/SUP와 DVD VobSub 이미지 자막은 Windows 내장 OCR로 텍스트로 읽어 들입니다.
 - 별도의 비디오 플레이어, 코덱 팩, LAV Filters가 필요 없습니다.
-- VST 플러그인이 아닙니다. 프로젝트에 따로 불러올 것이 없으며, FrameBridge가 기본 비디오 엔진 자체를 확장합니다.
+- VST 플러그인이 아닙니다. 플러그인 슬롯도, 프로젝트마다 불러올 것도, MTC 동기화도 필요 없으며, FrameBridge가 기본 비디오 엔진 자체를 확장합니다.
+- 표준 “Extract Audio From Video”로 오디오도 가져올 수 있습니다. Cubase와 Nuendo가 자체적으로 열지 못하는 MKV 등의 파일에서도 가능합니다.
 - 지원되는 HDR 소스의 HDR→SDR 변환을 육안으로 검증했습니다. 색 정확도에 대한 정량적 보증은 하지 않습니다.
 
 ## 지원되는 Cubase 및 Nuendo 버전
@@ -27,7 +28,7 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 
 **인접 버전도 작동할 가능성이 매우 높습니다.** 비디오 엔진은 같은 제품 세대 안에서는 거의 바뀌지 않습니다. 예를 들어 Nuendo 12.0.52가 검증되었다면 12.0.20이나 12.0.70도 작동할 가능성이 매우 높습니다. 설치 프로그램이 각 설치의 비디오 엔진을 직접 확인하여, 호환되는 설치는 설치 대상으로 표시하고 호환되지 않는 설치는 목록에 표시하지 않으며 아무것도 변경하지 않습니다. 작동을 보장하는 것은 아닙니다. 같은 엔진 세대의 이전 에디션(예: Nuendo 7–9, Cubase 8.5 / 9.5)도 해당될 수 있지만 테스트하지는 않았습니다.
 
-Cubase 8과 9에서는 FrameBridge가 여는 파일(예: MKV)의 오디오도 제공하므로, "Extract Audio From Video"를 최신 버전과 똑같이 사용할 수 있습니다.
+비디오 트랙 썸네일: Cubase와 Nuendo 12 이상. Cubase 8–11과 Nuendo 10에서는 썸네일 없이 비디오가 재생됩니다.
 
 Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../COMPATIBILITY.txt)(영문)를 참고하세요.
 
@@ -35,15 +36,28 @@ Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩�
 
 ## 검증된 미디어
 
-**컨테이너:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, OGV
+**컨테이너:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, WMV / ASF, OGV
 
-**비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10비트, Xvid
+**비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10비트, WMV 8, Xvid
+
+무거운 실제 소스로 테스트했습니다: 대사 트랙 8개와 많은 플러그인이 있는 프로젝트에서 4K HDR 블루레이 리먹스(HEVC, 약 25 GB), 4K HEVC 스트리밍 에피소드(약 7 GB), 2K ProRes DCP(약 180 GB) — 재생과 탐색 모두 부드럽습니다.
 
 **외부 자막:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP, VobSub(.idx + .sub 한 쌍). 자막 파일을 비디오와 같은 이름으로 같은 폴더에 두세요(예: `film.mkv` + `film.srt`).
 
 PGS/SUP와 VobSub의 텍스트 인식에는 Windows에 설치된 OCR 언어가 사용됩니다(보통 시스템 언어와 영어이며, Windows 설정에서 다른 언어를 추가할 수 있습니다). 필요한 언어가 없으면 원래의 자막 이미지가 표시됩니다.
 
 VVC/H.266은 이번 베타에서 의도적으로 지원하지 않습니다.
+
+<details>
+<summary>이 형식들도 재생될 가능성이 높습니다</summary>
+
+**컨테이너:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
+
+**비디오 코덱:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+
+FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 열리며 부드럽게 재생될 가능성도 충분하지만, 부드러운 재생과 탐색이 검증된 것은 위의 형식뿐입니다. 14일 환불이 적용됩니다.
+
+</details>
 
 **Cubase나 Nuendo에서 “Invalid or not supported file!”이라고 나옵니다. FrameBridge로 열 수 있나요?** 대부분 가능합니다. 이 메시지는 기본 비디오 엔진이 파일의 컨테이너, 코덱 또는 프레임 레이트를 처리하지 못할 때 표시됩니다. 예를 들어 MKV, WebM, MXF, iPhone 같은 스마트폰으로 촬영한 HEVC, 가변 프레임 레이트 비디오 등입니다. FrameBridge는 자체 디코더로 이러한 파일을 읽습니다. 검증된 포맷은 위에 나와 있습니다. 그래도 파일이 열리지 않으면 14일 이내에 전액 환불해 드립니다.
 

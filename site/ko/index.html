@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ko/", "inLanguage": "ko", "description": "FrameBridge는 Windows용 Cubase와 Nuendo의 네이티브 비디오 엔진을 확장합니다. 최신 비디오 포맷을 내장 비디오 트랙에서 사용하고, 외부 자막을 화면 위에 표시합니다. 트랜스코딩이 필요 없습니다.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 1", "datePublished": "2026-10-29", "image": "https://framebridge.cc/og.jpg", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261105">
+  <link rel="stylesheet" href="/style.css?v=20261109">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -112,12 +112,12 @@
         <div class="card">
           <div class="step-num">2</div>
           <h3>비디오 가져오기</h3>
-          <p>MKV, MOV, MP4, MXF, AVI 등이 기본 비디오 트랙에서 열리고 내장 비디오 플레이어에서 재생되며, 타임라인에는 썸네일도 표시됩니다.</p>
+          <p>MKV, MOV, MP4, MXF, AVI 등이 기본 비디오 트랙에서 열리고 내장 비디오 플레이어에서 재생되며, Cubase와 Nuendo 12 이상에서는 타임라인에 썸네일도 표시됩니다.</p>
         </div>
         <div class="card">
           <div class="step-num">3</div>
           <h3>자막은 저절로 나타납니다</h3>
-          <p>자막 파일을 비디오와 같은 이름으로 같은 폴더에 두세요(film.mkv + film.srt). 자막이 화면 위에 표시되고, 파일을 수정하면 바로 반영됩니다.</p>
+          <p>자막 파일을 비디오와 같은 이름으로 같은 폴더에 두세요(film.mkv + film.srt). 자막이 화면 위에 표시되고, 파일을 수정하면 바로 반영됩니다. 가져오기 후에 추가하거나 이름을 바꾼 파일도 다시 가져올 필요 없이 표시됩니다.</p>
         </div>
       </div>
     </div>
@@ -140,6 +140,7 @@
           <ul class="checks">
             <li>블루레이 PGS/SUP와 DVD VobSub 이미지 자막은 Windows 내장 OCR로 텍스트로 읽어 들입니다.</li>
             <li>지원되는 HDR 소스의 HDR→SDR 변환을 육안으로 검증했습니다.</li>
+            <li>표준 “Extract Audio From Video”로 오디오도 가져올 수 있습니다. Cubase와 Nuendo가 자체적으로 열지 못하는 MKV 등의 파일에서도 가능합니다.</li>
             <li><strong>UNINSTALL.cmd</strong>는 검증된 백업에서 프로그램 원본 파일을 바이트 단위까지 그대로 복원합니다. 프로젝트, 환경 설정, 플러그인은 건드리지 않습니다.</li>
           </ul>
         </div>
@@ -155,13 +156,13 @@
         <div class="card">
           <h3>컨테이너</h3>
           <div class="chips">
-            <span class="chip">MKV / WebM</span><span class="chip">MOV / MP4</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">M2TS / MTS / TS</span><span class="chip">FLV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">OGV</span>
+            <span class="chip">MKV / WebM</span><span class="chip">MOV / MP4</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">M2TS / MTS / TS</span><span class="chip">FLV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">WMV / ASF</span><span class="chip">OGV</span>
           </div>
         </div>
         <div class="card">
           <h3>비디오 코덱</h3>
           <div class="chips">
-            <span class="chip">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip">ProRes 422 HQ / 4444</span><span class="chip">DNxHR</span><span class="chip">CineForm</span><span class="chip">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 10-bit</span><span class="chip">APV</span><span class="chip">FFV1</span><span class="chip">HuffYUV</span><span class="chip">UtVideo</span><span class="chip">Theora</span><span class="chip">Xvid</span>
+            <span class="chip">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip">ProRes 422 HQ / 4444</span><span class="chip">DNxHR</span><span class="chip">CineForm</span><span class="chip">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 10-bit</span><span class="chip">APV</span><span class="chip">FFV1</span><span class="chip">HuffYUV</span><span class="chip">UtVideo</span><span class="chip">Theora</span><span class="chip">WMV 8</span><span class="chip">Xvid</span>
           </div>
         </div>
         <div class="card">
@@ -171,6 +172,21 @@
           </div>
         </div>
       </div>
+      <p class="note">무거운 실제 소스로 테스트했습니다: 대사 트랙 8개와 많은 플러그인이 있는 프로젝트에서 4K HDR 블루레이 리먹스(HEVC, 약 25 GB), 4K HEVC 스트리밍 에피소드(약 7 GB), 2K ProRes DCP(약 180 GB) — 재생과 탐색 모두 부드럽습니다.</p>
+      <details class="likely">
+        <summary>이 형식들도 재생될 가능성이 높습니다</summary>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>컨테이너</h3>
+            <div class="chips"><span class="chip chip-dim">3GP / 3G2</span><span class="chip chip-dim">M4V</span><span class="chip chip-dim">F4V</span><span class="chip chip-dim">DivX</span><span class="chip chip-dim">RM / RMVB</span><span class="chip chip-dim">MOD / TOD</span><span class="chip chip-dim">WTV / DVR-MS</span><span class="chip chip-dim">OGM</span><span class="chip chip-dim">MK3D</span><span class="chip chip-dim">EVO</span></div>
+          </div>
+          <div class="card">
+            <h3>비디오 코덱</h3>
+            <div class="chips"><span class="chip chip-dim">DNxHD</span><span class="chip chip-dim">XDCAM HD / EX / IMX</span><span class="chip chip-dim">XAVC / AVC-Intra</span><span class="chip chip-dim">HEVC 4:2:2 / 4:4:4</span><span class="chip chip-dim">DVCPRO HD</span><span class="chip chip-dim">JPEG 2000</span><span class="chip chip-dim">Avid Meridian / 1:1</span><span class="chip chip-dim">HAP / HAP Q</span><span class="chip chip-dim">NotchLC</span><span class="chip chip-dim">Canopus HQ / HQX / Lossless</span><span class="chip chip-dim">SheerVideo</span><span class="chip chip-dim">SpeedHQ (NDI)</span><span class="chip chip-dim">Apple Intermediate</span><span class="chip chip-dim">Uncompressed (v210, r210, R10k)</span><span class="chip chip-dim">QuickTime Animation</span><span class="chip chip-dim">PNG</span><span class="chip chip-dim">TIFF</span><span class="chip chip-dim">Lagarith</span><span class="chip chip-dim">MagicYUV</span><span class="chip chip-dim">FFVHuff</span><span class="chip chip-dim">WMV 7 / 9</span><span class="chip chip-dim">VC-1</span><span class="chip chip-dim">DivX / MS MPEG-4</span><span class="chip chip-dim">MPEG-1</span><span class="chip chip-dim">VP9 8-bit</span><span class="chip chip-dim">Sorenson Spark</span><span class="chip chip-dim">VP6</span><span class="chip chip-dim">RealVideo</span><span class="chip chip-dim">TechSmith / Camtasia</span><span class="chip chip-dim">Fraps</span><span class="chip chip-dim">CamStudio</span><span class="chip chip-dim">Cinepak</span><span class="chip chip-dim">Indeo</span><span class="chip chip-dim">Sorenson Video</span><span class="chip chip-dim">Microsoft Video 1</span></div>
+          </div>
+        </div>
+        <p class="note">FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 열리며 부드럽게 재생될 가능성도 충분하지만, 부드러운 재생과 탐색이 검증된 것은 위의 형식뿐입니다. 14일 환불이 적용됩니다.</p>
+      </details>
       <p class="note">PGS/SUP와 VobSub의 텍스트 인식에는 Windows에 설치된 OCR 언어가 사용됩니다. 필요한 언어가 없으면 원래의 자막 이미지가 표시됩니다. VVC/H.266은 이번 베타에서 의도적으로 지원하지 않습니다.</p>
     </div>
   </section>
@@ -188,6 +204,7 @@
             <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
           </dl>
           <p class="note" style="margin-top:0">Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다.</p>
+          <p class="note" style="margin-top:10px">비디오 트랙 썸네일: Cubase와 Nuendo 12 이상. Cubase 8–11과 Nuendo 10에서는 썸네일 없이 비디오가 재생됩니다.</p>
         </div>
         <div class="card">
           <h3>인접 버전</h3>
@@ -251,7 +268,7 @@
       </details>
       <details>
         <summary>VST 플러그인인가요? Mac 버전이 있나요?</summary>
-        <p>둘 다 아닙니다. FrameBridge는 플러그인이 아니라 Cubase와 Nuendo의 기본 비디오 엔진을 확장합니다. 따라서 비디오는 내장 비디오 플레이어에서 재생되며 프로젝트에 따로 불러올 것이 없습니다. Windows x64 전용입니다.</p>
+        <p>둘 다 아닙니다. FrameBridge는 플러그인이 아니라 Cubase와 Nuendo의 기본 비디오 엔진을 확장합니다. 따라서 비디오는 내장 비디오 플레이어에서 재생되며, 플러그인 슬롯도, 프로젝트마다 불러올 것도, MTC 동기화도 필요 없습니다. Windows x64 전용입니다.</p>
       </details>
       <details>
         <summary>어떤 자막 파일을 불러오나요?</summary>

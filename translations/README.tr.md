@@ -12,10 +12,11 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 
 - Cubase/Nuendo’nun yerel video kanalı ve yerleşik Video Player’ı ile çalışır.
 - Pakete dahil FFmpeg kütüphaneleri (LGPL) sayesinde genişletilmiş kapsayıcı ve codec desteği.
-- Harici altyazı dosyaları otomatik olarak yüklenir ve görüntünün üzerinde gösterilir; altyazı dosyasında yapılan değişiklikler anında yansır. Video dosyasının kendisi asla değiştirilmez.
+- Harici altyazı dosyaları otomatik olarak yüklenir ve görüntünün üzerinde gösterilir; altyazı dosyasında yapılan değişiklikler anında yansır — içe aktarmadan sonra eklenen veya yeniden adlandırılan dosya bile, yeniden içe aktarmaya gerek kalmadan. Video dosyasının kendisi asla değiştirilmez.
 - Tüm altyazı formatları tek tip bir görünümle (SRT görünümüyle) gösterilir. Blu-ray PGS/SUP ve DVD VobSub görüntüleri, Windows’un yerleşik OCR özelliğiyle metin olarak okunur.
 - Ayrı bir video oynatıcı, codec paketi veya LAV Filters gerekmez.
-- VST eklentisi değildir: projede hiçbir şey yüklemeniz gerekmez; FrameBridge doğrudan yerel video motorunu genişletir.
+- VST eklentisi değildir: eklenti yuvası, her projede bir şey yüklemek ya da MTC senkronu gerekmez; FrameBridge doğrudan yerel video motorunu genişletir.
+- Ses, standart “Extract Audio From Video” seçeneğiyle gelir — Cubase ve Nuendo’nun tek başına açamadığı MKV ve diğer dosyalardan da.
 - Desteklenen HDR içerikler için görsel olarak doğrulanmış HDR’den SDR’ye dönüştürme. Renk doğruluğuna dair ölçüme dayalı bir iddiada bulunulmaz.
 
 ## Desteklenen Cubase ve Nuendo sürümleri
@@ -27,7 +28,7 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 
 **Yakın sürümlerin çalışması çok olasıdır.** Video motoru bir ürün kuşağı içinde neredeyse hiç değişmez: örneğin Nuendo 12.0.52 doğrulandıysa, 12.0.20 veya 12.0.70 de büyük olasılıkla çalışır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Bu bir garanti değildir. Aynı motor kuşağına sahip daha eski sürümler (örneğin Nuendo 7–9, Cubase 8.5 / 9.5) de uygun olabilir, ancak test edilmemiştir.
 
-Cubase 8 ve 9’da FrameBridge, açtığı dosyaların sesini de sağlar (örneğin MKV); böylece “Extract Audio From Video” bu sürümlerde de yenilerde olduğu gibi çalışır.
+Video kanalında küçük resimler: Cubase ve Nuendo 12 ve sonrası. Cubase 8–11 ve Nuendo 10’da video küçük resimler olmadan oynatılır.
 
 Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../COMPATIBILITY.txt) dosyasındadır (İngilizce).
 
@@ -35,15 +36,28 @@ Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Ta
 
 ## Doğrulanmış medya desteği
 
-**Kapsayıcılar:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB ve OGV.
+**Kapsayıcılar:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, WMV / ASF ve OGV.
 
-**Video codec’leri ve profilleri:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10-bit ve Xvid.
+**Video codec’leri ve profilleri:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10-bit, WMV 8 ve Xvid.
+
+Ağır, gerçek materyallerle test edildi: 8 diyalog kanalı ve çok sayıda eklenti içeren bir projede 4K HDR Blu-ray remux (HEVC, ~25 GB), 4K HEVC bir yayın bölümü (~7 GB) ve 2K ProRes DCP (~180 GB) — akıcı oynatma ve sarma.
 
 **Harici altyazılar:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP ve VobSub (.idx + .sub çifti). Altyazı dosyasını aynı adla videonun yanına koyun (örneğin `film.mkv` + `film.srt`).
 
 PGS/SUP ve VobSub metin tanıma, Windows’ta yüklü OCR dillerini kullanır (genellikle sistem dili ve İngilizce; Windows ayarlarından başka diller eklenebilir). Gerekli dil yoksa altyazıların orijinal görüntüleri gösterilir.
 
 VVC/H.266 bu betada bilinçli olarak desteklenmez.
+
+<details>
+<summary>Büyük olasılıkla bunlar da oynar</summary>
+
+**Kapsayıcılar:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
+
+**Video codec’leri:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+
+FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikle açılır ve akıcı da oynayabilir; ancak akıcı oynatma ve sarma yalnızca yukarıdaki formatlar için doğrulanmıştır. 14 günlük iade geçerlidir.
+
+</details>
 
 **Cubase veya Nuendo “Invalid or not supported file!” diyor — FrameBridge bu videoyu açar mı?** Çoğu zaman evet. Cubase ve Nuendo bu mesajı, yerleşik video motoru dosyanın kapsayıcısını, kodeğini veya kare hızını işleyemediğinde gösterir; örneğin MKV, WebM, MXF, iPhone gibi telefonlardan gelen HEVC ya da değişken kare hızlı video. FrameBridge bu dosyaları kendi kod çözücüsüyle okur; doğrulanmış formatlar yukarıda listelenmiştir. Dosyanız yine de açılmazsa 14 gün içinde ödediğiniz tutarın tamamı iade edilir.
 

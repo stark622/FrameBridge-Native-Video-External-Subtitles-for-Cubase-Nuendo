@@ -12,10 +12,11 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 
 - Works with the native Cubase/Nuendo video track and built-in Video Player.
 - Extended container and codec support through packaged FFmpeg libraries (LGPL).
-- External subtitle sidecars are loaded automatically and shown over the picture; edits to the subtitle file are picked up live. The video file itself is never changed.
+- External subtitle sidecars are loaded automatically and shown over the picture; edits to the subtitle file are picked up live — even a file added or renamed after import, no re-import needed. The video file itself is never changed.
 - Every subtitle format is drawn in one clean look (the SRT look). Blu-ray PGS/SUP and DVD VobSub pictures are read as text with the Windows built-in OCR.
 - No separate video player, codec pack or LAV Filters required.
-- Not a VST plugin: nothing to load in the project — FrameBridge extends the native video engine itself.
+- Not a VST plugin: no plug-in slot, nothing to load in each project, no MTC sync — FrameBridge extends the native video engine itself.
+- Audio comes in with the standard “Extract Audio From Video” — also from MKV and other files Cubase and Nuendo can't open on their own.
 - Visually verified HDR-to-SDR conversion for supported HDR media. No quantitative color-accuracy claim is made.
 
 ## Supported Cubase and Nuendo versions
@@ -27,7 +28,7 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 
 **Nearby builds very likely work.** The video engine barely changes within one product generation, so if, for example, Nuendo 12.0.52 is verified, 12.0.20 or 12.0.70 will very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered for installation, an incompatible one is not listed and nothing is changed. This is not a guarantee. Older editions with the same engine generation (for example Nuendo 7–9, Cubase 8.5 / 9.5) may also qualify but have not been tested.
 
-On Cubase 8 and 9, FrameBridge also supplies the audio of the files it opens (for example MKV), so "Extract audio from video" works for them as in newer versions.
+Thumbnails on the video track: Cubase and Nuendo 12 and newer. In Cubase 8–11 and Nuendo 10 the video plays without thumbnails.
 
 Cubase Pro, Artist, Elements, AI and LE editions are found the same way. See [COMPATIBILITY.txt](COMPATIBILITY.txt) for the full matrix.
 
@@ -35,15 +36,28 @@ Cubase Pro, Artist, Elements, AI and LE editions are found the same way. See [CO
 
 ## Verified media support
 
-**Containers:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, and OGV.
+**Containers:** MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS / VOB, WMV / ASF, and OGV.
 
-**Video codecs and profiles:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10-bit, and Xvid.
+**Video codecs and profiles:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10-bit, WMV 8, and Xvid.
+
+Tested on heavy real material: a 4K HDR Blu-ray remux (HEVC, ~25 GB) in a project with 8 dialogue tracks and many plug-ins, a 4K HEVC streaming episode (~7 GB) and a 2K ProRes DCP (~180 GB) — smooth playback and seeking.
 
 **External subtitles:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP, and VobSub (the .idx + .sub pair). Put the subtitle file next to the video with the same name (for example `film.mkv` + `film.srt`).
 
 PGS/SUP and VobSub text recognition uses the OCR languages installed in Windows (usually the system language and English; more can be added in Windows settings). Without the needed language the original subtitle pictures are shown.
 
 VVC/H.266 is intentionally unsupported in this beta.
+
+<details>
+<summary>Likely to play too</summary>
+
+**Containers:** 3GP / 3G2, M4V, F4V, DivX, RM / RMVB, MOD / TOD, WTV / DVR-MS, OGM, MK3D, EVO
+
+**Video codecs:** DNxHD, XDCAM HD / EX / IMX, XAVC / AVC-Intra, HEVC 4:2:2 / 4:4:4, DVCPRO HD, JPEG 2000, Avid Meridian / 1:1, HAP / HAP Q, NotchLC, Canopus HQ / HQX / Lossless, SheerVideo, SpeedHQ (NDI), Apple Intermediate, Uncompressed (v210, r210, R10k), QuickTime Animation, PNG, TIFF, Lagarith, MagicYUV, FFVHuff, WMV 7 / 9, VC-1, DivX / MS MPEG-4, MPEG-1, VP9 8-bit, Sorenson Spark, VP6, RealVideo, TechSmith / Camtasia, Fraps, CamStudio, Cinepak, Indeo, Sorenson Video, Microsoft Video 1
+
+Decoded by the same FFmpeg 9.0.2 inside FrameBridge. These usually open and may well play smoothly, but only the formats above are verified for smooth playback and seeking. The 14-day refund applies.
+
+</details>
 
 **Cubase or Nuendo says “Invalid or not supported file!” — will FrameBridge open the video?** Often, yes. Cubase and Nuendo show this message when their built-in video engine cannot handle the file’s container, codec or frame rate — for example MKV, WebM, MXF, HEVC from phones such as the iPhone, or video with a variable frame rate. FrameBridge reads such files with its own decoder; the verified formats are listed above. If your file still does not open, you get a full refund within 14 days.
 
