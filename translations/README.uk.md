@@ -36,9 +36,9 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 
 ## Перевірені формати
 
-**Контейнери:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM та OGV.
+**Контейнери:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM та OGV.
 
-**Відеокодеки та профілі:** APV, AV1 8 біт, AV1 10 біт, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-кадри / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10 біт, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8 біт, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, HAP, Canopus HQX та Xvid.
+**Відеокодеки та профілі:** APV, AV1 8 біт, AV1 10 біт, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-кадри / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10 біт, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8 біт, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX та Xvid.
 
 Перевірено на важкому реальному матеріалі: 4K HDR Blu-ray remux (HEVC, ~25 ГБ) у проєкті з 8 доріжками акторів і безліччю плагінів та 4K HEVC епізод зі стримінгу (~7 ГБ) — плавне відтворення й перемотування.
 
@@ -51,9 +51,9 @@ VVC/H.266 у цій беті навмисно не підтримується.
 <details>
 <summary>Найімовірніше, теж відтворюються</summary>
 
-**Контейнери:** M4V, MOD, EVO
+**Контейнери:** MOD, EVO, DV
 
-**Відеокодеки:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP Q, Lagarith, Canopus HQ / Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**Відеокодеки:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
 
 Їх декодує той самий FFmpeg 9.0.2 усередині FrameBridge. Зазвичай вони відкриваються й цілком можуть відтворюватися плавно, але плавне відтворення й перемотування перевірені лише для форматів вище. Діє повернення коштів протягом 14 днів.
 

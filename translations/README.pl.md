@@ -36,9 +36,9 @@ Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pe
 
 ## Sprawdzone formaty
 
-**Kontenery:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM i OGV.
+**Kontenery:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM i OGV.
 
-**Kodeki wideo i profile:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10-bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8-bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, HAP, Canopus HQX i Xvid.
+**Kodeki wideo i profile:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10-bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8-bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX i Xvid.
 
 Przetestowane na ciężkim, prawdziwym materiale: remux Blu-ray 4K HDR (HEVC, ~25 GB) w projekcie z 8 ścieżkami dialogowymi i wieloma wtyczkami oraz odcinek 4K HEVC ze streamingu (~7 GB) — płynne odtwarzanie i przewijanie.
 
@@ -51,9 +51,9 @@ VVC/H.266 celowo nie jest obsługiwany w tej becie.
 <details>
 <summary>Prawdopodobnie też działają</summary>
 
-**Kontenery:** M4V, MOD, EVO
+**Kontenery:** MOD, EVO, DV
 
-**Kodeki wideo:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP Q, Lagarith, Canopus HQ / Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**Kodeki wideo:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
 
 Dekoduje je ten sam FFmpeg 9.0.2 wbudowany we FrameBridge. Zwykle się otwierają i mogą też działać płynnie, ale płynne odtwarzanie i przewijanie sprawdzono tylko dla formatów powyżej. Obowiązuje zwrot pieniędzy w ciągu 14 dni.
 

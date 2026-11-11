@@ -36,9 +36,9 @@ Las ediciones Cubase Pro, Artist, Elements, AI y LE se detectan de la misma mane
 
 ## Formatos verificados
 
-**Contenedores:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM y OGV.
+**Contenedores:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM y OGV.
 
-**Códecs de video y perfiles:** APV, AV1 de 8 bits, AV1 de 10 bits, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 de 10 bits, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 de 8 bits, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, HAP, Canopus HQX y Xvid.
+**Códecs de video y perfiles:** APV, AV1 de 8 bits, AV1 de 10 bits, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 de 10 bits, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 de 8 bits, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX y Xvid.
 
 Probado con material real y pesado: un remux de Blu-ray 4K HDR (HEVC, ~25 GB) en un proyecto con 8 pistas de diálogo y muchos plugins, y un episodio 4K HEVC de streaming (~7 GB), con reproducción y desplazamiento fluidos.
 
@@ -51,9 +51,9 @@ VVC/H.266 no es compatible en esta beta de forma intencionada.
 <details>
 <summary>Probablemente también funcionan</summary>
 
-**Contenedores:** M4V, MOD, EVO
+**Contenedores:** MOD, EVO, DV
 
-**Códecs de video:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP Q, Lagarith, Canopus HQ / Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**Códecs de video:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
 
 Los decodifica el mismo FFmpeg 9.0.2 incluido en FrameBridge. Normalmente se abren y es muy posible que se reproduzcan con fluidez, pero solo los formatos de arriba están verificados para reproducción y desplazamiento fluidos. Se aplica el reembolso de 14 días.
 

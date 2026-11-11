@@ -36,9 +36,9 @@ Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法
 
 ## 検証済みのメディア
 
-**コンテナ：** MKV / WebM、MK3D、FLV、F4V、M2TS / MTS / TS、TOD、MOV / MP4、AVI、DivX、MXF、MPEG-PS / VOB、WMV / ASF、WTV / DVR-MS、3GP / 3G2、RM / RMVB、OGM、OGV
+**コンテナ：** MKV / WebM、MK3D、FLV、F4V、M2TS / MTS / TS、TOD、MOV / MP4、M4V、AVI、DivX、MXF、MPEG-PS / VOB、WMV / ASF、WTV / DVR-MS、3GP / 3G2、RM / RMVB、OGM、OGV
 
-**ビデオコーデックとプロファイル：** APV、AV1 8 ビット、AV1 10 ビット、CineForm、DNxHR、FFV1、H.264 Main / High10 / B フレーム / VFR、HEVC Main / Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、Theora、UtVideo、VP8、VP9 10 ビット、WMV 7 / 8、DNxHD、XDCAM、XAVC / AVC-Intra、DVCPRO HD、Avid 1:1、SpeedHQ、Uncompressed v210、QuickTime Animation、PNG、TIFF、MagicYUV、FFVHuff、DivX / MS MPEG-4、H.263、VP9 8 ビット、Sorenson Spark、RealVideo、Cinepak、Sorenson Video、Microsoft Video 1、HAP、Canopus HQX、Xvid
+**ビデオコーデックとプロファイル：** APV、AV1 8 ビット、AV1 10 ビット、CineForm、DNxHR、FFV1、H.264 Main / High10 / B フレーム / VFR、HEVC Main / Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、ProRes Proxy、ProRes LT、Theora、UtVideo、VP8、VP9 10 ビット、WMV 7 / 8、DNxHD、XDCAM、XAVC / AVC-Intra、DVCPRO HD、DVCPRO50、Avid 1:1、SpeedHQ、Uncompressed v210、QuickTime Animation、PNG、TIFF、MagicYUV、FFVHuff、DivX / MS MPEG-4、H.263、VP9 8 ビット、Sorenson Spark、RealVideo、Cinepak、Sorenson Video、Microsoft Video 1、Canopus HQ、Canopus HQX、Xvid
 
 重い実素材でテスト済み：8 本のダイアログトラックと多数のプラグインを使ったプロジェクトでの 4K HDR Blu-ray リマックス（HEVC、約 25 GB）と、4K HEVC の配信エピソード（約 7 GB）。再生もシークもスムーズです。
 
@@ -51,9 +51,9 @@ VVC/H.266 は、このベータ版では意図的にサポートしていませ�
 <details>
 <summary>これらもおそらく再生できます</summary>
 
-**コンテナ:** M4V, MOD, EVO
+**コンテナ:** MOD, EVO, DV
 
-**ビデオコーデック:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP Q, Lagarith, Canopus HQ / Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**ビデオコーデック:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
 
 FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。通常は開くことができ、スムーズに再生できる可能性も十分ありますが、スムーズな再生とシークを確認済みなのは上記の形式だけです。14 日間の返金保証が適用されます。
 

@@ -36,9 +36,9 @@ Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩�
 
 ## 검증된 미디어
 
-**컨테이너:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM, OGV
+**컨테이너:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM, OGV
 
-**비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo, VP8, VP9 10비트, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8비트, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, HAP, Canopus HQX, Xvid
+**비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10비트, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8비트, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX, Xvid
 
 무거운 실제 소스로 테스트했습니다: 대사 트랙 8개와 많은 플러그인이 있는 프로젝트에서 4K HDR 블루레이 리먹스(HEVC, 약 25 GB)와 4K HEVC 스트리밍 에피소드(약 7 GB) — 재생과 탐색 모두 부드럽습니다.
 
@@ -51,9 +51,9 @@ VVC/H.266은 이번 베타에서 의도적으로 지원하지 않습니다.
 <details>
 <summary>이 형식들도 재생될 가능성이 높습니다</summary>
 
-**컨테이너:** M4V, MOD, EVO
+**컨테이너:** MOD, EVO, DV
 
-**비디오 코덱:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP Q, Lagarith, Canopus HQ / Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**비디오 코덱:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
 
 FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 열리며 부드럽게 재생될 가능성도 충분하지만, 부드러운 재생과 탐색이 검증된 것은 위의 형식뿐입니다. 14일 환불이 적용됩니다.
 
