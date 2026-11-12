@@ -46,14 +46,12 @@ Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法
 
 PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します（通常はシステムの言語と英語。その他の言語は Windows の設定で追加できます）。必要な言語がない場合は、元の字幕画像がそのまま表示されます。
 
-VVC/H.266 は、このベータ版では意図的にサポートしていません。
-
 <details>
 <summary>これらもおそらく再生できます</summary>
 
 **コンテナ:** MOD, EVO, DV
 
-**ビデオコーデック:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**ビデオコーデック:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo、VVC / H.266
 
 FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。通常は開くことができ、スムーズに再生できる可能性も十分ありますが、スムーズな再生とシークを確認済みなのは上記の形式だけです。14 日間の返金保証が適用されます。
 

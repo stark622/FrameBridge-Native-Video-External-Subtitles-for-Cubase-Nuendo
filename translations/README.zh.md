@@ -46,14 +46,12 @@ Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完�
 
 PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（通常为系统语言和英语；可在 Windows 设置中添加更多语言）。如果缺少所需语言，则显示原始字幕图像。
 
-本测试版有意不支持 VVC/H.266。
-
 <details>
 <summary>这些格式很可能也能播放</summary>
 
 **封装格式:** MOD, EVO, DV
 
-**视频编解码器:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**视频编解码器:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo、VVC / H.266
 
 由 FrameBridge 内置的同一个 FFmpeg 9.0.2 解码。这些格式通常可以打开，也很可能流畅播放，但只有上面列出的格式经过了流畅播放和定位的验证。适用 14 天退款。
 

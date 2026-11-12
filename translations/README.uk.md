@@ -46,14 +46,12 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 
 Розпізнавання тексту PGS/SUP і VobSub використовує мови OCR, встановлені у Windows (зазвичай мова системи та англійська; інші можна додати в налаштуваннях Windows). Якщо потрібної мови немає, показуються оригінальні зображення субтитрів.
 
-VVC/H.266 у цій беті навмисно не підтримується.
-
 <details>
 <summary>Найімовірніше, теж відтворюються</summary>
 
 **Контейнери:** MOD, EVO, DV
 
-**Відеокодеки:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**Відеокодеки:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 Їх декодує той самий FFmpeg 9.0.2 усередині FrameBridge. Зазвичай вони відкриваються й цілком можуть відтворюватися плавно, але плавне відтворення й перемотування перевірені лише для форматів вище. Діє повернення коштів протягом 14 днів.
 

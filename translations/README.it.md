@@ -46,14 +46,12 @@ Testato su materiale reale e pesante: un remux Blu-ray 4K HDR (HEVC, ~25 GB) in 
 
 Il riconoscimento del testo di PGS/SUP e VobSub usa le lingue OCR installate in Windows (di solito la lingua di sistema e l’inglese; altre si possono aggiungere nelle impostazioni di Windows). Se manca la lingua necessaria, vengono mostrate le immagini originali dei sottotitoli.
 
-VVC/H.266 non è supportato di proposito in questa beta.
-
 <details>
 <summary>Probabilmente funzionano anche</summary>
 
 **Contenitori:** MOD, EVO, DV
 
-**Codec video:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**Codec video:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 Decodificati dallo stesso FFmpeg 9.0.2 incluso in FrameBridge. Di solito si aprono e possono benissimo essere riprodotti in modo fluido, ma solo i formati sopra sono verificati per riproduzione e spostamento fluidi. Vale il rimborso entro 14 giorni.
 

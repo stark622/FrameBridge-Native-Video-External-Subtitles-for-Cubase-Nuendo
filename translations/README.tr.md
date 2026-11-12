@@ -46,14 +46,12 @@ Ağır, gerçek materyallerle test edildi: 8 diyalog kanalı ve çok sayıda ekl
 
 PGS/SUP ve VobSub metin tanıma, Windows’ta yüklü OCR dillerini kullanır (genellikle sistem dili ve İngilizce; Windows ayarlarından başka diller eklenebilir). Gerekli dil yoksa altyazıların orijinal görüntüleri gösterilir.
 
-VVC/H.266 bu betada bilinçli olarak desteklenmez.
-
 <details>
 <summary>Büyük olasılıkla bunlar da oynar</summary>
 
 **Kapsayıcılar:** MOD, EVO, DV
 
-**Video codec’leri:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo
+**Video codec’leri:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikle açılır ve akıcı da oynayabilir; ancak akıcı oynatma ve sarma yalnızca yukarıdaki formatlar için doğrulanmıştır. 14 günlük iade geçerlidir.
 
