@@ -32,7 +32,7 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 
 Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英語）をご覧ください。
 
-**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase / Nuendo 15.0.30 まで）で検証済みで、バージョン 15 の間はおそらく動作し続けますが、保証はありません。Cubase / Nuendo 16 のような新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。Cubase / Nuendo をアップデートするときは、先に UNINSTALL.cmd を実行し、アップデートをインストールしてから、もう一度 INSTALL.cmd を実行してください。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。
+**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase / Nuendo 15.0.30 まで）で検証済みで、バージョン 15 の間はおそらく動作し続けますが、保証はありません。Cubase 16 への対応はクローズドベータ中で、テストではすでに動作しており、次回のアップデートで提供されます。Nuendo 16 などの新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。Cubase / Nuendo をアップデートするときは、先に UNINSTALL.cmd を実行し、アップデートをインストールしてから、もう一度 INSTALL.cmd を実行してください。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。
 
 ## 検証済みのメディア
 

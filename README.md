@@ -32,7 +32,7 @@ Thumbnails on the video track are shown in all verified builds except Cubase 10.
 
 Cubase Pro, Artist, Elements, AI and LE editions are found the same way. See [COMPATIBILITY.txt](COMPATIBILITY.txt) for the full matrix.
 
-**Will it work after a Cubase or Nuendo update?** FrameBridge is verified with the builds listed above, up to Cubase and Nuendo 15.0.30, and will very likely keep working through version 15, though this is not guaranteed. A new major version such as Cubase or Nuendo 16 may change the video engine; using FrameBridge with it is at your own risk. To update Cubase or Nuendo, run UNINSTALL.cmd first, then install the update, then run INSTALL.cmd again. If FrameBridge stops working after an update, write to support.
+**Will it work after a Cubase or Nuendo update?** FrameBridge is verified with the builds listed above, up to Cubase and Nuendo 15.0.30, and will very likely keep working through version 15, though this is not guaranteed. Cubase 16 support is in closed beta: it already works in testing and will come with the next update. Nuendo 16 and other new major versions may change the video engine; using FrameBridge with them is at your own risk. To update Cubase or Nuendo, run UNINSTALL.cmd first, then install the update, then run INSTALL.cmd again. If FrameBridge stops working after an update, write to support.
 
 ## Verified media support
 

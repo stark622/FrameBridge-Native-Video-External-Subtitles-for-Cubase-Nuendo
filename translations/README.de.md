@@ -32,7 +32,7 @@ Thumbnails auf der Videospur gibt es in allen geprüften Versionen außer Cubase
 
 Die Editionen Cubase Pro, Artist, Elements, AI und LE werden auf dieselbe Weise erkannt. Die vollständige Matrix steht in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (Englisch).
 
-**Funktioniert es nach einem Update von Cubase oder Nuendo?** FrameBridge ist mit den oben aufgeführten Versionen bis Cubase und Nuendo 15.0.30 geprüft und dürfte in der gesamten Version 15 weiter funktionieren, eine Garantie gibt es dafür aber nicht. Eine neue Hauptversion wie Cubase oder Nuendo 16 kann die Video-Engine ändern – die Nutzung von FrameBridge damit erfolgt auf eigenes Risiko. Um Cubase oder Nuendo zu aktualisieren, führen Sie zuerst UNINSTALL.cmd aus, installieren dann das Update und führen anschließend erneut INSTALL.cmd aus. Funktioniert FrameBridge nach einem Update nicht mehr, schreiben Sie dem Support.
+**Funktioniert es nach einem Update von Cubase oder Nuendo?** FrameBridge ist mit den oben aufgeführten Versionen bis Cubase und Nuendo 15.0.30 geprüft und dürfte in der gesamten Version 15 weiter funktionieren, eine Garantie gibt es dafür aber nicht. Die Unterstützung für Cubase 16 ist in der geschlossenen Beta: Sie funktioniert in Tests bereits und kommt mit dem nächsten Update. Nuendo 16 und andere neue Hauptversionen können die Video-Engine ändern – die Nutzung von FrameBridge damit erfolgt auf eigenes Risiko. Um Cubase oder Nuendo zu aktualisieren, führen Sie zuerst UNINSTALL.cmd aus, installieren dann das Update und führen anschließend erneut INSTALL.cmd aus. Funktioniert FrameBridge nach einem Update nicht mehr, schreiben Sie dem Support.
 
 ## Geprüfte Medienunterstützung
 

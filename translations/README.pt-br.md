@@ -32,7 +32,7 @@ As miniaturas na pista de vídeo aparecem em todas as versões verificadas, exce
 
 As edições Cubase Pro, Artist, Elements, AI e LE são encontradas da mesma forma. A matriz completa está em [COMPATIBILITY.txt](../COMPATIBILITY.txt) (em inglês).
 
-**Vai funcionar depois de uma atualização do Cubase ou do Nuendo?** O FrameBridge é verificado com as versões listadas acima, até o Cubase e o Nuendo 15.0.30, e muito provavelmente continuará funcionando em toda a versão 15, mas isso não é garantido. Uma nova versão principal, como o Cubase ou o Nuendo 16, pode alterar o mecanismo de vídeo; usar o FrameBridge com ela é por sua conta e risco. Para atualizar o Cubase ou o Nuendo, execute primeiro o UNINSTALL.cmd, instale a atualização e depois execute o INSTALL.cmd novamente. Se o FrameBridge parar de funcionar após uma atualização, escreva para o suporte.
+**Vai funcionar depois de uma atualização do Cubase ou do Nuendo?** O FrameBridge é verificado com as versões listadas acima, até o Cubase e o Nuendo 15.0.30, e muito provavelmente continuará funcionando em toda a versão 15, mas isso não é garantido. O suporte ao Cubase 16 está em beta fechado: já funciona nos testes e virá na próxima atualização. O Nuendo 16 e outras novas versões principais podem alterar o mecanismo de vídeo; usar o FrameBridge com elas é por sua conta e risco. Para atualizar o Cubase ou o Nuendo, execute primeiro o UNINSTALL.cmd, instale a atualização e depois execute o INSTALL.cmd novamente. Se o FrameBridge parar de funcionar após uma atualização, escreva para o suporte.
 
 ## Mídias verificadas
 

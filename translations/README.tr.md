@@ -32,7 +32,7 @@ Video kanalındaki küçük resimler, Cubase 10.5–11 ve Nuendo 10 dışındaki
 
 Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../COMPATIBILITY.txt) dosyasındadır (İngilizce).
 
-**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve büyük olasılıkla 15 sürümünün tamamında çalışmaya devam edecektir, ancak bu garanti edilmez. Cubase veya Nuendo 16 gibi yeni bir ana sürüm video motorunu değiştirebilir; FrameBridge’i onunla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
+**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve büyük olasılıkla 15 sürümünün tamamında çalışmaya devam edecektir, ancak bu garanti edilmez. Cubase 16 desteği kapalı betada: testlerde zaten çalışıyor ve bir sonraki güncellemeyle gelecek. Nuendo 16 ve diğer yeni ana sürümler video motorunu değiştirebilir; FrameBridge’i onlarla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
 ## Doğrulanmış medya desteği
 
