@@ -14,6 +14,8 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 - Розширена підтримка контейнерів і кодеків завдяки бібліотекам FFmpeg, що входять до комплекту (LGPL).
 - Зовнішні файли субтитрів завантажуються автоматично й показуються поверх зображення; зміни у файлі субтитрів підхоплюються на льоту — навіть якщо файл додали чи перейменували вже після імпорту, без повторного імпорту. Сам відеофайл ніколи не змінюється.
 - Усі формати субтитрів відображаються в єдиному вигляді (як SRT). Зображення Blu-ray PGS/SUP і DVD VobSub розпізнаються як текст вбудованим OCR Windows.
+- Друге вікно відео для озвучення: жива копія відеоплеєра Cubase/Nuendo для звукорежисера, поки актор дивиться плеєр на весь екран на іншому моніторі.
+- Субтитри просто з монтажних листів і скриптів озвучення з ролями: PDF, DOCX, TXT, XLSX, CSV.
 - Не потрібні окремий відеоплеєр, кодек-пак чи LAV Filters.
 - Це не VST-плагін: не займає слот плагіна, нічого не треба підключати в кожному проєкті, не потрібна синхронізація по MTC — FrameBridge розширює сам штатний відеорушій.
 - Звук надходить штатною опцією «Extract Audio From Video» — зокрема з MKV та інших файлів, які Cubase і Nuendo самі не відкривають.
@@ -23,22 +25,22 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 
 **Перевірені збірки**
 
-- **Cubase:** 8.0.10 і 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30
+- **Cubase:** 8.0.10 і 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5
 - **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
 
 **Сусідні збірки з високою ймовірністю працюють.** Відеорушій майже не змінюється в межах одного покоління продукту: якщо, наприклад, перевірено Nuendo 12.0.52, то 12.0.20 чи 12.0.70 з високою ймовірністю теж працюватимуть. Інсталятор сам перевіряє відеорушій кожного встановлення: сумісне пропонується до встановлення, несумісне не потрапляє до списку, і нічого не змінюється. Це не гарантія. Старіші редакції з тим самим поколінням рушія (наприклад, Nuendo 7–9, Cubase 8.5 / 9.5) теж можуть підійти, але не тестувалися.
 
-Мініатюри на відеотреку є в усіх перевірених версіях, крім Cubase 10.5–11 і Nuendo 10 — там відео відтворюється без мініатюр.
+Мініатюри на відеотреку є в усіх перевірених версіях.
 
 Редакції Cubase Pro, Artist, Elements, AI та LE визначаються так само. Повна таблиця — у [COMPATIBILITY.txt](../COMPATIBILITY.txt) (англійською).
 
-**Чи працюватиме після оновлення Cubase або Nuendo?** FrameBridge перевірено на збірках зі списку вище, до Cubase і Nuendo 15.0.30 включно, і, найімовірніше, він працюватиме в усій 15-й версії, але це не гарантовано. Нові основні версії можуть змінити відеорушій — використовувати FrameBridge з ними ви можете на власний ризик. Щоб оновити Cubase або Nuendo, спершу запустіть UNINSTALL.cmd, потім установіть оновлення й знову запустіть INSTALL.cmd. Якщо після оновлення FrameBridge перестав працювати, напишіть у підтримку.
+**Чи працюватиме після оновлення Cubase або Nuendo?** FrameBridge перевірено на збірках зі списку вище, до Cubase 16.0.5 і Nuendo 15.0.30 включно. Нові основні версії можуть змінити відеорушій — використовувати FrameBridge з ними ви можете на власний ризик. Щоб оновити Cubase або Nuendo, спершу запустіть UNINSTALL.cmd, потім установіть оновлення й знову запустіть INSTALL.cmd. Якщо після оновлення FrameBridge перестав працювати, напишіть у підтримку.
 
 ## Перевірені формати
 
-**Контейнери:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM та OGV.
+**Контейнери:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOD, EVO, DV, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM та OGV.
 
-**Відеокодеки та профілі:** APV, AV1 8 біт, AV1 10 біт, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-кадри / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10 біт, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8 біт, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX та Xvid.
+**Відеокодеки та профілі:** APV, AV1 8 біт, AV1 10 біт, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-кадри / VFR, HEVC Main / Main10, HuffYUV, HAP / HAP Q, MPEG-1, DV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10 біт, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8 біт, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX та Xvid.
 
 Перевірено на важкому реальному матеріалі: 4K HDR Blu-ray remux (HEVC, ~25 ГБ) у проєкті з 8 доріжками акторів і безліччю плагінів та 4K HEVC епізод зі стримінгу (~7 ГБ) — плавне відтворення й перемотування.
 
@@ -49,9 +51,7 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 <details>
 <summary>Найімовірніше, теж відтворюються</summary>
 
-**Контейнери:** MOD, EVO, DV
-
-**Відеокодеки:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
+**Відеокодеки:** HEVC 4:2:2 / 4:4:4, JPEG 2000, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 Їх декодує той самий FFmpeg 9.0.2 усередині FrameBridge. Зазвичай вони відкриваються й цілком можуть відтворюватися плавно, але плавне відтворення й перемотування перевірені лише для форматів вище. Діє повернення коштів протягом 14 днів.
 
@@ -69,9 +69,9 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 
 ## Перевірка релізного файлу
 
-- Поточний реліз: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
-- SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
-- [Звіт VirusTotal](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (станом на 31 жовтня 2026 року): 1/63 — єдине загальне евристичне спрацювання одного рушія (MaxSecure); Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec та інші рушії, що завершили перевірку, нічого не знаходять.
+- Поточний реліз: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
+- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
+- [Звіт VirusTotal](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (станом на 14 листопада 2026 року): 0/61 — жоден рушій нічого не знаходить, зокрема Microsoft Defender, ESET, Malwarebytes, Sophos і Symantec.
 - Що саме інсталятор змінює на комп’ютері і як перевірити це самостійно: [SECURITY.md](../SECURITY.md)
 
 ## Продуктивність
@@ -87,7 +87,7 @@ FrameBridge розширює штатний відеорушій Cubase і Nuend
 ## Платформа та статус
 
 - Windows x64
-- FrameBridge Beta 1 · випуск 29 жовтня 2026
+- FrameBridge Beta 2 · випуск 14 листопада 2026
 - Комерційна пропрієтарна програма
 
 **[Купити FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Сайт: [framebridge.cc](https://framebridge.cc/uk/)

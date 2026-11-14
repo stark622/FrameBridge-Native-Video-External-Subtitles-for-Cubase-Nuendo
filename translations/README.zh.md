@@ -14,6 +14,8 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 - 通过随附的 FFmpeg 库（LGPL）扩展对封装格式和编解码器的支持。
 - 外挂字幕文件自动加载并显示在画面上；修改字幕文件后会即时生效；即使字幕文件是在导入之后才添加或改名的，也无需重新导入。视频文件本身永远不会被修改。
 - 所有字幕格式均以统一样式（与 SRT 相同）显示。蓝光 PGS/SUP 和 DVD VobSub 图形字幕通过 Windows 内置 OCR 识别为文本。
+- 配音用的第二个视频窗口：演员在另一块屏幕上全屏观看视频播放器时，为录音师显示 Cubase/Nuendo 视频播放器的实时副本。
+- 直接从带角色的配音台本和对白表生成字幕：PDF、DOCX、TXT、XLSX、CSV。
 - 无需单独的视频播放器、解码器包或 LAV Filters。
 - 不是 VST 插件：不占插件槽位，无需在每个工程中加载任何东西，也不需要 MTC 同步，FrameBridge 直接扩展原生视频引擎。
 - 音频通过标准的“从视频中提取音频”导入——包括 Cubase 和 Nuendo 自身无法打开的 MKV 等文件。
@@ -23,22 +25,22 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 
 **已验证的版本**
 
-- **Cubase：** 8.0.10 和 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30
+- **Cubase：** 8.0.10 和 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30、16.0.5
 - **Nuendo：** 10、12.0.52、13.0.10 / 13.0.50、14.0.32 / 14.0.40、15.0.21 / 15.0.30
 
 **相近版本很可能同样可以使用。** 同一代产品中的视频引擎几乎不变：例如 Nuendo 12.0.52 已经过验证，那么 12.0.20 或 12.0.70 很可能同样可以使用。安装程序会自行检查每个安装的视频引擎：兼容的会列出供安装，不兼容的不会出现在列表中，也不会做任何更改。这并不构成保证。具有相同引擎世代的旧版本（例如 Nuendo 7–9、Cubase 8.5 / 9.5）也可能适用，但尚未测试。
 
-除 Cubase 10.5–11 和 Nuendo 10 外，所有已验证版本的视频轨上都会显示缩略图；在这些版本中，视频播放时不显示缩略图。
+所有已验证版本的视频轨上都会显示缩略图。
 
 Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完整列表请参阅 [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英文）。
 
-**升级 Cubase 或 Nuendo 后还能用吗？** FrameBridge 已在上方列出的版本（最高至 Cubase 和 Nuendo 15.0.30）上验证，很可能在整个 15 版本系列中继续工作，但不作保证。新的主版本可能会更改视频引擎，与其搭配使用 FrameBridge 风险自负。升级 Cubase 或 Nuendo 时，请先运行 UNINSTALL.cmd，再安装升级，然后重新运行 INSTALL.cmd。如果升级后 FrameBridge 不再工作，请联系支持。
+**升级 Cubase 或 Nuendo 后还能用吗？** FrameBridge 已在上方列出的版本（最高至 Cubase 16.0.5 和 Nuendo 15.0.30）上验证。新的主版本可能会更改视频引擎，与其搭配使用 FrameBridge 风险自负。升级 Cubase 或 Nuendo 时，请先运行 UNINSTALL.cmd，再安装升级，然后重新运行 INSTALL.cmd。如果升级后 FrameBridge 不再工作，请联系支持。
 
 ## 已验证的媒体
 
-**封装格式：** MKV / WebM、MK3D、FLV、F4V、M2TS / MTS / TS、TOD、MOV / MP4、M4V、AVI、DivX、MXF、MPEG-PS / VOB、WMV / ASF、WTV / DVR-MS、3GP / 3G2、RM / RMVB、OGM 和 OGV。
+**封装格式：** MKV / WebM、MK3D、FLV、F4V、M2TS / MTS / TS、TOD、MOD、EVO、DV、MOV / MP4、M4V、AVI、DivX、MXF、MPEG-PS / VOB、WMV / ASF、WTV / DVR-MS、3GP / 3G2、RM / RMVB、OGM 和 OGV。
 
-**视频编解码器和配置：** APV、AV1 8 位、AV1 10 位、CineForm、DNxHR、FFV1、H.264 Main / High10 / B 帧 / VFR、HEVC Main / Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、ProRes Proxy、ProRes LT、Theora、UtVideo、VP8、VP9 10 位、WMV 7 / 8、DNxHD、XDCAM、XAVC / AVC-Intra、DVCPRO HD、DVCPRO50、Avid 1:1、SpeedHQ、Uncompressed v210、QuickTime Animation、PNG、TIFF、MagicYUV、FFVHuff、DivX / MS MPEG-4、H.263、VP9 8 位、Sorenson Spark、RealVideo、Cinepak、Sorenson Video、Microsoft Video 1、Canopus HQ、Canopus HQX和 Xvid。
+**视频编解码器和配置：** APV、AV1 8 位、AV1 10 位、CineForm、DNxHR、FFV1、H.264 Main / High10 / B 帧 / VFR、HEVC Main / Main10、HuffYUV、HAP / HAP Q、MPEG-1、DV、MPEG-2、ProRes 422 HQ、ProRes 4444、ProRes Proxy、ProRes LT、Theora、UtVideo、VP8、VP9 10 位、WMV 7 / 8、DNxHD、XDCAM、XAVC / AVC-Intra、DVCPRO HD、DVCPRO50、Avid 1:1、SpeedHQ、Uncompressed v210、QuickTime Animation、PNG、TIFF、MagicYUV、FFVHuff、DivX / MS MPEG-4、H.263、VP9 8 位、Sorenson Spark、RealVideo、Cinepak、Sorenson Video、Microsoft Video 1、Canopus HQ、Canopus HQX和 Xvid。
 
 已在高负载的真实素材上测试：在含 8 条对白轨和大量插件的工程中播放 4K HDR 蓝光原盘重封装（HEVC，约 25 GB）以及 4K HEVC 流媒体剧集（约 7 GB）——播放和定位都很流畅。
 
@@ -49,9 +51,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 <details>
 <summary>这些格式很可能也能播放</summary>
 
-**封装格式:** MOD, EVO, DV
-
-**视频编解码器:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo、VVC / H.266
+**视频编解码器:** HEVC 4:2:2 / 4:4:4, JPEG 2000, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo、VVC / H.266
 
 由 FrameBridge 内置的同一个 FFmpeg 9.0.2 解码。这些格式通常可以打开，也很可能流畅播放，但只有上面列出的格式经过了流畅播放和定位的验证。适用 14 天退款。
 
@@ -69,9 +69,9 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 ## 发布文件校验
 
-- 当前版本：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
-- SHA-256：`c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
-- [VirusTotal 报告](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection)（截至 2026 年 10 月 31 日）：1/63——仅有一个引擎（MaxSecure）给出一条通用启发式检测；Microsoft Defender、Kaspersky、BitDefender、ESET、Malwarebytes、Sophos、Symantec 以及其他完成扫描的引擎均未检出。
+- 当前版本：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
+- SHA-256：`714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
+- [VirusTotal 报告](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection)（截至 2026 年 11 月 14 日）：0/61——包括 Microsoft Defender、ESET、Malwarebytes、Sophos、Symantec 在内，没有任何引擎检出。
 - 安装程序会在您的电脑上更改什么，以及如何自行核实: [SECURITY.md](../SECURITY.md)
 
 ## 性能
@@ -87,7 +87,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 ## 平台与状态
 
 - Windows x64
-- FrameBridge Beta 1 · 2026 年 10 月 29 日发布
+- FrameBridge Beta 2 · 2026 年 11 月 14 日发布
 - 商业专有软件
 
 **[购买 FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · 网站：[framebridge.cc](https://framebridge.cc/zh/)

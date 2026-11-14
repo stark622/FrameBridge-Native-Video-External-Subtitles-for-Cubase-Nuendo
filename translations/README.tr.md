@@ -14,6 +14,8 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 - Pakete dahil FFmpeg kütüphaneleri (LGPL) sayesinde genişletilmiş kapsayıcı ve codec desteği.
 - Harici altyazı dosyaları otomatik olarak yüklenir ve görüntünün üzerinde gösterilir; altyazı dosyasında yapılan değişiklikler anında yansır — içe aktarmadan sonra eklenen veya yeniden adlandırılan dosya bile, yeniden içe aktarmaya gerek kalmadan. Video dosyasının kendisi asla değiştirilmez.
 - Tüm altyazı formatları tek tip bir görünümle (SRT görünümüyle) gösterilir. Blu-ray PGS/SUP ve DVD VobSub görüntüleri, Windows’un yerleşik OCR özelliğiyle metin olarak okunur.
+- Dublaj için ikinci video penceresi: oyuncu oynatıcıyı başka bir ekranda tam ekran izlerken ses mühendisi için Cubase/Nuendo Video Player’ın canlı kopyası.
+- Rol bilgili dublaj metinlerinden ve diyalog listelerinden doğrudan altyazı: PDF, DOCX, TXT, XLSX, CSV.
 - Ayrı bir video oynatıcı, codec paketi veya LAV Filters gerekmez.
 - VST eklentisi değildir: eklenti yuvası, her projede bir şey yüklemek ya da MTC senkronu gerekmez; FrameBridge doğrudan yerel video motorunu genişletir.
 - Ses, standart “Extract Audio From Video” seçeneğiyle gelir — Cubase ve Nuendo’nun tek başına açamadığı MKV ve diğer dosyalardan da.
@@ -23,22 +25,22 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 
 **Doğrulanmış sürümler**
 
-- **Cubase:** 8.0.10 ve 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30
+- **Cubase:** 8.0.10 ve 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5
 - **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
 
 **Yakın sürümlerin çalışması çok olasıdır.** Video motoru bir ürün kuşağı içinde neredeyse hiç değişmez: örneğin Nuendo 12.0.52 doğrulandıysa, 12.0.20 veya 12.0.70 de büyük olasılıkla çalışır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Bu bir garanti değildir. Aynı motor kuşağına sahip daha eski sürümler (örneğin Nuendo 7–9, Cubase 8.5 / 9.5) de uygun olabilir, ancak test edilmemiştir.
 
-Video kanalındaki küçük resimler, Cubase 10.5–11 ve Nuendo 10 dışındaki tüm doğrulanmış sürümlerde görünür; bu sürümlerde video küçük resimler olmadan oynatılır.
+Video kanalındaki küçük resimler tüm doğrulanmış sürümlerde görünür.
 
 Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../COMPATIBILITY.txt) dosyasındadır (İngilizce).
 
-**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase ve Nuendo 15.0.30’a kadar doğrulanmıştır ve büyük olasılıkla 15 sürümünün tamamında çalışmaya devam edecektir, ancak bu garanti edilmez. Yeni ana sürümler video motorunu değiştirebilir; FrameBridge’i onlarla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
+**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.30’a kadar doğrulanmıştır. Yeni ana sürümler video motorunu değiştirebilir; FrameBridge’i onlarla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
 ## Doğrulanmış medya desteği
 
-**Kapsayıcılar:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM ve OGV.
+**Kapsayıcılar:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOD, EVO, DV, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM ve OGV.
 
-**Video codec’leri ve profilleri:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10-bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8-bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX ve Xvid.
+**Video codec’leri ve profilleri:** APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frames / VFR, HEVC Main / Main10, HuffYUV, HAP / HAP Q, MPEG-1, DV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10-bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8-bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX ve Xvid.
 
 Ağır, gerçek materyallerle test edildi: 8 diyalog kanalı ve çok sayıda eklenti içeren bir projede 4K HDR Blu-ray remux (HEVC, ~25 GB) ve 4K HEVC bir yayın bölümü (~7 GB) — akıcı oynatma ve sarma.
 
@@ -49,9 +51,7 @@ PGS/SUP ve VobSub metin tanıma, Windows’ta yüklü OCR dillerini kullanır (g
 <details>
 <summary>Büyük olasılıkla bunlar da oynar</summary>
 
-**Kapsayıcılar:** MOD, EVO, DV
-
-**Video codec’leri:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
+**Video codec’leri:** HEVC 4:2:2 / 4:4:4, JPEG 2000, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikle açılır ve akıcı da oynayabilir; ancak akıcı oynatma ve sarma yalnızca yukarıdaki formatlar için doğrulanmıştır. 14 günlük iade geçerlidir.
 
@@ -69,9 +69,9 @@ Ayrıntılı talimatlar [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) ve [README.txt
 
 ## Sürüm dosyası kontrolü
 
-- Güncel sürüm: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
-- SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
-- [VirusTotal raporu](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (31 Ekim 2026 itibarıyla): 1/63 — tek bir motordan (MaxSecure) gelen tek bir genel sezgisel tespit; Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec ve taramayı tamamlayan diğer motorlar hiçbir şey bulmadı.
+- Güncel sürüm: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
+- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
+- [VirusTotal raporu](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (14 Kasım 2026 itibarıyla): 0/61 — Microsoft Defender, ESET, Malwarebytes, Sophos ve Symantec dahil hiçbir motor bir şey bulmadı.
 - Yükleyicinin bilgisayarınızda neyi değiştirdiği ve bunu kendiniz nasıl kontrol edeceğiniz: [SECURITY.md](../SECURITY.md)
 
 ## Performans
@@ -87,7 +87,7 @@ Ayrıca: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-vid
 ## Platform ve durum
 
 - Windows x64
-- FrameBridge Beta 1 · 29 Ekim 2026’da yayımlandı
+- FrameBridge Beta 2 · 14 Kasım 2026’da yayımlandı
 - Ticari, kapalı kaynak yazılım
 
 **[FrameBridge’i satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web sitesi: [framebridge.cc](https://framebridge.cc/tr/)

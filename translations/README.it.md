@@ -14,6 +14,8 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 - Supporto esteso di contenitori e codec grazie alle librerie FFmpeg incluse (LGPL).
 - I file di sottotitoli esterni vengono caricati automaticamente e mostrati sopra l’immagine; le modifiche al file dei sottotitoli vengono applicate in tempo reale, anche per un file aggiunto o rinominato dopo l’importazione, senza reimportare. Il file video non viene mai modificato.
 - Ogni formato di sottotitoli viene mostrato con un unico aspetto (quello degli SRT). Le immagini PGS/SUP dei Blu-ray e VobSub dei DVD vengono lette come testo con l’OCR integrato in Windows.
+- Seconda finestra video per il doppiaggio: una copia dal vivo del Riproduttore video di Cubase/Nuendo per il fonico, mentre l’attore guarda il riproduttore a schermo intero su un altro schermo.
+- Sottotitoli direttamente dai copioni di doppiaggio e dalle liste dialoghi con i ruoli: PDF, DOCX, TXT, XLSX, CSV.
 - Non servono player video separati, codec pack o LAV Filters.
 - Non è un plugin VST: nessuno slot plugin, niente da caricare in ogni progetto, nessuna sincronizzazione MTC — FrameBridge estende direttamente il motore video nativo.
 - L’audio arriva con l’opzione standard «Estrai l’audio dal video», anche da MKV e da altri file che Cubase e Nuendo da soli non aprono.
@@ -23,22 +25,22 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 
 **Versioni verificate**
 
-- **Cubase:** 8.0.10 e 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30
+- **Cubase:** 8.0.10 e 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5
 - **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
 
 **Le versioni vicine molto probabilmente funzionano.** Il motore video cambia pochissimo all’interno della stessa generazione di prodotto: se, ad esempio, Nuendo 12.0.52 è verificato, molto probabilmente funzioneranno anche 12.0.20 o 12.0.70. Il programma di installazione controlla da sé il motore video di ogni installazione: quella compatibile viene proposta per l’installazione, quella incompatibile non compare nell’elenco e non viene modificato nulla. Non è una garanzia. Anche edizioni più vecchie con la stessa generazione di motore (ad esempio Nuendo 7–9, Cubase 8.5 / 9.5) potrebbero essere idonee, ma non sono state testate.
 
-Le miniature sulla traccia video compaiono in tutte le versioni verificate, tranne Cubase 10.5–11 e Nuendo 10, dove il video viene riprodotto senza miniature.
+Le miniature sulla traccia video compaiono in tutte le versioni verificate.
 
 Le edizioni Cubase Pro, Artist, Elements, AI e LE vengono rilevate allo stesso modo. La matrice completa è in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (in inglese).
 
-**Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase e Nuendo 15.0.30, e molto probabilmente continuerà a funzionare per tutta la versione 15, anche se non è garantito. Le nuove versioni principali possono cambiare il motore video: usarle con FrameBridge è a tuo rischio. Per aggiornare Cubase o Nuendo, esegui prima UNINSTALL.cmd, installa l’aggiornamento e poi esegui di nuovo INSTALL.cmd. Se dopo un aggiornamento FrameBridge smette di funzionare, scrivi all’assistenza.
+**Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase 16.0.5 e Nuendo 15.0.30. Le nuove versioni principali possono cambiare il motore video: usarle con FrameBridge è a tuo rischio. Per aggiornare Cubase o Nuendo, esegui prima UNINSTALL.cmd, installa l’aggiornamento e poi esegui di nuovo INSTALL.cmd. Se dopo un aggiornamento FrameBridge smette di funzionare, scrivi all’assistenza.
 
 ## Formati verificati
 
-**Contenitori:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM e OGV.
+**Contenitori:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOD, EVO, DV, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM e OGV.
 
-**Codec video e profili:** APV, AV1 8 bit, AV1 10 bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frame / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10 bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8 bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX e Xvid.
+**Codec video e profili:** APV, AV1 8 bit, AV1 10 bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-frame / VFR, HEVC Main / Main10, HuffYUV, HAP / HAP Q, MPEG-1, DV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10 bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8 bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX e Xvid.
 
 Testato su materiale reale e pesante: un remux Blu-ray 4K HDR (HEVC, ~25 GB) in un progetto con 8 tracce di dialogo e molti plugin e un episodio 4K HEVC da streaming (~7 GB), con riproduzione e spostamento fluidi.
 
@@ -49,9 +51,7 @@ Il riconoscimento del testo di PGS/SUP e VobSub usa le lingue OCR installate in 
 <details>
 <summary>Probabilmente funzionano anche</summary>
 
-**Contenitori:** MOD, EVO, DV
-
-**Codec video:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
+**Codec video:** HEVC 4:2:2 / 4:4:4, JPEG 2000, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 Decodificati dallo stesso FFmpeg 9.0.2 incluso in FrameBridge. Di solito si aprono e possono benissimo essere riprodotti in modo fluido, ma solo i formati sopra sono verificati per riproduzione e spostamento fluidi. Vale il rimborso entro 14 giorni.
 
@@ -69,9 +69,9 @@ Le istruzioni complete sono in [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) e [READ
 
 ## Verifica del file della release
 
-- Release attuale: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
-- SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
-- [Report di VirusTotal](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection) (al 31 ottobre 2026): 1/63 — un’unica segnalazione euristica generica di un solo motore (MaxSecure); Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec e gli altri motori che hanno completato l’analisi non rilevano nulla.
+- Release attuale: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
+- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
+- [Report di VirusTotal](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (al 14 novembre 2026): 0/61 — nessun motore rileva nulla, compresi Microsoft Defender, ESET, Malwarebytes, Sophos e Symantec.
 - Cosa modifica il programma di installazione sul tuo PC e come verificarlo da solo: [SECURITY.md](../SECURITY.md)
 
 ## Prestazioni
@@ -87,7 +87,7 @@ Anche su: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-vi
 ## Piattaforma e stato
 
 - Windows x64
-- FrameBridge Beta 1 · uscita il 29 ottobre 2026
+- FrameBridge Beta 2 · uscita il 14 novembre 2026
 - Software commerciale e proprietario
 
 **[Acquista FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Sito web: [framebridge.cc](https://framebridge.cc/it/)

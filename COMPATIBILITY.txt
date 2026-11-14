@@ -1,6 +1,6 @@
 FrameBridge — Native Video for Cubase & Nuendo
-Beta
-COMPATIBILITY AND KNOWN LIMITATIONS - 2026-10-28
+Beta 2
+COMPATIBILITY AND KNOWN LIMITATIONS - 2026-11-14
 ================================================
 
 PLATFORM
@@ -20,6 +20,7 @@ Cubase:
   13.0.21
   14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40
   15.0.5 / 15.0.21 / 15.0.30
+  16.0.5
 
 Nuendo:
   10
@@ -29,16 +30,18 @@ Nuendo:
   15.0.21 / 15.0.30
 
 These are specifically tested builds, not a claim for every release in the
-Cubase 8-15 or Nuendo 10-15 generations. Cubase 9 passed the user's full video
-and subtitle test collection; Cubase 8 passed three previously unsupported video
+Cubase 8-16 or Nuendo 10-15 generations. Cubase 16.0.5 passed the user's full
+video, subtitle, audio and thumbnail test collection. Cubase 9 passed the full
+video and subtitle collection; Cubase 8 passed three previously unsupported video
 formats. Cubase Pro 12.0.51 was independently verified on a weak Windows 11 PC:
 installation, MKV playback with external subtitles, and restoration by uninstall.
 This does not mean all heavy media play smoothly on that PC.
 
 Nearby or older unlisted Cubase/Nuendo builds may also be compatible: the
 installer offers them only when its compatibility check of the installed video
-engine passes. This includes possible Nuendo 7-9 builds, but they have not been
-tested and are not guaranteed. A failed check leaves the installation untouched.
+engine passes. This includes possible Nuendo 7-9, 11 and 16 builds, but they have
+not been tested and are not guaranteed. A failed check leaves the installation
+untouched.
 
 All verified hosts share the same FFmpeg decoding and subtitle rendering.
 One observed UI difference is that Nuendo 13 can open its full-screen video
@@ -48,18 +51,37 @@ VERIFIED VIDEO MATRIX
 ---------------------
 
 Container coverage:
-  MKV / WebM, FLV, M2TS / MTS / TS, MOV / MP4, AVI, MXF, MPEG-PS/VOB and OGV.
+  MKV / WebM, MK3D, MOV / MP4, M4V, MXF (including Avid OP-Atom), AVI, DivX,
+  M2TS / MTS / TS, TOD, MOD, EVO, MPEG-PS / VOB, MPEG-1, DV, FLV, F4V,
+  WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGV and OGM.
 
 Codec coverage:
-  APV, AV1 8-bit, AV1 10-bit, CineForm, DNxHR, FFV1, H.264 Main/High10/B-frames/
-  VFR, HEVC Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, Theora, UtVideo,
-  VP8, VP9 10-bit and Xvid.
+  H.264 Main/High10/B-frames/VFR, HEVC Main/Main10, AV1 8-bit/10-bit,
+  ProRes Proxy/LT/422 HQ/4444, DNxHR/DNxHD, CineForm, XDCAM, XAVC/AVC-Intra,
+  DV, DVCPRO50, DVCPRO HD, MPEG-1, MPEG-2, VP8, VP9 8-bit/10-bit, APV, FFV1,
+  HuffYUV/FFVHuff, UtVideo, MagicYUV, Uncompressed v210, QuickTime Animation,
+  PNG, TIFF, Canopus HQ/HQX, SpeedHQ, HAP/HAP Q, Theora, WMV 7/8, Xvid,
+  DivX/MS MPEG-4, Sorenson Spark, Sorenson Video, RealVideo, Microsoft Video 1,
+  MJPEG, H.263, Avid 1:1 and Cinepak.
 
-The supported regression matrix passes 31/31 files. Long real-world HEVC and
-HDR samples were also opened through the common path. HDR-to-SDR conversion
-was visually verified; no quantitative color-accuracy claim is made.
+Video with non-square pixels (DV, DVCPRO50, DVCPRO HD) is shown in its correct
+wide proportions. Small videos (below 720 lines) that have a subtitle file are
+shown enlarged to 720 lines so that the subtitles stay sharp.
 
-VVC/H.266 is excluded from this beta and is rejected before decoder opening.
+LIKELY TO PLAY TOO (opens; smooth playback not guaranteed):
+  VVC/H.266, HEVC 4:2:2 and 4:4:4, JPEG 2000, Lagarith, Canopus Lossless,
+  WMV 9, VC-1, NotchLC, uncompressed r210/R10k/2vuy; not tested: Avid Meridian,
+  SheerVideo, Apple Intermediate, VP6, TechSmith/Camtasia, Fraps, CamStudio,
+  Indeo.
+
+FFmpeg contains more decoders than the file extensions Cubase/Nuendo accept:
+a file whose extension is not registered by FrameBridge cannot be imported,
+whatever codec it holds.
+
+Frame rates are reported exactly (24, 25, 30, 48, 50, 60 and the NTSC rates), so
+the host shows no false frame-rate mismatch. Video above 60 fps is delivered at
+60 fps. HDR-to-SDR conversion was visually verified; no quantitative
+color-accuracy claim is made.
 
 SUBTITLES
 ---------
@@ -68,14 +90,26 @@ Supported external subtitle formats:
   SRT, ASS, SSA, VTT, SMI/SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC,
   DCP XML, PGS/SUP and VobSub.
 
+Dubbing scripts and dialogue lists with timecodes and roles:
+  PDF, DOCX, TXT, XLSX and CSV (named like the video; shown in the SRT look
+  with the role as a prefix; an ordinary subtitle file takes priority).
+
 Text and bitmap subtitle paths are active across the verified video formats.
 All formats share the SRT look. PGS/SUP and VobSub are read as text with the
 Windows OCR (test SUP against its SRT: 73/76 lines identical, the rest differ by
 spacing/one dot; italics 560/561 words; a full Blu-ray episode: 792 of 795 cues as
 text in 3.2 s). Unreadable lines and languages without a Windows OCR pack keep the
-original pictures. Supported sidecars are
-loaded automatically, so they do not need to be burned into the source video in
-advance.
+original pictures. Supported sidecars are loaded automatically, so they do not
+need to be burned into the source video in advance.
+
+SOUND ENGINEER COPY WINDOW
+--------------------------
+
+A tray icon opens a live copy of the host's own Video Player, drawn by Windows
+(Desktop Window Manager): the same frame at the same moment, with subtitles, no
+second decoding and no separate playback. Verified on Cubase 8-15 and Nuendo 10.
+The copy is as sharp as the Video Player it copies: show the actor the Video Player
+itself in full screen and use the copy for the sound engineer. Windows 7 needs Aero.
 
 WORKFLOW
 --------
@@ -110,7 +144,8 @@ folder picker is offered. Cancelling performs no file or registry changes.
 
 Original engines are matched by exact SHA-256 identity or by the compatibility
 check, backed up per installation, bound to product state, and restored by atomic
-replacement. For Cubase 8/9 only, the installer also makes checked local copies
+replacement. On Cubase 16 the original AVI support module is backed up and restored
+the same way. For Cubase 8/9 only, the installer also makes checked local copies
 of the customer's existing QuickTime helper EXEs alongside the backed-up engine;
 its own copies are removed on rollback. These EXEs are not distributed in this
 package. Existing unknown FFmpeg DLLs or unknown hashes cause install refusal;
@@ -118,3 +153,6 @@ rollback removes only known product hashes. Product cleanup is limited to
 %ProgramData%\CubaseNuendoDirectShow and exact extension values previously recorded
 by this product. Projects, preferences, plug-ins and unrelated data are outside
 the installer scope.
+
+Recommended order when updating Cubase/Nuendo: UNINSTALL.cmd, the Steinberg
+update, then INSTALL.cmd.

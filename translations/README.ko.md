@@ -14,6 +14,8 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 - 함께 제공되는 FFmpeg 라이브러리(LGPL)로 컨테이너와 코덱 지원을 확장합니다.
 - 외부 자막 파일을 자동으로 불러와 화면 위에 표시하며, 자막 파일을 수정하면 바로 반영됩니다. 가져오기 후에 추가하거나 이름을 바꾼 파일도 다시 가져올 필요 없이 표시됩니다. 비디오 파일 자체는 절대 변경되지 않습니다.
 - 모든 자막 포맷이 하나의 모양(SRT와 같은 모양)으로 표시됩니다. 블루레이 PGS/SUP와 DVD VobSub 이미지 자막은 Windows 내장 OCR로 텍스트로 읽어 들입니다.
+- 더빙용 두 번째 비디오 창: 배우가 다른 화면에서 비디오 플레이어를 전체 화면으로 보는 동안 엔지니어용으로 Cubase/Nuendo 비디오 플레이어의 실시간 사본을 표시합니다.
+- 역할이 포함된 더빙 대본과 대사 목록에서 바로 자막: PDF, DOCX, TXT, XLSX, CSV.
 - 별도의 비디오 플레이어, 코덱 팩, LAV Filters가 필요 없습니다.
 - VST 플러그인이 아닙니다. 플러그인 슬롯도, 프로젝트마다 불러올 것도, MTC 동기화도 필요 없으며, FrameBridge가 기본 비디오 엔진 자체를 확장합니다.
 - 표준 “Extract Audio From Video”로 오디오도 가져올 수 있습니다. Cubase와 Nuendo가 자체적으로 열지 못하는 MKV 등의 파일에서도 가능합니다.
@@ -23,22 +25,22 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 
 **검증된 버전**
 
-- **Cubase:** 8.0.10 및 9.0.0(LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30
+- **Cubase:** 8.0.10 및 9.0.0(LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5
 - **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
 
 **인접 버전도 작동할 가능성이 매우 높습니다.** 비디오 엔진은 같은 제품 세대 안에서는 거의 바뀌지 않습니다. 예를 들어 Nuendo 12.0.52가 검증되었다면 12.0.20이나 12.0.70도 작동할 가능성이 매우 높습니다. 설치 프로그램이 각 설치의 비디오 엔진을 직접 확인하여, 호환되는 설치는 설치 대상으로 표시하고 호환되지 않는 설치는 목록에 표시하지 않으며 아무것도 변경하지 않습니다. 작동을 보장하는 것은 아닙니다. 같은 엔진 세대의 이전 에디션(예: Nuendo 7–9, Cubase 8.5 / 9.5)도 해당될 수 있지만 테스트하지는 않았습니다.
 
-비디오 트랙 썸네일은 Cubase 10.5–11과 Nuendo 10을 제외한 모든 검증된 버전에서 표시됩니다. 이 버전들에서는 썸네일 없이 비디오가 재생됩니다.
+비디오 트랙 썸네일은 모든 검증된 버전에서 표시됩니다.
 
 Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../COMPATIBILITY.txt)(영문)를 참고하세요.
 
-**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 및 Nuendo 15.0.30까지)에서 검증되었으며, 버전 15 전체에서 계속 작동할 가능성이 높지만 보장되지는 않습니다. 새 메이저 버전은 비디오 엔진이 바뀔 수 있으며, 이 버전에서 FrameBridge를 사용하는 것은 사용자 책임입니다. Cubase나 Nuendo를 업데이트하려면 먼저 UNINSTALL.cmd를 실행하고, 업데이트를 설치한 다음 INSTALL.cmd를 다시 실행하세요. 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
+**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 16.0.5 및 Nuendo 15.0.30까지)에서 검증되었습니다. 새 메이저 버전은 비디오 엔진이 바뀔 수 있으며, 이 버전에서 FrameBridge를 사용하는 것은 사용자 책임입니다. Cubase나 Nuendo를 업데이트하려면 먼저 UNINSTALL.cmd를 실행하고, 업데이트를 설치한 다음 INSTALL.cmd를 다시 실행하세요. 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
 
 ## 검증된 미디어
 
-**컨테이너:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM, OGV
+**컨테이너:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOD, EVO, DV, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM, OGV
 
-**비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main / Main10, HuffYUV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10비트, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8비트, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX, Xvid
+**비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main / Main10, HuffYUV, HAP / HAP Q, MPEG-1, DV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10비트, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8비트, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX, Xvid
 
 무거운 실제 소스로 테스트했습니다: 대사 트랙 8개와 많은 플러그인이 있는 프로젝트에서 4K HDR 블루레이 리먹스(HEVC, 약 25 GB)와 4K HEVC 스트리밍 에피소드(약 7 GB) — 재생과 탐색 모두 부드럽습니다.
 
@@ -49,9 +51,7 @@ PGS/SUP와 VobSub의 텍스트 인식에는 Windows에 설치된 OCR 언어가 �
 <details>
 <summary>이 형식들도 재생될 가능성이 높습니다</summary>
 
-**컨테이너:** MOD, EVO, DV
-
-**비디오 코덱:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
+**비디오 코덱:** HEVC 4:2:2 / 4:4:4, JPEG 2000, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo, VVC / H.266
 
 FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 열리며 부드럽게 재생될 가능성도 충분하지만, 부드러운 재생과 탐색이 검증된 것은 위의 형식뿐입니다. 14일 환불이 적용됩니다.
 
@@ -69,9 +69,9 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 ## 릴리스 파일 확인
 
-- 현재 릴리스: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
-- SHA-256: `c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
-- [VirusTotal 보고서](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection)(2026년 10월 31일 기준): 1/63 — 엔진 하나(MaxSecure)의 일반적인 휴리스틱 탐지 1건뿐입니다. Microsoft Defender, Kaspersky, BitDefender, ESET, Malwarebytes, Sophos, Symantec 등 검사를 마친 나머지 엔진에서는 아무것도 탐지되지 않았습니다.
+- 현재 릴리스: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
+- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
+- [VirusTotal 보고서](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection)(2026년 11월 14일 기준). 결과는 0/61로, Microsoft Defender, ESET, Malwarebytes, Sophos, Symantec을 포함해 어떤 엔진에서도 탐지되지 않았습니다.
 - 설치 프로그램이 PC에서 무엇을 변경하는지, 직접 확인하는 방법: [SECURITY.md](../SECURITY.md)
 
 ## 성능
@@ -87,7 +87,7 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 ## 플랫폼 및 상태
 
 - Windows x64
-- FrameBridge Beta 1 · 2026년 10월 29일 출시
+- FrameBridge Beta 2 · 2026년 11월 14일 출시
 - 상용 독점 소프트웨어
 
 **[FrameBridge 구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · 웹사이트: [framebridge.cc](https://framebridge.cc/ko/)

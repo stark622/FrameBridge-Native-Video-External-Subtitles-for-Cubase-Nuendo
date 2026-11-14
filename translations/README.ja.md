@@ -14,6 +14,8 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 - 同梱の FFmpeg ライブラリ（LGPL）により、対応コンテナとコーデックを拡張します。
 - 外部字幕ファイルを自動で読み込み、映像の上に表示します。字幕ファイルの変更もその場で反映されます。読み込み後に追加・名前変更したファイルも、読み込み直さずに表示されます。ビデオファイル自体は一切変更されません。
 - どの字幕フォーマットも統一された表示（SRT と同じ見た目）で描画されます。Blu-ray の PGS/SUP や DVD の VobSub の画像字幕は、Windows 内蔵の OCR でテキストとして読み取ります。
+- 吹き替え用の 2 つ目のビデオウィンドウ：役者が別の画面でビデオプレーヤーを全画面で見ている間、エンジニア用に Cubase/Nuendo のビデオプレーヤーのライブコピーを表示します。
+- 役名付きの吹き替え台本やダイアログリストから直接字幕：PDF、DOCX、TXT、XLSX、CSV。
 - 別のビデオプレーヤー、コーデックパック、LAV Filters は不要です。
 - VST プラグインではありません。プラグインスロットは不要で、プロジェクトごとに何かを読み込む必要も、MTC 同期も要りません。FrameBridge が標準のビデオエンジン自体を拡張します。
 - 標準の「ビデオからオーディオを抽出」でオーディオも読み込めます。Cubase や Nuendo 単体では開けない MKV などのファイルからも可能です。
@@ -23,22 +25,22 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 
 **検証済みバージョン**
 
-- **Cubase：** 8.0.10 および 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30
+- **Cubase：** 8.0.10 および 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30、16.0.5
 - **Nuendo：** 10、12.0.52、13.0.10 / 13.0.50、14.0.32 / 14.0.40、15.0.21 / 15.0.30
 
 **近いバージョンでも動作する可能性が非常に高いと考えられます。** ビデオエンジンは同じ製品世代の中ではほとんど変わりません。たとえば Nuendo 12.0.52 で検証済みなら、12.0.20 や 12.0.70 でも動作する可能性が非常に高いです。インストーラーは各インストールのビデオエンジンを自ら確認し、互換性があればインストール候補として表示し、互換性がなければ一覧に表示せず、何も変更しません。動作を保証するものではありません。同じ世代のエンジンを持つ古いエディション（Nuendo 7–9、Cubase 8.5 / 9.5 など）も対象になる場合がありますが、テストはしていません。
 
-ビデオトラックのサムネイルは、Cubase 10.5～11 と Nuendo 10 を除くすべての検証済みバージョンで表示されます。これらのバージョンでは、サムネイルなしで再生されます。
+ビデオトラックのサムネイルは、すべての検証済みバージョンで表示されます。
 
 Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英語）をご覧ください。
 
-**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase / Nuendo 15.0.30 まで）で検証済みで、バージョン 15 の間はおそらく動作し続けますが、保証はありません。新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。Cubase / Nuendo をアップデートするときは、先に UNINSTALL.cmd を実行し、アップデートをインストールしてから、もう一度 INSTALL.cmd を実行してください。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。
+**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.30 まで）で検証済みです。新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。Cubase / Nuendo をアップデートするときは、先に UNINSTALL.cmd を実行し、アップデートをインストールしてから、もう一度 INSTALL.cmd を実行してください。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。
 
 ## 検証済みのメディア
 
-**コンテナ：** MKV / WebM、MK3D、FLV、F4V、M2TS / MTS / TS、TOD、MOV / MP4、M4V、AVI、DivX、MXF、MPEG-PS / VOB、WMV / ASF、WTV / DVR-MS、3GP / 3G2、RM / RMVB、OGM、OGV
+**コンテナ：** MKV / WebM、MK3D、FLV、F4V、M2TS / MTS / TS、TOD、MOD、EVO、DV、MOV / MP4、M4V、AVI、DivX、MXF、MPEG-PS / VOB、WMV / ASF、WTV / DVR-MS、3GP / 3G2、RM / RMVB、OGM、OGV
 
-**ビデオコーデックとプロファイル：** APV、AV1 8 ビット、AV1 10 ビット、CineForm、DNxHR、FFV1、H.264 Main / High10 / B フレーム / VFR、HEVC Main / Main10、HuffYUV、MPEG-2、ProRes 422 HQ、ProRes 4444、ProRes Proxy、ProRes LT、Theora、UtVideo、VP8、VP9 10 ビット、WMV 7 / 8、DNxHD、XDCAM、XAVC / AVC-Intra、DVCPRO HD、DVCPRO50、Avid 1:1、SpeedHQ、Uncompressed v210、QuickTime Animation、PNG、TIFF、MagicYUV、FFVHuff、DivX / MS MPEG-4、H.263、VP9 8 ビット、Sorenson Spark、RealVideo、Cinepak、Sorenson Video、Microsoft Video 1、Canopus HQ、Canopus HQX、Xvid
+**ビデオコーデックとプロファイル：** APV、AV1 8 ビット、AV1 10 ビット、CineForm、DNxHR、FFV1、H.264 Main / High10 / B フレーム / VFR、HEVC Main / Main10、HuffYUV、HAP / HAP Q、MPEG-1、DV、MPEG-2、ProRes 422 HQ、ProRes 4444、ProRes Proxy、ProRes LT、Theora、UtVideo、VP8、VP9 10 ビット、WMV 7 / 8、DNxHD、XDCAM、XAVC / AVC-Intra、DVCPRO HD、DVCPRO50、Avid 1:1、SpeedHQ、Uncompressed v210、QuickTime Animation、PNG、TIFF、MagicYUV、FFVHuff、DivX / MS MPEG-4、H.263、VP9 8 ビット、Sorenson Spark、RealVideo、Cinepak、Sorenson Video、Microsoft Video 1、Canopus HQ、Canopus HQX、Xvid
 
 重い実素材でテスト済み：8 本のダイアログトラックと多数のプラグインを使ったプロジェクトでの 4K HDR Blu-ray リマックス（HEVC、約 25 GB）と、4K HEVC の配信エピソード（約 7 GB）。再生もシークもスムーズです。
 
@@ -49,9 +51,7 @@ PGS/SUP と VobSub の文字認識には、Windows にインストールされ�
 <details>
 <summary>これらもおそらく再生できます</summary>
 
-**コンテナ:** MOD, EVO, DV
-
-**ビデオコーデック:** HEVC 4:2:2 / 4:4:4, JPEG 2000, HAP / HAP Q, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, MPEG-1, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo、VVC / H.266
+**ビデオコーデック:** HEVC 4:2:2 / 4:4:4, JPEG 2000, Lagarith, Canopus Lossless, Avid Meridian, NotchLC, SheerVideo, Apple Intermediate, Uncompressed r210 / R10k / 2vuy, WMV 9, VC-1, VP6, TechSmith / Camtasia, Fraps, CamStudio, Indeo、VVC / H.266
 
 FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。通常は開くことができ、スムーズに再生できる可能性も十分ありますが、スムーズな再生とシークを確認済みなのは上記の形式だけです。14 日間の返金保証が適用されます。
 
@@ -69,9 +69,9 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 ## リリースファイルの確認
 
-- 現在のリリース：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta.zip`
-- SHA-256：`c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50`
-- [VirusTotal のレポート](https://www.virustotal.com/gui/file/c804d914c86e2abe7f05476455ae8efb447c6f2a74220bef515af9d266709e50/detection)（2026 年 10 月 31 日時点）：1/63 — 1 つのエンジン（MaxSecure）による汎用的なヒューリスティック検出が 1 件のみです。Microsoft Defender、Kaspersky、BitDefender、ESET、Malwarebytes、Sophos、Symantec など、スキャンを完了したその他のエンジンはすべて検出なしです。
+- 現在のリリース：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
+- SHA-256：`714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
+- [VirusTotal のレポート](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection)（2026 年 11 月 14 日時点）：0/61 — Microsoft Defender、ESET、Malwarebytes、Sophos、Symantec を含め、どのエンジンも検出なしです。
 - インストーラーが PC で何を変更するか、またそれを自分で確認する方法: [SECURITY.md](../SECURITY.md)
 
 ## パフォーマンス
@@ -87,7 +87,7 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 ## プラットフォームとステータス
 
 - Windows x64
-- FrameBridge Beta 1 · 2026年10月29日リリース
+- FrameBridge Beta 2 · 2026年11月14日リリース
 - 商用のプロプライエタリソフトウェア
 
 **[FrameBridge を購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web サイト：[framebridge.cc](https://framebridge.cc/ja/)
