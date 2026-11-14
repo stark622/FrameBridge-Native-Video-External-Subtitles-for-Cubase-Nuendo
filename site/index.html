@@ -52,7 +52,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/", "inLanguage": "en", "description": "FrameBridge extends the native Cubase and Nuendo video engine on Windows: modern video formats and external subtitles on the video track, no transcoding.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114e">
+  <link rel="stylesheet" href="/style.css?v=20261114f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -316,6 +316,9 @@
         </g>
         <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
         <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
@@ -352,6 +355,10 @@
       <details>
         <summary>Will it work after a Cubase or Nuendo update?</summary>
         <p>FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.30. New major versions may change the video engine; using FrameBridge with them is at your own risk. To update Cubase or Nuendo, run UNINSTALL.cmd first, then install the update, then run INSTALL.cmd again. If FrameBridge stops working after an update, write to support.</p>
+      </details>
+      <details>
+        <summary>Which dubbing script layouts are read?</summary>
+        <p>Name the script like the video (film.mkv + film.docx); an ordinary subtitle file with the same name takes priority.<br><b>DOCX</b> — a table with a header row: Start, End, Text (Role and No. optional; also In / Out, Subtitle, Speaker or Начало / Конец / Текст / Роль). One row = one line.<br><b>XLSX</b> — the same columns on the first sheet; times as text or as Excel time.<br><b>CSV</b> — header row Начало;Конец;Текст (+ Роль), separator ; , or tab. A CSV with English headers is not picked up in this beta — save it as XLSX.<br><b>TXT</b> — one line per cue: <code>00:00:01,000 - 00:00:03,500 Anna: …</code>; put the line <code>Начало - Конец - Текст</code> at the top.<br><b>PDF</b> — only a plain text table No / Start / End / Role / Text or TXT-style lines. PDFs printed from a browser or Word are usually not readable — use DOCX, XLSX or TXT.<br><b>Times</b> — hh:mm:ss,mmm with milliseconds, a start and an end for every line. Frames (hh:mm:ss:ff) only if the file states the frame rate, e.g. “25 fps” (not in XLSX).<br><b>Not read</b> — start-only times, mm:ss, times without milliseconds, text on the line under the timecode, DOCX without a table, .doc / .rtf / .odt, scanned PDFs.</p>
       </details>
     </div>
   </section>

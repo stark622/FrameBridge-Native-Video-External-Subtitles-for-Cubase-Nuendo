@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ru/", "inLanguage": "ru", "description": "FrameBridge расширяет штатный видеодвижок Cubase и Nuendo в Windows: современные видеоформаты и внешние субтитры на видеотреке, без перекодирования.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114e">
+  <link rel="stylesheet" href="/style.css?v=20261114f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -299,6 +299,9 @@
         </g>
         <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
         <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
@@ -335,6 +338,10 @@
       <details>
         <summary>Будет ли работать после обновления Cubase или Nuendo?</summary>
         <p>FrameBridge проверен на сборках из списка выше, до Cubase 16.0.5 и Nuendo 15.0.30 включительно. Новые основные версии могут изменить видеодвижок — использовать FrameBridge с ними вы можете на свой риск. Чтобы обновить Cubase или Nuendo, сначала запустите UNINSTALL.cmd, затем установите обновление и снова запустите INSTALL.cmd. Если после обновления FrameBridge перестал работать, напишите в поддержку.</p>
+      </details>
+      <details>
+        <summary>Какие монтажные листы читаются?</summary>
+        <p>Лист называется как видео (film.mkv + film.docx); обычный файл субтитров с тем же именем главнее.<br><b>DOCX</b> — таблица со строкой заголовков: Начало, Конец, Текст (Роль и № — по желанию; также Start / End / Text, In / Out, Реплика, Персонаж). Одна строка таблицы = одна реплика.<br><b>XLSX</b> — те же колонки на первом листе; время текстом или временем Excel.<br><b>CSV</b> — заголовки Начало;Конец;Текст (+ Роль), разделитель ; , или табуляция. CSV с английскими заголовками в этой бете не подхватывается — сохраните в XLSX.<br><b>TXT</b> — одна реплика на строку: <code>00:00:01,000 - 00:00:03,500 Anna: …</code>; первой строкой файла — <code>Начало - Конец - Текст</code>.<br><b>PDF</b> — только простая текстовая таблица № / Начало / Конец / Роль / Текст или строки как в TXT. PDF, напечатанные из браузера или Word, обычно не читаются — дайте DOCX, XLSX или TXT.<br><b>Время</b> — чч:мм:сс,ммм с миллисекундами, у каждой реплики начало и конец. Кадры (чч:мм:сс:кк) — только если в файле указана частота, например «25 fps» (не в XLSX).<br><b>Не читается</b> — только время начала, мм:сс, время без миллисекунд, текст строкой ниже таймкода, DOCX без таблицы, .doc / .rtf / .odt, сканы PDF.</p>
       </details>
     </div>
   </section>

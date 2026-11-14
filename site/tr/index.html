@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/tr/", "inLanguage": "tr", "description": "FrameBridge, Windows’taki Cubase ve Nuendo’nun yerel video motorunu genişletir: modern video formatları ve harici altyazılar, dönüştürme olmadan.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114e">
+  <link rel="stylesheet" href="/style.css?v=20261114f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -299,6 +299,9 @@
         </g>
         <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
         <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
@@ -335,6 +338,10 @@
       <details>
         <summary>Cubase veya Nuendo güncellemesinden sonra çalışır mı?</summary>
         <p>FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.30’a kadar doğrulanmıştır. Yeni ana sürümler video motorunu değiştirebilir; FrameBridge’i onlarla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.</p>
+      </details>
+      <details>
+        <summary>Hangi dublaj metni düzenleri okunur?</summary>
+        <p>Metin dosyası videoyla aynı adı taşır (film.mkv + film.docx); aynı adlı normal bir altyazı dosyası önceliklidir.<br><b>DOCX</b> — başlık satırı olan bir tablo: Start, End, Text (Role ve No. isteğe bağlı; ayrıca In / Out, Subtitle, Speaker veya Начало / Конец / Текст / Роль). Bir satır = bir replik.<br><b>XLSX</b> — aynı sütunlar ilk sayfada; süreler metin veya Excel saati olarak.<br><b>CSV</b> — başlık satırı Начало;Конец;Текст (+ Роль), ayırıcı ; , veya sekme. İngilizce başlıklı bir CSV bu betada algılanmaz — XLSX olarak kaydedin.<br><b>TXT</b> — satır başına bir replik: <code>00:00:01,000 - 00:00:03,500 Anna: …</code>; en üstte <code>Начало - Конец - Текст</code> satırı.<br><b>PDF</b> — yalnızca düz metin tablo No / Start / End / Role / Text veya TXT gibi satırlar. Tarayıcıdan veya Word’den yazdırılan PDF’ler genellikle okunamaz — DOCX, XLSX veya TXT kullanın.<br><b>Süreler</b> — milisaniyeli ss:dd:sn,mmm; her satırda başlangıç ve bitiş. Kareler (ss:dd:sn:kk) yalnızca dosyada kare hızı yazıyorsa, ör. “25 fps” (XLSX’te değil).<br><b>Okunmaz</b> — yalnızca başlangıç süresi, dd:sn, milisaniyesiz süreler, zaman kodunun altındaki satırda metin, tablosuz DOCX, .doc / .rtf / .odt, taranmış PDF’ler.</p>
       </details>
     </div>
   </section>

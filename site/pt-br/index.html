@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/pt-br/", "inLanguage": "pt-BR", "description": "O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windows: formatos de vídeo modernos e legendas externas, sem transcodificar.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114e">
+  <link rel="stylesheet" href="/style.css?v=20261114f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -299,6 +299,9 @@
         </g>
         <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
         <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
@@ -335,6 +338,10 @@
       <details>
         <summary>Vai funcionar depois de uma atualização do Cubase ou do Nuendo?</summary>
         <p>O FrameBridge é verificado com as versões listadas acima, até o Cubase 16.0.5 e o Nuendo 15.0.30. Novas versões principais podem alterar o mecanismo de vídeo; usar o FrameBridge com elas é por sua conta e risco. Para atualizar o Cubase ou o Nuendo, execute primeiro o UNINSTALL.cmd, instale a atualização e depois execute o INSTALL.cmd novamente. Se o FrameBridge parar de funcionar após uma atualização, escreva para o suporte.</p>
+      </details>
+      <details>
+        <summary>Quais layouts de roteiro de dublagem são lidos?</summary>
+        <p>O roteiro tem o mesmo nome do vídeo (film.mkv + film.docx); um arquivo de legendas comum com o mesmo nome tem prioridade.<br><b>DOCX</b> — uma tabela com linha de cabeçalho: Start, End, Text (Role e No. opcionais; também In / Out, Subtitle, Speaker ou Начало / Конец / Текст / Роль). Uma linha = uma fala.<br><b>XLSX</b> — as mesmas colunas na primeira planilha; tempos como texto ou como hora do Excel.<br><b>CSV</b> — cabeçalho Начало;Конец;Текст (+ Роль), separador ; , ou tabulação. Um CSV com cabeçalhos em inglês não é reconhecido nesta beta — salve como XLSX.<br><b>TXT</b> — uma fala por linha: <code>00:00:01,000 - 00:00:03,500 Anna: …</code>; no topo, a linha <code>Начало - Конец - Текст</code>.<br><b>PDF</b> — apenas uma tabela de texto simples No / Start / End / Role / Text ou linhas como no TXT. PDFs impressos de um navegador ou do Word normalmente não são lidos — use DOCX, XLSX ou TXT.<br><b>Tempos</b> — hh:mm:ss,mmm com milissegundos, início e fim em cada linha. Quadros (hh:mm:ss:qq) só se o arquivo informar a taxa, por ex. “25 fps” (não no XLSX).<br><b>Não é lido</b> — só tempo de início, mm:ss, tempos sem milissegundos, texto na linha abaixo do timecode, DOCX sem tabela, .doc / .rtf / .odt, PDFs escaneados.</p>
       </details>
     </div>
   </section>

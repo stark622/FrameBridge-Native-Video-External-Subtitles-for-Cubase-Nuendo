@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ja/", "inLanguage": "ja", "description": "FrameBridge は Windows 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットを内蔵のビデオトラックで扱い、外部字幕を映像の上に表示。トランスコードは不要です。", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114e">
+  <link rel="stylesheet" href="/style.css?v=20261114f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -299,6 +299,9 @@
         </g>
         <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
         <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
@@ -335,6 +338,10 @@
       <details>
         <summary>Cubase や Nuendo をアップデートしても動作しますか？</summary>
         <p>FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.30 まで）で検証済みです。新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。Cubase / Nuendo をアップデートするときは、先に UNINSTALL.cmd を実行し、アップデートをインストールしてから、もう一度 INSTALL.cmd を実行してください。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。</p>
+      </details>
+      <details>
+        <summary>どの形式の吹き替え台本が読み込めますか？</summary>
+        <p>台本は動画と同じ名前にします（film.mkv + film.docx）。同じ名前の通常の字幕ファイルがあればそちらが優先されます。<br><b>DOCX</b> — 見出し行のある表：Start、End、Text（Role と No. は任意。In / Out、Subtitle、Speaker や Начало / Конец / Текст / Роль も可）。1 行 = 1 セリフ。<br><b>XLSX</b> — 最初のシートに同じ列。時刻は文字列または Excel の時刻。<br><b>CSV</b> — 見出し Начало;Конец;Текст（+ Роль）、区切りは ; 、, またはタブ。英語の見出しの CSV はこのベータでは認識されません。XLSX で保存してください。<br><b>TXT</b> — 1 行に 1 セリフ：<code>00:00:01,000 - 00:00:03,500 Anna: …</code>。先頭に <code>Начало - Конец - Текст</code> の行を入れてください。<br><b>PDF</b> — No / Start / End / Role / Text の単純なテキスト表、または TXT と同じ行のみ。ブラウザや Word から印刷した PDF は通常読み込めません。DOCX、XLSX、TXT を使ってください。<br><b>時刻</b> — ミリ秒付きの hh:mm:ss,mmm。各セリフに開始と終了が必要。フレーム（hh:mm:ss:ff）はファイルにフレームレート（例「25 fps」）がある場合のみ（XLSX は不可）。<br><b>読み込めないもの</b> — 開始時刻のみ、mm:ss、ミリ秒なしの時刻、タイムコードの下の行にあるテキスト、表のない DOCX、.doc / .rtf / .odt、スキャンした PDF。</p>
       </details>
     </div>
   </section>

@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/zh/", "inLanguage": "zh-CN", "description": "FrameBridge 扩展 Windows 版 Cubase 和 Nuendo 的原生视频引擎：在内置视频轨上使用现代视频格式，并将外挂字幕显示在画面上，无需转码。", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114e">
+  <link rel="stylesheet" href="/style.css?v=20261114f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -299,6 +299,9 @@
         </g>
         <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
         <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
@@ -335,6 +338,10 @@
       <details>
         <summary>升级 Cubase 或 Nuendo 后还能用吗？</summary>
         <p>FrameBridge 已在上方列出的版本（最高至 Cubase 16.0.5 和 Nuendo 15.0.30）上验证。新的主版本可能会更改视频引擎，与其搭配使用 FrameBridge 风险自负。升级 Cubase 或 Nuendo 时，请先运行 UNINSTALL.cmd，再安装升级，然后重新运行 INSTALL.cmd。如果升级后 FrameBridge 不再工作，请联系支持。</p>
+      </details>
+      <details>
+        <summary>支持哪些配音台本格式？</summary>
+        <p>台本与视频同名（film.mkv + film.docx）；同名的普通字幕文件优先。<br><b>DOCX</b> — 带标题行的表格：Start、End、Text（Role 和 No. 可选；也可用 In / Out、Subtitle、Speaker 或 Начало / Конец / Текст / Роль）。一行 = 一句台词。<br><b>XLSX</b> — 第一个工作表中的相同列；时间为文本或 Excel 时间。<br><b>CSV</b> — 标题行 Начало;Конец;Текст（+ Роль），分隔符为 ;、, 或制表符。英文标题的 CSV 在此测试版中不会被识别——请另存为 XLSX。<br><b>TXT</b> — 每行一句台词：<code>00:00:01,000 - 00:00:03,500 Anna: …</code>；文件第一行写 <code>Начало - Конец - Текст</code>。<br><b>PDF</b> — 仅限 No / Start / End / Role / Text 的纯文本表格或与 TXT 相同的行。从浏览器或 Word 打印的 PDF 通常无法读取——请使用 DOCX、XLSX 或 TXT。<br><b>时间</b> — 带毫秒的 hh:mm:ss,mmm，每句都要有开始和结束。帧（hh:mm:ss:ff）仅在文件中注明帧率时可用，例如“25 fps”（XLSX 不支持）。<br><b>不支持</b> — 只有开始时间、mm:ss、无毫秒的时间、时间码下一行的文字、无表格的 DOCX、.doc / .rtf / .odt、扫描版 PDF。</p>
       </details>
     </div>
   </section>
