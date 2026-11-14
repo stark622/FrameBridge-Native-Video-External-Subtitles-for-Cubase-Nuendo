@@ -4,7 +4,7 @@ import { ensureTable } from './e.js';
 const FAQ = ['Invalid or not supported file', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update'];
 const OWNER_COUNTRIES = ['UA'];
 // single visits by the owner's friends (start time of the visit), left out like the owner's own
-const FRIEND_VISITS = [Date.parse('2026-11-14T20:01:06.090Z')];
+const FRIEND_VISITS = ['2026-11-14T08:41:11.360Z', '2026-11-14T08:53:55.705Z', '2026-11-14T18:45:23.236Z', '2026-11-14T20:01:06.090Z'].map(Date.parse);
 const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
 
 // Every visitor Cloudflare saw (it keeps request details for 31 days), including those before this counter existed.
