@@ -3,6 +3,8 @@ import { ensureTable } from './e.js';
 
 const FAQ = ['Invalid or not supported file', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update'];
 const OWNER_COUNTRIES = ['UA'];
+// single visits by the owner's friends (start time of the visit), left out like the owner's own
+const FRIEND_VISITS = [Date.parse('2026-11-14T20:01:06.090Z')];
 const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
 
 // Every visitor Cloudflare saw (it keeps request details for 31 days), including those before this counter existed.
@@ -156,7 +158,7 @@ export async function onRequestGet({ request, env }) {
   }
   // the owner tests the site from Ukraine, so those visits are left out of the report (rows stay stored; &owner=1 shows them)
   const showOwner = url.searchParams.get('owner') === '1';
-  const owner = sessions.filter((s) => !s.bot && !showOwner && OWNER_COUNTRIES.includes(s.country));
+  const owner = sessions.filter((s) => !s.bot && !showOwner && (OWNER_COUNTRIES.includes(s.country) || FRIEND_VISITS.includes(s.t0)));
   const human = sessions.filter((s) => !s.bot && !owner.includes(s));
   const keep = new Set(human.map((s) => s.sid));
   const engaged = human.filter((s) => s.acts > 0 || s.sees.size >= 2 || s.time >= 15);
