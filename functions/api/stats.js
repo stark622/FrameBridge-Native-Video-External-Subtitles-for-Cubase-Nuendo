@@ -95,6 +95,9 @@ async function cfVisitors(token, sinceMs, showOwner) {
 function esc(s) {
   return String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
+// the report shows the owner's clock (Kyiv, summer/winter time handled by Intl): 'YYYY-MM-DD HH:MM'
+const KYIV = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Kyiv', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+function kyiv(ms) { const p = Object.fromEntries(KYIV.formatToParts(new Date(ms)).map((x) => [x.type, x.value])); return `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}`; }
 function inc(m, k, n = 1) { m[k] = (m[k] || 0) + n; }
 function sorted(m) { return Object.entries(m).sort((a, b) => b[1] - a[1]); }
 
@@ -166,7 +169,7 @@ export async function onRequestGet({ request, env }) {
   };
   const perDay = {};
   for (const s of human) {
-    const d = new Date(s.t0).toISOString().slice(0, 10);
+    const d = kyiv(s.t0).slice(0, 10);
     perDay[d] = perDay[d] || [0, 0, 0];
     perDay[d][0]++;
     if (engaged.includes(s)) perDay[d][1]++;
@@ -246,22 +249,22 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 </div>
 <div class="layout">
 <div class="col-visits">
-${table('Recent visits (newest first, UTC)', human.slice(-100).reverse().map((s) => [
-    new Date(s.t0).toISOString().slice(5, 16).replace('T', ' '), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
+${table('Recent visits (newest first, Kyiv time)', human.slice(-100).reverse().map((s) => [
+    kyiv(s.t0).slice(5), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
     `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : ''),
   ]), ['Start', 'Country', 'System', 'Lang', 'From', 'Active · scroll', 'What they did'])}
 ${!env.CF_API_TOKEN
     ? '<h2>All visitors seen by Cloudflare</h2><p class="muted">Add the Pages secret CF_API_TOKEN (read-only analytics token) to list here every visitor of the last 31 days, including those before this counter.</p>'
     : cfError
       ? `<h2>All visitors seen by Cloudflare</h2><p class="muted">Cloudflare error: ${esc(cfError)}</p>`
-      : table('All visitors seen by Cloudflare, also before this counter (newest first, UTC; Cloudflare keeps 31 days)',
-          cf.visits.slice().reverse().map((v) => [new Date(v.t).toISOString().slice(5, 16).replace('T', ' '), v.k === 'vpn' ? 'VPN/server?' : 'person',
+      : table('All visitors seen by Cloudflare, also before this counter (newest first, Kyiv time; Cloudflare keeps 31 days)',
+          cf.visits.slice().reverse().map((v) => [kyiv(v.t).slice(5), v.k === 'vpn' ? 'VPN/server?' : 'person',
             v.country, v.net, v.sys, v.time, v.pages.length ? v.pages.join(' → ') : '—', v.counter ? 'yes' : '']),
           ['Start', 'Type', 'Country', 'Network', 'System', 'On site', 'Pages', 'In this counter']) +
         `<div class="muted" style="margin-top:6px">${cf.visits.filter((v) => v.k === 'human').length} people · ${cf.visits.filter((v) => v.k === 'vpn').length} via VPN/servers (person or bot, unclear) · left out: ${cf.bots} bot loads (${cf.farm} from farms: 4+ countries in one minute), ${cf.owner} own (${OWNER_COUNTRIES.join(', ')}) · "unknown" time = one page, reading time not recorded before 4 Nov · Buy clicks and video plays are only in this counter</div>`}
 </div>
 <div class="col-summary">
-${table('Per day (UTC)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
+${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
 <div class="grid">
 ${table('Operating system', by('os'), ['OS', 'Visits', 'Engaged'])}
 ${table('Browser', by('br'), ['Browser', 'Visits', 'Engaged'])}
