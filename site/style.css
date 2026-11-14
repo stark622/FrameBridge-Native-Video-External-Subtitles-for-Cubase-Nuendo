@@ -635,3 +635,43 @@ details.lang .globe { flex: none; }
   .showcase .play-label { font-size: 13px; padding: 5px 12px; }
   .price-card .amount { font-size: 46px; }
 }
+
+/* Compatibility: pale "Cubase 16 · Beta 2" pill with a hover / tap card */
+.b2 { position: relative; display: inline-block; margin-top: 18px; }
+.b2-btn {
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--muted);
+  background: transparent;
+  border: 1px dashed rgba(58, 168, 255, 0.35);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: help;
+  opacity: 0.72;
+  transition: opacity 0.2s, border-color 0.2s, color 0.2s;
+}
+.b2:hover .b2-btn, .b2:focus-within .b2-btn, .b2.open .b2-btn { opacity: 1; color: var(--text); border-color: rgba(58, 168, 255, 0.65); }
+.b2-tip {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 10px);
+  z-index: 30;
+  width: min(460px, calc(100vw - 32px));
+  padding: 16px 18px;
+  background: #0b111d;
+  border: 1px solid var(--hair-2);
+  border-radius: 14px;
+  box-shadow: var(--shadow-3);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+.b2:hover .b2-tip, .b2:focus-within .b2-tip, .b2.open .b2-tip { opacity: 1; visibility: visible; transform: none; }
+.b2-tip strong { display: block; color: var(--text); margin-bottom: 8px; font-size: 15.5px; }
+.b2-tip ul { margin: 0; padding-left: 18px; }
+.b2-tip li { margin: 5px 0; }
+.b2-tip li.b2-free { list-style: none; margin: 10px 0 0 -18px; color: var(--ok); font-weight: 600; }

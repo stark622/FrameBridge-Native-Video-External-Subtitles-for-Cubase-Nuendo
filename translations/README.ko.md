@@ -32,7 +32,7 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 
 Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../COMPATIBILITY.txt)(영문)를 참고하세요.
 
-**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 및 Nuendo 15.0.30까지)에서 검증되었으며, 버전 15 전체에서 계속 작동할 가능성이 높지만 보장되지는 않습니다. Cubase 16 지원은 비공개 베타 중이며, 테스트에서는 이미 작동하고 다음 업데이트와 함께 제공됩니다. Nuendo 16 등 새 메이저 버전은 비디오 엔진이 바뀔 수 있으며, 이 버전에서 FrameBridge를 사용하는 것은 사용자 책임입니다. Cubase나 Nuendo를 업데이트하려면 먼저 UNINSTALL.cmd를 실행하고, 업데이트를 설치한 다음 INSTALL.cmd를 다시 실행하세요. 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
+**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 및 Nuendo 15.0.30까지)에서 검증되었으며, 버전 15 전체에서 계속 작동할 가능성이 높지만 보장되지는 않습니다. 새 메이저 버전은 비디오 엔진이 바뀔 수 있으며, 이 버전에서 FrameBridge를 사용하는 것은 사용자 책임입니다. Cubase나 Nuendo를 업데이트하려면 먼저 UNINSTALL.cmd를 실행하고, 업데이트를 설치한 다음 INSTALL.cmd를 다시 실행하세요. 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
 
 ## 검증된 미디어
 
