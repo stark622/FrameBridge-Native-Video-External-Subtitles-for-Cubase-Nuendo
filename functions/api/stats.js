@@ -5,6 +5,7 @@ const FAQ = ['Invalid or not supported file', 'Changes video files?', 'How to re
 const OWNER_COUNTRIES = ['UA'];
 // single visits by the owner's friends (start time of the visit), left out like the owner's own
 const FRIEND_VISITS = ['2026-11-14T08:41:11.360Z', '2026-11-14T08:53:55.705Z', '2026-11-14T18:45:23.236Z', '2026-11-14T20:01:06.090Z'].map(Date.parse);
+const FRIEND_COUNTRY = 'CA'; // the same visits in the Cloudflare list: this country, from 10 min before to 2 h after
 const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
 
 // Every visitor Cloudflare saw (it keeps request details for 31 days), including those before this counter existed.
@@ -198,6 +199,7 @@ export async function onRequestGet({ request, env }) {
   let cf = null, cfError = '';
   if (env.CF_API_TOKEN) {
     try { cf = await cfVisitors(String(env.CF_API_TOKEN).trim(), since, showOwner); } catch (e) { cfError = String((e && e.message) || e); }
+    if (cf && !showOwner) cf.visits = cf.visits.filter((v) => !(v.country === FRIEND_COUNTRY && FRIEND_VISITS.some((t) => v.t >= t - 600000 && v.t <= t + 7200000)));
   }
 
   if (url.searchParams.get('format') === 'json') {
