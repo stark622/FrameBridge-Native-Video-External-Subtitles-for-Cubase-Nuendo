@@ -651,7 +651,6 @@ details.lang .globe { flex: none; }
   box-shadow: 0 0 18px -6px rgba(58, 168, 255, 0.6);
   transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
-.b2.open .b2-btn { color: #fff; background: rgba(58, 168, 255, 0.22); border-color: var(--accent); box-shadow: 0 0 24px -4px rgba(58, 168, 255, 0.75); }
 .b2-tip {
   position: absolute;
   left: 0;
@@ -671,10 +670,15 @@ details.lang .globe { flex: none; }
   transform: translateY(4px);
   transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
 }
-.b2.open .b2-tip { opacity: 1; visibility: visible; transform: none; }
+/* mouse: open on hover, close when the pointer leaves (a click does not pin it) */
 @media (hover: hover) {
   .b2:hover .b2-btn { color: #fff; background: rgba(58, 168, 255, 0.22); border-color: var(--accent); box-shadow: 0 0 24px -4px rgba(58, 168, 255, 0.75); }
   .b2:hover .b2-tip { opacity: 1; visibility: visible; transform: none; }
+}
+/* touch: tap opens, a second tap or a tap outside closes */
+@media (hover: none) {
+  .b2.open .b2-btn { color: #fff; background: rgba(58, 168, 255, 0.22); border-color: var(--accent); box-shadow: 0 0 24px -4px rgba(58, 168, 255, 0.75); }
+  .b2.open .b2-tip { opacity: 1; visibility: visible; transform: none; }
 }
 .b2-tip strong { display: block; color: var(--text); margin-bottom: 8px; font-size: 15.5px; }
 .b2-tip ul { margin: 0; padding-left: 18px; }
