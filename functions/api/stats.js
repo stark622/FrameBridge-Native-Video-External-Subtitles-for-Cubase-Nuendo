@@ -249,7 +249,6 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 <div class="tile"><b>${summary.video_play_sessions}</b>visits played the video</div>
 <div class="tile"><b>${avgTime} s</b>avg active time (engaged)</div>
 <div class="tile"><b>${summary.sessions_flagged_bot}</b>flagged as bots<br><span class="muted">excluded</span></div>
-<div class="tile"><b>${owner.length}</b>own visits (${OWNER_COUNTRIES.join(', ')})<br><span class="muted">${showOwner ? 'shown' : 'excluded'}</span></div>
 </div>
 <div class="layout">
 <div class="col-visits">
@@ -265,7 +264,7 @@ ${!env.CF_API_TOKEN
           cf.visits.slice().reverse().map((v) => [kyiv(v.t).slice(5), v.k === 'vpn' ? 'VPN/server?' : 'person',
             v.country, v.net, v.sys, v.time, v.pages.length ? v.pages.join(' → ') : '—', v.counter ? 'yes' : '']),
           ['Start', 'Type', 'Country', 'Network', 'System', 'On site', 'Pages', 'In this counter']) +
-        `<div class="muted" style="margin-top:6px">${cf.visits.filter((v) => v.k === 'human').length} people · ${cf.visits.filter((v) => v.k === 'vpn').length} via VPN/servers (person or bot, unclear) · left out: ${cf.bots} bot loads (${cf.farm} from farms: 4+ countries in one minute), ${cf.owner} own (${OWNER_COUNTRIES.join(', ')}) · "unknown" time = one page, reading time not recorded before 4 Nov · Buy clicks and video plays are only in this counter</div>`}
+        `<div class="muted" style="margin-top:6px">${cf.visits.filter((v) => v.k === 'human').length} people · ${cf.visits.filter((v) => v.k === 'vpn').length} via VPN/servers (person or bot, unclear) · left out: ${cf.bots} bot loads (${cf.farm} from farms: 4+ countries in one minute) · "unknown" time = one page, reading time not recorded before 4 Nov · Buy clicks and video plays are only in this counter</div>`}
 </div>
 <div class="col-summary">
 ${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
