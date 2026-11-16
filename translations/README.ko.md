@@ -2,13 +2,27 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · **한국어**
 
+![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0) ![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0) ![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) ![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)
+
 [![Nuendo 기본 비디오 트랙에서 작동하는 FrameBridge — 클릭하여 데모 보기](../poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-**웹사이트: [framebridge.cc](https://framebridge.cc/ko/)** · [YouTube에서 FrameBridge 데모 보기](https://youtu.be/qJqN0ybHV8E)
+위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 다양한 비디오 포맷과 자막 형식을 실시간으로 가져오는 모습을 편집 없이 한 번에 담았습니다.
+
+**[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진을 확장합니다. 최신 비디오 포맷이 기본 비디오 트랙에서 열리고 내장 비디오 플레이어에서 재생되며, 외부 자막 파일은 화면 위에 자동으로 표시됩니다. 소스를 트랜스코딩할 필요도, 자막을 영상에 입힐 필요도 없습니다.
 
+**Cubase나 Nuendo에서 “Invalid or not supported file!”이라고 나오나요?** FrameBridge는 바로 이 메시지를 위해 만들어졌습니다. 이 메시지는 기본 비디오 엔진이 파일의 컨테이너, 코덱 또는 프레임 레이트를 처리하지 못할 때 표시됩니다. MKV, WebM, MXF, iPhone 같은 스마트폰으로 촬영한 HEVC, 가변 프레임 레이트 영상 등이 그렇습니다. FrameBridge는 이런 파일을 자체 디코더로 읽습니다. 그래도 파일이 열리지 않으면 14일 이내에 전액 환불해 드립니다.
+
 ## 주요 장점
+
+- **기본 비디오 트랙에서 최신 포맷** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 등 많은 포맷이 변환 없이 내장 비디오 플레이어에서 재생됩니다.
+- **화면 위의 외부 자막** — `film.mkv` 옆에 `film.srt`를 두면 됩니다. 자막 파일을 수정하면 바로 반영됩니다. 비디오 파일은 절대 변경되지 않습니다.
+- **더빙을 위해 만들었습니다** — 엔지니어용 두 번째 비디오 창, 역할이 포함된 더빙 대본에서 바로 자막.
+- **플러그인이 아닙니다** — 플러그인 슬롯도, 프로젝트마다 불러올 것도, MTC 동기화도, 코덱 팩도 필요 없습니다. UNINSTALL.cmd로 정확히 복원됩니다.
+
+<details>
+<summary>모든 기능</summary>
 
 - Cubase/Nuendo 기본 비디오 트랙과 내장 비디오 플레이어에서 작동합니다.
 - 함께 제공되는 FFmpeg 라이브러리(LGPL)로 컨테이너와 코덱 지원을 확장합니다.
@@ -21,32 +35,52 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 - 표준 “Extract Audio From Video”로 오디오도 가져올 수 있습니다. Cubase와 Nuendo가 자체적으로 열지 못하는 MKV 등의 파일에서도 가능합니다.
 - 지원되는 HDR 소스의 HDR→SDR 변환을 육안으로 검증했습니다. 색 정확도에 대한 정량적 보증은 하지 않습니다.
 
+</details>
+
+## 더빙용 두 번째 비디오 창
+
+화면 두 개: 배우에게는 Cubase/Nuendo 비디오 플레이어 전체 화면, 여러분에게는 FrameBridge 사본.
+
+![비디오 플레이어를 배우의 화면으로 끌어다 놓고, 두 번 클릭해 전체 화면으로 바꾼 뒤, 트레이의 FrameBridge 아이콘을 클릭하면 여러분의 화면에 사본이 열립니다](../dub-window.gif)
+
 ## 지원되는 Cubase 및 Nuendo 버전
 
-**검증된 버전**
+| | 검증된 버전 |
+|---|---|
+| **Cubase** | 8.0.10 및 9.0.0(LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
 
-- **Cubase:** 8.0.10 및 9.0.0(LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5
-- **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
+Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../COMPATIBILITY.txt)(영문)를 참고하세요. 비디오 트랙 썸네일은 모든 검증된 버전에서 표시됩니다.
+
+<details>
+<summary>다른 버전과 업데이트</summary>
 
 **인접 버전도 작동할 가능성이 매우 높습니다.** 비디오 엔진은 같은 제품 세대 안에서는 거의 바뀌지 않습니다. 예를 들어 Nuendo 12.0.52가 검증되었다면 12.0.20이나 12.0.70도 작동할 가능성이 매우 높습니다. 설치 프로그램이 각 설치의 비디오 엔진을 직접 확인하여, 호환되는 설치는 설치 대상으로 표시하고 호환되지 않는 설치는 목록에 표시하지 않으며 아무것도 변경하지 않습니다. 작동을 보장하는 것은 아닙니다. 같은 엔진 세대의 이전 에디션(예: Nuendo 7–9, Cubase 8.5 / 9.5)도 해당될 수 있지만 테스트하지는 않았습니다.
 
-비디오 트랙 썸네일은 모든 검증된 버전에서 표시됩니다.
-
-Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../COMPATIBILITY.txt)(영문)를 참고하세요.
-
 **Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 16.0.5 및 Nuendo 15.0.30까지)에서 검증되었습니다. 새 메이저 버전은 비디오 엔진이 바뀔 수 있으며, 이 버전에서 FrameBridge를 사용하는 것은 사용자 책임입니다. Cubase나 Nuendo를 업데이트하려면 먼저 UNINSTALL.cmd를 실행하고, 업데이트를 설치한 다음 INSTALL.cmd를 다시 실행하세요. 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
 
+</details>
+
 ## 검증된 미디어
+
+**컨테이너:** MKV / WebM, MOV / MP4, MXF, M2TS / MTS / TS, AVI, MPEG-PS / VOB, WMV 등.
+
+**비디오 코덱:** H.264(High10, B-프레임, VFR 포함), HEVC Main / Main10, AV1 8/10비트, VP9, ProRes 422 HQ / 4444 / LT / Proxy, DNxHD / DNxHR, CineForm, XDCAM, XAVC / AVC-Intra, MPEG-2, APV, FFV1 등.
+
+**외부 자막:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP, VobSub(.idx + .sub 한 쌍). 자막 파일을 비디오와 같은 이름으로 같은 폴더에 두세요(예: `film.mkv` + `film.srt`).
+
+무거운 실제 소스로 테스트했습니다: 대사 트랙 8개와 많은 플러그인이 있는 프로젝트에서 4K HDR 블루레이 리먹스(HEVC, 약 25 GB)와 4K HEVC 스트리밍 에피소드(약 7 GB) — 재생과 탐색 모두 부드럽습니다.
+
+<details>
+<summary>검증된 모든 컨테이너와 코덱</summary>
 
 **컨테이너:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOD, EVO, DV, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM, OGV
 
 **비디오 코덱 및 프로파일:** APV, AV1 8비트, AV1 10비트, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-프레임 / VFR, HEVC Main / Main10, HuffYUV, HAP / HAP Q, MPEG-1, DV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10비트, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8비트, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX, Xvid
 
-무거운 실제 소스로 테스트했습니다: 대사 트랙 8개와 많은 플러그인이 있는 프로젝트에서 4K HDR 블루레이 리먹스(HEVC, 약 25 GB)와 4K HEVC 스트리밍 에피소드(약 7 GB) — 재생과 탐색 모두 부드럽습니다.
-
-**외부 자막:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP, VobSub(.idx + .sub 한 쌍). 자막 파일을 비디오와 같은 이름으로 같은 폴더에 두세요(예: `film.mkv` + `film.srt`).
-
 PGS/SUP와 VobSub의 텍스트 인식에는 Windows에 설치된 OCR 언어가 사용됩니다(보통 시스템 언어와 영어이며, Windows 설정에서 다른 언어를 추가할 수 있습니다). 필요한 언어가 없으면 원래의 자막 이미지가 표시됩니다.
+
+</details>
 
 <details>
 <summary>이 형식들도 재생될 가능성이 높습니다</summary>
@@ -57,7 +91,9 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 </details>
 
-**Cubase나 Nuendo에서 “Invalid or not supported file!”이라고 나옵니다. FrameBridge로 열 수 있나요?** 대부분 가능합니다. 이 메시지는 기본 비디오 엔진이 파일의 컨테이너, 코덱 또는 프레임 레이트를 처리하지 못할 때 표시됩니다. 예를 들어 MKV, WebM, MXF, iPhone 같은 스마트폰으로 촬영한 HEVC, 가변 프레임 레이트 비디오 등입니다. FrameBridge는 자체 디코더로 이러한 파일을 읽습니다. 검증된 포맷은 위에 나와 있습니다. 그래도 파일이 열리지 않으면 14일 이내에 전액 환불해 드립니다.
+## 성능
+
+재생의 부드러움은 소스와 하드웨어에 따라 달라집니다. 일상 작업에는 최신 중급 CPU와 사용하는 포맷(HEVC, AV1)을 하드웨어로 디코딩하는 그래픽 카드를 권장합니다. FrameBridge는 아주 오래된 PC에도 설치되어 충돌 없이 작동하지만(2012년 테스트 PC: Intel Core i5-2550K + GeForce GTX 660), 작업용으로 쓸 수 있는 PC는 아닙니다. 해당 세대의 GPU가 이 포맷을 하드웨어로 디코딩하지 못해 무거운 4K 10비트 영상(HEVC Main10, H.264 High10)이 끊깁니다. 성능이 낮은 PC에서는 DAW에서 비디오 썸네일을 끄고 1080p 이하의 H.264 8비트 작업용 사본을 사용하면 도움이 됩니다. 알려진 문제는 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt)에 정리되어 있습니다.
 
 ## 설치 및 복원
 
@@ -73,10 +109,6 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 - SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
 - [VirusTotal 보고서](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection)(2026년 11월 14일 기준). 결과는 0/61로, Microsoft Defender, ESET, Malwarebytes, Sophos, Symantec을 포함해 어떤 엔진에서도 탐지되지 않았습니다.
 - 설치 프로그램이 PC에서 무엇을 변경하는지, 직접 확인하는 방법: [SECURITY.md](../SECURITY.md)
-
-## 성능
-
-재생 속도는 소스와 하드웨어에 따라 달라집니다. 무거운 4K 10비트 영상(HEVC Main10, H.264 High10)에는 충분한 성능의 CPU/GPU가 필요합니다. 오래된 테스트 PC(Intel Core i5-2550K + GeForce GTX 660)에서는 해당 세대의 GPU가 이 포맷을 하드웨어로 디코딩하지 못해 심하게 끊겼습니다. 성능이 낮은 PC에서는 DAW에서 비디오 썸네일을 끄고 1080p 이하의 H.264 8비트 작업용 사본을 사용하는 것을 권장합니다. 알려진 문제는 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt)에 정리되어 있습니다.
 
 ## FrameBridge를 만든 사람
 

@@ -2,13 +2,27 @@
 
 [English](../README.md) · **Deutsch** · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
+![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0) ![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0) ![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) ![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)
+
 [![FrameBridge auf der nativen Videospur von Nuendo — klicken, um die Demo anzusehen](../poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-**Website: [framebridge.cc](https://framebridge.cc/de/)** · [Demovideo von FrameBridge auf YouTube ansehen](https://youtu.be/qJqN0ybHV8E)
+Oben eine kurze Videoanleitung in Cubase 11 Pro: eine MKV mit ihrer SRT-Untertiteldatei und eine HDR-MKV, die in SDR angezeigt wird. [Erweiterte Version auf YouTube](https://youtu.be/NjNHtkc8-OE): ein ungeschnittener Durchgang mit Live-Import vieler Videoformate und Untertiteltypen.
+
+**[Website](https://framebridge.cc/de/)** · **[Kaufen](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Windows x64. Moderne Videoformate öffnen sich auf der nativen Videospur und laufen im integrierten Video-Player, und externe Untertiteldateien werden automatisch über dem Bild angezeigt — ohne Transcodierung des Materials und ohne Einbrennen der Untertitel ins Video.
 
+**Cubase oder Nuendo meldet „Datei ist entweder fehlerhaft oder Medientyp wird nicht unterstützt!“?** Genau für diese Meldung ist FrameBridge gemacht. Cubase und Nuendo zeigen sie, wenn die integrierte Video-Engine mit Container, Codec oder Bildrate der Datei nicht zurechtkommt – MKV, WebM, MXF, HEVC von Smartphones wie dem iPhone, Video mit variabler Bildrate. FrameBridge liest solche Dateien mit einem eigenen Decoder. Öffnet sich Ihre Datei trotzdem nicht, erhalten Sie innerhalb von 14 Tagen den vollen Kaufpreis zurück.
+
 ## Die wichtigsten Vorteile
+
+- **Moderne Formate auf der nativen Videospur** – MKV, WebM, MXF, HEVC, AV1, ProRes 4444 und viele mehr laufen im integrierten Video-Player, ohne Transkodierung.
+- **Externe Untertitel über dem Bild** – `film.srt` neben `film.mkv` legen; Änderungen an der Untertiteldatei erscheinen sofort. Die Videodatei wird nie verändert.
+- **Für die Synchronisation gemacht** – ein zweites Videofenster für den Toningenieur, Untertitel direkt aus Synchronbüchern mit Rollen.
+- **Kein Plug-in** – kein Plug-in-Slot, nichts in jedem Projekt zu laden, keine MTC-Synchronisation, kein Codec-Pack. Exakte Wiederherstellung mit UNINSTALL.cmd.
+
+<details>
+<summary>Alle Funktionen</summary>
 
 - Arbeitet mit der nativen Videospur und dem integrierten Video-Player von Cubase/Nuendo.
 - Erweiterte Container- und Codec-Unterstützung durch mitgelieferte FFmpeg-Bibliotheken (LGPL).
@@ -21,32 +35,52 @@ FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Window
 - Der Ton kommt über das normale „Audio aus Videodatei extrahieren“ – auch aus MKV und anderen Dateien, die Cubase und Nuendo allein nicht öffnen.
 - Visuell geprüfte HDR-zu-SDR-Umwandlung für unterstütztes HDR-Material. Eine messtechnische Aussage zur Farbgenauigkeit wird nicht getroffen.
 
+</details>
+
+## Zweites Videofenster für die Synchronisation
+
+Zwei Bildschirme: der Video-Player von Cubase/Nuendo im Vollbild für den Sprecher, die FrameBridge-Kopie für Sie.
+
+![Video-Player auf den Bildschirm des Sprechers ziehen, Doppelklick für Vollbild, FrameBridge-Symbol im Infobereich anklicken: die Kopie öffnet sich auf Ihrem Bildschirm](../dub-window.gif)
+
 ## Unterstützte Versionen von Cubase und Nuendo
 
-**Geprüfte Versionen**
+| | Geprüfte Versionen |
+|---|---|
+| **Cubase** | 8.0.10 und 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
 
-- **Cubase:** 8.0.10 und 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5
-- **Nuendo:** 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
+Die Editionen Cubase Pro, Artist, Elements, AI und LE werden auf dieselbe Weise erkannt. Die vollständige Matrix steht in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (Englisch). Thumbnails auf der Videospur gibt es in allen geprüften Versionen.
+
+<details>
+<summary>Andere Versionen und Updates</summary>
 
 **Benachbarte Versionen funktionieren sehr wahrscheinlich.** Die Video-Engine ändert sich innerhalb einer Produktgeneration kaum: Ist zum Beispiel Nuendo 12.0.52 geprüft, funktionieren 12.0.20 oder 12.0.70 sehr wahrscheinlich ebenfalls. Das Installationsprogramm prüft die Video-Engine jeder Installation selbst: Eine kompatible wird zur Installation angeboten, eine inkompatible erscheint nicht in der Liste, und nichts wird verändert. Eine Garantie ist das nicht. Ältere Editionen mit derselben Engine-Generation (zum Beispiel Nuendo 7–9, Cubase 8.5 / 9.5) können ebenfalls infrage kommen, wurden aber nicht getestet.
 
-Thumbnails auf der Videospur gibt es in allen geprüften Versionen.
-
-Die Editionen Cubase Pro, Artist, Elements, AI und LE werden auf dieselbe Weise erkannt. Die vollständige Matrix steht in [COMPATIBILITY.txt](../COMPATIBILITY.txt) (Englisch).
-
 **Funktioniert es nach einem Update von Cubase oder Nuendo?** FrameBridge ist mit den oben aufgeführten Versionen geprüft, bis Cubase 16.0.5 und Nuendo 15.0.30. Neue Hauptversionen können die Video-Engine ändern – die Nutzung von FrameBridge damit erfolgt auf eigenes Risiko. Um Cubase oder Nuendo zu aktualisieren, führen Sie zuerst UNINSTALL.cmd aus, installieren dann das Update und führen anschließend erneut INSTALL.cmd aus. Funktioniert FrameBridge nach einem Update nicht mehr, schreiben Sie dem Support.
 
+</details>
+
 ## Geprüfte Medienunterstützung
+
+**Container:** MKV / WebM, MOV / MP4, MXF, M2TS / MTS / TS, AVI, MPEG-PS / VOB, WMV und weitere.
+
+**Videocodecs:** H.264 (inkl. High10, B-Frames, VFR), HEVC Main / Main10, AV1 8/10-Bit, VP9, ProRes 422 HQ / 4444 / LT / Proxy, DNxHD / DNxHR, CineForm, XDCAM, XAVC / AVC-Intra, MPEG-2, APV, FFV1 und weitere.
+
+**Externe Untertitel:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP und VobSub (das Paar .idx + .sub). Legen Sie die Untertiteldatei mit gleichem Namen neben das Video (zum Beispiel `film.mkv` + `film.srt`).
+
+Getestet mit schwerem echtem Material: ein 4K-HDR-Blu-ray-Remux (HEVC, ~25 GB) in einem Projekt mit 8 Dialogspuren und vielen Plug-ins und eine 4K-HEVC-Streaming-Folge (~7 GB) – flüssige Wiedergabe und flüssiges Spulen.
+
+<details>
+<summary>Alle geprüften Container und Codecs</summary>
 
 **Container:** MKV / WebM, MK3D, FLV, F4V, M2TS / MTS / TS, TOD, MOD, EVO, DV, MOV / MP4, M4V, AVI, DivX, MXF, MPEG-PS / VOB, WMV / ASF, WTV / DVR-MS, 3GP / 3G2, RM / RMVB, OGM und OGV.
 
 **Videocodecs und Profile:** APV, AV1 8-Bit, AV1 10-Bit, CineForm, DNxHR, FFV1, H.264 Main / High10 / B-Frames / VFR, HEVC Main / Main10, HuffYUV, HAP / HAP Q, MPEG-1, DV, MPEG-2, ProRes 422 HQ, ProRes 4444, ProRes Proxy, ProRes LT, Theora, UtVideo, VP8, VP9 10-Bit, WMV 7 / 8, DNxHD, XDCAM, XAVC / AVC-Intra, DVCPRO HD, DVCPRO50, Avid 1:1, SpeedHQ, Uncompressed v210, QuickTime Animation, PNG, TIFF, MagicYUV, FFVHuff, DivX / MS MPEG-4, H.263, VP9 8-Bit, Sorenson Spark, RealVideo, Cinepak, Sorenson Video, Microsoft Video 1, Canopus HQ, Canopus HQX und Xvid.
 
-Getestet mit schwerem echtem Material: ein 4K-HDR-Blu-ray-Remux (HEVC, ~25 GB) in einem Projekt mit 8 Dialogspuren und vielen Plug-ins und eine 4K-HEVC-Streaming-Folge (~7 GB) – flüssige Wiedergabe und flüssiges Spulen.
-
-**Externe Untertitel:** SRT, ASS, SSA, VTT, SMI / SAMI, MicroDVD, TTML, DFXP, IMSC, EBU STL, SCC, DCP XML, PGS / SUP und VobSub (das Paar .idx + .sub). Legen Sie die Untertiteldatei mit gleichem Namen neben das Video (zum Beispiel `film.mkv` + `film.srt`).
-
 Die Texterkennung von PGS/SUP und VobSub nutzt die in Windows installierten OCR-Sprachen (meist die Systemsprache und Englisch; weitere lassen sich in den Windows-Einstellungen hinzufügen). Fehlt die benötigte Sprache, werden die ursprünglichen Untertitelbilder angezeigt.
+
+</details>
 
 <details>
 <summary>Läuft wahrscheinlich auch</summary>
@@ -57,7 +91,9 @@ Dekodiert vom selben FFmpeg 9.0.2 in FrameBridge. Diese Formate öffnen sich mei
 
 </details>
 
-**Cubase oder Nuendo meldet „Datei ist entweder fehlerhaft oder Medientyp wird nicht unterstützt!“ – öffnet FrameBridge das Video?** Oft ja. Cubase und Nuendo zeigen diese Meldung, wenn die integrierte Video-Engine mit Container, Codec oder Bildrate der Datei nicht zurechtkommt – etwa MKV, WebM, MXF, HEVC von Smartphones wie dem iPhone oder Video mit variabler Bildrate. FrameBridge liest solche Dateien mit einem eigenen Decoder; die geprüften Formate stehen oben. Öffnet sich Ihre Datei trotzdem nicht, erhalten Sie innerhalb von 14 Tagen den vollen Kaufpreis zurück.
+## Leistung
+
+Die Wiedergabegeschwindigkeit hängt vom Material und von der Hardware ab. Für die tägliche Arbeit sollten Sie mit einer aktuellen Mittelklasse-CPU und einer Grafikkarte rechnen, die die verwendeten Formate (HEVC, AV1) in Hardware dekodiert. FrameBridge lässt sich auch auf einem sehr alten PC installieren und läuft dort ohne Abstürze – auf einem Test-PC von 2012 (Intel Core i5-2550K + GeForce GTX 660) –, zum Arbeiten taugt so ein Rechner aber nicht: Schweres 4K-10-Bit-Video (HEVC Main10, H.264 High10) ruckelt dort, weil eine GPU dieser Generation diese Formate nicht in Hardware dekodieren kann. Auf schwachen PCs hilft es, die Video-Thumbnails in der DAW auszuschalten und mit H.264-8-Bit-Arbeitskopien bis 1080p zu arbeiten. Bekannte Probleme stehen in [READ_ME_FIRST.txt](../READ_ME_FIRST.txt).
 
 ## Installation und Wiederherstellung
 
@@ -73,10 +109,6 @@ Die vollständige Anleitung steht in [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) u
 - SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
 - [VirusTotal-Bericht](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (Stand 14. November 2026): 0/61 — kein Scanner meldet etwas, darunter Microsoft Defender, ESET, Malwarebytes, Sophos und Symantec.
 - Was das Installationsprogramm auf Ihrem PC ändert und wie Sie es selbst prüfen: [SECURITY.md](../SECURITY.md)
-
-## Leistung
-
-Die Wiedergabegeschwindigkeit hängt vom Material und von der Hardware ab. Anspruchsvolles 4K-10-Bit-Video (HEVC Main10, H.264 High10) braucht eine leistungsfähige CPU/GPU: Auf einem älteren Test-PC (Intel Core i5-2550K + GeForce GTX 660) ruckelte es stark, weil eine GPU dieser Generation diese Formate nicht in Hardware decodieren kann. Auf schwachen PCs empfiehlt es sich, die Video-Thumbnails in der DAW abzuschalten und mit H.264-8-Bit-Arbeitskopien bis 1080p zu arbeiten. Bekannte Probleme sind in [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) aufgeführt.
 
 ## Wer FrameBridge entwickelt
 
