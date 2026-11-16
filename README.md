@@ -2,7 +2,7 @@
 
 **English** · [Deutsch](translations/README.de.md) · [Français](translations/README.fr.md) · [Español](translations/README.es.md) · [Italiano](translations/README.it.md) · [Português (Brasil)](translations/README.pt-br.md) · [Polski](translations/README.pl.md) · [Türkçe](translations/README.tr.md) · [Русский](translations/README.ru.md) · [Українська](translations/README.uk.md) · [日本語](translations/README.ja.md) · [简体中文](translations/README.zh.md) · [한국어](translations/README.ko.md)
 
-![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0) ![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0) ![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) ![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#platform-and-status) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#supported-cubase-and-nuendo-versions) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#supported-cubase-and-nuendo-versions) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#platform-and-status)
 
 [![FrameBridge running on the native Nuendo video track — click to watch the demo](poster.png)](https://youtu.be/qJqN0ybHV8E)
 
