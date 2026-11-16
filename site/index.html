@@ -52,7 +52,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/", "inLanguage": "en", "description": "FrameBridge extends the native Cubase and Nuendo video engine on Windows: modern video formats and external subtitles on the video track, no transcoding.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261116a">
+  <link rel="stylesheet" href="/style.css?v=20261116f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -180,7 +180,7 @@
         <div class="card">
           <div class="step-num">3</div>
           <h3>Subtitles appear by themselves</h3>
-          <p>Put the subtitle file next to the video with the same name (film.mkv + film.srt). It is shown over the picture; edits are picked up live — even a file added or renamed after import, no re-import needed.</p>
+          <p>Put the subtitle file next to the video with the same name (film.mkv + film.srt). It is shown over the picture, and edits are picked up live without re-import.</p>
         </div>
       </div>
     </div>
@@ -193,16 +193,13 @@
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
-            <li>Works with the native Cubase/Nuendo video track and built-in Video Player.</li>
-            <li>Extended container and codec support through packaged FFmpeg libraries (LGPL).</li>
-            <li>External subtitles are loaded automatically and shown over the picture. The video file itself is never changed.</li>
-            <li>Every subtitle format is drawn in one clean, readable look — no styling surprises.</li>
-            <li>Second video window for dubbing: a live copy of the Cubase/Nuendo Video Player for the sound engineer, while the actor watches the player in full screen on another screen.</li>
+            <li>More containers and codecs right on the native video track, through the packaged FFmpeg libraries (LGPL).</li>
+            <li>External subtitles in any format, including Blu-ray PGS/SUP and DVD VobSub pictures, appear over the picture in one clean, readable look. The video file is never changed.</li>
+            <li>Second video window for dubbing: a live copy of the Cubase/Nuendo Video Player for the sound engineer, while the actor watches the player on another screen.</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>Blu-ray PGS/SUP and DVD VobSub pictures are read as text with the Windows built-in OCR.</li>
             <li>Visually verified HDR-to-SDR conversion for supported HDR media.</li>
             <li>Audio comes in with the standard “Extract Audio From Video” — also from MKV and other files Cubase and Nuendo can't open on their own.</li>
             <li>Subtitles straight from dubbing scripts and dialogue lists with roles: PDF, DOCX, TXT, XLSX, CSV.</li>
@@ -224,10 +221,10 @@
             <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
           </div>
         </div>
-        <div class="card">
+        <div class="card tip-host">
           <h3>External subtitles</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip">PGS / SUP</span><span class="chip">VobSub (.idx + .sub)</span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">PGS/SUP and VobSub text recognition uses the OCR languages installed in Windows; without the needed language the original subtitle pictures are shown.</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">Keep film.idx and film.sub together next to the video. PGS/SUP and VobSub text recognition uses the OCR languages installed in Windows; without the needed language the original subtitle pictures are shown.</span></span>
           </div>
         </div>
       </div>
@@ -246,7 +243,6 @@
           </div>
         <p class="note">Decoded by the same FFmpeg 9.0.2 inside FrameBridge. These usually open and may well play smoothly, but only the formats above are verified for smooth playback and seeking. The 14-day refund applies.</p>
       </details>
-      <p class="note">PGS/SUP and VobSub text recognition uses the OCR languages installed in Windows; without the needed language the original subtitle pictures are shown.</p>
     </div>
   </section>
 
@@ -254,38 +250,36 @@
     <div class="wrap">
       <h2>Compatibility</h2>
       <p class="section-lead">Windows x64 only. The following builds are verified:</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <dl class="versions">
-            <dt>Cubase</dt>
-            <dd>8.0.10 and 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd>
-            <dt>Nuendo</dt>
-            <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
-          </dl>
-          <p class="note" style="margin-top:0">Pro, Artist, Elements, AI and LE editions are found the same way.</p>
-          <p class="note" style="margin-top:10px">Thumbnails on the video track are shown in all verified builds.</p>
-        </div>
-        <div class="card">
-          <h3>Nearby builds</h3>
-          <p>The video engine rarely changes within one product generation, so nearby builds very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered, an incompatible one is not listed and nothing is changed. This is not a guarantee.</p>
-          <h3 style="margin-top:18px">Performance</h3>
-          <p>Heavy 4K 10-bit video (HEVC Main10, H.264 High10) needs a capable CPU/GPU. On older PCs, switching off video thumbnails and using H.264 8-bit working copies up to 1080p is recommended.</p>
-        </div>
+      <div class="card">
+        <dl class="versions versions-row">
+          <div><dt>Cubase</dt>
+          <dd>8.0.10 and 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd></div>
+          <div><dt>Nuendo</dt>
+          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd></div>
+        </dl>
+        <p class="note" style="margin-top:0">Pro, Artist, Elements, AI and LE editions are found the same way. Thumbnails on the video track are shown in all verified builds.</p>
+        <p class="perf-line"><strong>Performance.</strong> Heavy 4K 10-bit video (HEVC Main10, H.264 High10) needs a capable CPU/GPU. On older PCs, switching off video thumbnails and using H.264 8-bit working copies up to 1080p is recommended.</p>
       </div>
-      <div class="b2">
-        <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">What's new in Beta 2</button>
-        <div class="b2-tip" id="b2-tip" role="tooltip">
-          <strong>Beta 2 · 14 November 2026</strong>
-          <ul>
-            <li>Verified on Cubase 16.0.5 and all builds listed above</li>
-            <li>Second video window for dubbing: a live copy of the Video Player for the sound engineer, while the actor watches the player in full screen</li>
-            <li>Subtitles straight from dubbing scripts with roles: PDF, DOCX, TXT, XLSX, CSV</li>
-            <li>More files import: MPEG-1, DV and DivX on more Cubase/Nuendo versions; correct proportions for DV and DVCPRO</li>
-            <li>General playback speed optimizations</li>
-            <li>Player colours match your system media player</li>
-          </ul>
+      <div class="comp-actions">
+        <div class="b2">
+          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">What's new in Beta 2</button>
+          <div class="b2-tip" id="b2-tip" role="tooltip">
+            <strong>Beta 2 · 14 November 2026</strong>
+            <ul>
+              <li>Verified on Cubase 16.0.5 and all builds listed above</li>
+              <li>Second video window for dubbing: a live copy of the Video Player for the sound engineer, while the actor watches the player on another screen</li>
+              <li>Subtitles straight from dubbing scripts with roles: PDF, DOCX, TXT, XLSX, CSV</li>
+              <li>More files import: MPEG-1, DV and DivX on more Cubase/Nuendo versions; correct proportions for DV and DVCPRO</li>
+              <li>General playback speed optimizations</li>
+              <li>Player colours match your system media player</li>
+            </ul>
+          </div>
+          <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
         </div>
-        <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
+        <button type="button" class="b2-btn more-btn" aria-expanded="false" aria-controls="comp-more" onclick="var p=document.getElementById('comp-more');p.hidden=!p.hidden;this.setAttribute('aria-expanded',!p.hidden)">Nearby builds</button>
+      </div>
+      <div id="comp-more" class="card comp-more" hidden>
+        <p>The video engine rarely changes within one product generation, so nearby builds very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered, an incompatible one is not listed and nothing is changed.</p>
       </div>
       <p class="note">Full details and known limitations: <a href="/compatibility">compatibility notes</a>.</p>
     </div>
@@ -328,29 +322,13 @@
         <p>No. Subtitles are displayed over the picture at playback time; the video file and the subtitle file stay exactly as they are. If you save a video with Cubase’s Export Video, keep in mind that the subtitles are burned into the exported file (checked in Cubase 15); rename the subtitle file before exporting if you need a clean picture.</p>
       </details>
       <details>
-        <summary>How do I remove it?</summary>
-        <p>Close Cubase/Nuendo and run UNINSTALL.cmd. It restores the original program files from the verified backup made during installation, byte for byte.</p>
-      </details>
-      <details>
-        <summary>Does it include any Steinberg files?</summary>
-        <p>No. No Steinberg file is shipped in the package; the installer works only with the files of your own installation.</p>
-      </details>
-      <details>
-        <summary>My antivirus shows a warning. Why?</summary>
-        <p>FrameBridge is new and its files are not code-signed yet, and the installer replaces one program DLL — some heuristic scanners flag that pattern. The release archive is checked on VirusTotal (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">report</a>, as of 14 November 2026): 0/61 — no engine reports a detection, including Microsoft Defender, ESET, Malwarebytes, Sophos and Symantec. The installer has no network activity and keeps a verified backup for exact rollback. What the installer changes on your PC and how to check it yourself: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (English)</p>
+        <summary>Is it safe that the installer replaces a program file? What if my antivirus warns?</summary>
+        <p>The installer is built for exact rollback: the original file is checked and saved before it is replaced, and UNINSTALL.cmd puts it back byte for byte. No network access, no services, no autostart, and no Steinberg file in the package. VirusTotal: 0/61 (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">report</a>, 14 November 2026). The files are not code-signed yet, so a heuristic scanner may still react to the DLL replacement — a reaction to the pattern, not a found threat. What exactly changes on your PC and how to check it yourself: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a></p>
         <p>Release file SHA-256: <code style="word-break:break-all">714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc</code></p>
       </details>
       <details>
         <summary>Is it a VST plugin? Is there a Mac version?</summary>
         <p>No to both. FrameBridge is not a plugin: it extends the native video engine of Cubase and Nuendo, so video plays in the built-in Video Player — no plug-in slot, nothing to load in each project, no MTC sync. It runs on Windows x64 only.</p>
-      </details>
-      <details>
-        <summary>Which subtitle file is picked up?</summary>
-        <p>A subtitle file in the same folder with the same name as the video, for example film.mkv + film.srt. VobSub is a pair: keep film.idx and film.sub together.</p>
-      </details>
-      <details>
-        <summary>What if it doesn't work on my system?</summary>
-        <p>Write to <a href="mailto:stark622@ukr.net">stark622@ukr.net</a> within 14 days of purchase. If FrameBridge does not install or work with your Cubase or Nuendo, you get a full refund.</p>
       </details>
       <details>
         <summary>Will it work after a Cubase or Nuendo update?</summary>

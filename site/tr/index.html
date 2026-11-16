@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/tr/", "inLanguage": "tr", "description": "FrameBridge, Windows’taki Cubase ve Nuendo’nun yerel video motorunu genişletir: modern video formatları ve harici altyazılar, dönüştürme olmadan.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261116a">
+  <link rel="stylesheet" href="/style.css?v=20261116f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -163,7 +163,7 @@
         <div class="card">
           <div class="step-num">3</div>
           <h3>Altyazılar kendiliğinden görünür</h3>
-          <p>Altyazı dosyasını aynı adla videonun yanına koyun (film.mkv + film.srt). Altyazı görüntünün üzerinde gösterilir; dosyada yaptığınız değişiklikler anında yansır — içe aktarmadan sonra eklenen veya yeniden adlandırılan dosya bile, yeniden içe aktarmaya gerek kalmadan.</p>
+          <p>Altyazı dosyasını aynı adla videonun yanına koyun (film.mkv + film.srt). Görüntünün üzerinde gösterilir; düzenlemeler yeniden içe aktarmaya gerek kalmadan anında algılanır.</p>
         </div>
       </div>
     </div>
@@ -176,16 +176,13 @@
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
-            <li>Cubase/Nuendo’nun yerel video kanalı ve yerleşik Video Player’ı ile çalışır.</li>
-            <li>Pakete dahil FFmpeg kütüphaneleri (LGPL) sayesinde genişletilmiş kapsayıcı ve codec desteği.</li>
-            <li>Harici altyazılar otomatik olarak yüklenir ve görüntünün üzerinde gösterilir. Video dosyasının kendisi asla değiştirilmez.</li>
-            <li>Tüm altyazı formatları tek tip, temiz ve okunaklı bir görünümle gösterilir — stil sürprizi yok.</li>
-            <li>Dublaj için ikinci video penceresi: oyuncu oynatıcıyı başka bir ekranda tam ekran izlerken ses mühendisi için Cubase/Nuendo Video Player’ın canlı kopyası.</li>
+            <li>Paketteki FFmpeg kitaplıkları (LGPL) sayesinde doğrudan yerel video kanalında daha fazla kapsayıcı ve codec.</li>
+            <li>Blu-ray PGS/SUP ve DVD VobSub görüntüleri dahil her formattaki harici altyazılar görüntünün üzerinde tek, temiz ve okunaklı bir görünümle gösterilir. Video dosyası asla değiştirilmez.</li>
+            <li>Dublaj için ikinci video penceresi: oyuncu oynatıcıyı başka bir ekranda izlerken ses mühendisi için Cubase/Nuendo Video Player’ın canlı kopyası.</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>Blu-ray PGS/SUP ve DVD VobSub görüntüleri, Windows’un yerleşik OCR özelliğiyle metin olarak okunur.</li>
             <li>Desteklenen HDR içerikler için görsel olarak doğrulanmış HDR’den SDR’ye dönüştürme.</li>
             <li>Ses, standart “Extract Audio From Video” seçeneğiyle gelir — Cubase ve Nuendo’nun tek başına açamadığı MKV ve diğer dosyalardan da.</li>
             <li>Rol bilgili dublaj metinlerinden ve diyalog listelerinden doğrudan altyazı: PDF, DOCX, TXT, XLSX, CSV.</li>
@@ -207,10 +204,10 @@
             <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
           </div>
         </div>
-        <div class="card">
+        <div class="card tip-host">
           <h3>Harici altyazılar</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip">PGS / SUP</span><span class="chip">VobSub (.idx + .sub)</span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">PGS/SUP ve VobSub metin tanıma, Windows’ta yüklü OCR dillerini kullanır; gerekli dil yoksa altyazıların orijinal görüntüleri gösterilir.</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">film.idx ve film.sub dosyalarını birlikte videonun yanında tutun. PGS/SUP ve VobSub metin tanıma, Windows’ta yüklü OCR dillerini kullanır; gerekli dil yoksa altyazıların orijinal görüntüleri gösterilir.</span></span>
           </div>
         </div>
       </div>
@@ -229,7 +226,6 @@
           </div>
         <p class="note">FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikle açılır ve akıcı da oynayabilir; ancak akıcı oynatma ve sarma yalnızca yukarıdaki formatlar için doğrulanmıştır. 14 günlük iade geçerlidir.</p>
       </details>
-      <p class="note">PGS/SUP ve VobSub metin tanıma, Windows’ta yüklü OCR dillerini kullanır; gerekli dil yoksa altyazıların orijinal görüntüleri gösterilir.</p>
     </div>
   </section>
 
@@ -237,38 +233,36 @@
     <div class="wrap">
       <h2>Uyumluluk</h2>
       <p class="section-lead">Yalnızca Windows x64. Doğrulanmış sürümler:</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <dl class="versions">
-            <dt>Cubase</dt>
-            <dd>8.0.10 ve 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd>
-            <dt>Nuendo</dt>
-            <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
-          </dl>
-          <p class="note" style="margin-top:0">Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur.</p>
-          <p class="note" style="margin-top:10px">Video kanalındaki küçük resimler tüm doğrulanmış sürümlerde görünür.</p>
-        </div>
-        <div class="card">
-          <h3>Yakın sürümler</h3>
-          <p>Video motoru bir ürün kuşağı içinde nadiren değişir, bu yüzden yakın sürümlerin de çalışması çok olasıdır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Bu bir garanti değildir.</p>
-          <h3 style="margin-top:18px">Performans</h3>
-          <p>Ağır 4K 10-bit video (HEVC Main10, H.264 High10) güçlü bir CPU/GPU gerektirir. Eski bilgisayarlarda video küçük resimlerini kapatmanız ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmanız önerilir.</p>
-        </div>
+      <div class="card">
+        <dl class="versions versions-row">
+          <div><dt>Cubase</dt>
+          <dd>8.0.10 ve 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd></div>
+          <div><dt>Nuendo</dt>
+          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd></div>
+        </dl>
+        <p class="note" style="margin-top:0">Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Video kanalındaki küçük resimler tüm doğrulanmış sürümlerde görünür.</p>
+        <p class="perf-line"><strong>Performans.</strong> Ağır 4K 10-bit video (HEVC Main10, H.264 High10) güçlü bir CPU/GPU gerektirir. Eski bilgisayarlarda video küçük resimlerini kapatmanız ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmanız önerilir.</p>
       </div>
-      <div class="b2">
-        <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Beta 2’deki yenilikler</button>
-        <div class="b2-tip" id="b2-tip" role="tooltip">
-          <strong>Beta 2 · 14 Kasım 2026</strong>
-          <ul>
-            <li>Cubase 16.0.5 ve yukarıda listelenen tüm sürümlerle doğrulandı</li>
-            <li>Dublaj için ikinci video penceresi: oyuncu oynatıcıyı tam ekranda izlerken ses mühendisi için Video Player’ın canlı kopyası</li>
-            <li>Rol bilgili dublaj metinlerinden doğrudan altyazı: PDF, DOCX, TXT, XLSX, CSV</li>
-            <li>Daha fazla dosya içe aktarılır: daha fazla Cubase/Nuendo sürümünde MPEG-1, DV ve DivX; DV ve DVCPRO için doğru en-boy oranları</li>
-            <li>Oynatma hızında genel iyileştirmeler</li>
-            <li>Oynatıcıdaki renkler sistem medya oynatıcınızla aynı</li>
-          </ul>
+      <div class="comp-actions">
+        <div class="b2">
+          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Beta 2’deki yenilikler</button>
+          <div class="b2-tip" id="b2-tip" role="tooltip">
+            <strong>Beta 2 · 14 Kasım 2026</strong>
+            <ul>
+              <li>Cubase 16.0.5 ve yukarıda listelenen tüm sürümlerle doğrulandı</li>
+              <li>Dublaj için ikinci video penceresi: oyuncu oynatıcıyı başka bir ekranda izlerken ses mühendisi için Video Player’ın canlı kopyası</li>
+              <li>Rol bilgili dublaj metinlerinden doğrudan altyazı: PDF, DOCX, TXT, XLSX, CSV</li>
+              <li>Daha fazla dosya içe aktarılır: daha fazla Cubase/Nuendo sürümünde MPEG-1, DV ve DivX; DV ve DVCPRO için doğru en-boy oranları</li>
+              <li>Oynatma hızında genel iyileştirmeler</li>
+              <li>Oynatıcıdaki renkler sistem medya oynatıcınızla aynı</li>
+            </ul>
+          </div>
+          <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
         </div>
-        <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
+        <button type="button" class="b2-btn more-btn" aria-expanded="false" aria-controls="comp-more" onclick="var p=document.getElementById('comp-more');p.hidden=!p.hidden;this.setAttribute('aria-expanded',!p.hidden)">Yakın sürümler</button>
+      </div>
+      <div id="comp-more" class="card comp-more" hidden>
+        <p>Video motoru bir ürün kuşağı içinde nadiren değişir, bu yüzden yakın sürümlerin de çalışması çok olasıdır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez.</p>
       </div>
       <p class="note">Tüm ayrıntılar ve bilinen sınırlamalar: <a href="/compatibility">uyumluluk notları</a> (İngilizce).</p>
     </div>
@@ -311,29 +305,13 @@
         <p>Hayır. Altyazılar oynatma sırasında görüntünün üzerinde gösterilir; video dosyası ve altyazı dosyası olduğu gibi kalır. Videoyu Cubase’in Export Video özelliğiyle kaydederseniz, altyazıların dışa aktarılan dosyaya gömüleceğini unutmayın (Cubase 15’te denendi); temiz görüntü gerekiyorsa dışa aktarmadan önce altyazı dosyasının adını değiştirin.</p>
       </details>
       <details>
-        <summary>Nasıl kaldırırım?</summary>
-        <p>Cubase/Nuendo’yu kapatın ve UNINSTALL.cmd’yi çalıştırın. Programın orijinal dosyalarını, kurulum sırasında alınan doğrulanmış yedekten bayt bayt geri yükler.</p>
-      </details>
-      <details>
-        <summary>Pakette Steinberg dosyası var mı?</summary>
-        <p>Hayır. Pakette hiçbir Steinberg dosyası yoktur; yükleyici yalnızca kendi kurulumunuzdaki dosyalarla çalışır.</p>
-      </details>
-      <details>
-        <summary>Antivirüsüm uyarı veriyor. Neden?</summary>
-        <p>FrameBridge yeni, dosyaları henüz kod imzalı değil ve yükleyici programın bir DLL dosyasını değiştiriyor — bazı sezgisel tarayıcılar bu davranışı işaretler. Sürüm arşivi VirusTotal’da kontrol edildi (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">rapor</a>, 14 Kasım 2026 itibarıyla): 0/61 — Microsoft Defender, ESET, Malwarebytes, Sophos ve Symantec dahil hiçbir motor bir şey bulmadı. Yükleyici ağa bağlanmaz ve birebir geri yükleme için doğrulanmış bir yedek tutar. Yükleyicinin bilgisayarınızda neyi değiştirdiği ve bunu kendiniz nasıl kontrol edeceğiniz: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (İngilizce)</p>
+        <summary>Yükleyicinin bir program dosyasını değiştirmesi güvenli mi? Antivirüs uyarırsa ne olacak?</summary>
+        <p>Yükleyici birebir geri alma için tasarlandı: orijinal dosya değiştirilmeden önce doğrulanıp saklanır, UNINSTALL.cmd onu bayt bayt geri koyar. Ağ erişimi, hizmet, otomatik başlatma yok; pakette tek bir Steinberg dosyası da yok. VirusTotal: 0/61 (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">rapor</a>, 14 Kasım 2026). Dosyalar henüz dijital olarak imzalı değil, bu yüzden sezgisel bir tarayıcı yine de DLL değişimine tepki verebilir — bu bulunan bir tehdit değil, kalıba verilen bir tepkidir. Bilgisayarınızda tam olarak neyin değiştiği ve bunu kendiniz nasıl kontrol edeceğiniz: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (İngilizce)</p>
         <p>Sürüm dosyasının SHA-256 değeri: <code style="word-break:break-all">714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc</code></p>
       </details>
       <details>
         <summary>VST eklentisi mi? Mac sürümü var mı?</summary>
         <p>İkisine de hayır. FrameBridge bir eklenti değildir: Cubase ve Nuendo’nun yerel video motorunu genişletir; video yerleşik Video Player’da oynatılır — eklenti yuvası, her projede bir şey yüklemek ya da MTC senkronu gerekmez. Yalnızca Windows x64 içindir.</p>
-      </details>
-      <details>
-        <summary>Hangi altyazı dosyası yüklenir?</summary>
-        <p>Videoyla aynı klasörde ve aynı adda olan altyazı dosyası, örneğin film.mkv + film.srt. VobSub bir çifttir: film.idx ve film.sub dosyalarını birlikte tutun.</p>
-      </details>
-      <details>
-        <summary>Sistemimde çalışmazsa ne olur?</summary>
-        <p>Satın aldıktan sonraki 14 gün içinde <a href="mailto:stark622@ukr.net">stark622@ukr.net</a> adresine yazın. FrameBridge, Cubase veya Nuendo kurulumunuza yüklenmez ya da çalışmazsa ödediğiniz tutarın tamamı iade edilir.</p>
       </details>
       <details>
         <summary>Cubase veya Nuendo güncellemesinden sonra çalışır mı?</summary>

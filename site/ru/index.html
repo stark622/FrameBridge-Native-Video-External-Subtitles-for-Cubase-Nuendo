@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ru/", "inLanguage": "ru", "description": "FrameBridge расширяет штатный видеодвижок Cubase и Nuendo в Windows: современные видеоформаты и внешние субтитры на видеотреке, без перекодирования.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261116a">
+  <link rel="stylesheet" href="/style.css?v=20261116f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -163,7 +163,7 @@
         <div class="card">
           <div class="step-num">3</div>
           <h3>Субтитры появляются сами</h3>
-          <p>Положите файл субтитров рядом с видео под тем же именем (film.mkv + film.srt). Он отображается поверх изображения, а правки подхватываются на лету — даже если файл положили или переименовали уже после импорта, без повторного импорта.</p>
+          <p>Положите файл субтитров рядом с видео под тем же именем (film.mkv + film.srt). Он отображается поверх изображения, а правки подхватываются на лету без повторного импорта.</p>
         </div>
       </div>
     </div>
@@ -176,16 +176,13 @@
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
-            <li>Работает со штатным видеотреком и встроенным Видеоплеером Cubase/Nuendo.</li>
-            <li>Расширенная поддержка контейнеров и кодеков за счёт входящих в комплект библиотек FFmpeg (LGPL).</li>
-            <li>Внешние субтитры загружаются автоматически и показываются поверх изображения. Сам видеофайл никогда не изменяется.</li>
-            <li>Все форматы субтитров отображаются в едином чистом и читаемом виде — без сюрпризов со стилями.</li>
-            <li>Второе окно видео для озвучания: живая копия Видеоплеера Cubase/Nuendo для звукорежиссёра, пока актёр смотрит плеер на весь экран на другом мониторе.</li>
+            <li>Больше контейнеров и кодеков прямо на штатном видеотреке — за счёт входящих в комплект библиотек FFmpeg (LGPL).</li>
+            <li>Внешние субтитры любого формата, включая картинки Blu-ray PGS/SUP и DVD VobSub, показываются поверх изображения в едином чистом и читаемом виде. Сам видеофайл никогда не изменяется.</li>
+            <li>Второе окно видео для озвучания: живая копия Видеоплеера Cubase/Nuendo для звукорежиссёра, пока актёр смотрит плеер на другом мониторе.</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>Картинки Blu-ray PGS/SUP и DVD VobSub распознаются как текст встроенным OCR Windows.</li>
             <li>Визуально проверенное преобразование HDR в SDR для поддерживаемых HDR-материалов.</li>
             <li>Звук приходит штатной опцией «Извлечь Аудио из Видео» — в том числе из MKV и других файлов, которые Cubase и Nuendo сами не открывают.</li>
             <li>Субтитры прямо из монтажных листов и скриптов озвучания с ролями: PDF, DOCX, TXT, XLSX, CSV.</li>
@@ -207,10 +204,10 @@
             <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
           </div>
         </div>
-        <div class="card">
+        <div class="card tip-host">
           <h3>Внешние субтитры</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip">PGS / SUP</span><span class="chip">VobSub (.idx + .sub)</span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">Распознавание текста PGS/SUP и VobSub использует языки OCR, установленные в Windows; если нужного языка нет, показываются исходные картинки субтитров.</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">Держите film.idx и film.sub вместе рядом с видео. Распознавание текста PGS/SUP и VobSub использует языки OCR, установленные в Windows; если нужного языка нет, показываются исходные картинки субтитров.</span></span>
           </div>
         </div>
       </div>
@@ -229,7 +226,6 @@
           </div>
         <p class="note">Их декодирует тот же FFmpeg 9.0.2 внутри FrameBridge. Обычно они открываются и вполне могут играть плавно, но плавное воспроизведение и перемотка проверены только для форматов выше. Действует возврат за 14 дней.</p>
       </details>
-      <p class="note">Распознавание текста PGS/SUP и VobSub использует языки OCR, установленные в Windows; если нужного языка нет, показываются исходные картинки субтитров.</p>
     </div>
   </section>
 
@@ -237,38 +233,36 @@
     <div class="wrap">
       <h2>Совместимость</h2>
       <p class="section-lead">Только Windows x64. Проверены следующие сборки:</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <dl class="versions">
-            <dt>Cubase</dt>
-            <dd>8.0.10 и 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd>
-            <dt>Nuendo</dt>
-            <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
-          </dl>
-          <p class="note" style="margin-top:0">Редакции Pro, Artist, Elements, AI и LE определяются так же.</p>
-          <p class="note" style="margin-top:10px">Миниатюры на видеотреке есть во всех проверенных версиях.</p>
-        </div>
-        <div class="card">
-          <h3>Соседние сборки</h3>
-          <p>Видеодвижок редко меняется в пределах одного поколения продукта, поэтому соседние сборки с высокой вероятностью тоже работают. Установщик сам проверяет видеодвижок каждой установки: совместимая предлагается к установке, несовместимая не попадает в список, и ничего не меняется. Это не гарантия.</p>
-          <h3 style="margin-top:18px">Производительность</h3>
-          <p>Тяжёлому видео 4K 10 бит (HEVC Main10, H.264 High10) нужен мощный CPU/GPU. На старых компьютерах рекомендуется отключить миниатюры видео и работать с рабочими копиями H.264 8 бит до 1080p.</p>
-        </div>
+      <div class="card">
+        <dl class="versions versions-row">
+          <div><dt>Cubase</dt>
+          <dd>8.0.10 и 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd></div>
+          <div><dt>Nuendo</dt>
+          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd></div>
+        </dl>
+        <p class="note" style="margin-top:0">Редакции Pro, Artist, Elements, AI и LE определяются так же. Миниатюры на видеотреке есть во всех проверенных версиях.</p>
+        <p class="perf-line"><strong>Производительность.</strong> Тяжёлому видео 4K 10 бит (HEVC Main10, H.264 High10) нужен мощный CPU/GPU. На старых компьютерах рекомендуется отключить миниатюры видео и работать с рабочими копиями H.264 8 бит до 1080p.</p>
       </div>
-      <div class="b2">
-        <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Что нового в Бете 2</button>
-        <div class="b2-tip" id="b2-tip" role="tooltip">
-          <strong>Бета 2 · 14 ноября 2026</strong>
-          <ul>
-            <li>Проверена на Cubase 16.0.5 и на всех версиях из списка выше</li>
-            <li>Второе окно видео для озвучания: живая копия Видеоплеера для звукорежиссёра, пока актёр смотрит плеер на весь экран</li>
-            <li>Субтитры прямо из монтажных листов и скриптов озвучания с ролями: PDF, DOCX, TXT, XLSX, CSV</li>
-            <li>Импортируется больше файлов: MPEG-1, DV и DivX на большем числе версий Cubase/Nuendo; правильные пропорции DV и DVCPRO</li>
-            <li>Общая оптимизация скорости воспроизведения</li>
-            <li>Цвета в плеере как в системном медиаплеере</li>
-          </ul>
+      <div class="comp-actions">
+        <div class="b2">
+          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Что нового в Бете 2</button>
+          <div class="b2-tip" id="b2-tip" role="tooltip">
+            <strong>Бета 2 · 14 ноября 2026</strong>
+            <ul>
+              <li>Проверена на Cubase 16.0.5 и на всех версиях из списка выше</li>
+              <li>Второе окно видео для озвучания: живая копия Видеоплеера для звукорежиссёра, пока актёр смотрит плеер на другом мониторе</li>
+              <li>Субтитры прямо из монтажных листов и скриптов озвучания с ролями: PDF, DOCX, TXT, XLSX, CSV</li>
+              <li>Импортируется больше файлов: MPEG-1, DV и DivX на большем числе версий Cubase/Nuendo; правильные пропорции DV и DVCPRO</li>
+              <li>Общая оптимизация скорости воспроизведения</li>
+              <li>Цвета в плеере как в системном медиаплеере</li>
+            </ul>
+          </div>
+          <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
         </div>
-        <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
+        <button type="button" class="b2-btn more-btn" aria-expanded="false" aria-controls="comp-more" onclick="var p=document.getElementById('comp-more');p.hidden=!p.hidden;this.setAttribute('aria-expanded',!p.hidden)">Соседние сборки</button>
+      </div>
+      <div id="comp-more" class="card comp-more" hidden>
+        <p>Видеодвижок редко меняется в пределах одного поколения продукта, поэтому соседние сборки с высокой вероятностью тоже работают. Установщик сам проверяет видеодвижок каждой установки: совместимая предлагается к установке, несовместимая не попадает в список, и ничего не меняется.</p>
       </div>
       <p class="note">Все подробности и известные ограничения: <a href="/compatibility">заметки о совместимости</a> (на английском).</p>
     </div>
@@ -311,29 +305,13 @@
         <p>Нет. Субтитры показываются поверх изображения во время воспроизведения; видеофайл и файл субтитров остаются в точности такими, какими были. Если сохраняете видео через Export Video в Cubase, учтите: субтитры прожигаются в экспортированный файл (проверено в Cubase 15); нужна чистая картинка — перед экспортом переименуйте файл субтитров.</p>
       </details>
       <details>
-        <summary>Как удалить FrameBridge?</summary>
-        <p>Закройте Cubase/Nuendo и запустите UNINSTALL.cmd. Он восстанавливает оригинальные файлы программы байт в байт из проверенной резервной копии, сделанной при установке.</p>
-      </details>
-      <details>
-        <summary>Есть ли в комплекте файлы Steinberg?</summary>
-        <p>Нет. В пакете нет ни одного файла Steinberg; установщик работает только с файлами вашей собственной установки.</p>
-      </details>
-      <details>
-        <summary>Антивирус показывает предупреждение. Почему?</summary>
-        <p>FrameBridge — новая программа, её файлы пока не подписаны цифровой подписью, а установщик заменяет одну DLL программы — некоторые эвристические сканеры отмечают такой сценарий. Релизный архив проверен на VirusTotal (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">отчёт</a>, по состоянию на 14 ноября 2026 года): 0/61 — ни один движок ничего не находит, в том числе Microsoft Defender, ESET, Malwarebytes, Sophos и Symantec. Установщик не обращается к сети и хранит проверенную резервную копию для точного отката. Что именно установщик меняет на компьютере и как проверить это самому: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (на английском)</p>
+        <summary>Безопасно ли, что установщик заменяет файл программы? А если ругается антивирус?</summary>
+        <p>Установщик сделан под точный откат: перед заменой оригинальный файл проверяется и сохраняется, а UNINSTALL.cmd возвращает его байт в байт. Никакой сети, служб и автозапуска, и ни одного файла Steinberg в пакете. VirusTotal: 0/61 (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">отчёт</a>, 14 ноября 2026). Файлы пока без цифровой подписи, поэтому эвристический сканер всё же может среагировать на замену DLL — это реакция на сценарий, а не найденная угроза. Что именно меняется на компьютере и как проверить это самому: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (на английском)</p>
         <p>SHA-256 релизного файла: <code style="word-break:break-all">714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc</code></p>
       </details>
       <details>
         <summary>Это VST-плагин? Есть ли версия для Mac?</summary>
         <p>Нет и нет. FrameBridge — не плагин: он расширяет штатный видеодвижок Cubase и Nuendo, поэтому видео играет во встроенном Видеоплеере — не занимает слот плагина, ничего не нужно подключать в каждом проекте, не нужна синхронизация по MTC. Работает только в Windows x64.</p>
-      </details>
-      <details>
-        <summary>Какой файл субтитров подхватывается?</summary>
-        <p>Файл субтитров в той же папке и с тем же именем, что и видео, например film.mkv + film.srt. VobSub — это пара файлов: держите film.idx и film.sub вместе.</p>
-      </details>
-      <details>
-        <summary>Что если на моей системе не заработает?</summary>
-        <p>Напишите на <a href="mailto:stark622@ukr.net">stark622@ukr.net</a> в течение 14 дней после покупки. Если FrameBridge не устанавливается или не работает с вашим Cubase или Nuendo, вы получите полный возврат денег.</p>
       </details>
       <details>
         <summary>Будет ли работать после обновления Cubase или Nuendo?</summary>

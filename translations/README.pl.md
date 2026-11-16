@@ -55,7 +55,7 @@ Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pe
 <details>
 <summary>Inne wersje i aktualizacje</summary>
 
-**Pokrewne wersje najprawdopodobniej działają.** Silnik wideo prawie się nie zmienia w obrębie jednej generacji produktu: jeśli na przykład sprawdzono Nuendo 12.0.52, to 12.0.20 czy 12.0.70 najprawdopodobniej też zadziałają. Instalator sam sprawdza silnik wideo każdej instalacji: zgodna jest proponowana do instalacji, niezgodna nie pojawia się na liście i nic nie jest zmieniane. To nie jest gwarancja. Starsze edycje z tą samą generacją silnika (na przykład Nuendo 7–9, Cubase 8.5 / 9.5) również mogą się nadawać, ale nie były testowane.
+**Pokrewne wersje najprawdopodobniej działają.** Silnik wideo prawie się nie zmienia w obrębie jednej generacji produktu: jeśli na przykład sprawdzono Nuendo 12.0.52, to 12.0.20 czy 12.0.70 najprawdopodobniej też zadziałają. Instalator sam sprawdza silnik wideo każdej instalacji: zgodna jest proponowana do instalacji, niezgodna nie pojawia się na liście i nic nie jest zmieniane. Starsze edycje z tą samą generacją silnika (na przykład Nuendo 7–9, Cubase 8.5 / 9.5) również mogą się nadawać, ale nie były testowane.
 
 **Czy zadziała po aktualizacji Cubase lub Nuendo?** FrameBridge jest sprawdzony z wersjami wymienionymi wyżej, do Cubase 16.0.5 i Nuendo 15.0.30. Nowe główne wersje mogą zmienić silnik wideo — korzystasz z FrameBridge w nich na własne ryzyko. Aby zaktualizować Cubase lub Nuendo, najpierw uruchom UNINSTALL.cmd, potem zainstaluj aktualizację, a następnie ponownie uruchom INSTALL.cmd. Jeśli po aktualizacji FrameBridge przestanie działać, napisz do wsparcia.
 
@@ -93,7 +93,7 @@ Dekoduje je ten sam FFmpeg 9.0.2 wbudowany we FrameBridge. Zwykle się otwieraj�
 
 ## Wydajność
 
-Płynność odtwarzania zależy od materiału i sprzętu. Do codziennej pracy warto mieć aktualny procesor ze średniej półki i kartę graficzną, która sprzętowo dekoduje używane formaty (HEVC, AV1). FrameBridge instaluje się i działa bez awarii także na bardzo starym PC — na komputerze testowym z 2012 roku (Intel Core i5-2550K + GeForce GTX 660) — ale to nie jest maszyna do pracy: ciężkie wideo 4K 10-bit (HEVC Main10, H.264 High10) tam się zacina, bo GPU tej generacji nie potrafi sprzętowo dekodować tych formatów. Na słabych komputerach pomaga wyłączenie miniatur wideo w DAW i praca na kopiach roboczych H.264 8-bit do 1080p. Znane problemy są opisane w [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
+Płynność odtwarzania zależy od materiału i sprzętu. Do codziennej pracy warto mieć aktualny procesor ze średniej półki i kartę graficzną, która sprzętowo dekoduje używane formaty (HEVC, AV1). Na starszych komputerach — na przykład na komputerze testowym z 2012 roku (Intel Core i5-2550K + GeForce GTX 660) — ciężkie wideo 4K 10-bit (HEVC Main10, H.264 High10) się zacina, bo GPU tej generacji nie potrafi sprzętowo dekodować tych formatów. Na słabych komputerach pomaga wyłączenie miniatur wideo w DAW i praca na kopiach roboczych H.264 8-bit do 1080p. Znane problemy są opisane w [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
 
 ## Instalacja i przywracanie
 

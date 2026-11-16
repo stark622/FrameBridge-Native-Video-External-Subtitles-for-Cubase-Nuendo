@@ -55,7 +55,7 @@ Le edizioni Cubase Pro, Artist, Elements, AI e LE vengono rilevate allo stesso m
 <details>
 <summary>Altre versioni e aggiornamenti</summary>
 
-**Le versioni vicine molto probabilmente funzionano.** Il motore video cambia pochissimo all’interno della stessa generazione di prodotto: se, ad esempio, Nuendo 12.0.52 è verificato, molto probabilmente funzioneranno anche 12.0.20 o 12.0.70. Il programma di installazione controlla da sé il motore video di ogni installazione: quella compatibile viene proposta per l’installazione, quella incompatibile non compare nell’elenco e non viene modificato nulla. Non è una garanzia. Anche edizioni più vecchie con la stessa generazione di motore (ad esempio Nuendo 7–9, Cubase 8.5 / 9.5) potrebbero essere idonee, ma non sono state testate.
+**Le versioni vicine molto probabilmente funzionano.** Il motore video cambia pochissimo all’interno della stessa generazione di prodotto: se, ad esempio, Nuendo 12.0.52 è verificato, molto probabilmente funzioneranno anche 12.0.20 o 12.0.70. Il programma di installazione controlla da sé il motore video di ogni installazione: quella compatibile viene proposta per l’installazione, quella incompatibile non compare nell’elenco e non viene modificato nulla. Anche edizioni più vecchie con la stessa generazione di motore (ad esempio Nuendo 7–9, Cubase 8.5 / 9.5) potrebbero essere idonee, ma non sono state testate.
 
 **Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase 16.0.5 e Nuendo 15.0.30. Le nuove versioni principali possono cambiare il motore video: usarle con FrameBridge è a tuo rischio. Per aggiornare Cubase o Nuendo, esegui prima UNINSTALL.cmd, installa l’aggiornamento e poi esegui di nuovo INSTALL.cmd. Se dopo un aggiornamento FrameBridge smette di funzionare, scrivi all’assistenza.
 
@@ -93,7 +93,7 @@ Decodificati dallo stesso FFmpeg 9.0.2 incluso in FrameBridge. Di solito si apro
 
 ## Prestazioni
 
-La fluidità della riproduzione dipende dal materiale e dall’hardware. Per il lavoro quotidiano conviene una CPU di fascia media attuale e una scheda video che decodifichi in hardware i formati che usi (HEVC, AV1). FrameBridge si installa e funziona senza crash anche su un PC molto vecchio — su un PC di prova del 2012 (Intel Core i5-2550K + GeForce GTX 660) —, ma non è una macchina su cui lavorare: lì il video 4K a 10 bit pesante (HEVC Main10, H.264 High10) scatta, perché una GPU di quella generazione non sa decodificare questi formati in hardware. Sui PC poco potenti aiuta disattivare le miniature video nella DAW e usare copie di lavoro H.264 a 8 bit fino a 1080p. I problemi noti sono elencati in [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
+La fluidità della riproduzione dipende dal materiale e dall’hardware. Per il lavoro quotidiano conviene una CPU di fascia media attuale e una scheda video che decodifichi in hardware i formati che usi (HEVC, AV1). Sui PC più vecchi — ad esempio un PC di prova del 2012 (Intel Core i5-2550K + GeForce GTX 660) — il video 4K a 10 bit pesante (HEVC Main10, H.264 High10) scatta, perché una GPU di quella generazione non sa decodificare questi formati in hardware. Sui PC poco potenti aiuta disattivare le miniature video nella DAW e usare copie di lavoro H.264 a 8 bit fino a 1080p. I problemi noti sono elencati in [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
 
 ## Installazione e ripristino
 

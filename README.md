@@ -56,7 +56,7 @@ Cubase Pro, Artist, Elements, AI and LE editions are found the same way. Thumbna
 <details>
 <summary>Other builds and updates</summary>
 
-**Nearby builds very likely work.** The video engine barely changes within one product generation, so if, for example, Nuendo 12.0.52 is verified, 12.0.20 or 12.0.70 will very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered for installation, an incompatible one is not listed and nothing is changed. This is not a guarantee. Older editions with the same engine generation (for example Nuendo 7–9, Cubase 8.5 / 9.5) may also qualify but have not been tested.
+**Nearby builds very likely work.** The video engine barely changes within one product generation, so if, for example, Nuendo 12.0.52 is verified, 12.0.20 or 12.0.70 will very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered for installation, an incompatible one is not listed and nothing is changed. Older editions with the same engine generation (for example Nuendo 7–9, Cubase 8.5 / 9.5) may also qualify but have not been tested.
 
 **Will it work after a Cubase or Nuendo update?** FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.30. New major versions may change the video engine; using FrameBridge with them is at your own risk. To update Cubase or Nuendo, run UNINSTALL.cmd first, then install the update, then run INSTALL.cmd again. If FrameBridge stops working after an update, write to support.
 
@@ -94,7 +94,7 @@ Decoded by the same FFmpeg 9.0.2 inside FrameBridge. These usually open and may 
 
 ## Performance
 
-Playback speed depends on the media and the hardware. For everyday work, plan for a current mid-range CPU and a graphics card that decodes the formats you use (HEVC, AV1) in hardware. FrameBridge also installs and runs on a very old PC without crashing — on a 2012 test PC (Intel Core i5-2550K + GeForce GTX 660) — but that is not a machine to work on: heavy 4K 10-bit video (HEVC Main10, H.264 High10) stutters there, because a GPU of that generation cannot decode these formats in hardware. On weak PCs, switching off video thumbnails in the DAW and using H.264 8-bit working copies up to 1080p helps. Known issues are listed in [READ_ME_FIRST.txt](docs/READ_ME_FIRST.txt).
+Playback speed depends on the media and the hardware. For everyday work, plan for a current mid-range CPU and a graphics card that decodes the formats you use (HEVC, AV1) in hardware. On older PCs — for example a 2012 test PC (Intel Core i5-2550K + GeForce GTX 660) — heavy 4K 10-bit video (HEVC Main10, H.264 High10) stutters, because a GPU of that generation cannot decode these formats in hardware. On weak PCs, switching off video thumbnails in the DAW and using H.264 8-bit working copies up to 1080p helps. Known issues are listed in [READ_ME_FIRST.txt](docs/READ_ME_FIRST.txt).
 
 ## Installation and rollback
 

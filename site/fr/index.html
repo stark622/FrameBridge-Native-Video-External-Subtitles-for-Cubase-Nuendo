@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/fr/", "inLanguage": "fr", "description": "FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows : formats vidéo modernes et sous-titres externes, sans transcodage.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261116a">
+  <link rel="stylesheet" href="/style.css?v=20261116f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -163,7 +163,7 @@
         <div class="card">
           <div class="step-num">3</div>
           <h3>Les sous-titres apparaissent tout seuls</h3>
-          <p>Placez le fichier de sous-titres à côté de la vidéo, sous le même nom (film.mkv + film.srt). Il s’affiche sur l’image ; les modifications sont prises en compte en direct — même un fichier ajouté ou renommé après l’import, sans réimporter.</p>
+          <p>Placez le fichier de sous-titres à côté de la vidéo, sous le même nom (film.mkv + film.srt). Il s’affiche sur l’image, et les modifications sont prises en compte en direct, sans réimport.</p>
         </div>
       </div>
     </div>
@@ -176,16 +176,13 @@
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
-            <li>Fonctionne avec la piste vidéo native et le Lecteur vidéo intégré de Cubase/Nuendo.</li>
-            <li>Prise en charge étendue des conteneurs et des codecs grâce aux bibliothèques FFmpeg fournies (LGPL).</li>
-            <li>Les sous-titres externes sont chargés automatiquement et affichés sur l’image. Le fichier vidéo lui-même n’est jamais modifié.</li>
-            <li>Tous les formats de sous-titres sont affichés dans un même style net et lisible — aucune surprise de mise en forme.</li>
-            <li>Deuxième fenêtre vidéo pour le doublage : une copie en direct du Lecteur vidéo de Cubase/Nuendo pour l’ingénieur du son, pendant que le comédien regarde le lecteur en plein écran sur un autre écran.</li>
+            <li>Davantage de conteneurs et de codecs directement sur la piste vidéo native, grâce aux bibliothèques FFmpeg incluses (LGPL).</li>
+            <li>Les sous-titres externes de tout format, y compris les images Blu-ray PGS/SUP et DVD VobSub, s’affichent sur l’image dans un même style net et lisible. Le fichier vidéo n’est jamais modifié.</li>
+            <li>Deuxième fenêtre vidéo pour le doublage : une copie en direct du Lecteur vidéo de Cubase/Nuendo pour l’ingénieur du son, pendant que le comédien regarde le lecteur sur un autre écran.</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>Les images PGS/SUP (Blu-ray) et VobSub (DVD) sont lues comme du texte grâce à l’OCR intégré à Windows.</li>
             <li>Conversion HDR vers SDR vérifiée visuellement pour les médias HDR pris en charge.</li>
             <li>Le son arrive via l’option standard « Extraire l’audio de la vidéo » — y compris depuis des MKV et d’autres fichiers que Cubase et Nuendo n’ouvrent pas seuls.</li>
             <li>Sous-titres directement depuis les scripts de doublage et les listes de dialogues avec les rôles : PDF, DOCX, TXT, XLSX, CSV.</li>
@@ -207,10 +204,10 @@
             <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
           </div>
         </div>
-        <div class="card">
+        <div class="card tip-host">
           <h3>Sous-titres externes</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip">PGS / SUP</span><span class="chip">VobSub (.idx + .sub)</span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">La reconnaissance du texte PGS/SUP et VobSub utilise les langues OCR installées dans Windows ; sans la langue nécessaire, les images d’origine des sous-titres sont affichées.</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">Gardez film.idx et film.sub ensemble, à côté de la vidéo. La reconnaissance du texte PGS/SUP et VobSub utilise les langues OCR installées dans Windows ; sans la langue nécessaire, les images d’origine des sous-titres sont affichées.</span></span>
           </div>
         </div>
       </div>
@@ -229,7 +226,6 @@
           </div>
         <p class="note">Décodés par le même FFmpeg 9.0.2 intégré à FrameBridge. Ces formats s’ouvrent généralement et peuvent tout à fait être lus de façon fluide, mais seuls les formats ci-dessus sont vérifiés pour une lecture et un déplacement fluides. Le remboursement sous 14 jours s’applique.</p>
       </details>
-      <p class="note">La reconnaissance du texte PGS/SUP et VobSub utilise les langues OCR installées dans Windows ; sans la langue nécessaire, les images d’origine des sous-titres sont affichées.</p>
     </div>
   </section>
 
@@ -237,38 +233,36 @@
     <div class="wrap">
       <h2>Compatibilité</h2>
       <p class="section-lead">Windows x64 uniquement. Les versions suivantes sont vérifiées :</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <dl class="versions">
-            <dt>Cubase</dt>
-            <dd>8.0.10 et 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd>
-            <dt>Nuendo</dt>
-            <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
-          </dl>
-          <p class="note" style="margin-top:0">Les éditions Pro, Artist, Elements, AI et LE sont détectées de la même manière.</p>
-          <p class="note" style="margin-top:10px">Les miniatures sur la piste vidéo s’affichent dans toutes les versions vérifiées.</p>
-        </div>
-        <div class="card">
-          <h3>Versions voisines</h3>
-          <p>Le moteur vidéo change rarement au sein d’une même génération de produit : les versions voisines fonctionnent donc très probablement aussi. L’installateur vérifie lui-même le moteur vidéo de chaque installation : une installation compatible est proposée, une installation incompatible n’apparaît pas dans la liste et rien n’est modifié. Ce n’est pas une garantie.</p>
-          <h3 style="margin-top:18px">Performances</h3>
-          <p>La vidéo 4K 10 bits exigeante (HEVC Main10, H.264 High10) demande un CPU/GPU performant. Sur les PC plus anciens, il est conseillé de désactiver les miniatures vidéo et de travailler avec des copies de travail H.264 8 bits jusqu’en 1080p.</p>
-        </div>
+      <div class="card">
+        <dl class="versions versions-row">
+          <div><dt>Cubase</dt>
+          <dd>8.0.10 et 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd></div>
+          <div><dt>Nuendo</dt>
+          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd></div>
+        </dl>
+        <p class="note" style="margin-top:0">Les éditions Pro, Artist, Elements, AI et LE sont détectées de la même manière. Les miniatures sur la piste vidéo s’affichent dans toutes les versions vérifiées.</p>
+        <p class="perf-line"><strong>Performances.</strong> La vidéo 4K 10 bits exigeante (HEVC Main10, H.264 High10) demande un CPU/GPU performant. Sur les PC plus anciens, il est conseillé de désactiver les miniatures vidéo et de travailler avec des copies de travail H.264 8 bits jusqu’en 1080p.</p>
       </div>
-      <div class="b2">
-        <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Nouveautés de la Bêta 2</button>
-        <div class="b2-tip" id="b2-tip" role="tooltip">
-          <strong>Bêta 2 · 14 novembre 2026</strong>
-          <ul>
-            <li>Vérifiée avec Cubase 16.0.5 et toutes les versions listées ci-dessus</li>
-            <li>Deuxième fenêtre vidéo pour le doublage : une copie en direct du Lecteur vidéo pour l’ingénieur du son, pendant que le comédien regarde le lecteur en plein écran</li>
-            <li>Sous-titres directement depuis les scripts de doublage avec les rôles : PDF, DOCX, TXT, XLSX, CSV</li>
-            <li>Davantage de fichiers s’importent : MPEG-1, DV et DivX sur plus de versions de Cubase/Nuendo ; proportions correctes pour DV et DVCPRO</li>
-            <li>Optimisations générales de la vitesse de lecture</li>
-            <li>Les couleurs du lecteur correspondent à celles de votre lecteur multimédia système</li>
-          </ul>
+      <div class="comp-actions">
+        <div class="b2">
+          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Nouveautés de la Bêta 2</button>
+          <div class="b2-tip" id="b2-tip" role="tooltip">
+            <strong>Bêta 2 · 14 novembre 2026</strong>
+            <ul>
+              <li>Vérifiée avec Cubase 16.0.5 et toutes les versions listées ci-dessus</li>
+              <li>Deuxième fenêtre vidéo pour le doublage : une copie en direct du Lecteur vidéo pour l’ingénieur du son, pendant que le comédien regarde le lecteur sur un autre écran</li>
+              <li>Sous-titres directement depuis les scripts de doublage avec les rôles : PDF, DOCX, TXT, XLSX, CSV</li>
+              <li>Davantage de fichiers s’importent : MPEG-1, DV et DivX sur plus de versions de Cubase/Nuendo ; proportions correctes pour DV et DVCPRO</li>
+              <li>Optimisations générales de la vitesse de lecture</li>
+              <li>Les couleurs du lecteur correspondent à celles de votre lecteur multimédia système</li>
+            </ul>
+          </div>
+          <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
         </div>
-        <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
+        <button type="button" class="b2-btn more-btn" aria-expanded="false" aria-controls="comp-more" onclick="var p=document.getElementById('comp-more');p.hidden=!p.hidden;this.setAttribute('aria-expanded',!p.hidden)">Versions voisines</button>
+      </div>
+      <div id="comp-more" class="card comp-more" hidden>
+        <p>Le moteur vidéo change rarement au sein d’une même génération de produit : les versions voisines fonctionnent donc très probablement aussi. L’installateur vérifie lui-même le moteur vidéo de chaque installation : une installation compatible est proposée, une installation incompatible n’apparaît pas dans la liste et rien n’est modifié.</p>
       </div>
       <p class="note">Tous les détails et les limitations connues : <a href="/compatibility">notes de compatibilité</a> (en anglais).</p>
     </div>
@@ -311,29 +305,13 @@
         <p>Non. Les sous-titres sont affichés sur l’image pendant la lecture ; le fichier vidéo et le fichier de sous-titres restent exactement tels quels. Si vous enregistrez une vidéo avec Export Video de Cubase, sachez que les sous-titres sont incrustés dans le fichier exporté (vérifié dans Cubase 15) ; renommez le fichier de sous-titres avant l’export si vous voulez une image propre.</p>
       </details>
       <details>
-        <summary>Comment le désinstaller ?</summary>
-        <p>Fermez Cubase/Nuendo et lancez UNINSTALL.cmd. Il restaure les fichiers d’origine du programme, octet par octet, à partir de la sauvegarde vérifiée créée lors de l’installation.</p>
-      </details>
-      <details>
-        <summary>Le paquet contient-il des fichiers Steinberg ?</summary>
-        <p>Non. Aucun fichier Steinberg n’est fourni dans le paquet ; l’installateur travaille uniquement avec les fichiers de votre propre installation.</p>
-      </details>
-      <details>
-        <summary>Mon antivirus affiche un avertissement. Pourquoi ?</summary>
-        <p>FrameBridge est récent, ses fichiers ne sont pas encore signés numériquement, et l’installateur remplace une DLL du programme — certains analyseurs heuristiques signalent ce schéma. L’archive de la version a été vérifiée sur VirusTotal (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">rapport</a>, au 14 novembre 2026) : 0/61 — aucun moteur ne signale quoi que ce soit, dont Microsoft Defender, ESET, Malwarebytes, Sophos et Symantec. L’installateur n’accède pas au réseau et conserve une sauvegarde vérifiée pour une restauration exacte. Ce que l’installateur modifie sur votre PC et comment le vérifier vous-même: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (en anglais)</p>
+        <summary>Est-ce sûr que l’installateur remplace un fichier du programme ? Et si mon antivirus m’alerte ?</summary>
+        <p>L’installateur est conçu pour une restauration exacte : le fichier d’origine est vérifié et sauvegardé avant d’être remplacé, et UNINSTALL.cmd le remet octet pour octet. Aucun accès réseau, aucun service, aucun démarrage automatique, et aucun fichier Steinberg dans le paquet. VirusTotal : 0/61 (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">rapport</a>, 14 novembre 2026). Les fichiers ne sont pas encore signés numériquement : un analyseur heuristique peut donc encore réagir au remplacement de la DLL — une réaction au schéma, pas une menace détectée. Ce qui change exactement sur votre PC et comment le vérifier vous-même : <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> (en anglais)</p>
         <p>SHA-256 du fichier de la version : <code style="word-break:break-all">714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc</code></p>
       </details>
       <details>
         <summary>Est-ce un plug-in VST ? Existe-t-il une version Mac ?</summary>
         <p>Non, dans les deux cas. FrameBridge n’est pas un plug-in : il étend le moteur vidéo natif de Cubase et Nuendo, la vidéo est donc lue dans le Lecteur vidéo intégré — aucun slot de plug-in, rien à charger dans chaque projet, aucune synchro MTC. Il fonctionne uniquement sous Windows x64.</p>
-      </details>
-      <details>
-        <summary>Quel fichier de sous-titres est chargé ?</summary>
-        <p>Un fichier de sous-titres placé dans le même dossier et portant le même nom que la vidéo, par exemple film.mkv + film.srt. VobSub est une paire : gardez film.idx et film.sub ensemble.</p>
-      </details>
-      <details>
-        <summary>Et si cela ne fonctionne pas sur mon système ?</summary>
-        <p>Écrivez à <a href="mailto:stark622@ukr.net">stark622@ukr.net</a> dans les 14 jours suivant l’achat. Si FrameBridge ne s’installe pas ou ne fonctionne pas avec votre Cubase ou Nuendo, vous êtes intégralement remboursé.</p>
       </details>
       <details>
         <summary>Fonctionnera-t-il après une mise à jour de Cubase ou Nuendo ?</summary>

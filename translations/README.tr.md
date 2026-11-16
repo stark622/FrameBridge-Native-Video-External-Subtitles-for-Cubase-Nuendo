@@ -55,7 +55,7 @@ Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Ta
 <details>
 <summary>Diğer sürümler ve güncellemeler</summary>
 
-**Yakın sürümlerin çalışması çok olasıdır.** Video motoru bir ürün kuşağı içinde neredeyse hiç değişmez: örneğin Nuendo 12.0.52 doğrulandıysa, 12.0.20 veya 12.0.70 de büyük olasılıkla çalışır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Bu bir garanti değildir. Aynı motor kuşağına sahip daha eski sürümler (örneğin Nuendo 7–9, Cubase 8.5 / 9.5) de uygun olabilir, ancak test edilmemiştir.
+**Yakın sürümlerin çalışması çok olasıdır.** Video motoru bir ürün kuşağı içinde neredeyse hiç değişmez: örneğin Nuendo 12.0.52 doğrulandıysa, 12.0.20 veya 12.0.70 de büyük olasılıkla çalışır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Aynı motor kuşağına sahip daha eski sürümler (örneğin Nuendo 7–9, Cubase 8.5 / 9.5) de uygun olabilir, ancak test edilmemiştir.
 
 **Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.30’a kadar doğrulanmıştır. Yeni ana sürümler video motorunu değiştirebilir; FrameBridge’i onlarla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
@@ -93,7 +93,7 @@ FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikl
 
 ## Performans
 
-Oynatma akıcılığı materyale ve donanıma bağlıdır. Günlük çalışma için güncel, orta sınıf bir işlemci ve kullandığınız formatları (HEVC, AV1) donanımsal olarak çözebilen bir ekran kartı düşünün. FrameBridge çok eski bir bilgisayara da kurulur ve çökmeden çalışır — 2012 tarihli bir test bilgisayarında (Intel Core i5-2550K + GeForce GTX 660) —, ancak bu çalışılacak bir makine değildir: ağır 4K 10-bit video (HEVC Main10, H.264 High10) orada takılır, çünkü o neslin GPU’su bu formatları donanımsal olarak çözemez. Zayıf bilgisayarlarda DAW’da video küçük resimlerini kapatmak ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmak yardımcı olur. Bilinen sorunlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) dosyasında listelenmiştir.
+Oynatma akıcılığı materyale ve donanıma bağlıdır. Günlük çalışma için güncel, orta sınıf bir işlemci ve kullandığınız formatları (HEVC, AV1) donanımsal olarak çözebilen bir ekran kartı düşünün. Daha eski bilgisayarlarda — örneğin 2012 tarihli bir test bilgisayarında (Intel Core i5-2550K + GeForce GTX 660) — ağır 4K 10-bit video (HEVC Main10, H.264 High10) takılır, çünkü o neslin GPU’su bu formatları donanımsal olarak çözemez. Zayıf bilgisayarlarda DAW’da video küçük resimlerini kapatmak ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmak yardımcı olur. Bilinen sorunlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) dosyasında listelenmiştir.
 
 ## Kurulum ve geri alma
 

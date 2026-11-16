@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ja/", "inLanguage": "ja", "description": "FrameBridge は Windows 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットを内蔵のビデオトラックで扱い、外部字幕を映像の上に表示。トランスコードは不要です。", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261116a">
+  <link rel="stylesheet" href="/style.css?v=20261116f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -163,7 +163,7 @@
         <div class="card">
           <div class="step-num">3</div>
           <h3>字幕は自動で表示</h3>
-          <p>字幕ファイルをビデオと同じ名前で同じ場所に置くだけです（film.mkv + film.srt）。字幕は映像の上に表示され、ファイルの変更もその場で反映されます。読み込み後に追加・名前変更したファイルも、読み込み直さずに表示されます。</p>
+          <p>字幕ファイルをビデオと同じ名前で隣に置きます（film.mkv + film.srt）。映像の上に表示され、編集は読み込み直しなしでその場で反映されます。</p>
         </div>
       </div>
     </div>
@@ -176,16 +176,13 @@
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
-            <li>Cubase/Nuendo 標準のビデオトラックと内蔵ビデオプレーヤーで動作します。</li>
-            <li>同梱の FFmpeg ライブラリ（LGPL）により、対応コンテナとコーデックを拡張します。</li>
-            <li>外部字幕を自動で読み込み、映像の上に表示します。ビデオファイル自体は一切変更されません。</li>
-            <li>どの字幕フォーマットも、統一された見やすい表示で描画されます。スタイルによる思わぬ崩れはありません。</li>
-            <li>吹き替え用の 2 つ目のビデオウィンドウ：役者が別の画面でビデオプレーヤーを全画面で見ている間、エンジニア用に Cubase/Nuendo のビデオプレーヤーのライブコピーを表示します。</li>
+            <li>同梱の FFmpeg ライブラリ（LGPL）で、標準のビデオトラック上で扱えるコンテナとコーデックが増えます。</li>
+            <li>Blu-ray の PGS/SUP や DVD の VobSub の画像字幕を含め、どの形式の外部字幕も、すっきり読みやすい同じ見た目で映像の上に表示されます。ビデオファイルは一切変更されません。</li>
+            <li>吹き替え用の 2 つ目のビデオウィンドウ：役者が別の画面でビデオプレーヤーを見ている間、エンジニア用に Cubase/Nuendo のビデオプレーヤーのライブコピーを表示します。</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>Blu-ray の PGS/SUP や DVD の VobSub の画像字幕は、Windows 内蔵の OCR でテキストとして読み取ります。</li>
             <li>対応する HDR 素材の HDR から SDR への変換を目視で確認済みです。</li>
             <li>標準の「ビデオからオーディオを抽出」でオーディオも読み込めます。Cubase や Nuendo 単体では開けない MKV などのファイルからも可能です。</li>
             <li>役名付きの吹き替え台本やダイアログリストから直接字幕：PDF、DOCX、TXT、XLSX、CSV。</li>
@@ -207,10 +204,10 @@
             <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
           </div>
         </div>
-        <div class="card">
+        <div class="card tip-host">
           <h3>外部字幕</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip">PGS / SUP</span><span class="chip">VobSub (.idx + .sub)</span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">film.idx と film.sub はセットでビデオの隣に置いてください。 PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</span></span>
           </div>
         </div>
       </div>
@@ -229,7 +226,6 @@
           </div>
         <p class="note">FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。通常は開くことができ、スムーズに再生できる可能性も十分ありますが、スムーズな再生とシークを確認済みなのは上記の形式だけです。14 日間の返金保証が適用されます。</p>
       </details>
-      <p class="note">PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</p>
     </div>
   </section>
 
@@ -237,38 +233,36 @@
     <div class="wrap">
       <h2>互換性</h2>
       <p class="section-lead">Windows x64 専用です。検証済みのバージョンは次のとおりです。</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <dl class="versions">
-            <dt>Cubase</dt>
-            <dd>8.0.10 および 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd>
-            <dt>Nuendo</dt>
-            <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd>
-          </dl>
-          <p class="note" style="margin-top:0">Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。</p>
-          <p class="note" style="margin-top:10px">ビデオトラックのサムネイルは、すべての検証済みバージョンで表示されます。</p>
-        </div>
-        <div class="card">
-          <h3>近いバージョン</h3>
-          <p>ビデオエンジンは同じ製品世代の中ではほとんど変わらないため、近いバージョンでも動作する可能性が非常に高いと考えられます。インストーラーは各インストールのビデオエンジンを自ら確認します。互換性があればインストール候補として表示し、互換性がなければ一覧に表示せず、何も変更しません。動作を保証するものではありません。</p>
-          <h3 style="margin-top:18px">パフォーマンス</h3>
-          <p>重い 4K 10 ビット映像（HEVC Main10、H.264 High10）には高性能な CPU/GPU が必要です。古い PC では、ビデオのサムネイルをオフにし、1080p までの H.264 8 ビットの作業用コピーを使うことをおすすめします。</p>
-        </div>
+      <div class="card">
+        <dl class="versions versions-row">
+          <div><dt>Cubase</dt>
+          <dd>8.0.10 および 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd></div>
+          <div><dt>Nuendo</dt>
+          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd></div>
+        </dl>
+        <p class="note" style="margin-top:0">Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。 ビデオトラックのサムネイルは、すべての検証済みバージョンで表示されます。</p>
+        <p class="perf-line"><strong>パフォーマンス.</strong> 重い 4K 10 ビット映像（HEVC Main10、H.264 High10）には高性能な CPU/GPU が必要です。古い PC では、ビデオのサムネイルをオフにし、1080p までの H.264 8 ビットの作業用コピーを使うことをおすすめします。</p>
       </div>
-      <div class="b2">
-        <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Beta 2 の新機能</button>
-        <div class="b2-tip" id="b2-tip" role="tooltip">
-          <strong>Beta 2 · 2026年11月14日</strong>
-          <ul>
-            <li>Cubase 16.0.5 と上記のすべてのビルドで検証済み</li>
-            <li>吹き替え用の 2 つ目のビデオウィンドウ：役者がビデオプレーヤーを全画面で見ている間、エンジニア用にビデオプレーヤーのライブコピーを表示</li>
-            <li>役名付きの吹き替え台本から直接字幕：PDF、DOCX、TXT、XLSX、CSV</li>
-            <li>読み込める形式が増加：より多くの Cubase / Nuendo で MPEG-1、DV、DivX。DV と DVCPRO の正しい縦横比</li>
-            <li>再生速度の全体的な最適化</li>
-            <li>プレーヤーの色がシステムのメディアプレーヤーと一致</li>
-          </ul>
+      <div class="comp-actions">
+        <div class="b2">
+          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">Beta 2 の新機能</button>
+          <div class="b2-tip" id="b2-tip" role="tooltip">
+            <strong>Beta 2 · 2026年11月14日</strong>
+            <ul>
+              <li>Cubase 16.0.5 と上記のすべてのビルドで検証済み</li>
+              <li>吹き替え用の 2 つ目のビデオウィンドウ：役者が別の画面でビデオプレーヤーを見ている間、エンジニア用にビデオプレーヤーのライブコピーを表示</li>
+              <li>役名付きの吹き替え台本から直接字幕：PDF、DOCX、TXT、XLSX、CSV</li>
+              <li>読み込める形式が増加：より多くの Cubase / Nuendo で MPEG-1、DV、DivX。DV と DVCPRO の正しい縦横比</li>
+              <li>再生速度の全体的な最適化</li>
+              <li>プレーヤーの色がシステムのメディアプレーヤーと一致</li>
+            </ul>
+          </div>
+          <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
         </div>
-        <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
+        <button type="button" class="b2-btn more-btn" aria-expanded="false" aria-controls="comp-more" onclick="var p=document.getElementById('comp-more');p.hidden=!p.hidden;this.setAttribute('aria-expanded',!p.hidden)">近いバージョン</button>
+      </div>
+      <div id="comp-more" class="card comp-more" hidden>
+        <p>ビデオエンジンは同じ製品世代の中ではほとんど変わらないため、近いバージョンでも動作する可能性が非常に高いと考えられます。インストーラーは各インストールのビデオエンジンを自ら確認します。互換性があればインストール候補として表示し、互換性がなければ一覧に表示せず、何も変更しません。</p>
       </div>
       <p class="note">詳細と既知の制限事項：<a href="/compatibility">互換性に関する注記</a>（英語）</p>
     </div>
@@ -311,29 +305,13 @@
         <p>いいえ。字幕は再生時に映像の上に表示されるだけで、ビデオファイルも字幕ファイルもそのまま変わりません。 Cubase の Export Video で動画を保存する場合、字幕は書き出したファイルに焼き込まれる点に注意してください（Cubase 15 で確認）。字幕なしの映像が必要なら、書き出し前に字幕ファイルの名前を変更してください。</p>
       </details>
       <details>
-        <summary>アンインストールするには？</summary>
-        <p>Cubase/Nuendo を終了し、UNINSTALL.cmd を実行します。インストール時に作成された検証済みのバックアップから、プログラムの元のファイルを 1 バイト単位で正確に復元します。</p>
-      </details>
-      <details>
-        <summary>Steinberg のファイルは含まれていますか？</summary>
-        <p>いいえ。パッケージに Steinberg のファイルは一切含まれていません。インストーラーは、お使いのインストール環境のファイルだけを扱います。</p>
-      </details>
-      <details>
-        <summary>ウイルス対策ソフトが警告を表示します。なぜですか？</summary>
-        <p>FrameBridge は新しいソフトウェアで、まだコード署名がされていません。また、インストーラーはプログラムの DLL を 1 つ置き換えるため、一部のヒューリスティック検出がこのパターンに反応することがあります。リリースアーカイブは VirusTotal で確認済みです（<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">レポート</a>、2026 年 11 月 14 日時点）：0/61 — Microsoft Defender、ESET、Malwarebytes、Sophos、Symantec を含め、どのエンジンも検出なしです。インストーラーはネットワークに接続せず、正確に元に戻すための検証済みバックアップを保持します。インストーラーが PC で何を変更するか、またそれを自分で確認する方法: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a> （英語）</p>
+        <summary>インストーラーがプログラムのファイルを置き換えても安全ですか？ウイルス対策ソフトが警告したら？</summary>
+        <p>インストーラーは元どおりに戻せるように作られています。置き換える前に元のファイルを検証して保存し、UNINSTALL.cmd でバイト単位まで同じ状態に戻します。ネットワーク接続、サービス、自動起動はなく、パッケージに Steinberg のファイルは一切含まれません。VirusTotal：0/61（<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">レポート</a>、2026 年 11 月 14 日時点）。ファイルにはまだデジタル署名がないため、ヒューリスティック型のスキャナーが DLL の置き換えに反応することはありますが、これは手順のパターンへの反応であり、脅威が見つかったわけではありません。PC で何が変わるか、ご自身での確認方法は <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a>（英語）をご覧ください。</p>
         <p>リリースファイルの SHA-256： <code style="word-break:break-all">714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc</code></p>
       </details>
       <details>
         <summary>VST プラグインですか？Mac 版はありますか？</summary>
         <p>どちらもいいえです。FrameBridge はプラグインではなく、Cubase と Nuendo 標準のビデオエンジンを拡張します。そのため、ビデオは内蔵のビデオプレーヤーで再生されます。プラグインスロットは不要で、プロジェクトごとに何かを読み込む必要も、MTC 同期も要りません。Windows x64 専用です。</p>
-      </details>
-      <details>
-        <summary>どの字幕ファイルが読み込まれますか？</summary>
-        <p>ビデオと同じフォルダーにある、ビデオと同じ名前の字幕ファイルです（例：film.mkv + film.srt）。VobSub は 2 つで 1 組なので、film.idx と film.sub を必ず一緒に置いてください。</p>
-      </details>
-      <details>
-        <summary>自分のシステムで動作しなかったら？</summary>
-        <p>購入から14日以内に <a href="mailto:stark622@ukr.net">stark622@ukr.net</a> までご連絡ください。FrameBridge がお使いの Cubase / Nuendo にインストールできない、または動作しない場合は全額返金します。</p>
       </details>
       <details>
         <summary>Cubase や Nuendo をアップデートしても動作しますか？</summary>

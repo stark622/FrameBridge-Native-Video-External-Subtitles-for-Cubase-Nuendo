@@ -455,6 +455,36 @@ details.likely .grid { margin-top: 16px; align-items: start; }
 
 .versions dt { font-weight: 700; margin-top: 4px; }
 .versions dd { margin: 4px 0 14px; color: var(--muted); }
+/* Compatibility: Cubase | Nuendo side by side; nearby builds + performance folded under one button */
+.versions-row { display: grid; grid-template-columns: 3fr 2fr; gap: 0 36px; margin: 0; }
+@media (max-width: 760px) { .versions-row { grid-template-columns: 1fr; } }
+.comp-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px; }
+.comp-actions .b2 { margin-top: 0; }
+.more-btn { display: inline-flex; align-items: center; gap: 9px; }
+.more-btn::after { content: ""; width: 6px; height: 6px; margin-top: -3px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.3s var(--ease); }
+.more-btn[aria-expanded="true"]::after { transform: rotate(225deg); margin-top: 3px; }
+.more-btn:hover, .more-btn[aria-expanded="true"] { color: #fff; background: rgba(58, 168, 255, 0.22); border-color: var(--accent); box-shadow: 0 0 24px -4px rgba(58, 168, 255, 0.75); }
+.comp-more { margin-top: 16px; }
+.comp-more p { margin: 0; }
+.perf-line { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--hair); color: var(--muted); font-size: 15px; }
+.perf-line strong { color: var(--text); }
+.comp-more[hidden] { display: none; }
+
+/* Bitmap subtitle chips (PGS/SUP, VobSub): the OCR note shows on hover / tap */
+.card.tip-host { overflow: visible; }
+.chip-tip { position: relative; cursor: help; border-style: dashed; outline: none; }
+.chip-tip::after { content: "i"; display: inline-grid; place-items: center; width: 14px; height: 14px; margin-left: 6px; border-radius: 50%; border: 1px solid currentColor; font-size: 10px; font-weight: 700; font-style: italic; opacity: 0.7; vertical-align: 1px; }
+.chip-tip .tip {
+  position: absolute; z-index: 20; bottom: calc(100% + 10px); left: 50%; transform: translate(-50%, 4px);
+  width: max-content; max-width: min(320px, 78vw); padding: 10px 12px; border-radius: 12px;
+  background: #0d1422; border: 1px solid rgba(58, 168, 255, 0.45); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  color: var(--text); font-size: 13px; font-weight: 400; line-height: 1.45; white-space: normal; text-align: left;
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s var(--ease), visibility 0.18s;
+}
+.chip-tip.tip-end .tip { left: auto; right: 0; transform: translate(0, 4px); }
+.chip-tip:hover .tip, .chip-tip:focus .tip { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.chip-tip.tip-end:hover .tip, .chip-tip.tip-end:focus .tip { transform: translate(0, 0); }
+.chip-tip:focus-visible { border-color: var(--accent); }
 
 /* Pricing: glass card with a luminous gradient edge */
 .price-card {
