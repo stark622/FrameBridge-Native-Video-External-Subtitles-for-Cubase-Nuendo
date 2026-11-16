@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#플랫폼-및-상태) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#지원되는-cubase-및-nuendo-버전) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#지원되는-cubase-및-nuendo-버전) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#플랫폼-및-상태)
 
-[![Nuendo 기본 비디오 트랙에서 작동하는 FrameBridge — 클릭하여 데모 보기](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![Nuendo 기본 비디오 트랙에서 작동하는 FrameBridge — 클릭하여 데모 보기](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 다양한 비디오 포맷과 자막 형식을 실시간으로 가져오는 모습을 편집 없이 한 번에 담았습니다.
 
@@ -41,7 +41,7 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 
 화면 두 개: 배우에게는 Cubase/Nuendo 비디오 플레이어 전체 화면, 여러분에게는 FrameBridge 사본.
 
-![비디오 플레이어를 배우의 화면으로 끌어다 놓고, 두 번 클릭해 전체 화면으로 바꾼 뒤, 트레이의 FrameBridge 아이콘을 클릭하면 여러분의 화면에 사본이 열립니다](../dub-window.gif)
+![비디오 플레이어를 배우의 화면으로 끌어다 놓고, 두 번 클릭해 전체 화면으로 바꾼 뒤, 트레이의 FrameBridge 아이콘을 클릭하면 여러분의 화면에 사본이 열립니다](../media/dub-window.gif)
 
 ## 지원되는 Cubase 및 Nuendo 버전
 
@@ -50,7 +50,7 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 | **Cubase** | 8.0.10 및 9.0.0(LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
 | **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
 
-Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../COMPATIBILITY.txt)(영문)를 참고하세요. 비디오 트랙 썸네일은 모든 검증된 버전에서 표시됩니다.
+Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt)(영문)를 참고하세요. 비디오 트랙 썸네일은 모든 검증된 버전에서 표시됩니다.
 
 <details>
 <summary>다른 버전과 업데이트</summary>
@@ -93,7 +93,7 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 ## 성능
 
-재생의 부드러움은 소스와 하드웨어에 따라 달라집니다. 일상 작업에는 최신 중급 CPU와 사용하는 포맷(HEVC, AV1)을 하드웨어로 디코딩하는 그래픽 카드를 권장합니다. FrameBridge는 아주 오래된 PC에도 설치되어 충돌 없이 작동하지만(2012년 테스트 PC: Intel Core i5-2550K + GeForce GTX 660), 작업용으로 쓸 수 있는 PC는 아닙니다. 해당 세대의 GPU가 이 포맷을 하드웨어로 디코딩하지 못해 무거운 4K 10비트 영상(HEVC Main10, H.264 High10)이 끊깁니다. 성능이 낮은 PC에서는 DAW에서 비디오 썸네일을 끄고 1080p 이하의 H.264 8비트 작업용 사본을 사용하면 도움이 됩니다. 알려진 문제는 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt)에 정리되어 있습니다.
+재생의 부드러움은 소스와 하드웨어에 따라 달라집니다. 일상 작업에는 최신 중급 CPU와 사용하는 포맷(HEVC, AV1)을 하드웨어로 디코딩하는 그래픽 카드를 권장합니다. FrameBridge는 아주 오래된 PC에도 설치되어 충돌 없이 작동하지만(2012년 테스트 PC: Intel Core i5-2550K + GeForce GTX 660), 작업용으로 쓸 수 있는 PC는 아닙니다. 해당 세대의 GPU가 이 포맷을 하드웨어로 디코딩하지 못해 무거운 4K 10비트 영상(HEVC Main10, H.264 High10)이 끊깁니다. 성능이 낮은 PC에서는 DAW에서 비디오 썸네일을 끄고 1080p 이하의 H.264 8비트 작업용 사본을 사용하면 도움이 됩니다. 알려진 문제는 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)에 정리되어 있습니다.
 
 ## 설치 및 복원
 
@@ -101,7 +101,7 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 - `UNINSTALL.cmd`는 검증된 백업에서 프로그램 원본 파일을 복원합니다(바이트 단위까지 그대로). 프로젝트, 환경 설정, 플러그인은 건드리지 않습니다.
 - 패키지에는 Steinberg 파일이 전혀 포함되어 있지 않으며, 설치 프로그램은 사용자의 설치 파일만 다룹니다.
 
-자세한 안내는 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt)와 [README.txt](../README.txt)(영문)를 참고하세요.
+자세한 안내는 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)와 [README.txt](../docs/README.txt)(영문)를 참고하세요.
 
 ## 릴리스 파일 확인
 
@@ -132,12 +132,12 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 **법률 문서(영문, 영문판이 우선합니다):**
 
-- [개인정보 처리방침](../PRIVACY_POLICY.md)
-- [서비스 약관](../TERMS_OF_SERVICE.md)
-- [최종 사용자 라이선스](../END_USER_LICENSE.txt)
+- [개인정보 처리방침](../docs/PRIVACY_POLICY.md)
+- [서비스 약관](../docs/TERMS_OF_SERVICE.md)
+- [최종 사용자 라이선스](../docs/END_USER_LICENSE.txt)
 
 ## 라이선스
 
-FrameBridge는 상용 소프트웨어입니다. 제품 이용 조건은 [END_USER_LICENSE.txt](../END_USER_LICENSE.txt)에 있습니다. 함께 제공되는 FFmpeg 공유 라이브러리(LGPL 2.1 이상, 소스 코드는 패키지에 포함)에 적용되는 조건을 비롯한 타사 라이선스 정보는 [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt)에 있습니다.
+FrameBridge는 상용 소프트웨어입니다. 제품 이용 조건은 [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt)에 있습니다. 함께 제공되는 FFmpeg 공유 라이브러리(LGPL 2.1 이상, 소스 코드는 패키지에 포함)에 적용되는 조건을 비롯한 타사 라이선스 정보는 [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt)에 있습니다.
 
 FrameBridge는 독립 소프트웨어이며 Steinberg와 제휴 관계가 없고, Steinberg의 후원이나 승인을 받지 않았습니다. Cubase와 Nuendo는 각 소유자의 상표입니다.

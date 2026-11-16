@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#plataforma-y-estado) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#versiones-de-cubase-y-nuendo-compatibles) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#versiones-de-cubase-y-nuendo-compatibles) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#plataforma-y-estado)
 
-[![FrameBridge en la pista de video nativa de Nuendo — haga clic para ver la demo](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![FrameBridge en la pista de video nativa de Nuendo — haga clic para ver la demo](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Arriba, una breve guía en video en Cubase 11 Pro: un MKV con su archivo de subtítulos SRT y un MKV HDR mostrado en SDR. [Versión extendida en YouTube](https://youtu.be/NjNHtkc8-OE): una sola toma sin cortes con la importación en vivo de muchos formatos de video y tipos de subtítulos.
 
@@ -41,7 +41,7 @@ FrameBridge amplía el motor de video nativo de Cubase y Nuendo en Windows x64. 
 
 Dos pantallas: el Reproductor de video de Cubase/Nuendo a pantalla completa para el actor, la copia de FrameBridge para usted.
 
-![Arrastre el Reproductor de video a la pantalla del actor, haga doble clic para pantalla completa y pulse el icono de FrameBridge en la bandeja: la copia se abre en su pantalla](../dub-window.gif)
+![Arrastre el Reproductor de video a la pantalla del actor, haga doble clic para pantalla completa y pulse el icono de FrameBridge en la bandeja: la copia se abre en su pantalla](../media/dub-window.gif)
 
 ## Versiones de Cubase y Nuendo compatibles
 
@@ -50,7 +50,7 @@ Dos pantallas: el Reproductor de video de Cubase/Nuendo a pantalla completa para
 | **Cubase** | 8.0.10 y 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
 | **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
 
-Las ediciones Cubase Pro, Artist, Elements, AI y LE se detectan de la misma manera. La matriz completa está en [COMPATIBILITY.txt](../COMPATIBILITY.txt) (en inglés). Las miniaturas en la pista de video se muestran en todas las versiones verificadas.
+Las ediciones Cubase Pro, Artist, Elements, AI y LE se detectan de la misma manera. La matriz completa está en [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) (en inglés). Las miniaturas en la pista de video se muestran en todas las versiones verificadas.
 
 <details>
 <summary>Otras versiones y actualizaciones</summary>
@@ -93,7 +93,7 @@ Los decodifica el mismo FFmpeg 9.0.2 incluido en FrameBridge. Normalmente se abr
 
 ## Rendimiento
 
-La fluidez de la reproducción depende del material y del hardware. Para el trabajo diario, cuente con una CPU actual de gama media y una tarjeta gráfica que decodifique por hardware los formatos que usa (HEVC, AV1). FrameBridge también se instala y funciona sin bloqueos en un PC muy antiguo —en un PC de prueba de 2012 (Intel Core i5-2550K + GeForce GTX 660)—, pero no es un equipo para trabajar: el video 4K de 10 bits pesado (HEVC Main10, H.264 High10) se entrecorta, porque una GPU de esa generación no puede decodificar esos formatos por hardware. En PC poco potentes ayuda desactivar las miniaturas de video en la DAW y trabajar con copias de trabajo H.264 de 8 bits hasta 1080p. Los problemas conocidos se enumeran en [READ_ME_FIRST.txt](../READ_ME_FIRST.txt).
+La fluidez de la reproducción depende del material y del hardware. Para el trabajo diario, cuente con una CPU actual de gama media y una tarjeta gráfica que decodifique por hardware los formatos que usa (HEVC, AV1). FrameBridge también se instala y funciona sin bloqueos en un PC muy antiguo —en un PC de prueba de 2012 (Intel Core i5-2550K + GeForce GTX 660)—, pero no es un equipo para trabajar: el video 4K de 10 bits pesado (HEVC Main10, H.264 High10) se entrecorta, porque una GPU de esa generación no puede decodificar esos formatos por hardware. En PC poco potentes ayuda desactivar las miniaturas de video en la DAW y trabajar con copias de trabajo H.264 de 8 bits hasta 1080p. Los problemas conocidos se enumeran en [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
 
 ## Instalación y restauración
 
@@ -101,7 +101,7 @@ La fluidez de la reproducción depende del material y del hardware. Para el trab
 - `UNINSTALL.cmd` restaura los archivos originales del programa desde una copia de seguridad verificada (byte a byte). Los proyectos, las preferencias y los plug-ins no se tocan.
 - El paquete no incluye ningún archivo de Steinberg; el instalador trabaja únicamente con los archivos de su propia instalación.
 
-Las instrucciones completas están en [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) y [README.txt](../README.txt) (en inglés).
+Las instrucciones completas están en [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) y [README.txt](../docs/README.txt) (en inglés).
 
 ## Comprobación del archivo de la versión
 
@@ -132,12 +132,12 @@ Escriba a stark622@ukr.net dentro de los 14 días posteriores a la compra. Si Fr
 
 **Información legal (en inglés; prevalece la versión en inglés):**
 
-- [Política de privacidad](../PRIVACY_POLICY.md)
-- [Términos del servicio](../TERMS_OF_SERVICE.md)
-- [Licencia de usuario final](../END_USER_LICENSE.txt)
+- [Política de privacidad](../docs/PRIVACY_POLICY.md)
+- [Términos del servicio](../docs/TERMS_OF_SERVICE.md)
+- [Licencia de usuario final](../docs/END_USER_LICENSE.txt)
 
 ## Licencias
 
-FrameBridge es software comercial. Los términos del producto propietario se encuentran en [END_USER_LICENSE.txt](../END_USER_LICENSE.txt). Los detalles de licencias de terceros, incluidos los términos aplicables a las bibliotecas compartidas de FFmpeg incluidas (LGPL 2.1 o posterior, código fuente incluido en el paquete), se encuentran en [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
+FrameBridge es software comercial. Los términos del producto propietario se encuentran en [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt). Los detalles de licencias de terceros, incluidos los términos aplicables a las bibliotecas compartidas de FFmpeg incluidas (LGPL 2.1 o posterior, código fuente incluido en el paquete), se encuentran en [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
 
 FrameBridge es software independiente y no está afiliado, patrocinado ni respaldado por Steinberg. Cubase y Nuendo son marcas comerciales de su respectivo propietario.

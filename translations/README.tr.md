@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#platform-ve-durum) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#platform-ve-durum)
 
-[![Nuendo’nun yerel video kanalında çalışan FrameBridge — demoyu izlemek için tıklayın](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![Nuendo’nun yerel video kanalında çalışan FrameBridge — demoyu izlemek için tıklayın](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): birçok video formatının ve altyazı türünün canlı olarak içe aktarıldığı kesintisiz tek çekim.
 
@@ -41,7 +41,7 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 
 İki ekran: oyuncu için tam ekran Cubase/Nuendo Video Player, sizin için FrameBridge kopyası.
 
-![Video Player’ı oyuncunun ekranına sürükleyin, tam ekran için çift tıklayın, sistem tepsisindeki FrameBridge simgesine tıklayın: kopya sizin ekranınızda açılır](../dub-window.gif)
+![Video Player’ı oyuncunun ekranına sürükleyin, tam ekran için çift tıklayın, sistem tepsisindeki FrameBridge simgesine tıklayın: kopya sizin ekranınızda açılır](../media/dub-window.gif)
 
 ## Desteklenen Cubase ve Nuendo sürümleri
 
@@ -50,7 +50,7 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 | **Cubase** | 8.0.10 ve 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
 | **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
 
-Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../COMPATIBILITY.txt) dosyasındadır (İngilizce). Video kanalındaki küçük resimler tüm doğrulanmış sürümlerde görünür.
+Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) dosyasındadır (İngilizce). Video kanalındaki küçük resimler tüm doğrulanmış sürümlerde görünür.
 
 <details>
 <summary>Diğer sürümler ve güncellemeler</summary>
@@ -93,7 +93,7 @@ FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikl
 
 ## Performans
 
-Oynatma akıcılığı materyale ve donanıma bağlıdır. Günlük çalışma için güncel, orta sınıf bir işlemci ve kullandığınız formatları (HEVC, AV1) donanımsal olarak çözebilen bir ekran kartı düşünün. FrameBridge çok eski bir bilgisayara da kurulur ve çökmeden çalışır — 2012 tarihli bir test bilgisayarında (Intel Core i5-2550K + GeForce GTX 660) —, ancak bu çalışılacak bir makine değildir: ağır 4K 10-bit video (HEVC Main10, H.264 High10) orada takılır, çünkü o neslin GPU’su bu formatları donanımsal olarak çözemez. Zayıf bilgisayarlarda DAW’da video küçük resimlerini kapatmak ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmak yardımcı olur. Bilinen sorunlar [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) dosyasında listelenmiştir.
+Oynatma akıcılığı materyale ve donanıma bağlıdır. Günlük çalışma için güncel, orta sınıf bir işlemci ve kullandığınız formatları (HEVC, AV1) donanımsal olarak çözebilen bir ekran kartı düşünün. FrameBridge çok eski bir bilgisayara da kurulur ve çökmeden çalışır — 2012 tarihli bir test bilgisayarında (Intel Core i5-2550K + GeForce GTX 660) —, ancak bu çalışılacak bir makine değildir: ağır 4K 10-bit video (HEVC Main10, H.264 High10) orada takılır, çünkü o neslin GPU’su bu formatları donanımsal olarak çözemez. Zayıf bilgisayarlarda DAW’da video küçük resimlerini kapatmak ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmak yardımcı olur. Bilinen sorunlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) dosyasında listelenmiştir.
 
 ## Kurulum ve geri alma
 
@@ -101,7 +101,7 @@ Oynatma akıcılığı materyale ve donanıma bağlıdır. Günlük çalışma i
 - `UNINSTALL.cmd`, programın orijinal dosyalarını doğrulanmış bir yedekten geri yükler (bayt bayt). Projelere, tercihlere ve eklentilere dokunulmaz.
 - Pakette hiçbir Steinberg dosyası yoktur; yükleyici yalnızca kendi kurulumunuzdaki dosyalarla çalışır.
 
-Ayrıntılı talimatlar [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) ve [README.txt](../README.txt) dosyalarındadır (İngilizce).
+Ayrıntılı talimatlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) ve [README.txt](../docs/README.txt) dosyalarındadır (İngilizce).
 
 ## Sürüm dosyası kontrolü
 
@@ -132,12 +132,12 @@ Satın aldıktan sonraki 14 gün içinde stark622@ukr.net adresine yazın. Frame
 
 **Yasal belgeler (İngilizce; İngilizce sürüm esas alınır):**
 
-- [Gizlilik Politikası](../PRIVACY_POLICY.md)
-- [Hizmet Şartları](../TERMS_OF_SERVICE.md)
-- [Son Kullanıcı Lisansı](../END_USER_LICENSE.txt)
+- [Gizlilik Politikası](../docs/PRIVACY_POLICY.md)
+- [Hizmet Şartları](../docs/TERMS_OF_SERVICE.md)
+- [Son Kullanıcı Lisansı](../docs/END_USER_LICENSE.txt)
 
 ## Lisanslama
 
-FrameBridge ticari bir yazılımdır. Ürüne ait koşullar [END_USER_LICENSE.txt](../END_USER_LICENSE.txt) dosyasındadır. Pakete dahil FFmpeg paylaşımlı kütüphanelerine (LGPL 2.1 veya üstü, kaynak kodu pakette) uygulanan koşullar dahil olmak üzere üçüncü taraf lisans bilgileri [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt) dosyasındadır.
+FrameBridge ticari bir yazılımdır. Ürüne ait koşullar [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt) dosyasındadır. Pakete dahil FFmpeg paylaşımlı kütüphanelerine (LGPL 2.1 veya üstü, kaynak kodu pakette) uygulanan koşullar dahil olmak üzere üçüncü taraf lisans bilgileri [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt) dosyasındadır.
 
 FrameBridge bağımsız bir yazılımdır; Steinberg ile bağlantılı değildir, Steinberg tarafından desteklenmez veya onaylanmaz. Cubase ve Nuendo, ilgili sahibinin ticari markalarıdır.

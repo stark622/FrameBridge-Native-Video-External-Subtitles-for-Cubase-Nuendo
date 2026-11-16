@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#platforma-i-status) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#obsługiwane-wersje-cubase-i-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#obsługiwane-wersje-cubase-i-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#platforma-i-status)
 
-[![FrameBridge na natywnej ścieżce wideo Nuendo — kliknij, aby obejrzeć demo](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![FrameBridge na natywnej ścieżce wideo Nuendo — kliknij, aby obejrzeć demo](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Powyżej krótki poradnik wideo w Cubase 11 Pro: plik MKV z napisami SRT oraz MKV HDR wyświetlany w SDR. [Wersja rozszerzona na YouTube](https://youtu.be/NjNHtkc8-OE): jedno ujęcie bez cięć z importem na żywo wielu formatów wideo i rodzajów napisów.
 
@@ -41,7 +41,7 @@ FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x6
 
 Dwa ekrany: Video Player z Cubase/Nuendo na pełnym ekranie dla aktora, kopia FrameBridge dla Ciebie.
 
-![Przeciągnij Video Player na ekran aktora, kliknij dwukrotnie, aby włączyć pełny ekran, kliknij ikonę FrameBridge w zasobniku: kopia otworzy się na Twoim ekranie](../dub-window.gif)
+![Przeciągnij Video Player na ekran aktora, kliknij dwukrotnie, aby włączyć pełny ekran, kliknij ikonę FrameBridge w zasobniku: kopia otworzy się na Twoim ekranie](../media/dub-window.gif)
 
 ## Obsługiwane wersje Cubase i Nuendo
 
@@ -50,7 +50,7 @@ Dwa ekrany: Video Player z Cubase/Nuendo na pełnym ekranie dla aktora, kopia Fr
 | **Cubase** | 8.0.10 i 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
 | **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
 
-Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pełna tabela jest w pliku [COMPATIBILITY.txt](../COMPATIBILITY.txt) (po angielsku). Miniatury na ścieżce wideo są widoczne we wszystkich sprawdzonych wersjach.
+Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pełna tabela jest w pliku [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) (po angielsku). Miniatury na ścieżce wideo są widoczne we wszystkich sprawdzonych wersjach.
 
 <details>
 <summary>Inne wersje i aktualizacje</summary>
@@ -93,7 +93,7 @@ Dekoduje je ten sam FFmpeg 9.0.2 wbudowany we FrameBridge. Zwykle się otwieraj�
 
 ## Wydajność
 
-Płynność odtwarzania zależy od materiału i sprzętu. Do codziennej pracy warto mieć aktualny procesor ze średniej półki i kartę graficzną, która sprzętowo dekoduje używane formaty (HEVC, AV1). FrameBridge instaluje się i działa bez awarii także na bardzo starym PC — na komputerze testowym z 2012 roku (Intel Core i5-2550K + GeForce GTX 660) — ale to nie jest maszyna do pracy: ciężkie wideo 4K 10-bit (HEVC Main10, H.264 High10) tam się zacina, bo GPU tej generacji nie potrafi sprzętowo dekodować tych formatów. Na słabych komputerach pomaga wyłączenie miniatur wideo w DAW i praca na kopiach roboczych H.264 8-bit do 1080p. Znane problemy są opisane w [READ_ME_FIRST.txt](../READ_ME_FIRST.txt).
+Płynność odtwarzania zależy od materiału i sprzętu. Do codziennej pracy warto mieć aktualny procesor ze średniej półki i kartę graficzną, która sprzętowo dekoduje używane formaty (HEVC, AV1). FrameBridge instaluje się i działa bez awarii także na bardzo starym PC — na komputerze testowym z 2012 roku (Intel Core i5-2550K + GeForce GTX 660) — ale to nie jest maszyna do pracy: ciężkie wideo 4K 10-bit (HEVC Main10, H.264 High10) tam się zacina, bo GPU tej generacji nie potrafi sprzętowo dekodować tych formatów. Na słabych komputerach pomaga wyłączenie miniatur wideo w DAW i praca na kopiach roboczych H.264 8-bit do 1080p. Znane problemy są opisane w [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
 
 ## Instalacja i przywracanie
 
@@ -101,7 +101,7 @@ Płynność odtwarzania zależy od materiału i sprzętu. Do codziennej pracy wa
 - `UNINSTALL.cmd` przywraca oryginalne pliki programu ze sprawdzonej kopii zapasowej (bajt po bajcie). Projekty, ustawienia i wtyczki pozostają nietknięte.
 - W pakiecie nie ma żadnego pliku Steinberga; instalator pracuje wyłącznie na plikach Twojej własnej instalacji.
 
-Pełna instrukcja jest w plikach [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) i [README.txt](../README.txt) (po angielsku).
+Pełna instrukcja jest w plikach [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) i [README.txt](../docs/README.txt) (po angielsku).
 
 ## Weryfikacja pliku wydania
 
@@ -132,12 +132,12 @@ Napisz na stark622@ukr.net w ciągu 14 dni od zakupu. Jeśli FrameBridge nie zai
 
 **Informacje prawne (po angielsku; wiążąca jest wersja angielska):**
 
-- [Polityka prywatności](../PRIVACY_POLICY.md)
-- [Warunki korzystania](../TERMS_OF_SERVICE.md)
-- [Licencja użytkownika końcowego](../END_USER_LICENSE.txt)
+- [Polityka prywatności](../docs/PRIVACY_POLICY.md)
+- [Warunki korzystania](../docs/TERMS_OF_SERVICE.md)
+- [Licencja użytkownika końcowego](../docs/END_USER_LICENSE.txt)
 
 ## Licencje
 
-FrameBridge to oprogramowanie komercyjne. Warunki produktu są opisane w [END_USER_LICENSE.txt](../END_USER_LICENSE.txt). Informacje o licencjach komponentów zewnętrznych, w tym o warunkach dla dołączonych bibliotek współdzielonych FFmpeg (LGPL 2.1 lub nowsza, kod źródłowy dołączony do pakietu), znajdują się w [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
+FrameBridge to oprogramowanie komercyjne. Warunki produktu są opisane w [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt). Informacje o licencjach komponentów zewnętrznych, w tym o warunkach dla dołączonych bibliotek współdzielonych FFmpeg (LGPL 2.1 lub nowsza, kod źródłowy dołączony do pakietu), znajdują się w [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
 
 FrameBridge to niezależne oprogramowanie, niepowiązane ze Steinbergiem ani przez niego niesponsorowane czy niepopierane. Cubase i Nuendo są znakami towarowymi ich właściciela.

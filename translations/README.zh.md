@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#平台与状态) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#支持的-cubase-和-nuendo-版本) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#支持的-cubase-和-nuendo-版本) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#平台与状态)
 
-[![FrameBridge 在 Nuendo 原生视频轨上运行 — 点击观看演示](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![FrameBridge 在 Nuendo 原生视频轨上运行 — 点击观看演示](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 上方是 Cubase 11 Pro 中的简短视频指南：带 SRT 字幕文件的 MKV，以及以 SDR 显示的 HDR MKV。[YouTube 上的加长版](https://youtu.be/NjNHtkc8-OE)：一镜到底、无剪辑，现场导入多种视频格式和字幕类型。
 
@@ -41,7 +41,7 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 
 两块屏幕：演员看全屏的 Cubase/Nuendo 视频播放器，您看 FrameBridge 副本。
 
-![把视频播放器拖到演员的屏幕上，双击切换全屏，再点击任务栏通知区域中的 FrameBridge 图标：副本会在您的屏幕上打开](../dub-window.gif)
+![把视频播放器拖到演员的屏幕上，双击切换全屏，再点击任务栏通知区域中的 FrameBridge 图标：副本会在您的屏幕上打开](../media/dub-window.gif)
 
 ## 支持的 Cubase 和 Nuendo 版本
 
@@ -50,7 +50,7 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 | **Cubase** | 8.0.10 和 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30、16.0.5 |
 | **Nuendo** | 10、12.0.52、13.0.10 / 13.0.50、14.0.32 / 14.0.40、15.0.21 / 15.0.30 |
 
-Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完整列表请参阅 [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英文）。 所有已验证版本的视频轨上都会显示缩略图。
+Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完整列表请参阅 [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt)（英文）。 所有已验证版本的视频轨上都会显示缩略图。
 
 <details>
 <summary>其他版本与更新</summary>
@@ -93,7 +93,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 ## 性能
 
-播放流畅度取决于素材和硬件。日常工作建议使用当代中端 CPU，以及能对您所用格式（HEVC、AV1）进行硬件解码的显卡。FrameBridge 在非常旧的电脑上也能安装并运行而不崩溃（2012 年的测试电脑：Intel Core i5-2550K + GeForce GTX 660），但那样的机器并不适合工作：高负载的 4K 10 位视频（HEVC Main10、H.264 High10）在上面会卡顿，因为这一代显卡无法对这些格式进行硬件解码。在性能较弱的电脑上，在 DAW 中关闭视频缩略图并使用 1080p 及以下的 H.264 8 位工作副本会有帮助。已知问题列于 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt)。
+播放流畅度取决于素材和硬件。日常工作建议使用当代中端 CPU，以及能对您所用格式（HEVC、AV1）进行硬件解码的显卡。FrameBridge 在非常旧的电脑上也能安装并运行而不崩溃（2012 年的测试电脑：Intel Core i5-2550K + GeForce GTX 660），但那样的机器并不适合工作：高负载的 4K 10 位视频（HEVC Main10、H.264 High10）在上面会卡顿，因为这一代显卡无法对这些格式进行硬件解码。在性能较弱的电脑上，在 DAW 中关闭视频缩略图并使用 1080p 及以下的 H.264 8 位工作副本会有帮助。已知问题列于 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)。
 
 ## 安装与还原
 
@@ -101,7 +101,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 - `UNINSTALL.cmd` 会从经过验证的备份中恢复程序的原始文件（逐字节）。工程、偏好设置和插件均不受影响。
 - 安装包中没有任何 Steinberg 文件；安装程序只处理您自己安装中的文件。
 
-完整说明请参阅 [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) 和 [README.txt](../README.txt)（英文）。
+完整说明请参阅 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) 和 [README.txt](../docs/README.txt)（英文）。
 
 ## 发布文件校验
 
@@ -132,12 +132,12 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 **法律文件（英文，以英文版本为准）：**
 
-- [隐私政策](../PRIVACY_POLICY.md)
-- [服务条款](../TERMS_OF_SERVICE.md)
-- [最终用户许可](../END_USER_LICENSE.txt)
+- [隐私政策](../docs/PRIVACY_POLICY.md)
+- [服务条款](../docs/TERMS_OF_SERVICE.md)
+- [最终用户许可](../docs/END_USER_LICENSE.txt)
 
 ## 许可
 
-FrameBridge 是商业软件。产品的使用条款见 [END_USER_LICENSE.txt](../END_USER_LICENSE.txt)。第三方许可信息（包括随附的 FFmpeg 共享库所适用的条款：LGPL 2.1 或更高版本，源代码已包含在安装包中）见 [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt)。
+FrameBridge 是商业软件。产品的使用条款见 [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt)。第三方许可信息（包括随附的 FFmpeg 共享库所适用的条款：LGPL 2.1 或更高版本，源代码已包含在安装包中）见 [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt)。
 
 FrameBridge 是独立软件，与 Steinberg 无关联，也未获得 Steinberg 的赞助或认可。Cubase 和 Nuendo 是其各自所有者的商标。

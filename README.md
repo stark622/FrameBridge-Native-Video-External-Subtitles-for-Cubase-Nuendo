@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#platform-and-status) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#supported-cubase-and-nuendo-versions) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#supported-cubase-and-nuendo-versions) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#platform-and-status)
 
-[![FrameBridge running on the native Nuendo video track — click to watch the demo](poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![FrameBridge running on the native Nuendo video track — click to watch the demo](media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Above is a short video guide in Cubase 11 Pro: an MKV with its SRT subtitle file, and an HDR MKV shown in SDR.
 [Extended version on YouTube](https://youtu.be/NjNHtkc8-OE): one uncut take with live imports of many video formats and subtitle types.
@@ -42,7 +42,7 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 
 Two screens: the Cubase/Nuendo Video Player in full screen for the actor, the FrameBridge copy for you.
 
-![Drag the Video Player to the actor's screen, double-click for full screen, click the FrameBridge tray icon: the copy opens on your screen](dub-window.gif)
+![Drag the Video Player to the actor's screen, double-click for full screen, click the FrameBridge tray icon: the copy opens on your screen](media/dub-window.gif)
 
 ## Supported Cubase and Nuendo versions
 
@@ -51,7 +51,7 @@ Two screens: the Cubase/Nuendo Video Player in full screen for the actor, the Fr
 | **Cubase** | 8.0.10 and 9.0.0 (LE AI Elements) · 10.5.0.68 · 11 · 12.0.10 / 12.0.51 / 12.0.52 · 13.0.21 · 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40 · 15.0.5 / 15.0.21 / 15.0.30 · 16.0.5 |
 | **Nuendo** | 10 · 12.0.52 · 13.0.10 / 13.0.50 · 14.0.32 / 14.0.40 · 15.0.21 / 15.0.30 |
 
-Cubase Pro, Artist, Elements, AI and LE editions are found the same way. Thumbnails on the video track are shown in all verified builds. Full matrix: [COMPATIBILITY.txt](COMPATIBILITY.txt).
+Cubase Pro, Artist, Elements, AI and LE editions are found the same way. Thumbnails on the video track are shown in all verified builds. Full matrix: [COMPATIBILITY.txt](docs/COMPATIBILITY.txt).
 
 <details>
 <summary>Other builds and updates</summary>
@@ -94,7 +94,7 @@ Decoded by the same FFmpeg 9.0.2 inside FrameBridge. These usually open and may 
 
 ## Performance
 
-Playback speed depends on the media and the hardware. For everyday work, plan for a current mid-range CPU and a graphics card that decodes the formats you use (HEVC, AV1) in hardware. FrameBridge also installs and runs on a very old PC without crashing — on a 2012 test PC (Intel Core i5-2550K + GeForce GTX 660) — but that is not a machine to work on: heavy 4K 10-bit video (HEVC Main10, H.264 High10) stutters there, because a GPU of that generation cannot decode these formats in hardware. On weak PCs, switching off video thumbnails in the DAW and using H.264 8-bit working copies up to 1080p helps. Known issues are listed in [READ_ME_FIRST.txt](READ_ME_FIRST.txt).
+Playback speed depends on the media and the hardware. For everyday work, plan for a current mid-range CPU and a graphics card that decodes the formats you use (HEVC, AV1) in hardware. FrameBridge also installs and runs on a very old PC without crashing — on a 2012 test PC (Intel Core i5-2550K + GeForce GTX 660) — but that is not a machine to work on: heavy 4K 10-bit video (HEVC Main10, H.264 High10) stutters there, because a GPU of that generation cannot decode these formats in hardware. On weak PCs, switching off video thumbnails in the DAW and using H.264 8-bit working copies up to 1080p helps. Known issues are listed in [READ_ME_FIRST.txt](docs/READ_ME_FIRST.txt).
 
 ## Installation and rollback
 
@@ -102,7 +102,7 @@ Playback speed depends on the media and the hardware. For everyday work, plan fo
 - `UNINSTALL.cmd` restores the original program files from a verified backup (byte for byte). Projects, preferences and plug-ins are not touched.
 - No Steinberg file is shipped in the package; the installer works only with the files of your own installation.
 
-Full instructions are in [READ_ME_FIRST.txt](READ_ME_FIRST.txt) and [README.txt](README.txt).
+Full instructions are in [READ_ME_FIRST.txt](docs/READ_ME_FIRST.txt) and [README.txt](docs/README.txt).
 
 ## Release file check
 
@@ -134,12 +134,12 @@ Write to stark622@ukr.net within 14 days of purchase. If FrameBridge does not in
 
 **Legal:**
 
-- [Privacy Policy](PRIVACY_POLICY.md)
-- [Terms of Service](TERMS_OF_SERVICE.md)
-- [End-User License](END_USER_LICENSE.txt)
+- [Privacy Policy](docs/PRIVACY_POLICY.md)
+- [Terms of Service](docs/TERMS_OF_SERVICE.md)
+- [End-User License](docs/END_USER_LICENSE.txt)
 
 ## Licensing
 
-FrameBridge is commercial software. The proprietary product terms are provided in [END_USER_LICENSE.txt](END_USER_LICENSE.txt). Third-party licensing details, including the terms applicable to the packaged FFmpeg shared libraries (LGPL 2.1 or later, source included in the package), are provided in [LICENSE_AND_NOTICE.txt](LICENSE_AND_NOTICE.txt).
+FrameBridge is commercial software. The proprietary product terms are provided in [END_USER_LICENSE.txt](docs/END_USER_LICENSE.txt). Third-party licensing details, including the terms applicable to the packaged FFmpeg shared libraries (LGPL 2.1 or later, source included in the package), are provided in [LICENSE_AND_NOTICE.txt](LICENSE_AND_NOTICE.txt).
 
 FrameBridge is independent software and is not affiliated with, sponsored by, or endorsed by Steinberg. Cubase and Nuendo are trademarks of their respective owner.

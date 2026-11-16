@@ -52,7 +52,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/", "inLanguage": "en", "description": "FrameBridge extends the native Cubase and Nuendo video engine on Windows: modern video formats and external subtitles on the video track, no transcoding.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261114f">
+  <link rel="stylesheet" href="/style.css?v=20261116a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
 </head>
@@ -113,6 +113,52 @@
         <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">Watch the video guide</span></span>
       </a>
       <p class="caption">Above is a short video guide in Cubase 11 Pro: an MKV with its SRT subtitle file, and an HDR MKV shown in SDR. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Extended version on YouTube</a>: one uncut take with live imports of many video formats and subtitle types.</p>
+      <details class="dub-demo">
+        <summary>Two video windows for ADR and dubbing: full screen for the actor, a copy for you</summary>
+        <p>Cubase and Nuendo show video in a single Video Player window. FrameBridge adds a live copy of it: the actor watches the Video Player in full screen on the actor's screen, and you keep the copy next to your project — no HDMI splitter, no second Nuendo instance.</p>
+        <svg class="dub-anim" viewBox="0 0 760 330" role="img" aria-label="Cubase and Nuendo show video in a single Video Player window. FrameBridge adds a live copy of it: the actor watches the Video Player in full screen on the actor's screen, and you keep the copy next to your project — no HDMI splitter, no second Nuendo instance.">
+        <!-- labels -->
+        <text class="lbl" x="200" y="24" text-anchor="middle">Your screen</text>
+        <text class="lbl" x="571" y="24" text-anchor="middle">Actor's screen</text>
+        <!-- left monitor: real Cubase project -->
+        <rect class="scr" x="30" y="38" width="340" height="210" rx="10"/>
+        <rect class="stand" x="180" y="250" width="40" height="22"/><rect class="stand" x="150" y="272" width="100" height="6" rx="3"/>
+        <image x="38" y="46" width="324" height="178" preserveAspectRatio="none" href="/img/dub/cubase.webp"/>
+        <!-- taskbar + FrameBridge tray icon -->
+        <rect x="38" y="226" width="324" height="18" fill="#0f1520"/>
+        <rect x="324" y="229" width="14" height="13" rx="3" fill="#1d7fe0"/>
+        <text x="331" y="239.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">2</text>
+        <circle class="ripple" cx="331" cy="236" r="12" fill="none" stroke="#3aa8ff" stroke-width="2"/>
+        <!-- right monitor -->
+        <rect class="scr" x="402" y="38" width="338" height="210" rx="10"/>
+        <rect class="stand" x="551" y="250" width="40" height="22"/><rect class="stand" x="521" y="272" width="100" height="6" rx="3"/>
+        <rect x="410" y="46" width="322" height="194" rx="4" fill="#06090f"/>
+        <!-- Cubase Video Player in full screen on the actor's screen (real screenshot) -->
+        <g class="full"><image x="410" y="52.3" width="322" height="181.4" preserveAspectRatio="none" href="/img/dub/fullscreen.webp"/></g>
+        <g class="fulltag">
+        <rect x="455" y="290" width="232" height="26" rx="13" fill="rgba(54,209,137,.14)" stroke="#36d189"/>
+        <g transform="translate(472 296)" fill="none" stroke="#36d189" stroke-width="1.8" stroke-linecap="round">
+        <rect x="3" y="0" width="7" height="10" rx="3.5" fill="#36d189" stroke="none"/>
+        <path d="M0 7 a6.5 6.5 0 0 0 13 0"/><path d="M6.5 13.5 v2"/>
+        </g>
+        <text x="580" y="307" text-anchor="middle" font-size="11.5" font-weight="600" fill="#bff0d8">Cubase Video Player · full screen</text>
+        </g>
+        <!-- the FrameBridge copy in Cubase (real window) -->
+        <g class="copy"><image x="146.7" y="103.8" width="153.4" height="93.8" preserveAspectRatio="none" href="/img/dub/copy.webp"/>
+        <rect x="146.7" y="103.8" width="153.4" height="93.8" fill="none" stroke="#3aa8ff" stroke-width="1.6"/></g>
+        <g class="copytag">
+        <rect x="62" y="200" width="276" height="23" rx="11.5" fill="rgba(11,17,29,.92)" stroke="#3aa8ff"/>
+        <text x="200" y="215.5" text-anchor="middle" font-size="11.5" font-weight="600" fill="#cfe8ff">Use this player on the same screen as Cubase</text>
+        </g>
+        <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
+        <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
+        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
+        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
+        <!-- cursor (tip at 0,0) -->
+        <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
+        </svg>
+      </details>
     </div>
   </div>
 
@@ -276,52 +322,6 @@
       <details>
         <summary>Cubase or Nuendo says “Invalid or not supported file!” — will FrameBridge open the video?</summary>
         <p>Often, yes. Cubase and Nuendo show this message when their built-in video engine cannot handle the file’s container, codec or frame rate — for example MKV, WebM, MXF, HEVC from phones such as the iPhone, or video with a variable frame rate. FrameBridge reads such files with its own decoder; the verified formats are listed above. If your file still does not open, you get a full refund within 14 days.</p>
-      </details>
-      <details>
-        <summary>How do I set up the second video window for dubbing?</summary>
-        <p>Two screens: the Cubase/Nuendo Video Player in full screen for the actor, the FrameBridge copy for you.</p>
-        <svg class="dub-anim" viewBox="0 0 760 330" role="img" aria-label="Two screens: the Cubase/Nuendo Video Player in full screen for the actor, the FrameBridge copy for you.">
-        <!-- labels -->
-        <text class="lbl" x="200" y="24" text-anchor="middle">Your screen</text>
-        <text class="lbl" x="571" y="24" text-anchor="middle">Actor's screen</text>
-        <!-- left monitor: real Cubase project -->
-        <rect class="scr" x="30" y="38" width="340" height="210" rx="10"/>
-        <rect class="stand" x="180" y="250" width="40" height="22"/><rect class="stand" x="150" y="272" width="100" height="6" rx="3"/>
-        <image x="38" y="46" width="324" height="178" preserveAspectRatio="none" href="/img/dub/cubase.webp"/>
-        <!-- taskbar + FrameBridge tray icon -->
-        <rect x="38" y="226" width="324" height="18" fill="#0f1520"/>
-        <rect x="324" y="229" width="14" height="13" rx="3" fill="#1d7fe0"/>
-        <text x="331" y="239.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">2</text>
-        <circle class="ripple" cx="331" cy="236" r="12" fill="none" stroke="#3aa8ff" stroke-width="2"/>
-        <!-- right monitor -->
-        <rect class="scr" x="402" y="38" width="338" height="210" rx="10"/>
-        <rect class="stand" x="551" y="250" width="40" height="22"/><rect class="stand" x="521" y="272" width="100" height="6" rx="3"/>
-        <rect x="410" y="46" width="322" height="194" rx="4" fill="#06090f"/>
-        <!-- Cubase Video Player in full screen on the actor's screen (real screenshot) -->
-        <g class="full"><image x="410" y="52.3" width="322" height="181.4" preserveAspectRatio="none" href="/img/dub/fullscreen.webp"/></g>
-        <g class="fulltag">
-        <rect x="455" y="290" width="232" height="26" rx="13" fill="rgba(54,209,137,.14)" stroke="#36d189"/>
-        <g transform="translate(472 296)" fill="none" stroke="#36d189" stroke-width="1.8" stroke-linecap="round">
-        <rect x="3" y="0" width="7" height="10" rx="3.5" fill="#36d189" stroke="none"/>
-        <path d="M0 7 a6.5 6.5 0 0 0 13 0"/><path d="M6.5 13.5 v2"/>
-        </g>
-        <text x="580" y="307" text-anchor="middle" font-size="11.5" font-weight="600" fill="#bff0d8">Cubase Video Player · full screen</text>
-        </g>
-        <!-- the FrameBridge copy in Cubase (real window) -->
-        <g class="copy"><image x="146.7" y="103.8" width="153.4" height="93.8" preserveAspectRatio="none" href="/img/dub/copy.webp"/>
-        <rect x="146.7" y="103.8" width="153.4" height="93.8" fill="none" stroke="#3aa8ff" stroke-width="1.6"/></g>
-        <g class="copytag">
-        <rect x="62" y="200" width="276" height="23" rx="11.5" fill="rgba(11,17,29,.92)" stroke="#3aa8ff"/>
-        <text x="200" y="215.5" text-anchor="middle" font-size="11.5" font-weight="600" fill="#cfe8ff">Use this player on the same screen as Cubase</text>
-        </g>
-        <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
-        <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
-        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
-        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
-        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
-        <!-- cursor (tip at 0,0) -->
-        <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
-        </svg>
       </details>
       <details>
         <summary>Does FrameBridge change my video files?</summary>

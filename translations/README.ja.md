@@ -4,7 +4,7 @@
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#プラットフォームとステータス) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#プラットフォームとステータス)
 
-[![Nuendo 標準のビデオトラックで動作する FrameBridge — クリックでデモを再生](../poster.png)](https://youtu.be/qJqN0ybHV8E)
+[![Nuendo 標準のビデオトラックで動作する FrameBridge — クリックでデモを再生](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、さまざまなビデオフォーマットと字幕形式をその場で読み込む様子をノーカットのワンテイクで収録しています。
 
@@ -41,7 +41,7 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 
 画面は 2 つ：役者には Cubase/Nuendo のビデオプレーヤーを全画面で、あなたには FrameBridge のコピーを。
 
-![ビデオプレーヤーを役者の画面へドラッグし、ダブルクリックで全画面にして、タスクトレイの FrameBridge アイコンをクリックすると、あなたの画面にコピーが開きます](../dub-window.gif)
+![ビデオプレーヤーを役者の画面へドラッグし、ダブルクリックで全画面にして、タスクトレイの FrameBridge アイコンをクリックすると、あなたの画面にコピーが開きます](../media/dub-window.gif)
 
 ## 対応する Cubase / Nuendo のバージョン
 
@@ -50,7 +50,7 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 | **Cubase** | 8.0.10 および 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30、16.0.5 |
 | **Nuendo** | 10、12.0.52、13.0.10 / 13.0.50、14.0.32 / 14.0.40、15.0.21 / 15.0.30 |
 
-Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../COMPATIBILITY.txt)（英語）をご覧ください。 ビデオトラックのサムネイルは、すべての検証済みバージョンで表示されます。
+Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt)（英語）をご覧ください。 ビデオトラックのサムネイルは、すべての検証済みバージョンで表示されます。
 
 <details>
 <summary>その他のバージョンとアップデート</summary>
@@ -93,7 +93,7 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 ## パフォーマンス
 
-再生のスムーズさは素材とハードウェアによって変わります。日常の作業には、最近のミドルクラスの CPU と、使用するフォーマット（HEVC、AV1）をハードウェアでデコードできるグラフィックカードをおすすめします。FrameBridge はとても古い PC にもインストールでき、クラッシュせずに動作します（2012 年のテスト PC：Intel Core i5-2550K + GeForce GTX 660）。ただし作業向きのマシンではありません。その世代の GPU はこれらのフォーマットをハードウェアでデコードできないため、重い 4K 10 ビット映像（HEVC Main10、H.264 High10）はカクつきます。性能の低い PC では、DAW でビデオのサムネイルをオフにし、1080p 以下の H.264 8 ビットの作業用コピーを使うと改善します。既知の問題は [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) にまとめています。
+再生のスムーズさは素材とハードウェアによって変わります。日常の作業には、最近のミドルクラスの CPU と、使用するフォーマット（HEVC、AV1）をハードウェアでデコードできるグラフィックカードをおすすめします。FrameBridge はとても古い PC にもインストールでき、クラッシュせずに動作します（2012 年のテスト PC：Intel Core i5-2550K + GeForce GTX 660）。ただし作業向きのマシンではありません。その世代の GPU はこれらのフォーマットをハードウェアでデコードできないため、重い 4K 10 ビット映像（HEVC Main10、H.264 High10）はカクつきます。性能の低い PC では、DAW でビデオのサムネイルをオフにし、1080p 以下の H.264 8 ビットの作業用コピーを使うと改善します。既知の問題は [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) にまとめています。
 
 ## インストールと復元
 
@@ -101,7 +101,7 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 - `UNINSTALL.cmd` は、検証済みのバックアップからプログラムの元のファイルを復元します（1 バイト単位で正確に）。プロジェクト、環境設定、プラグインには一切触れません。
 - パッケージに Steinberg のファイルは一切含まれていません。インストーラーは、お使いのインストール環境のファイルだけを扱います。
 
-詳しい手順は [READ_ME_FIRST.txt](../READ_ME_FIRST.txt) と [README.txt](../README.txt)（英語）をご覧ください。
+詳しい手順は [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) と [README.txt](../docs/README.txt)（英語）をご覧ください。
 
 ## リリースファイルの確認
 
@@ -132,12 +132,12 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 **法的文書（英語。英語版が優先されます）：**
 
-- [プライバシーポリシー](../PRIVACY_POLICY.md)
-- [利用規約](../TERMS_OF_SERVICE.md)
-- [エンドユーザー使用許諾](../END_USER_LICENSE.txt)
+- [プライバシーポリシー](../docs/PRIVACY_POLICY.md)
+- [利用規約](../docs/TERMS_OF_SERVICE.md)
+- [エンドユーザー使用許諾](../docs/END_USER_LICENSE.txt)
 
 ## ライセンス
 
-FrameBridge は商用ソフトウェアです。製品の使用条件は [END_USER_LICENSE.txt](../END_USER_LICENSE.txt) に記載しています。同梱の FFmpeg 共有ライブラリ（LGPL 2.1 以降、ソースコードはパッケージに同梱）に適用される条件を含む、サードパーティのライセンス情報は [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt) に記載しています。
+FrameBridge は商用ソフトウェアです。製品の使用条件は [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt) に記載しています。同梱の FFmpeg 共有ライブラリ（LGPL 2.1 以降、ソースコードはパッケージに同梱）に適用される条件を含む、サードパーティのライセンス情報は [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt) に記載しています。
 
 FrameBridge は独立したソフトウェアであり、Steinberg との提携関係はなく、Steinberg による後援や承認も受けていません。Cubase および Nuendo は、それぞれの所有者の商標です。
