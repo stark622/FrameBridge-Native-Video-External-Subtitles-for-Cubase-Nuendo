@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。通常は開くことができ、スムーズに再生できる可能性も十分ありますが、スムーズな再生とシークを確認済みなのは上記の形式だけです。14 日間の返金保証が適用されます。</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>購入前にチェック</h2>
+      <p class="section-lead">動画、字幕、吹き替え台本、または Cubase / Nuendo（プログラム本体かそのショートカット）をドラッグしてください。ファイルはブラウザー内で読み込まれ、アップロードされることはありません。</p>
+      <p class="check-mobile">ファイルのチェックはサイトのパソコン版で使えます。パソコンで framebridge.cc を開き、動画・字幕・Cubase / Nuendo をドラッグしてください。</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>ここにファイルをドラッグするか、クリックして選択</b><small>動画: 開けるかどうか、どれだけ滑らかか。字幕と台本: 読み込めるか、何が読み込まれるか。Cubase/Nuendo: FrameBridge をインストールできるか（exe は C:\Program Files\Steinberg\… にあります）。</small></label>
+      <div class="check-pcrow">作業に使うコンピューター:<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">高性能（12スレッド以上、2020年以降のGPU）</option><option value="mid">ミドルクラス（6～10スレッド）</option><option value="low">古い（4スレッド、2016年より前のGPU）</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

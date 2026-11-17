@@ -1,0 +1,40 @@
+/* "Check before you buy" */
+#check .check-zone { display: block; margin-top: 18px; padding: 34px 20px; border: 2px dashed rgba(58, 168, 255, 0.45); border-radius: 18px;
+  text-align: center; cursor: pointer; background: rgba(58, 168, 255, 0.05); transition: border-color 0.2s, background 0.2s; }
+#check .check-zone:hover, #check .check-zone.over { border-color: var(--accent); background: rgba(58, 168, 255, 0.12); }
+#check .check-zone b { display: block; font-size: 18px; color: var(--text); }
+#check .check-zone small { display: block; margin-top: 6px; color: var(--muted); font-size: 13.5px; }
+#check .check-pcrow { margin-top: 14px; color: var(--muted); font-size: 14.5px; }
+#check .check-pc { margin-left: 8px; max-width: 100%; padding: 6px 10px; border-radius: 10px; background: #0d1422; color: var(--text); border: 1px solid var(--hair-2); font: inherit; }
+#check .check-out { margin-top: 18px; padding: 18px 20px; border-radius: 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--hair-2); }
+#check .ck-row { display: grid; grid-template-columns: 210px 1fr; gap: 14px; padding: 8px 0; border-bottom: 1px solid var(--hair); }
+#check .ck-row:last-of-type { border-bottom: 0; }
+#check .ck-k { color: var(--muted); font-size: 14px; }
+#check .ck-good span:last-child::before { content: "●"; color: var(--ok); margin-right: 8px; }
+#check .ck-warn span:last-child::before { content: "●"; color: #f5b942; margin-right: 8px; }
+#check .ck-bad span:last-child::before, #check p.ck-bad::before { content: "●"; color: #ff6b6b; margin-right: 8px; }
+#check .ck-note, #check .ck-fine { color: var(--muted); font-size: 13.5px; }
+#check .ck-fine { margin: 10px 0 0; }
+@media (max-width: 640px) { #check .ck-row { grid-template-columns: 1fr; gap: 2px; } }
+
+#check .check-help { display: inline-grid; place-items: center; width: 20px; height: 20px; margin-left: 6px; border-radius: 50%; border: 1px solid var(--muted);
+  font-size: 12px; font-weight: 700; color: var(--muted); cursor: help; vertical-align: middle; }
+#check .check-pcrow { position: relative; }
+#check .check-help:hover, #check .check-help:focus { color: var(--text); border-color: var(--accent); outline: none; }
+#check .check-help::after { content: attr(data-tip); position: absolute; z-index: 30; left: 0; bottom: calc(100% + 10px);
+  width: min(560px, 100%); white-space: pre-line; box-sizing: border-box; padding: 12px 14px; border-radius: 12px; background: #0d1422; border: 1px solid rgba(58,168,255,.45);
+  box-shadow: 0 10px 30px rgba(0,0,0,.45); color: var(--text); font-size: 13px; font-weight: 400; line-height: 1.5; text-align: left;
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s, visibility .18s; }
+#check .check-help:hover::after, #check .check-help:focus::after { opacity: 1; visibility: visible; }
+
+
+#check .ck-cues { display: grid; gap: 4px; font-size: 14px; }
+#check .ck-cues i { font-style: normal; color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 10px; font-size: 12px; }
+
+/* Phones and tablets: nothing to drop there - the section only says the check lives on the desktop site */
+#check .check-mobile { display: none; }
+@media (hover: none) and (pointer: coarse) {
+  #check .check-mobile { display: block; margin: 0; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(58,168,255,.35);
+    background: rgba(58,168,255,.08); color: var(--text); font-size: 15px; line-height: 1.5; }
+  #check .check-zone, #check .check-pcrow, #check .check-out { display: none; }
+}

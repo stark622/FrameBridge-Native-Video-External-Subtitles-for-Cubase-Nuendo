@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">Їх декодує той самий FFmpeg 9.0.2 усередині FrameBridge. Зазвичай вони відкриваються й цілком можуть відтворюватися плавно, але плавне відтворення й перемотування перевірені лише для форматів вище. Діє повернення коштів протягом 14 днів.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>Перевірте до покупки</h2>
+      <p class="section-lead">Перетягніть своє відео, субтитри або монтажний лист — або Cubase / Nuendo (програму чи її ярлик). Файл читається просто в браузері й нікуди не надсилається.</p>
+      <p class="check-mobile">Перевірка файлу працює у версії сайту для комп’ютера: відкрийте framebridge.cc на ПК і перетягніть туди відео, субтитри або Cubase / Nuendo.</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>Перетягніть файл сюди або натисніть, щоб вибрати</b><small>Відео: чи відкриється і наскільки плавно. Субтитри та листи: чи прочитає і що саме. Cubase/Nuendo: чи встановиться FrameBridge (exe лежить у C:\Program Files\Steinberg\…).</small></label>
+      <div class="check-pcrow">Комп’ютер, на якому працюєте:<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">потужний (12+ потоків, відеокарта 2020+)</option><option value="mid">середній (6–10 потоків)</option><option value="low">старий (4 потоки, відеокарта старша за 2016)</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

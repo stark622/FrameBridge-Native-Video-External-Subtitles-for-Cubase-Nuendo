@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">Decodificati dallo stesso FFmpeg 9.0.2 incluso in FrameBridge. Di solito si aprono e possono benissimo essere riprodotti in modo fluido, ma solo i formati sopra sono verificati per riproduzione e spostamento fluidi. Vale il rimborso entro 14 giorni.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>Verifica prima di acquistare</h2>
+      <p class="section-lead">Trascina il tuo video, i sottotitoli o il copione di doppiaggio — oppure Cubase / Nuendo (il programma o il suo collegamento). Il file viene letto direttamente nel browser e non viene mai caricato.</p>
+      <p class="check-mobile">Il controllo dei file funziona nella versione desktop del sito: apri framebridge.cc sul computer e trascinaci un video, dei sottotitoli o Cubase / Nuendo.</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>Trascina qui un file o fai clic per sceglierlo</b><small>Video: se si apre e con quanta fluidità. Sottotitoli e copioni: se vengono letti e cosa esattamente. Cubase/Nuendo: se FrameBridge si installa (l’exe è in C:\Program Files\Steinberg\…).</small></label>
+      <div class="check-pcrow">Computer su cui lavori:<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">potente (12+ thread, scheda 2020+)</option><option value="mid">fascia media (6–10 thread)</option><option value="low">datato (4 thread, scheda prima del 2016)</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

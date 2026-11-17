@@ -109,6 +109,14 @@ NOT USED / NOT INCLUDED
   Windows system OCR API (Windows.Media.Ocr). No OCR engine or language data is
   shipped in this package.
 
+WEBSITE FILE CHECK (framebridge.cc, not part of the download)
+  The &quot;Check before you buy&quot; section reads the chosen file only inside the
+  visitor&#x27;s browser; nothing is uploaded. It uses:
+  - MediaInfo / mediainfo.js (media information) - BSD 2-Clause; /vendor/mediainfo/LICENSE.txt.
+  - FrameBridge subtitle and script readers compiled to WebAssembly with WASI SDK 34,
+    which links wasi-libc (MIT; parts from musl libc, MIT) and LLVM libc++ (Apache 2.0
+    with LLVM Exception); /vendor/fbsubs/LICENSES.txt.
+
 NO AFFILIATION
   FrameBridge is not affiliated with or endorsed by Steinberg. &quot;Cubase&quot; and
   &quot;Nuendo&quot; are trademarks of their respective owner.

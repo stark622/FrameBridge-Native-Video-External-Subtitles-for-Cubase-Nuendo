@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">Décodés par le même FFmpeg 9.0.2 intégré à FrameBridge. Ces formats s’ouvrent généralement et peuvent tout à fait être lus de façon fluide, mais seuls les formats ci-dessus sont vérifiés pour une lecture et un déplacement fluides. Le remboursement sous 14 jours s’applique.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>Vérifiez avant d’acheter</h2>
+      <p class="section-lead">Glissez votre vidéo, vos sous-titres ou votre bande rythmo / script de doublage — ou Cubase / Nuendo (le programme ou son raccourci). Le fichier est lu directement dans votre navigateur et n’est jamais envoyé.</p>
+      <p class="check-mobile">La vérification de fichiers fonctionne sur la version ordinateur du site : ouvrez framebridge.cc sur votre PC et glissez-y une vidéo, des sous-titres ou Cubase / Nuendo.</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>Glissez un fichier ici ou cliquez pour choisir</b><small>Vidéo : s’ouvre-t-elle et avec quelle fluidité. Sous-titres et scripts : sont-ils lus et quoi exactement. Cubase/Nuendo : FrameBridge s’installe-t-il (l’exe se trouve dans C:\Program Files\Steinberg\…).</small></label>
+      <div class="check-pcrow">Ordinateur sur lequel vous travaillez :<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">puissant (12+ threads, carte 2020+)</option><option value="mid">milieu de gamme (6–10 threads)</option><option value="low">ancien (4 threads, carte avant 2016)</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

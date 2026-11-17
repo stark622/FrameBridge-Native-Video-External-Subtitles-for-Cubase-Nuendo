@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 열리며 부드럽게 재생될 가능성도 충분하지만, 부드러운 재생과 탐색이 검증된 것은 위의 형식뿐입니다. 14일 환불이 적용됩니다.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>구매 전에 확인하세요</h2>
+      <p class="section-lead">영상, 자막 또는 더빙 대본을 끌어다 놓거나 Cubase / Nuendo(프로그램 또는 바로 가기)를 끌어다 놓으세요. 파일은 브라우저 안에서만 읽히며 업로드되지 않습니다.</p>
+      <p class="check-mobile">파일 확인은 사이트의 PC 버전에서 작동합니다. 컴퓨터에서 framebridge.cc를 열고 영상, 자막 또는 Cubase / Nuendo를 끌어다 놓으세요.</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>여기에 파일을 끌어다 놓거나 클릭해서 선택</b><small>영상: 열리는지, 얼마나 부드러운지. 자막과 대본: 읽히는지, 무엇이 읽히는지. Cubase/Nuendo: FrameBridge가 설치되는지 (exe 위치: C:\Program Files\Steinberg\…).</small></label>
+      <div class="check-pcrow">작업용 컴퓨터:<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">고성능 (12+ 스레드, 2020년 이후 그래픽카드)</option><option value="mid">중급 (6–10 스레드)</option><option value="low">구형 (4 스레드, 2016년 이전 그래픽카드)</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

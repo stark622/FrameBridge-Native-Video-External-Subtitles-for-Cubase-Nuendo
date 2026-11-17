@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">Dekoduje je ten sam FFmpeg 9.0.2 wbudowany we FrameBridge. Zwykle się otwierają i mogą też działać płynnie, ale płynne odtwarzanie i przewijanie sprawdzono tylko dla formatów powyżej. Obowiązuje zwrot pieniędzy w ciągu 14 dni.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>Sprawdź przed zakupem</h2>
+      <p class="section-lead">Przeciągnij swoje wideo, napisy lub listę dialogową — albo Cubase / Nuendo (program lub jego skrót). Plik jest czytany w przeglądarce i nigdzie nie jest wysyłany.</p>
+      <p class="check-mobile">Sprawdzanie plików działa w wersji strony na komputer: otwórz framebridge.cc na PC i przeciągnij tam wideo, napisy albo Cubase / Nuendo.</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>Przeciągnij plik tutaj lub kliknij, aby wybrać</b><small>Wideo: czy się otworzy i jak płynnie. Napisy i listy: czy zostaną odczytane i co dokładnie. Cubase/Nuendo: czy FrameBridge się zainstaluje (exe leży w C:\Program Files\Steinberg\…).</small></label>
+      <div class="check-pcrow">Komputer, na którym pracujesz:<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">mocny (12+ wątków, karta z 2020+)</option><option value="mid">średni (6–10 wątków)</option><option value="low">stary (4 wątki, karta sprzed 2016)</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

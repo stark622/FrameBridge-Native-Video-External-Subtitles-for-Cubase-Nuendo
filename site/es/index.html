@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">Los decodifica el mismo FFmpeg 9.0.2 incluido en FrameBridge. Normalmente se abren y es muy posible que se reproduzcan con fluidez, pero solo los formatos de arriba están verificados para reproducción y desplazamiento fluidos. Se aplica el reembolso de 14 días.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>Compruébalo antes de comprar</h2>
+      <p class="section-lead">Arrastra tu vídeo, subtítulos o guion de doblaje — o Cubase / Nuendo (el programa o su acceso directo). El archivo se lee en tu navegador y nunca se sube.</p>
+      <p class="check-mobile">La comprobación de archivos funciona en la versión para ordenador del sitio: abre framebridge.cc en tu PC y arrastra allí un vídeo, subtítulos o Cubase / Nuendo.</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>Arrastra un archivo aquí o haz clic para elegirlo</b><small>Vídeo: si se abre y con qué fluidez. Subtítulos y guiones: si se leen y qué exactamente. Cubase/Nuendo: si FrameBridge se instala (el exe está en C:\Program Files\Steinberg\…).</small></label>
+      <div class="check-pcrow">Ordenador con el que trabajas:<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">potente (12+ hilos, gráfica de 2020+)</option><option value="mid">gama media (6–10 hilos)</option><option value="low">antiguo (4 hilos, gráfica anterior a 2016)</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 

@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="/style.css?v=20261117a">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
+  <script src="/check.js?v=1" defer></script>
+  <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
 
@@ -226,6 +228,17 @@
           </div>
         <p class="note">由 FrameBridge 内置的同一个 FFmpeg 9.0.2 解码。这些格式通常可以打开，也很可能流畅播放，但只有上面列出的格式经过了流畅播放和定位的验证。适用 14 天退款。</p>
       </details>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="wrap">
+      <h2>购买前先检查</h2>
+      <p class="section-lead">拖入您的视频、字幕或配音台本，或 Cubase / Nuendo（程序本体或其快捷方式）。文件直接在浏览器中读取，绝不会上传。</p>
+      <p class="check-mobile">文件检查适用于网站的电脑版：请在电脑上打开 framebridge.cc，把视频、字幕或 Cubase / Nuendo 拖进去。</p>
+      <label class="check-zone"><input type="file" class="check-file" multiple hidden><b>将文件拖到这里，或点击选择</b><small>视频：能否打开、播放有多流畅。字幕和台本：能否读取、读到什么。Cubase/Nuendo：能否安装 FrameBridge（exe 位于 C:\Program Files\Steinberg\…）。</small></label>
+      <div class="check-pcrow">您工作用的电脑：<span class="check-help" tabindex="0" role="button" aria-label="?">?</span><select class="check-pc"><option value="auto"></option><option value="high">高性能（12+ 线程，2020 年后显卡）</option><option value="mid">中端（6–10 线程）</option><option value="low">旧电脑（4 线程，2016 年前显卡）</option></select></div>
+      <div class="check-out" hidden aria-live="polite"></div>
     </div>
   </section>
 
