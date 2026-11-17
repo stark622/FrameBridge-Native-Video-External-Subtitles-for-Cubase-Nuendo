@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · **简体中文** · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#平台与状态) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#支持的-cubase-和-nuendo-版本) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#支持的-cubase-和-nuendo-版本) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#平台与状态)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#发布文件校验) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#支持的-cubase-和-nuendo-版本) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#支持的-cubase-和-nuendo-版本) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#发布文件校验)
 
 [![FrameBridge 在 Nuendo 原生视频轨上运行 — 点击观看演示](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
@@ -116,28 +116,18 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 另见： [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
-## 平台与状态
+## 价格与支持
 
-- Windows x64
-- FrameBridge Beta 2 · 2026 年 11 月 14 日发布
-- 商业专有软件
-
-**[购买 FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · 网站：[framebridge.cc](https://framebridge.cc/zh/)
+**[购买 FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 **价格：** 自定价格：US$29 至 US$59 · 付款页面默认 59，可降至 29 · 一次性购买
 
 请在购买后 14 天内发邮件至 stark622@ukr.net。如果 FrameBridge 无法在您的 Cubase 或 Nuendo 上安装或运行，将为您全额退款。
-
-**支持：** stark622@ukr.net
-
-**法律文件（英文，以英文版本为准）：**
-
-- [隐私政策](../docs/PRIVACY_POLICY.md)
-- [服务条款](../docs/TERMS_OF_SERVICE.md)
-- [最终用户许可](../docs/END_USER_LICENSE.txt)
 
 ## 许可
 
 FrameBridge 是商业软件。产品的使用条款见 [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt)。第三方许可信息（包括随附的 FFmpeg 共享库所适用的条款：LGPL 2.1 或更高版本，源代码已包含在安装包中）见 [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt)。
 
 FrameBridge 是独立软件，与 Steinberg 无关联，也未获得 Steinberg 的赞助或认可。Cubase 和 Nuendo 是其各自所有者的商标。
+
+**法律文件（英文，以英文版本为准）：** [隐私政策](../docs/PRIVACY_POLICY.md) · [服务条款](../docs/TERMS_OF_SERVICE.md)

@@ -2,7 +2,7 @@
 
 [English](../README.md) · **Deutsch** · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#plattform-und-status) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#unterstützte-versionen-von-cubase-und-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#unterstützte-versionen-von-cubase-und-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#plattform-und-status)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#prüfung-der-release-datei) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#unterstützte-versionen-von-cubase-und-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#unterstützte-versionen-von-cubase-und-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#prüfung-der-release-datei)
 
 [![FrameBridge auf der nativen Videospur von Nuendo — klicken, um die Demo anzusehen](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
@@ -116,28 +116,18 @@ Ich bin stark622, Toningenieur für Synchronisation und Voice-over und Entwickle
 
 Auch auf: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
-## Plattform und Status
+## Preis und Support
 
-- Windows x64
-- FrameBridge Beta 2 · veröffentlicht am 14. November 2026
-- Kommerzielle, proprietäre Software
-
-**[FrameBridge kaufen](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Website: [framebridge.cc](https://framebridge.cc/de/)
+**[FrameBridge kaufen](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 **Preis:** Preis frei wählbar: US$29 bis US$59 · die Kasse öffnet mit 59, Sie können auf 29 senken · Einmalkauf
 
 Schreiben Sie innerhalb von 14 Tagen nach dem Kauf an stark622@ukr.net. Lässt sich FrameBridge mit Ihrem Cubase oder Nuendo nicht installieren oder funktioniert es nicht, erhalten Sie den vollen Kaufpreis zurück.
-
-**Support:** stark622@ukr.net
-
-**Rechtliches (Englisch; maßgeblich ist die englische Fassung):**
-
-- [Datenschutzerklärung](../docs/PRIVACY_POLICY.md)
-- [Nutzungsbedingungen](../docs/TERMS_OF_SERVICE.md)
-- [Endbenutzerlizenz](../docs/END_USER_LICENSE.txt)
 
 ## Lizenzierung
 
 FrameBridge ist kommerzielle Software. Die Bedingungen für das proprietäre Produkt stehen in [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt). Angaben zur Lizenzierung von Drittkomponenten, einschließlich der Bedingungen für die mitgelieferten FFmpeg-Bibliotheken (LGPL 2.1 oder später, Quellcode im Paket enthalten), stehen in [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
 
 FrameBridge ist unabhängige Software und steht in keiner Verbindung zu Steinberg, wird von Steinberg weder gesponsert noch unterstützt. Cubase und Nuendo sind Marken ihres jeweiligen Inhabers.
+
+**Rechtliches (Englisch; maßgeblich ist die englische Fassung):** [Datenschutzerklärung](../docs/PRIVACY_POLICY.md) · [Nutzungsbedingungen](../docs/TERMS_OF_SERVICE.md)

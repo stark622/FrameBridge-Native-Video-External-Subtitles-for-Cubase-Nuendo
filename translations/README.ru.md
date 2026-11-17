@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · **Русский** · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#платформа-и-статус) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#платформа-и-статус)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#проверка-релизного-файла) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#проверка-релизного-файла)
 
 [![FrameBridge на штатном видеотреке Nuendo — нажмите, чтобы посмотреть демо](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
@@ -116,28 +116,18 @@ Cubase и Nuendo показывают видео в одном окне Виде
 
 Также на: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
-## Платформа и статус
+## Цена и поддержка
 
-- Windows x64
-- FrameBridge Beta 2 · выпуск 14 ноября 2026
-- Коммерческая проприетарная программа
-
-**[Купить FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Сайт: [framebridge.cc](https://framebridge.cc/ru/)
+**[Купить FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 **Цена:** Цену выбираете вы: от 29 до 59 USD · на странице оплаты сразу стоит 59 — можно уменьшить до 29 · разовая покупка
 
 Напишите на stark622@ukr.net в течение 14 дней после покупки. Если FrameBridge не устанавливается или не работает с вашим Cubase или Nuendo, вы получите полный возврат денег.
-
-**Поддержка:** stark622@ukr.net
-
-**Юридические документы (на английском; приоритет имеет английская версия):**
-
-- [Политика конфиденциальности](../docs/PRIVACY_POLICY.md)
-- [Условия обслуживания](../docs/TERMS_OF_SERVICE.md)
-- [Лицензия пользователя](../docs/END_USER_LICENSE.txt)
 
 ## Лицензирование
 
 FrameBridge — коммерческая программа. Условия использования продукта — в [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt). Сведения о лицензиях сторонних компонентов, включая условия для входящих в комплект разделяемых библиотек FFmpeg (LGPL 2.1 или новее, исходный код включён в пакет), — в [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt).
 
 FrameBridge — независимая программа: она не связана с компанией Steinberg, не спонсируется и не одобряется ею. Cubase и Nuendo — товарные знаки их правообладателя.
+
+**Юридические документы (на английском; приоритет имеет английская версия):** [Политика конфиденциальности](../docs/PRIVACY_POLICY.md) · [Условия обслуживания](../docs/TERMS_OF_SERVICE.md)

@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · **日本語** · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#プラットフォームとステータス) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#プラットフォームとステータス)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#リリースファイルの確認) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#リリースファイルの確認)
 
 [![Nuendo 標準のビデオトラックで動作する FrameBridge — クリックでデモを再生](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
@@ -116,28 +116,18 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 関連ページ： [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
-## プラットフォームとステータス
+## 価格とサポート
 
-- Windows x64
-- FrameBridge Beta 2 · 2026年11月14日リリース
-- 商用のプロプライエタリソフトウェア
-
-**[FrameBridge を購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web サイト：[framebridge.cc](https://framebridge.cc/ja/)
+**[FrameBridge を購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 **価格：** 価格は US$29〜US$59 で自由に設定 · 決済ページは 59 で開きますが、29 まで下げられます · 買い切り
 
 購入から14日以内に stark622@ukr.net までご連絡ください。FrameBridge がお使いの Cubase / Nuendo にインストールできない、または動作しない場合は全額返金します。
-
-**サポート：** stark622@ukr.net
-
-**法的文書（英語。英語版が優先されます）：**
-
-- [プライバシーポリシー](../docs/PRIVACY_POLICY.md)
-- [利用規約](../docs/TERMS_OF_SERVICE.md)
-- [エンドユーザー使用許諾](../docs/END_USER_LICENSE.txt)
 
 ## ライセンス
 
 FrameBridge は商用ソフトウェアです。製品の使用条件は [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt) に記載しています。同梱の FFmpeg 共有ライブラリ（LGPL 2.1 以降、ソースコードはパッケージに同梱）に適用される条件を含む、サードパーティのライセンス情報は [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt) に記載しています。
 
 FrameBridge は独立したソフトウェアであり、Steinberg との提携関係はなく、Steinberg による後援や承認も受けていません。Cubase および Nuendo は、それぞれの所有者の商標です。
+
+**法的文書（英語。英語版が優先されます）：** [プライバシーポリシー](../docs/PRIVACY_POLICY.md) · [利用規約](../docs/TERMS_OF_SERVICE.md)

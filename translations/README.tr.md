@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · **Türkçe** · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#platform-ve-durum) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#platform-ve-durum)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#sürüm-dosyası-kontrolü) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#sürüm-dosyası-kontrolü)
 
 [![Nuendo’nun yerel video kanalında çalışan FrameBridge — demoyu izlemek için tıklayın](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
@@ -116,28 +116,18 @@ Ben stark622; dublaj ve seslendirme mühendisiyim, FrameBridge’in de geliştir
 
 Ayrıca: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
-## Platform ve durum
+## Fiyat ve destek
 
-- Windows x64
-- FrameBridge Beta 2 · 14 Kasım 2026’da yayımlandı
-- Ticari, kapalı kaynak yazılım
-
-**[FrameBridge’i satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web sitesi: [framebridge.cc](https://framebridge.cc/tr/)
+**[FrameBridge’i satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
 **Fiyat:** Dilediğiniz fiyat: 29–59 USD · ödeme sayfası 59 ile açılır, 29’a kadar düşürebilirsiniz · tek seferlik satın alma
 
 Satın aldıktan sonraki 14 gün içinde stark622@ukr.net adresine yazın. FrameBridge, Cubase veya Nuendo kurulumunuza yüklenmez ya da çalışmazsa ödediğiniz tutarın tamamı iade edilir.
-
-**Destek:** stark622@ukr.net
-
-**Yasal belgeler (İngilizce; İngilizce sürüm esas alınır):**
-
-- [Gizlilik Politikası](../docs/PRIVACY_POLICY.md)
-- [Hizmet Şartları](../docs/TERMS_OF_SERVICE.md)
-- [Son Kullanıcı Lisansı](../docs/END_USER_LICENSE.txt)
 
 ## Lisanslama
 
 FrameBridge ticari bir yazılımdır. Ürüne ait koşullar [END_USER_LICENSE.txt](../docs/END_USER_LICENSE.txt) dosyasındadır. Pakete dahil FFmpeg paylaşımlı kütüphanelerine (LGPL 2.1 veya üstü, kaynak kodu pakette) uygulanan koşullar dahil olmak üzere üçüncü taraf lisans bilgileri [LICENSE_AND_NOTICE.txt](../LICENSE_AND_NOTICE.txt) dosyasındadır.
 
 FrameBridge bağımsız bir yazılımdır; Steinberg ile bağlantılı değildir, Steinberg tarafından desteklenmez veya onaylanmaz. Cubase ve Nuendo, ilgili sahibinin ticari markalarıdır.
+
+**Yasal belgeler (İngilizce; İngilizce sürüm esas alınır):** [Gizlilik Politikası](../docs/PRIVACY_POLICY.md) · [Hizmet Şartları](../docs/TERMS_OF_SERVICE.md)
