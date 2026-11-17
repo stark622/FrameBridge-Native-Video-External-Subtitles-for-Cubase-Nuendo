@@ -803,3 +803,32 @@ details.lang .globe { flex: none; }
   .dub-anim .mini, .dub-anim .cursor, .dub-anim .ripple, .dub-anim .dc1, .dub-anim .dc2 { display:none; }
   .dub-anim .full, .dub-anim .fulltag, .dub-anim .copy, .dub-anim .copytag { animation:none; opacity:1; transform:none; }
 }
+
+/* Phone: bottom tab bar with the header sections (the header nav is hidden below 900px) */
+.tabbar { display: none; }
+@media (max-width: 900px) {
+  .tabbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
+    background: rgba(5, 7, 13, 0.72);
+    -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
+    border-top: 1px solid var(--hair);
+  }
+  .tabbar a {
+    display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 0;
+    padding: 6px 2px 5px; border-radius: 12px; color: var(--muted);
+    font-size: 11px; line-height: 1.15; font-weight: 500; text-align: center;
+    -webkit-tap-highlight-color: transparent; transition: color 0.2s, background 0.2s;
+  }
+  .tabbar a span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tabbar svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .tabbar a.on, .tabbar a:active { color: var(--text); background: rgba(58, 168, 255, 0.14); }
+  .tabbar a.on svg { stroke: var(--accent); }
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  html { scroll-padding-bottom: 72px; }
+  .lite .tabbar { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(5, 7, 13, 0.96); }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .tabbar { background: rgba(5, 7, 13, 0.96); }
+}
