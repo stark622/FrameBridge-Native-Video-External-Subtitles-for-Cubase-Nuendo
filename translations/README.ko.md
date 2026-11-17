@@ -6,7 +6,7 @@
 
 [![Nuendo 기본 비디오 트랙에서 작동하는 FrameBridge — 클릭하여 데모 보기](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 다양한 비디오 포맷과 자막 형식을 실시간으로 가져오는 모습을 편집 없이 한 번에 담았습니다.
+위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식. FrameBridge 없이는 Cubase가 MKV와 OGV를 열지 못하고 MXF에서는 소리만 가져옵니다.
 
 **[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
@@ -57,7 +57,7 @@ Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩�
 
 **인접 버전도 작동할 가능성이 매우 높습니다.** 비디오 엔진은 같은 제품 세대 안에서는 거의 바뀌지 않습니다. 예를 들어 Nuendo 12.0.52가 검증되었다면 12.0.20이나 12.0.70도 작동할 가능성이 매우 높습니다. 설치 프로그램이 각 설치의 비디오 엔진을 직접 확인하여, 호환되는 설치는 설치 대상으로 표시하고 호환되지 않는 설치는 목록에 표시하지 않으며 아무것도 변경하지 않습니다. 같은 엔진 세대의 이전 에디션(예: Nuendo 7–9, Cubase 8.5 / 9.5)도 해당될 수 있지만 테스트하지는 않았습니다.
 
-**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 16.0.5 및 Nuendo 15.0.30까지)에서 검증되었습니다. 새 메이저 버전은 비디오 엔진이 바뀔 수 있으며, 이 버전에서 FrameBridge를 사용하는 것은 사용자 책임입니다. Cubase나 Nuendo를 업데이트하려면 먼저 UNINSTALL.cmd를 실행하고, 업데이트를 설치한 다음 INSTALL.cmd를 다시 실행하세요. 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
+**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 16.0.5 및 Nuendo 15.0.30까지)에서 검증되었습니다. 새 메이저 버전에서 비디오 엔진이 바뀌면 설치 프로그램은 그 설치를 제안하지 않고 아무것도 변경하지 않습니다. Cubase나 Nuendo를 업데이트한 뒤에는 INSTALL.cmd를 다시 실행하기만 하면 됩니다. Cubase나 Nuendo 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
 
 </details>
 
@@ -124,7 +124,7 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 **[FrameBridge 구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · 웹사이트: [framebridge.cc](https://framebridge.cc/ko/)
 
-**가격:** 원하는 금액으로 결제 — 최소 29 USD, 권장 59 USD. 1회 구매입니다.
+**가격:** US$29~US$59 사이에서 원하는 금액으로 결제 · 결제 페이지는 59로 열리며 29까지 낮출 수 있습니다 · 1회 구매
 
 구매 후 14일 이내에 stark622@ukr.net로 메일을 보내 주세요. FrameBridge가 사용 중인 Cubase 또는 Nuendo에 설치되지 않거나 작동하지 않으면 전액 환불해 드립니다.
 

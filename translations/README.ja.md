@@ -6,7 +6,7 @@
 
 [![Nuendo 標準のビデオトラックで動作する FrameBridge — クリックでデモを再生](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、さまざまなビデオフォーマットと字幕形式をその場で読み込む様子をノーカットのワンテイクで収録しています。
+上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。FrameBridge なしでは、Cubase は MKV と OGV を開けず、MXF からは音声しか読み込みません。
 
 **[Web サイト](https://framebridge.cc/ja/)** · **[購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
@@ -57,7 +57,7 @@ Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法
 
 **近いバージョンでも動作する可能性が非常に高いと考えられます。** ビデオエンジンは同じ製品世代の中ではほとんど変わりません。たとえば Nuendo 12.0.52 で検証済みなら、12.0.20 や 12.0.70 でも動作する可能性が非常に高いです。インストーラーは各インストールのビデオエンジンを自ら確認し、互換性があればインストール候補として表示し、互換性がなければ一覧に表示せず、何も変更しません。同じ世代のエンジンを持つ古いエディション（Nuendo 7–9、Cubase 8.5 / 9.5 など）も対象になる場合がありますが、テストはしていません。
 
-**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.30 まで）で検証済みです。新しいメジャーバージョンではビデオエンジンが変わる可能性があり、FrameBridge との併用は自己責任となります。Cubase / Nuendo をアップデートするときは、先に UNINSTALL.cmd を実行し、アップデートをインストールしてから、もう一度 INSTALL.cmd を実行してください。アップデート後に動作しなくなった場合は、サポートまでご連絡ください。
+**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.30 まで）で検証済みです。新しいメジャーバージョンでビデオエンジンが変わった場合、インストーラーはそのインストールを候補に出さず、何も変更しません。Cubase / Nuendo をアップデートしたら、もう一度 INSTALL.cmd を実行するだけです。Cubase / Nuendo のアップデート後に FrameBridge が動作しなくなった場合は、サポートまでご連絡ください。
 
 </details>
 
@@ -124,7 +124,7 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 **[FrameBridge を購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web サイト：[framebridge.cc](https://framebridge.cc/ja/)
 
-**価格：** 価格は自由に設定 — 最低 29 USD、推奨 59 USD。買い切りです。
+**価格：** 価格は US$29〜US$59 で自由に設定 · 決済ページは 59 で開きますが、29 まで下げられます · 買い切り
 
 購入から14日以内に stark622@ukr.net までご連絡ください。FrameBridge がお使いの Cubase / Nuendo にインストールできない、または動作しない場合は全額返金します。
 

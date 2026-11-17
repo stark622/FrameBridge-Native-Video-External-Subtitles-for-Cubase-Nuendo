@@ -6,7 +6,7 @@
 
 [![FrameBridge 在 Nuendo 原生视频轨上运行 — 点击观看演示](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-上方是 Cubase 11 Pro 中的简短视频指南：带 SRT 字幕文件的 MKV，以及以 SDR 显示的 HDR MKV。[YouTube 上的加长版](https://youtu.be/NjNHtkc8-OE)：一镜到底、无剪辑，现场导入多种视频格式和字幕类型。
+上方是 Cubase 11 Pro 中的简短视频指南：带 SRT 字幕文件的 MKV，以及以 SDR 显示的 HDR MKV。[YouTube 上的加长版](https://youtu.be/NjNHtkc8-OE)：一镜到底、无剪辑，现场导入 MKV（HEVC 4K 10 位，含 HDR）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）和多种字幕格式。没有 FrameBridge 时，Cubase 打不开 MKV 和 OGV，MXF 只能导入声音。
 
 **[网站](https://framebridge.cc/zh/)** · **[购买](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
@@ -57,7 +57,7 @@ Cubase Pro、Artist、Elements、AI 和 LE 版本均以相同方式识别。完�
 
 **相近版本很可能同样可以使用。** 同一代产品中的视频引擎几乎不变：例如 Nuendo 12.0.52 已经过验证，那么 12.0.20 或 12.0.70 很可能同样可以使用。安装程序会自行检查每个安装的视频引擎：兼容的会列出供安装，不兼容的不会出现在列表中，也不会做任何更改。具有相同引擎世代的旧版本（例如 Nuendo 7–9、Cubase 8.5 / 9.5）也可能适用，但尚未测试。
 
-**升级 Cubase 或 Nuendo 后还能用吗？** FrameBridge 已在上方列出的版本（最高至 Cubase 16.0.5 和 Nuendo 15.0.30）上验证。新的主版本可能会更改视频引擎，与其搭配使用 FrameBridge 风险自负。升级 Cubase 或 Nuendo 时，请先运行 UNINSTALL.cmd，再安装升级，然后重新运行 INSTALL.cmd。如果升级后 FrameBridge 不再工作，请联系支持。
+**升级 Cubase 或 Nuendo 后还能用吗？** FrameBridge 已在上方列出的版本（最高至 Cubase 16.0.5 和 Nuendo 15.0.30）上验证。新的主版本可能会更改视频引擎，这时安装程序不会提供该安装，也不会做任何更改。升级 Cubase 或 Nuendo 后，只需重新运行 INSTALL.cmd。如果升级您的 Cubase 或 Nuendo 后 FrameBridge 不再工作，请联系支持。
 
 </details>
 
@@ -124,7 +124,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 **[购买 FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · 网站：[framebridge.cc](https://framebridge.cc/zh/)
 
-**价格：** 自定价格——最低 29 USD，建议 59 USD。一次性购买。
+**价格：** 自定价格：US$29 至 US$59 · 付款页面默认 59，可降至 29 · 一次性购买
 
 请在购买后 14 天内发邮件至 stark622@ukr.net。如果 FrameBridge 无法在您的 Cubase 或 Nuendo 上安装或运行，将为您全额退款。
 

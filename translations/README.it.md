@@ -6,7 +6,7 @@
 
 [![FrameBridge sulla traccia video nativa di Nuendo — clicca per guardare la demo](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-Qui sopra, una breve guida video in Cubase 11 Pro: un MKV con il suo file di sottotitoli SRT e un MKV HDR visualizzato in SDR. [Versione estesa su YouTube](https://youtu.be/NjNHtkc8-OE): un’unica ripresa senza tagli con l’importazione dal vivo di molti formati video e tipi di sottotitoli.
+Qui sopra, una breve guida video in Cubase 11 Pro: un MKV con il suo file di sottotitoli SRT e un MKV HDR visualizzato in SDR. [Versione estesa su YouTube](https://youtu.be/NjNHtkc8-OE): un’unica ripresa senza tagli, importata dal vivo — MKV (HEVC 4K a 10 bit, anche HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) e diversi formati di sottotitoli. Senza FrameBridge, Cubase non apre MKV e OGV e dei MXF prende solo l’audio.
 
 **[Sito web](https://framebridge.cc/it/)** · **[Acquista](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
@@ -57,7 +57,7 @@ Le edizioni Cubase Pro, Artist, Elements, AI e LE vengono rilevate allo stesso m
 
 **Le versioni vicine molto probabilmente funzionano.** Il motore video cambia pochissimo all’interno della stessa generazione di prodotto: se, ad esempio, Nuendo 12.0.52 è verificato, molto probabilmente funzioneranno anche 12.0.20 o 12.0.70. Il programma di installazione controlla da sé il motore video di ogni installazione: quella compatibile viene proposta per l’installazione, quella incompatibile non compare nell’elenco e non viene modificato nulla. Anche edizioni più vecchie con la stessa generazione di motore (ad esempio Nuendo 7–9, Cubase 8.5 / 9.5) potrebbero essere idonee, ma non sono state testate.
 
-**Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase 16.0.5 e Nuendo 15.0.30. Le nuove versioni principali possono cambiare il motore video: usarle con FrameBridge è a tuo rischio. Per aggiornare Cubase o Nuendo, esegui prima UNINSTALL.cmd, installa l’aggiornamento e poi esegui di nuovo INSTALL.cmd. Se dopo un aggiornamento FrameBridge smette di funzionare, scrivi all’assistenza.
+**Funzionerà dopo un aggiornamento di Cubase o Nuendo?** FrameBridge è verificato con le build elencate sopra, fino a Cubase 16.0.5 e Nuendo 15.0.30. Una nuova versione principale può cambiare il motore video: in quel caso l’installer semplicemente non propone quell’installazione e non modifica nulla. Dopo aver aggiornato Cubase o Nuendo, basta eseguire di nuovo INSTALL.cmd. Se dopo l’aggiornamento del tuo Cubase o Nuendo FrameBridge smette di funzionare, scrivi all’assistenza.
 
 </details>
 
@@ -124,7 +124,7 @@ Anche su: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-vi
 
 **[Acquista FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Sito web: [framebridge.cc](https://framebridge.cc/it/)
 
-**Prezzo:** prezzo libero — minimo 29 USD, consigliati 59 USD. Acquisto una tantum.
+**Prezzo:** Prezzo libero: da US$29 a US$59 · la pagina di pagamento si apre su 59, puoi scendere fino a 29 · acquisto una tantum
 
 Scrivi a stark622@ukr.net entro 14 giorni dall’acquisto. Se FrameBridge non si installa o non funziona con il tuo Cubase o Nuendo, ricevi un rimborso completo.
 

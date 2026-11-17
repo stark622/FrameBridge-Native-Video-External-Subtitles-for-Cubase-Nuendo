@@ -6,8 +6,7 @@
 
 [![FrameBridge running on the native Nuendo video track — click to watch the demo](media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-Above is a short video guide in Cubase 11 Pro: an MKV with its SRT subtitle file, and an HDR MKV shown in SDR.
-[Extended version on YouTube](https://youtu.be/NjNHtkc8-OE): one uncut take with live imports of many video formats and subtitle types.
+Above is a short video guide in Cubase 11 Pro: an MKV with its SRT subtitle file, and an HDR MKV shown in SDR. [Extended version on YouTube](https://youtu.be/NjNHtkc8-OE): one uncut take, imported live — MKV (HEVC 4K 10-bit, incl. HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) and several subtitle formats. Without FrameBridge, Cubase does not open MKV and OGV and takes only the sound from MXF.
 
 **[Website](https://framebridge.cc)** · **[Buy](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
@@ -58,7 +57,7 @@ Cubase Pro, Artist, Elements, AI and LE editions are found the same way. Thumbna
 
 **Nearby builds very likely work.** The video engine barely changes within one product generation, so if, for example, Nuendo 12.0.52 is verified, 12.0.20 or 12.0.70 will very likely work too. The installer checks the video engine of each installation itself: a compatible one is offered for installation, an incompatible one is not listed and nothing is changed. Older editions with the same engine generation (for example Nuendo 7–9, Cubase 8.5 / 9.5) may also qualify but have not been tested.
 
-**Will it work after a Cubase or Nuendo update?** FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.30. New major versions may change the video engine; using FrameBridge with them is at your own risk. To update Cubase or Nuendo, run UNINSTALL.cmd first, then install the update, then run INSTALL.cmd again. If FrameBridge stops working after an update, write to support.
+**Will it work after a Cubase or Nuendo update?** FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.30. A new major version may change the video engine — then the installer simply does not offer that installation and changes nothing. After updating Cubase or Nuendo, just run INSTALL.cmd again. If FrameBridge stops working after you update your Cubase or Nuendo, write to support.
 
 </details>
 
@@ -125,8 +124,7 @@ Also on: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-vid
 
 **[Buy FrameBridge](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Website: [framebridge.cc](https://framebridge.cc)
 
-**Pricing:** Pay what you want — 29 USD minimum,  
-59 USD suggested. One-time purchase.
+**Pricing:** Pay what you want: US$29 to US$59 · the checkout opens at 59, you can lower it to 29 · one-time purchase
 
 Write to stark622@ukr.net within 14 days of purchase. If FrameBridge does not install or work with your Cubase or Nuendo, you get a full refund.
 

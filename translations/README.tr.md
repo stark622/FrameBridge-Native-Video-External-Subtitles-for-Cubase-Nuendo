@@ -6,7 +6,7 @@
 
 [![Nuendo’nun yerel video kanalında çalışan FrameBridge — demoyu izlemek için tıklayın](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): birçok video formatının ve altyazı türünün canlı olarak içe aktarıldığı kesintisiz tek çekim.
+Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): tek bir kesintisiz çekim, canlı içe aktarma — MKV (HEVC 4K 10-bit, HDR dahil), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) ve birkaç altyazı formatı. FrameBridge olmadan Cubase MKV ve OGV’yi açmaz, MXF’ten ise yalnızca sesi alır.
 
 **[Web sitesi](https://framebridge.cc/tr/)** · **[Satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
@@ -57,7 +57,7 @@ Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Ta
 
 **Yakın sürümlerin çalışması çok olasıdır.** Video motoru bir ürün kuşağı içinde neredeyse hiç değişmez: örneğin Nuendo 12.0.52 doğrulandıysa, 12.0.20 veya 12.0.70 de büyük olasılıkla çalışır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Aynı motor kuşağına sahip daha eski sürümler (örneğin Nuendo 7–9, Cubase 8.5 / 9.5) de uygun olabilir, ancak test edilmemiştir.
 
-**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.30’a kadar doğrulanmıştır. Yeni ana sürümler video motorunu değiştirebilir; FrameBridge’i onlarla kullanmak sizin sorumluluğunuzdadır. Cubase veya Nuendo’yu güncellemek için önce UNINSTALL.cmd’yi çalıştırın, ardından güncellemeyi yükleyin ve INSTALL.cmd’yi yeniden çalıştırın. Bir güncellemeden sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
+**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.30’a kadar doğrulanmıştır. Yeni bir ana sürüm video motorunu değiştirebilir; bu durumda yükleyici o kurulumu sunmaz ve hiçbir şeyi değiştirmez. Cubase veya Nuendo’yu güncelledikten sonra INSTALL.cmd’yi yeniden çalıştırmanız yeterli. Cubase veya Nuendo’nuzu güncelledikten sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
 </details>
 
@@ -124,7 +124,7 @@ Ayrıca: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-vid
 
 **[FrameBridge’i satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · Web sitesi: [framebridge.cc](https://framebridge.cc/tr/)
 
-**Fiyat:** dilediğiniz fiyat — en az 29 USD, önerilen 59 USD. Tek seferlik satın alma.
+**Fiyat:** Dilediğiniz fiyat: 29–59 USD · ödeme sayfası 59 ile açılır, 29’a kadar düşürebilirsiniz · tek seferlik satın alma
 
 Satın aldıktan sonraki 14 gün içinde stark622@ukr.net adresine yazın. FrameBridge, Cubase veya Nuendo kurulumunuza yüklenmez ya da çalışmazsa ödediğiniz tutarın tamamı iade edilir.
 
