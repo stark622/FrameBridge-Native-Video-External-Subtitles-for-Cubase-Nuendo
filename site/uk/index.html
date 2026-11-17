@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/uk/", "inLanguage": "uk", "description": "FrameBridge розширює штатний відеорушій Cubase і Nuendo у Windows: сучасні відеоформати та зовнішні субтитри на відеодоріжці, без перекодування.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117e">
+  <link rel="stylesheet" href="/style.css?v=20261117f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -106,9 +106,8 @@
         </div>
         <figcaption>Той самий файл .mov (DNxHD) у Cubase. MOV Cubase приймає, але без FrameBridge цей кодек не показує: чорний плеєр і порожні мініатюри. З FrameBridge — картинка, мініатюри та субтитри. Потягніть шторку.</figcaption>
       </figure>
-      <div class="media-tabs">
+      <div class="media-tabs media-one">
         <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-guide"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.3v7.4l6-3.7z" fill="currentColor"/></svg><span>Відеогайд</span></button>
-        <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-adr"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="1.8" y="5" width="9.4" height="7.4" rx="1.3"/><rect x="12.8" y="5" width="9.4" height="7.4" rx="1.3"/><path d="M6.5 12.4v3.4M4.5 15.8h4M17.5 12.4v3.4M15.5 15.8h4"/></svg><span>Друге вікно для ADR</span></button>
       </div>
       <div class="mt-panel" id="mt-guide" hidden>
         <a id="demo" class="player" href="https://youtu.be/qJqN0ybHV8E" target="_blank" rel="noopener" data-yt="qJqN0ybHV8E" aria-label="Відтворити демонстраційне відео FrameBridge">
@@ -116,52 +115,6 @@
         <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">Дивитися відеогайд</span></span>
       </a>
         <p class="caption">Вище — короткий відеогайд у Cubase 11 Pro: MKV із парним SRT-файлом субтитрів і HDR-MKV, показаний у SDR. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Розширена версія на YouTube</a> — один дубль без монтажу, наживо імпортуються MKV (HEVC 4K 10 біт, зокрема HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) і субтитри різних форматів.</p>
-      </div>
-      <div class="mt-panel dub-demo" id="mt-adr" hidden>
-        <h3>Два вікна відео для ADR та озвучення: на весь екран — актору, копія — вам</h3>
-        <p>Cubase і Nuendo показують відео в одному вікні відеоплеєра. FrameBridge додає його живу копію: актор дивиться відеоплеєр на своєму моніторі, а копія лишається у вас поруч із проєктом — без HDMI-спліттера й без окремої карти відеовиводу Blackmagic.</p>
-        <svg class="dub-anim" viewBox="0 0 760 330" role="img" aria-label="Cubase і Nuendo показують відео в одному вікні відеоплеєра. FrameBridge додає його живу копію: актор дивиться відеоплеєр на своєму моніторі, а копія лишається у вас поруч із проєктом — без HDMI-спліттера й без окремої карти відеовиводу Blackmagic.">
-        <!-- labels -->
-        <text class="lbl" x="200" y="24" text-anchor="middle">Ваш екран</text>
-        <text class="lbl" x="571" y="24" text-anchor="middle">Екран актора</text>
-        <!-- left monitor: real Cubase project -->
-        <rect class="scr" x="30" y="38" width="340" height="210" rx="10"/>
-        <rect class="stand" x="180" y="250" width="40" height="22"/><rect class="stand" x="150" y="272" width="100" height="6" rx="3"/>
-        <image x="38" y="46" width="324" height="178" preserveAspectRatio="none" href="/img/dub/cubase.webp"/>
-        <!-- taskbar + FrameBridge tray icon -->
-        <rect x="38" y="226" width="324" height="18" fill="#0f1520"/>
-        <rect x="324" y="229" width="14" height="13" rx="3" fill="#1d7fe0"/>
-        <text x="331" y="239.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">2</text>
-        <circle class="ripple" cx="331" cy="236" r="12" fill="none" stroke="#3aa8ff" stroke-width="2"/>
-        <!-- right monitor -->
-        <rect class="scr" x="402" y="38" width="338" height="210" rx="10"/>
-        <rect class="stand" x="551" y="250" width="40" height="22"/><rect class="stand" x="521" y="272" width="100" height="6" rx="3"/>
-        <rect x="410" y="46" width="322" height="194" rx="4" fill="#06090f"/>
-        <!-- Cubase Video Player in full screen on the actor's screen (real screenshot) -->
-        <g class="full"><image x="410" y="52.3" width="322" height="181.4" preserveAspectRatio="none" href="/img/dub/fullscreen.webp"/></g>
-        <g class="fulltag">
-        <rect x="455" y="290" width="232" height="26" rx="13" fill="rgba(54,209,137,.14)" stroke="#36d189"/>
-        <g transform="translate(472 296)" fill="none" stroke="#36d189" stroke-width="1.8" stroke-linecap="round">
-        <rect x="3" y="0" width="7" height="10" rx="3.5" fill="#36d189" stroke="none"/>
-        <path d="M0 7 a6.5 6.5 0 0 0 13 0"/><path d="M6.5 13.5 v2"/>
-        </g>
-        <text x="580" y="307" text-anchor="middle" font-size="11.5" font-weight="600" fill="#bff0d8">Cubase Video Player · full screen</text>
-        </g>
-        <!-- the FrameBridge copy in Cubase (real window) -->
-        <g class="copy"><image x="146.7" y="103.8" width="153.4" height="93.8" preserveAspectRatio="none" href="/img/dub/copy.webp"/>
-        <rect x="146.7" y="103.8" width="153.4" height="93.8" fill="none" stroke="#3aa8ff" stroke-width="1.6"/></g>
-        <g class="copytag">
-        <rect x="62" y="200" width="276" height="23" rx="11.5" fill="rgba(11,17,29,.92)" stroke="#3aa8ff"/>
-        <text x="200" y="215.5" text-anchor="middle" font-size="11.5" font-weight="600" fill="#cfe8ff">Use this player on the same screen as Cubase</text>
-        </g>
-        <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
-        <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
-        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
-        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
-        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
-        <!-- cursor (tip at 0,0) -->
-        <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
-        </svg>
       </div>
     </div>
   </div>
@@ -195,23 +148,27 @@
     <div class="wrap">
       <h2>Що ви отримуєте</h2>
       <p class="section-lead">Для дубляжу та закадрового озвучення, постпродакшну й композиторів, які пишуть музику до фільмів та ігор.</p>
+      <div class="demos">
+        <div class="demo-tabs"><button type="button" class="dt" aria-pressed="true">Друге вікно (ADR)</button><button type="button" class="dt" aria-pressed="false">Субтитри</button><button type="button" class="dt" aria-pressed="false">Монтажний лист</button></div>
+        <figure class="demo demo-wide"><video src="/img/clip/adr.mp4?v=3" poster="/img/clip/adr.webp?v=3" width="1440" height="532" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Збільшити"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase сам не відкриває. Ліворуч ваш екран: проєкт і жива копія плеєра. Праворуч екран актора: Відеоплеєр на весь екран. Без HDMI-сплітера й карти Blackmagic.</figcaption></figure>
+        <figure class="demo" hidden><video src="/img/clip/subs.mp4?v=1" poster="/img/clip/subs.webp?v=1" width="960" height="916" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Збільшити"></button><figcaption><b>3GP · H.264 4K</b> — Cubase сам не відкриває. Поклали .vtt з тим самим ім’ям поруч із відео — і ті самі секунди вже із субтитрами. Так само SRT, ASS, TTML та інші, навіть картинки Blu-ray PGS/SUP і DVD VobSub — усе в одному чистому вигляді.</figcaption></figure>
+        <figure class="demo" hidden><video src="/img/clip/script.mp4?v=1" poster="/img/clip/script.webp?v=1" width="960" height="1000" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Збільшити"></button><figcaption><b>AVI · Xvid</b> — Cubase сам не відкриває. Поруч монтажний лист PDF з тим самим ім’ям — репліки з ролями йдуть субтитрами. Також DOCX, XLSX, TXT, CSV.</figcaption></figure>
+      </div>
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
             <li>Більше контейнерів і кодеків просто на штатному відеотреку — завдяки бібліотекам FFmpeg із комплекту (LGPL).</li>
-            <li>Зовнішні субтитри будь-якого формату, зокрема картинки Blu-ray PGS/SUP і DVD VobSub, показуються поверх зображення в єдиному чистому й читабельному вигляді. Сам відеофайл ніколи не змінюється.</li>
-            <li>Друге вікно відео для озвучення: жива копія відеоплеєра Cubase/Nuendo для звукорежисера, поки актор дивиться плеєр на іншому моніторі.</li>
+            <li>Візуально перевірене перетворення HDR у SDR для підтримуваних HDR-матеріалів.</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>Візуально перевірене перетворення HDR у SDR для підтримуваних HDR-матеріалів.</li>
             <li>Звук надходить штатною опцією «Extract Audio From Video» — зокрема з MKV та інших файлів, які Cubase і Nuendo самі не відкривають.</li>
-            <li>Субтитри просто з монтажних листів і скриптів озвучення з ролями: PDF, DOCX, TXT, XLSX, CSV.</li>
             <li><strong>UNINSTALL.cmd</strong> відновлює оригінальні файли програми з перевіреної резервної копії, байт у байт. Проєкти, налаштування та плагіни не зачіпаються.</li>
           </ul>
         </div>
       </div>
+      <div class="demo-box" hidden><button type="button" class="demo-close" aria-label="Закрити"></button><video muted loop playsinline></video></div>
     </div>
   </section>
 
@@ -219,26 +176,29 @@
     <div class="wrap">
       <h2>Перевірені формати</h2>
       <p class="section-lead">Перевірено на реальних файлах в усіх підтверджених збірках Cubase і Nuendo.</p>
+      <div class="fmt-box fmt-short">
       <div class="grid grid-2">
         <div class="card">
           <h3>Контейнери</h3>
           <div class="chips">
-            <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
+            <span class="chip">MKV / WebM</span><span class="chip chip-more">MK3D</span><span class="chip chip-more">MOV / MP4</span><span class="chip chip-more">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip chip-more">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip chip-more">TOD</span><span class="chip chip-more">MOD</span><span class="chip chip-more">EVO</span><span class="chip chip-more">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip chip-more">F4V</span><span class="chip">WMV / ASF</span><span class="chip chip-more">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip chip-more">RM / RMVB</span><span class="chip chip-more">OGV</span><span class="chip chip-more">OGM</span>
           </div>
         </div>
         <div class="card tip-host">
           <h3>Зовнішні субтитри</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">Розпізнавання тексту PGS/SUP і VobSub використовує мови OCR, встановлені у Windows; якщо потрібної мови немає, показуються оригінальні зображення субтитрів.</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">Тримайте film.idx і film.sub разом поруч із відео. Розпізнавання тексту PGS/SUP і VobSub використовує мови OCR, встановлені у Windows; якщо потрібної мови немає, показуються оригінальні зображення субтитрів.</span></span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip chip-more">SSA</span><span class="chip">VTT</span><span class="chip chip-more">SMI / SAMI</span><span class="chip chip-more">MicroDVD</span><span class="chip">TTML</span><span class="chip chip-more">DFXP</span><span class="chip chip-more">IMSC</span><span class="chip chip-more">EBU STL</span><span class="chip chip-more">SCC</span><span class="chip chip-more">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">Розпізнавання тексту PGS/SUP і VobSub використовує мови OCR, встановлені у Windows; якщо потрібної мови немає, показуються оригінальні зображення субтитрів.</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">Тримайте film.idx і film.sub разом поруч із відео. Розпізнавання тексту PGS/SUP і VobSub використовує мови OCR, встановлені у Windows; якщо потрібної мови немає, показуються оригінальні зображення субтитрів.</span></span>
           </div>
         </div>
       </div>
       <div class="card" style="margin-top:18px">
         <h3>Відеокодеки</h3>
         <div class="chips">
-          <span class="chip">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main / Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip">ProRes Proxy / LT / 422 HQ / 4444</span><span class="chip">DNxHR / DNxHD</span><span class="chip">CineForm</span><span class="chip">XDCAM</span><span class="chip">XAVC / AVC-Intra</span><span class="chip">DV / DVCPRO50 / DVCPRO HD</span><span class="chip">Avid 1:1</span><span class="chip">MPEG-1</span><span class="chip">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 8/10-bit</span><span class="chip">APV</span><span class="chip">FFV1</span><span class="chip">HuffYUV / FFVHuff</span><span class="chip">UtVideo</span><span class="chip">MagicYUV</span><span class="chip">Uncompressed v210</span><span class="chip">QuickTime Animation</span><span class="chip">PNG</span><span class="chip">TIFF</span><span class="chip">Canopus HQ / HQX</span><span class="chip">SpeedHQ</span><span class="chip">HAP / HAP Q</span><span class="chip">Theora</span><span class="chip">WMV 7 / 8</span><span class="chip">Xvid</span><span class="chip">DivX / MS MPEG-4</span><span class="chip">H.263</span><span class="chip">Sorenson Spark</span><span class="chip">RealVideo</span><span class="chip">Cinepak</span><span class="chip">Sorenson Video</span><span class="chip">Microsoft Video 1</span>
+          <span class="chip chip-more">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main / Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip chip-more">ProRes Proxy / LT / 422 HQ / 4444</span><span class="chip">DNxHR / DNxHD</span><span class="chip chip-more">CineForm</span><span class="chip chip-more">XDCAM</span><span class="chip">XAVC / AVC-Intra</span><span class="chip chip-more">DV / DVCPRO50 / DVCPRO HD</span><span class="chip chip-more">Avid 1:1</span><span class="chip chip-more">MPEG-1</span><span class="chip">MPEG-2</span><span class="chip chip-more">VP8</span><span class="chip">VP9 8/10-bit</span><span class="chip chip-more">APV</span><span class="chip chip-more">FFV1</span><span class="chip chip-more">HuffYUV / FFVHuff</span><span class="chip chip-more">UtVideo</span><span class="chip chip-more">MagicYUV</span><span class="chip chip-more">Uncompressed v210</span><span class="chip chip-more">QuickTime Animation</span><span class="chip chip-more">PNG</span><span class="chip chip-more">TIFF</span><span class="chip chip-more">Canopus HQ / HQX</span><span class="chip chip-more">SpeedHQ</span><span class="chip chip-more">HAP / HAP Q</span><span class="chip chip-more">Theora</span><span class="chip chip-more">WMV 7 / 8</span><span class="chip">Xvid</span><span class="chip">DivX / MS MPEG-4</span><span class="chip chip-more">H.263</span><span class="chip chip-more">Sorenson Spark</span><span class="chip chip-more">RealVideo</span><span class="chip chip-more">Cinepak</span><span class="chip chip-more">Sorenson Video</span><span class="chip chip-more">Microsoft Video 1</span>
         </div>
       </div>
+      </div>
+      <button type="button" class="fmt-toggle" aria-expanded="false" data-more="Показати всі формати" data-less="Згорнути список">Показати всі формати</button>
       <p class="note">Перевірено на важкому реальному матеріалі: 4K HDR Blu-ray remux (HEVC, ~25 ГБ) у проєкті з 8 доріжками акторів і безліччю плагінів та 4K HEVC епізод зі стримінгу (~7 ГБ) — плавне відтворення й перемотування.</p>
       <details class="likely">
         <summary>Найімовірніше, теж відтворюються</summary>
@@ -376,7 +336,7 @@
     </div>
     <p>Юридичні документи й нотатки про сумісність доступні лише англійською; переважну силу має англійська версія.</p>
     <p>Підтримка: stark622@ukr.net</p>
-    <p>FrameBridge — незалежна програма: вона не пов’язана з компанією Steinberg, не спонсорується й не схвалюється нею. Cubase і Nuendo — торговельні марки їхнього правовласника. FFmpeg — торговельна марка Фабріса Беллара.</p>
+    <p>FrameBridge — незалежна програма: вона не пов’язана з компанією Steinberg, не спонсорується й не схвалюється нею. Cubase і Nuendo — торговельні марки їхнього правовласника. FFmpeg — торговельна марка Фабріса Беллара. Сторонні відеофрагменти показано лише для демонстрації сумісності відео й показу субтитрів. Усі права на вихідні матеріали належать їхнім правовласникам. Сторонні відеоматеріали не входять до комплекту FrameBridge.</p>
     <p>© 2026 FrameBridge</p>
   </div>
 </footer>
@@ -472,6 +432,51 @@
   new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { var r = v.play(); if (r && r.catch) r.catch(function () {}); } else v.pause(); });
   }, { threshold: 0.4 }).observe(v);
+})();
+(function () {
+  var box = document.querySelector('.demos');
+  if (!box) return;
+  var tabs = box.querySelectorAll('.dt'), figs = box.querySelectorAll('.demo'), cur = 0, seen = false;
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play() { var v = figs[cur].querySelector('video'); if (still) { v.controls = true; return; } var r = v.play(); if (r && r.catch) r.catch(function () {}); }
+  function show(i) {
+    figs[cur].querySelector('video').pause();
+    cur = i;
+    for (var k = 0; k < figs.length; k++) { figs[k].hidden = k !== i; tabs[k].setAttribute('aria-pressed', String(k === i)); }
+    if (seen) play();
+  }
+  Array.prototype.forEach.call(tabs, function (t, i) { t.addEventListener('click', function () { show(i); }); });
+  if (!('IntersectionObserver' in window)) { seen = true; play(); return; }
+  new IntersectionObserver(function (es) {
+    seen = es[0].isIntersecting;
+    if (seen) play(); else figs[cur].querySelector('video').pause();
+  }, { threshold: 0.35 }).observe(box);
+})();
+(function () {
+  var t = document.querySelector('.fmt-toggle'), box = document.querySelector('.fmt-box');
+  if (t && box) {
+    var n = box.querySelectorAll('.chip-more').length;
+    t.textContent = t.getAttribute('data-more') + ' (+' + n + ')';
+    t.addEventListener('click', function () {
+      var open = box.classList.toggle('fmt-short') === false;
+      t.setAttribute('aria-expanded', String(open));
+      t.textContent = open ? t.getAttribute('data-less') : t.getAttribute('data-more') + ' (+' + n + ')';
+    });
+  }
+  var lb = document.querySelector('.demo-box');
+  if (!lb) return;
+  var big = lb.querySelector('video');
+  function close() { lb.hidden = true; big.pause(); big.removeAttribute('src'); big.load(); document.documentElement.classList.remove('lb-open'); }
+  Array.prototype.forEach.call(document.querySelectorAll('.demo-zoom'), function (b) {
+    b.addEventListener('click', function () {
+      var v = b.parentNode.querySelector('video');
+      big.src = v.currentSrc || v.getAttribute('src'); big.currentTime = 0;
+      lb.hidden = false; document.documentElement.classList.add('lb-open');
+      var r = big.play(); if (r && r.catch) r.catch(function () {});
+    });
+  });
+  lb.addEventListener('click', function (e) { if (e.target !== big) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
 })();
 (function () {
   var d = document.querySelector('details.lang');

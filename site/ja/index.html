@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ja/", "inLanguage": "ja", "description": "FrameBridge は Windows 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットを内蔵のビデオトラックで扱い、外部字幕を映像の上に表示。トランスコードは不要です。", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117e">
+  <link rel="stylesheet" href="/style.css?v=20261117f">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -106,9 +106,8 @@
         </div>
         <figcaption>Cubase で同じ .mov ファイル（DNxHD）を開いた状態です。Cubase は MOV を受け付けますが、FrameBridge なしではこのコーデックを表示できず、プレーヤーは黒、サムネイルは空のままです。FrameBridge ありでは映像、サムネイル、字幕が表示されます。境界線をドラッグしてください。</figcaption>
       </figure>
-      <div class="media-tabs">
+      <div class="media-tabs media-one">
         <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-guide"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.3v7.4l6-3.7z" fill="currentColor"/></svg><span>動画ガイド</span></button>
-        <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-adr"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="1.8" y="5" width="9.4" height="7.4" rx="1.3"/><rect x="12.8" y="5" width="9.4" height="7.4" rx="1.3"/><path d="M6.5 12.4v3.4M4.5 15.8h4M17.5 12.4v3.4M15.5 15.8h4"/></svg><span>ADR 用の2つ目のウィンドウ</span></button>
       </div>
       <div class="mt-panel" id="mt-guide" hidden>
         <a id="demo" class="player" href="https://youtu.be/qJqN0ybHV8E" target="_blank" rel="noopener" data-yt="qJqN0ybHV8E" aria-label="FrameBridge のデモビデオを再生">
@@ -116,52 +115,6 @@
         <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">ビデオガイドを見る</span></span>
       </a>
         <p class="caption">上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。<a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">YouTube の拡張版</a>は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。</p>
-      </div>
-      <div class="mt-panel dub-demo" id="mt-adr" hidden>
-        <h3>ADR と吹き替えのための 2 つのビデオウィンドウ：役者には全画面、あなたにはコピー</h3>
-        <p>Cubase と Nuendo では、ビデオは 1 つのビデオプレーヤーウィンドウにしか表示されません。FrameBridge はそのライブコピーを追加します。役者は自分の画面でビデオプレーヤーを見て、あなたはプロジェクトの横にコピーを置いておけます。HDMI スプリッターも、Blackmagic の出力カードも不要です。</p>
-        <svg class="dub-anim" viewBox="0 0 760 330" role="img" aria-label="Cubase と Nuendo では、ビデオは 1 つのビデオプレーヤーウィンドウにしか表示されません。FrameBridge はそのライブコピーを追加します。役者は自分の画面でビデオプレーヤーを見て、あなたはプロジェクトの横にコピーを置いておけます。HDMI スプリッターも、Blackmagic の出力カードも不要です。">
-        <!-- labels -->
-        <text class="lbl" x="200" y="24" text-anchor="middle">あなたの画面</text>
-        <text class="lbl" x="571" y="24" text-anchor="middle">役者の画面</text>
-        <!-- left monitor: real Cubase project -->
-        <rect class="scr" x="30" y="38" width="340" height="210" rx="10"/>
-        <rect class="stand" x="180" y="250" width="40" height="22"/><rect class="stand" x="150" y="272" width="100" height="6" rx="3"/>
-        <image x="38" y="46" width="324" height="178" preserveAspectRatio="none" href="/img/dub/cubase.webp"/>
-        <!-- taskbar + FrameBridge tray icon -->
-        <rect x="38" y="226" width="324" height="18" fill="#0f1520"/>
-        <rect x="324" y="229" width="14" height="13" rx="3" fill="#1d7fe0"/>
-        <text x="331" y="239.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">2</text>
-        <circle class="ripple" cx="331" cy="236" r="12" fill="none" stroke="#3aa8ff" stroke-width="2"/>
-        <!-- right monitor -->
-        <rect class="scr" x="402" y="38" width="338" height="210" rx="10"/>
-        <rect class="stand" x="551" y="250" width="40" height="22"/><rect class="stand" x="521" y="272" width="100" height="6" rx="3"/>
-        <rect x="410" y="46" width="322" height="194" rx="4" fill="#06090f"/>
-        <!-- Cubase Video Player in full screen on the actor's screen (real screenshot) -->
-        <g class="full"><image x="410" y="52.3" width="322" height="181.4" preserveAspectRatio="none" href="/img/dub/fullscreen.webp"/></g>
-        <g class="fulltag">
-        <rect x="455" y="290" width="232" height="26" rx="13" fill="rgba(54,209,137,.14)" stroke="#36d189"/>
-        <g transform="translate(472 296)" fill="none" stroke="#36d189" stroke-width="1.8" stroke-linecap="round">
-        <rect x="3" y="0" width="7" height="10" rx="3.5" fill="#36d189" stroke="none"/>
-        <path d="M0 7 a6.5 6.5 0 0 0 13 0"/><path d="M6.5 13.5 v2"/>
-        </g>
-        <text x="580" y="307" text-anchor="middle" font-size="11.5" font-weight="600" fill="#bff0d8">Cubase Video Player · full screen</text>
-        </g>
-        <!-- the FrameBridge copy in Cubase (real window) -->
-        <g class="copy"><image x="146.7" y="103.8" width="153.4" height="93.8" preserveAspectRatio="none" href="/img/dub/copy.webp"/>
-        <rect x="146.7" y="103.8" width="153.4" height="93.8" fill="none" stroke="#3aa8ff" stroke-width="1.6"/></g>
-        <g class="copytag">
-        <rect x="62" y="200" width="276" height="23" rx="11.5" fill="rgba(11,17,29,.92)" stroke="#3aa8ff"/>
-        <text x="200" y="215.5" text-anchor="middle" font-size="11.5" font-weight="600" fill="#cfe8ff">Use this player on the same screen as Cubase</text>
-        </g>
-        <!-- the Cubase Video Player window (real), dragged to the actor's screen -->
-        <g class="mini"><image x="148.3" y="102.1" width="143" height="86" preserveAspectRatio="none" href="/img/dub/player.webp"/></g>
-        <!-- double-click on the picture: Cubase / Nuendo switch the Video Player to full screen -->
-        <circle class="dc1" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
-        <circle class="dc2" cx="566" cy="140" r="10" fill="none" stroke="#3aa8ff" stroke-width="3"/>
-        <!-- cursor (tip at 0,0) -->
-        <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
-        </svg>
       </div>
     </div>
   </div>
@@ -195,23 +148,27 @@
     <div class="wrap">
       <h2>主な特長</h2>
       <p class="section-lead">吹き替え・ナレーション、ポストプロダクション、そして映画やゲームの音楽を書く作曲家のために。</p>
+      <div class="demos">
+        <div class="demo-tabs"><button type="button" class="dt" aria-pressed="true">2つ目のウィンドウ（ADR）</button><button type="button" class="dt" aria-pressed="false">字幕</button><button type="button" class="dt" aria-pressed="false">吹き替え台本</button></div>
+        <figure class="demo demo-wide"><video src="/img/clip/adr.mp4?v=3" poster="/img/clip/adr.webp?v=3" width="1440" height="532" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="拡大"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase 単体では開けません。左はプロジェクトとプレーヤーのライブコピーがあるあなたの画面、右はビデオプレーヤーを全画面表示した声優の画面です。HDMI スプリッターも Blackmagic カードも不要です。</figcaption></figure>
+        <figure class="demo" hidden><video src="/img/clip/subs.mp4?v=1" poster="/img/clip/subs.webp?v=1" width="960" height="916" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="拡大"></button><figcaption><b>3GP · H.264 4K</b> — Cubase 単体では開けません。同じ名前の .vtt を動画の隣に置くだけで、同じ場面が字幕付きで再生されます。SRT、ASS、TTML なども同様で、Blu-ray の PGS/SUP や DVD の VobSub といった画像字幕も、すべて同じ見やすい表示になります。</figcaption></figure>
+        <figure class="demo" hidden><video src="/img/clip/script.mp4?v=1" poster="/img/clip/script.webp?v=1" width="960" height="1000" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="拡大"></button><figcaption><b>AVI · Xvid</b> — Cubase 単体では開けません。同じ名前の PDF 吹き替え台本を隣に置くと、役名付きのセリフが字幕として表示されます。DOCX、XLSX、TXT、CSV にも対応しています。</figcaption></figure>
+      </div>
       <div class="grid grid-2">
         <div class="card">
           <ul class="checks">
             <li>同梱の FFmpeg ライブラリ（LGPL）で、標準のビデオトラック上で扱えるコンテナとコーデックが増えます。</li>
-            <li>Blu-ray の PGS/SUP や DVD の VobSub の画像字幕を含め、どの形式の外部字幕も、すっきり読みやすい同じ見た目で映像の上に表示されます。ビデオファイルは一切変更されません。</li>
-            <li>吹き替え用の 2 つ目のビデオウィンドウ：役者が別の画面でビデオプレーヤーを見ている間、エンジニア用に Cubase/Nuendo のビデオプレーヤーのライブコピーを表示します。</li>
+            <li>対応する HDR 素材の HDR から SDR への変換を目視で確認済みです。</li>
           </ul>
         </div>
         <div class="card">
           <ul class="checks">
-            <li>対応する HDR 素材の HDR から SDR への変換を目視で確認済みです。</li>
             <li>標準の「ビデオからオーディオを抽出」でオーディオも読み込めます。Cubase や Nuendo 単体では開けない MKV などのファイルからも可能です。</li>
-            <li>役名付きの吹き替え台本やダイアログリストから直接字幕：PDF、DOCX、TXT、XLSX、CSV。</li>
             <li><strong>UNINSTALL.cmd</strong> は、検証済みのバックアップからプログラムの元のファイルを 1 バイト単位で正確に復元します。プロジェクト、環境設定、プラグインには一切触れません。</li>
           </ul>
         </div>
       </div>
+      <div class="demo-box" hidden><button type="button" class="demo-close" aria-label="閉じる"></button><video muted loop playsinline></video></div>
     </div>
   </section>
 
@@ -219,26 +176,29 @@
     <div class="wrap">
       <h2>検証済みフォーマット</h2>
       <p class="section-lead">検証済みのすべての Cubase / Nuendo バージョンで、実際のファイルを使ってテストしています。</p>
+      <div class="fmt-box fmt-short">
       <div class="grid grid-2">
         <div class="card">
           <h3>コンテナ</h3>
           <div class="chips">
-            <span class="chip">MKV / WebM</span><span class="chip">MK3D</span><span class="chip">MOV / MP4</span><span class="chip">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip">TOD</span><span class="chip">MOD</span><span class="chip">EVO</span><span class="chip">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip">F4V</span><span class="chip">WMV / ASF</span><span class="chip">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip">RM / RMVB</span><span class="chip">OGV</span><span class="chip">OGM</span>
+            <span class="chip">MKV / WebM</span><span class="chip chip-more">MK3D</span><span class="chip chip-more">MOV / MP4</span><span class="chip chip-more">M4V</span><span class="chip">MXF</span><span class="chip">AVI</span><span class="chip chip-more">DivX</span><span class="chip">M2TS / MTS / TS</span><span class="chip chip-more">TOD</span><span class="chip chip-more">MOD</span><span class="chip chip-more">EVO</span><span class="chip chip-more">DV</span><span class="chip">MPEG-PS / VOB</span><span class="chip">FLV</span><span class="chip chip-more">F4V</span><span class="chip">WMV / ASF</span><span class="chip chip-more">WTV / DVR-MS</span><span class="chip">3GP / 3G2</span><span class="chip chip-more">RM / RMVB</span><span class="chip chip-more">OGV</span><span class="chip chip-more">OGM</span>
           </div>
         </div>
         <div class="card tip-host">
           <h3>外部字幕</h3>
           <div class="chips">
-            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip">SSA</span><span class="chip">VTT</span><span class="chip">SMI / SAMI</span><span class="chip">MicroDVD</span><span class="chip">TTML</span><span class="chip">DFXP</span><span class="chip">IMSC</span><span class="chip">EBU STL</span><span class="chip">SCC</span><span class="chip">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">film.idx と film.sub はセットでビデオの隣に置いてください。 PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</span></span>
+            <span class="chip">SRT</span><span class="chip">ASS</span><span class="chip chip-more">SSA</span><span class="chip">VTT</span><span class="chip chip-more">SMI / SAMI</span><span class="chip chip-more">MicroDVD</span><span class="chip">TTML</span><span class="chip chip-more">DFXP</span><span class="chip chip-more">IMSC</span><span class="chip chip-more">EBU STL</span><span class="chip chip-more">SCC</span><span class="chip chip-more">DCP XML</span><span class="chip chip-tip" tabindex="0">PGS / SUP<span class="tip" role="tooltip">PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</span></span><span class="chip chip-tip tip-end" tabindex="0">VobSub (.idx + .sub)<span class="tip" role="tooltip">film.idx と film.sub はセットでビデオの隣に置いてください。 PGS/SUP と VobSub の文字認識には、Windows にインストールされている OCR 言語を使用します。必要な言語がない場合は、元の字幕画像がそのまま表示されます。</span></span>
           </div>
         </div>
       </div>
       <div class="card" style="margin-top:18px">
         <h3>ビデオコーデック</h3>
         <div class="chips">
-          <span class="chip">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main / Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip">ProRes Proxy / LT / 422 HQ / 4444</span><span class="chip">DNxHR / DNxHD</span><span class="chip">CineForm</span><span class="chip">XDCAM</span><span class="chip">XAVC / AVC-Intra</span><span class="chip">DV / DVCPRO50 / DVCPRO HD</span><span class="chip">Avid 1:1</span><span class="chip">MPEG-1</span><span class="chip">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 8/10-bit</span><span class="chip">APV</span><span class="chip">FFV1</span><span class="chip">HuffYUV / FFVHuff</span><span class="chip">UtVideo</span><span class="chip">MagicYUV</span><span class="chip">Uncompressed v210</span><span class="chip">QuickTime Animation</span><span class="chip">PNG</span><span class="chip">TIFF</span><span class="chip">Canopus HQ / HQX</span><span class="chip">SpeedHQ</span><span class="chip">HAP / HAP Q</span><span class="chip">Theora</span><span class="chip">WMV 7 / 8</span><span class="chip">Xvid</span><span class="chip">DivX / MS MPEG-4</span><span class="chip">H.263</span><span class="chip">Sorenson Spark</span><span class="chip">RealVideo</span><span class="chip">Cinepak</span><span class="chip">Sorenson Video</span><span class="chip">Microsoft Video 1</span>
+          <span class="chip chip-more">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main / Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip chip-more">ProRes Proxy / LT / 422 HQ / 4444</span><span class="chip">DNxHR / DNxHD</span><span class="chip chip-more">CineForm</span><span class="chip chip-more">XDCAM</span><span class="chip">XAVC / AVC-Intra</span><span class="chip chip-more">DV / DVCPRO50 / DVCPRO HD</span><span class="chip chip-more">Avid 1:1</span><span class="chip chip-more">MPEG-1</span><span class="chip">MPEG-2</span><span class="chip chip-more">VP8</span><span class="chip">VP9 8/10-bit</span><span class="chip chip-more">APV</span><span class="chip chip-more">FFV1</span><span class="chip chip-more">HuffYUV / FFVHuff</span><span class="chip chip-more">UtVideo</span><span class="chip chip-more">MagicYUV</span><span class="chip chip-more">Uncompressed v210</span><span class="chip chip-more">QuickTime Animation</span><span class="chip chip-more">PNG</span><span class="chip chip-more">TIFF</span><span class="chip chip-more">Canopus HQ / HQX</span><span class="chip chip-more">SpeedHQ</span><span class="chip chip-more">HAP / HAP Q</span><span class="chip chip-more">Theora</span><span class="chip chip-more">WMV 7 / 8</span><span class="chip">Xvid</span><span class="chip">DivX / MS MPEG-4</span><span class="chip chip-more">H.263</span><span class="chip chip-more">Sorenson Spark</span><span class="chip chip-more">RealVideo</span><span class="chip chip-more">Cinepak</span><span class="chip chip-more">Sorenson Video</span><span class="chip chip-more">Microsoft Video 1</span>
         </div>
       </div>
+      </div>
+      <button type="button" class="fmt-toggle" aria-expanded="false" data-more="すべての形式を表示" data-less="表示を減らす">すべての形式を表示</button>
       <p class="note">重い実素材でテスト済み：8 本のダイアログトラックと多数のプラグインを使ったプロジェクトでの 4K HDR Blu-ray リマックス（HEVC、約 25 GB）と、4K HEVC の配信エピソード（約 7 GB）。再生もシークもスムーズです。</p>
       <details class="likely">
         <summary>これらもおそらく再生できます</summary>
@@ -376,7 +336,7 @@
     </div>
     <p>法的文書と互換性に関する注記は英語版のみです。英語版が優先されます。</p>
     <p>サポート： stark622@ukr.net</p>
-    <p>FrameBridge は独立したソフトウェアであり、Steinberg との提携関係はなく、Steinberg による後援や承認も受けていません。Cubase および Nuendo は、それぞれの所有者の商標です。FFmpeg は Fabrice Bellard の商標です。</p>
+    <p>FrameBridge は独立したソフトウェアであり、Steinberg との提携関係はなく、Steinberg による後援や承認も受けていません。Cubase および Nuendo は、それぞれの所有者の商標です。FFmpeg は Fabrice Bellard の商標です。 第三者の映像は、動画の互換性と字幕表示を示す目的でのみ使用しています。元の素材に関するすべての権利は各権利者に帰属します。FrameBridge に第三者の映像は含まれていません。</p>
     <p>© 2026 FrameBridge</p>
   </div>
 </footer>
@@ -472,6 +432,51 @@
   new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { var r = v.play(); if (r && r.catch) r.catch(function () {}); } else v.pause(); });
   }, { threshold: 0.4 }).observe(v);
+})();
+(function () {
+  var box = document.querySelector('.demos');
+  if (!box) return;
+  var tabs = box.querySelectorAll('.dt'), figs = box.querySelectorAll('.demo'), cur = 0, seen = false;
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play() { var v = figs[cur].querySelector('video'); if (still) { v.controls = true; return; } var r = v.play(); if (r && r.catch) r.catch(function () {}); }
+  function show(i) {
+    figs[cur].querySelector('video').pause();
+    cur = i;
+    for (var k = 0; k < figs.length; k++) { figs[k].hidden = k !== i; tabs[k].setAttribute('aria-pressed', String(k === i)); }
+    if (seen) play();
+  }
+  Array.prototype.forEach.call(tabs, function (t, i) { t.addEventListener('click', function () { show(i); }); });
+  if (!('IntersectionObserver' in window)) { seen = true; play(); return; }
+  new IntersectionObserver(function (es) {
+    seen = es[0].isIntersecting;
+    if (seen) play(); else figs[cur].querySelector('video').pause();
+  }, { threshold: 0.35 }).observe(box);
+})();
+(function () {
+  var t = document.querySelector('.fmt-toggle'), box = document.querySelector('.fmt-box');
+  if (t && box) {
+    var n = box.querySelectorAll('.chip-more').length;
+    t.textContent = t.getAttribute('data-more') + ' (+' + n + ')';
+    t.addEventListener('click', function () {
+      var open = box.classList.toggle('fmt-short') === false;
+      t.setAttribute('aria-expanded', String(open));
+      t.textContent = open ? t.getAttribute('data-less') : t.getAttribute('data-more') + ' (+' + n + ')';
+    });
+  }
+  var lb = document.querySelector('.demo-box');
+  if (!lb) return;
+  var big = lb.querySelector('video');
+  function close() { lb.hidden = true; big.pause(); big.removeAttribute('src'); big.load(); document.documentElement.classList.remove('lb-open'); }
+  Array.prototype.forEach.call(document.querySelectorAll('.demo-zoom'), function (b) {
+    b.addEventListener('click', function () {
+      var v = b.parentNode.querySelector('video');
+      big.src = v.currentSrc || v.getAttribute('src'); big.currentTime = 0;
+      lb.hidden = false; document.documentElement.classList.add('lb-open');
+      var r = big.play(); if (r && r.catch) r.catch(function () {});
+    });
+  });
+  lb.addEventListener('click', function (e) { if (e.target !== big) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
 })();
 (function () {
   var d = document.querySelector('details.lang');
