@@ -28,7 +28,7 @@ FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows x64. 
 - Prise en charge étendue des conteneurs et des codecs grâce aux bibliothèques FFmpeg fournies (LGPL).
 - Les fichiers de sous-titres externes sont chargés automatiquement et affichés sur l’image ; les modifications du fichier de sous-titres sont prises en compte en direct — même un fichier ajouté ou renommé après l’import, sans réimporter. Le fichier vidéo lui-même n’est jamais modifié.
 - Tous les formats de sous-titres sont affichés dans un même style (celui du SRT). Les images PGS/SUP (Blu-ray) et VobSub (DVD) sont lues comme du texte grâce à l’OCR intégré à Windows.
-- Deuxième fenêtre vidéo pour le doublage : une copie en direct du Lecteur vidéo de Cubase/Nuendo pour l’ingénieur du son, pendant que le comédien regarde le lecteur en plein écran sur un autre écran.
+- Deuxième fenêtre vidéo pour le doublage : une copie en direct du Lecteur vidéo de Cubase/Nuendo pour l’ingénieur du son, pendant que le comédien regarde le lecteur sur un autre écran.
 - Sous-titres directement depuis les scripts de doublage et les listes de dialogues avec les rôles : PDF, DOCX, TXT, XLSX, CSV.
 - Aucun lecteur vidéo séparé, pack de codecs ou LAV Filters n’est nécessaire.
 - Ce n’est pas un plug-in VST : aucun slot de plug-in, rien à charger dans chaque projet, aucune synchro MTC — FrameBridge étend directement le moteur vidéo natif.
@@ -39,7 +39,7 @@ FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows x64. 
 
 ## Deuxième fenêtre vidéo pour le doublage
 
-Deux écrans : le Lecteur vidéo de Cubase/Nuendo en plein écran pour le comédien, la copie FrameBridge pour vous.
+Cubase et Nuendo affichent la vidéo dans une seule fenêtre Lecteur vidéo. FrameBridge en ajoute une copie en direct : le comédien regarde le Lecteur vidéo sur son écran, et vous gardez la copie à côté de votre projet — sans splitter HDMI, sans carte de sortie Blackmagic.
 
 ![Faites glisser le Lecteur vidéo sur l’écran du comédien, double-cliquez pour le plein écran, cliquez sur l’icône FrameBridge de la barre des tâches : la copie s’ouvre sur votre écran](../media/dub-window.gif)
 

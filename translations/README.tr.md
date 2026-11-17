@@ -28,7 +28,7 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 - Pakete dahil FFmpeg kütüphaneleri (LGPL) sayesinde genişletilmiş kapsayıcı ve codec desteği.
 - Harici altyazı dosyaları otomatik olarak yüklenir ve görüntünün üzerinde gösterilir; altyazı dosyasında yapılan değişiklikler anında yansır — içe aktarmadan sonra eklenen veya yeniden adlandırılan dosya bile, yeniden içe aktarmaya gerek kalmadan. Video dosyasının kendisi asla değiştirilmez.
 - Tüm altyazı formatları tek tip bir görünümle (SRT görünümüyle) gösterilir. Blu-ray PGS/SUP ve DVD VobSub görüntüleri, Windows’un yerleşik OCR özelliğiyle metin olarak okunur.
-- Dublaj için ikinci video penceresi: oyuncu oynatıcıyı başka bir ekranda tam ekran izlerken ses mühendisi için Cubase/Nuendo Video Player’ın canlı kopyası.
+- Dublaj için ikinci video penceresi: oyuncu oynatıcıyı başka bir ekranda izlerken ses mühendisi için Cubase/Nuendo Video Player’ın canlı kopyası.
 - Rol bilgili dublaj metinlerinden ve diyalog listelerinden doğrudan altyazı: PDF, DOCX, TXT, XLSX, CSV.
 - Ayrı bir video oynatıcı, codec paketi veya LAV Filters gerekmez.
 - VST eklentisi değildir: eklenti yuvası, her projede bir şey yüklemek ya da MTC senkronu gerekmez; FrameBridge doğrudan yerel video motorunu genişletir.
@@ -39,7 +39,7 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 
 ## Dublaj için ikinci video penceresi
 
-İki ekran: oyuncu için tam ekran Cubase/Nuendo Video Player, sizin için FrameBridge kopyası.
+Cubase ve Nuendo videoyu tek bir Video Player penceresinde gösterir. FrameBridge bunun canlı bir kopyasını ekler: oyuncu Video Player’ı kendi ekranında izler, kopya ise projenizin yanında sizde kalır — HDMI çoklayıcı ya da Blackmagic çıkış kartı gerekmez.
 
 ![Video Player’ı oyuncunun ekranına sürükleyin, tam ekran için çift tıklayın, sistem tepsisindeki FrameBridge simgesine tıklayın: kopya sizin ekranınızda açılır](../media/dub-window.gif)
 

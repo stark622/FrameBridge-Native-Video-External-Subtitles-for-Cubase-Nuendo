@@ -28,7 +28,7 @@ FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x6
 - Rozszerzona obsługa kontenerów i kodeków dzięki dołączonym bibliotekom FFmpeg (LGPL).
 - Zewnętrzne pliki napisów są wczytywane automatycznie i wyświetlane na obrazie; zmiany w pliku napisów są uwzględniane na bieżąco — nawet gdy plik zostanie dodany lub przemianowany już po imporcie, bez ponownego importu. Sam plik wideo nigdy nie jest zmieniany.
 - Każdy format napisów jest wyświetlany w jednym stylu (takim jak SRT). Obrazy napisów PGS/SUP z Blu-ray i VobSub z DVD są odczytywane jako tekst przez wbudowane w Windows OCR.
-- Drugie okno wideo do dubbingu: kopia na żywo okna Video Player z Cubase/Nuendo dla realizatora dźwięku, podczas gdy aktor ogląda odtwarzacz na pełnym ekranie na innym monitorze.
+- Drugie okno wideo do dubbingu: kopia na żywo okna Video Player z Cubase/Nuendo dla realizatora dźwięku, podczas gdy aktor ogląda odtwarzacz na innym monitorze.
 - Napisy prosto ze scenariuszy dubbingowych i list dialogowych z rolami: PDF, DOCX, TXT, XLSX, CSV.
 - Nie potrzeba osobnego odtwarzacza wideo, pakietu kodeków ani LAV Filters.
 - To nie jest wtyczka VST: bez slotu wtyczki, bez ładowania czegokolwiek w każdym projekcie i bez synchronizacji MTC — FrameBridge rozszerza sam natywny silnik wideo.
@@ -39,7 +39,7 @@ FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x6
 
 ## Drugie okno wideo do dubbingu
 
-Dwa ekrany: Video Player z Cubase/Nuendo na pełnym ekranie dla aktora, kopia FrameBridge dla Ciebie.
+Cubase i Nuendo pokazują wideo w jednym oknie Video Player. FrameBridge dodaje jego kopię na żywo: aktor ogląda Video Player na swoim monitorze, a Ty masz kopię obok projektu — bez splittera HDMI i bez karty wyjściowej Blackmagic.
 
 ![Przeciągnij Video Player na ekran aktora, kliknij dwukrotnie, aby włączyć pełny ekran, kliknij ikonę FrameBridge w zasobniku: kopia otworzy się na Twoim ekranie](../media/dub-window.gif)
 

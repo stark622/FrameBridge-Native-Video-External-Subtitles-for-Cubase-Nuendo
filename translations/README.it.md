@@ -28,7 +28,7 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 - Supporto esteso di contenitori e codec grazie alle librerie FFmpeg incluse (LGPL).
 - I file di sottotitoli esterni vengono caricati automaticamente e mostrati sopra l’immagine; le modifiche al file dei sottotitoli vengono applicate in tempo reale, anche per un file aggiunto o rinominato dopo l’importazione, senza reimportare. Il file video non viene mai modificato.
 - Ogni formato di sottotitoli viene mostrato con un unico aspetto (quello degli SRT). Le immagini PGS/SUP dei Blu-ray e VobSub dei DVD vengono lette come testo con l’OCR integrato in Windows.
-- Seconda finestra video per il doppiaggio: una copia dal vivo del Riproduttore video di Cubase/Nuendo per il fonico, mentre l’attore guarda il riproduttore a schermo intero su un altro schermo.
+- Seconda finestra video per il doppiaggio: una copia dal vivo del Riproduttore video di Cubase/Nuendo per il fonico, mentre l’attore guarda il riproduttore su un altro schermo.
 - Sottotitoli direttamente dai copioni di doppiaggio e dalle liste dialoghi con i ruoli: PDF, DOCX, TXT, XLSX, CSV.
 - Non servono player video separati, codec pack o LAV Filters.
 - Non è un plugin VST: nessuno slot plugin, niente da caricare in ogni progetto, nessuna sincronizzazione MTC — FrameBridge estende direttamente il motore video nativo.
@@ -39,7 +39,7 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 
 ## Seconda finestra video per il doppiaggio
 
-Due schermi: il Riproduttore video di Cubase/Nuendo a schermo intero per l’attore, la copia FrameBridge per te.
+Cubase e Nuendo mostrano il video in un’unica finestra Riproduttore video. FrameBridge ne aggiunge una copia dal vivo: l’attore guarda il Riproduttore video sul suo schermo e tu tieni la copia accanto al progetto, senza splitter HDMI e senza scheda di uscita Blackmagic.
 
 ![Trascina il Riproduttore video sullo schermo dell’attore, doppio clic per lo schermo intero, clic sull’icona FrameBridge nell’area di notifica: la copia si apre sul tuo schermo](../media/dub-window.gif)
 

@@ -28,7 +28,7 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 - 通过随附的 FFmpeg 库（LGPL）扩展对封装格式和编解码器的支持。
 - 外挂字幕文件自动加载并显示在画面上；修改字幕文件后会即时生效；即使字幕文件是在导入之后才添加或改名的，也无需重新导入。视频文件本身永远不会被修改。
 - 所有字幕格式均以统一样式（与 SRT 相同）显示。蓝光 PGS/SUP 和 DVD VobSub 图形字幕通过 Windows 内置 OCR 识别为文本。
-- 配音用的第二个视频窗口：演员在另一块屏幕上全屏观看视频播放器时，为录音师显示 Cubase/Nuendo 视频播放器的实时副本。
+- 配音用的第二个视频窗口：演员在另一块屏幕上观看视频播放器时，为录音师显示 Cubase/Nuendo 视频播放器的实时副本。
 - 直接从带角色的配音台本和对白表生成字幕：PDF、DOCX、TXT、XLSX、CSV。
 - 无需单独的视频播放器、解码器包或 LAV Filters。
 - 不是 VST 插件：不占插件槽位，无需在每个工程中加载任何东西，也不需要 MTC 同步，FrameBridge 直接扩展原生视频引擎。
@@ -39,7 +39,7 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 
 ## 配音用的第二个视频窗口
 
-两块屏幕：演员看全屏的 Cubase/Nuendo 视频播放器，您看 FrameBridge 副本。
+Cubase 和 Nuendo 只在一个视频播放器窗口中显示视频。FrameBridge 为它添加一个实时副本：演员在自己的屏幕上观看视频播放器，您则在工程旁边保留副本——无需 HDMI 分配器，也无需 Blackmagic 输出卡。
 
 ![把视频播放器拖到演员的屏幕上，双击切换全屏，再点击任务栏通知区域中的 FrameBridge 图标：副本会在您的屏幕上打开](../media/dub-window.gif)
 

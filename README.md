@@ -28,7 +28,7 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 - Extended container and codec support through packaged FFmpeg libraries (LGPL).
 - External subtitle sidecars are loaded automatically and shown over the picture; edits to the subtitle file are picked up live — even a file added or renamed after import, no re-import needed. The video file itself is never changed.
 - Every subtitle format is drawn in one clean look (the SRT look). Blu-ray PGS/SUP and DVD VobSub pictures are read as text with the Windows built-in OCR.
-- Second video window for dubbing: a live copy of the Cubase/Nuendo Video Player for the sound engineer, while the actor watches the player in full screen on another screen.
+- Second video window for dubbing: a live copy of the Cubase/Nuendo Video Player for the sound engineer, while the actor watches the player on another screen.
 - Subtitles straight from dubbing scripts and dialogue lists with roles: PDF, DOCX, TXT, XLSX, CSV.
 - No separate video player, codec pack or LAV Filters required.
 - Not a VST plugin: no plug-in slot, nothing to load in each project, no MTC sync — FrameBridge extends the native video engine itself.
@@ -39,7 +39,7 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 
 ## Second video window for dubbing
 
-Two screens: the Cubase/Nuendo Video Player in full screen for the actor, the FrameBridge copy for you.
+Cubase and Nuendo show video in a single Video Player window. FrameBridge adds a live copy of it: the actor watches the Video Player on the actor's screen, and you keep the copy next to your project — no HDMI splitter, no Blackmagic output card.
 
 ![Drag the Video Player to the actor's screen, double-click for full screen, click the FrameBridge tray icon: the copy opens on your screen](media/dub-window.gif)
 

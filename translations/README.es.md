@@ -28,7 +28,7 @@ FrameBridge amplía el motor de video nativo de Cubase y Nuendo en Windows x64. 
 - Compatibilidad ampliada de contenedores y códecs gracias a las bibliotecas FFmpeg incluidas (LGPL).
 - Los archivos de subtítulos externos se cargan automáticamente y se muestran sobre la imagen; los cambios en el archivo de subtítulos se aplican al instante, incluso si el archivo se añade o se renombra después de importar, sin volver a importar. El archivo de video nunca se modifica.
 - Todos los formatos de subtítulos se muestran con un mismo aspecto (el de SRT). Las imágenes PGS/SUP de Blu-ray y VobSub de DVD se leen como texto con el OCR integrado de Windows.
-- Segunda ventana de video para doblaje: una copia en vivo del Reproductor de video de Cubase/Nuendo para el ingeniero de sonido, mientras el actor ve el reproductor a pantalla completa en otra pantalla.
+- Segunda ventana de video para doblaje: una copia en vivo del Reproductor de video de Cubase/Nuendo para el ingeniero de sonido, mientras el actor ve el reproductor en otra pantalla.
 - Subtítulos directamente desde guiones de doblaje y listas de diálogos con roles: PDF, DOCX, TXT, XLSX, CSV.
 - No hace falta un reproductor de video aparte, un paquete de códecs ni LAV Filters.
 - No es un plugin VST: sin ranura de plugin, sin cargar nada en cada proyecto y sin sincronización MTC; FrameBridge amplía el propio motor de video nativo.
@@ -39,7 +39,7 @@ FrameBridge amplía el motor de video nativo de Cubase y Nuendo en Windows x64. 
 
 ## Segunda ventana de video para doblaje
 
-Dos pantallas: el Reproductor de video de Cubase/Nuendo a pantalla completa para el actor, la copia de FrameBridge para usted.
+Cubase y Nuendo muestran el video en una sola ventana del Reproductor de video. FrameBridge añade una copia en vivo: el actor ve el Reproductor de video en su pantalla y usted tiene la copia junto a su proyecto, sin divisor HDMI y sin tarjeta de salida Blackmagic.
 
 ![Arrastre el Reproductor de video a la pantalla del actor, haga doble clic para pantalla completa y pulse el icono de FrameBridge en la bandeja: la copia se abre en su pantalla](../media/dub-window.gif)
 

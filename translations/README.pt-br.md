@@ -28,7 +28,7 @@ O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windo
 - Suporte ampliado a contêineres e codecs por meio das bibliotecas FFmpeg incluídas (LGPL).
 - Arquivos de legenda externos são carregados automaticamente e exibidos sobre a imagem; alterações no arquivo de legenda são aplicadas na hora, até mesmo um arquivo adicionado ou renomeado depois da importação, sem reimportar. O arquivo de vídeo nunca é alterado.
 - Todos os formatos de legenda são exibidos com o mesmo visual (o do SRT). As imagens PGS/SUP de Blu-ray e VobSub de DVD são lidas como texto pelo OCR integrado do Windows.
-- Segunda janela de vídeo para dublagem: uma cópia ao vivo do Player de Vídeo do Cubase/Nuendo para o técnico de som, enquanto o ator vê o player em tela cheia em outra tela.
+- Segunda janela de vídeo para dublagem: uma cópia ao vivo do Player de Vídeo do Cubase/Nuendo para o técnico de som, enquanto o ator vê o player em outra tela.
 - Legendas direto de roteiros de dublagem e listas de diálogos com papéis: PDF, DOCX, TXT, XLSX, CSV.
 - Não é preciso player de vídeo separado, pacote de codecs nem LAV Filters.
 - Não é um plugin VST: sem slot de plugin, nada para carregar em cada projeto, sem sincronização MTC — o FrameBridge amplia o próprio mecanismo de vídeo nativo.
@@ -39,7 +39,7 @@ O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windo
 
 ## Segunda janela de vídeo para dublagem
 
-Duas telas: o Player de Vídeo do Cubase/Nuendo em tela cheia para o ator, a cópia do FrameBridge para você.
+O Cubase e o Nuendo mostram o vídeo em uma única janela do Player de Vídeo. O FrameBridge adiciona uma cópia ao vivo: o ator assiste ao Player de Vídeo na tela dele, e você mantém a cópia ao lado do projeto — sem splitter HDMI, sem placa de saída Blackmagic.
 
 ![Arraste o Player de Vídeo para a tela do ator, clique duas vezes para tela cheia e clique no ícone do FrameBridge na bandeja: a cópia abre na sua tela](../media/dub-window.gif)
 

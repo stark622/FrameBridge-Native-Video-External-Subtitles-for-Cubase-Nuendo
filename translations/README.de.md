@@ -28,7 +28,7 @@ FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Window
 - Erweiterte Container- und Codec-Unterstützung durch mitgelieferte FFmpeg-Bibliotheken (LGPL).
 - Externe Untertiteldateien werden automatisch geladen und über dem Bild angezeigt; Änderungen an der Untertiteldatei werden live übernommen – auch eine Datei, die erst nach dem Import hinzugefügt oder umbenannt wird, ohne erneuten Import. Die Videodatei selbst wird nie verändert.
 - Jedes Untertitelformat wird in einem einheitlichen Look dargestellt (dem SRT-Look). Blu-ray-PGS/SUP- und DVD-VobSub-Bilder werden mit der in Windows integrierten Texterkennung (OCR) als Text gelesen.
-- Zweites Videofenster für die Synchronisation: eine Live-Kopie des Video-Players von Cubase/Nuendo für den Toningenieur, während der Sprecher den Player im Vollbild auf einem anderen Bildschirm sieht.
+- Zweites Videofenster für die Synchronisation: eine Live-Kopie des Video-Players von Cubase/Nuendo für den Toningenieur, während der Sprecher den Player auf einem anderen Bildschirm sieht.
 - Untertitel direkt aus Synchronbüchern und Dialoglisten mit Rollen: PDF, DOCX, TXT, XLSX, CSV.
 - Kein separater Videoplayer, kein Codec-Pack und keine LAV Filters nötig.
 - Kein VST-Plug-in: kein Plug-in-Slot, nichts in jedem Projekt zu laden, keine MTC-Synchronisation – FrameBridge erweitert die native Video-Engine selbst.
@@ -39,7 +39,7 @@ FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Window
 
 ## Zweites Videofenster für die Synchronisation
 
-Zwei Bildschirme: der Video-Player von Cubase/Nuendo im Vollbild für den Sprecher, die FrameBridge-Kopie für Sie.
+Cubase und Nuendo zeigen Video in einem einzigen Video-Player-Fenster. FrameBridge fügt eine Live-Kopie davon hinzu: Der Sprecher sieht den Video-Player auf seinem Bildschirm, und Sie behalten die Kopie neben Ihrem Projekt – ohne HDMI-Splitter, ohne Blackmagic-Ausgabekarte.
 
 ![Video-Player auf den Bildschirm des Sprechers ziehen, Doppelklick für Vollbild, FrameBridge-Symbol im Infobereich anklicken: die Kopie öffnet sich auf Ihrem Bildschirm](../media/dub-window.gif)
 
