@@ -159,7 +159,7 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-disabled { background: var(--glass); color: var(--muted); border-color: var(--hair); cursor: default; }
 
 /* Hero */
-.hero { padding: 88px 0 44px; text-align: center; }
+.hero { padding: 72px 0 36px; text-align: center; }
 .badge {
   display: inline-flex;
   align-items: center;
@@ -329,7 +329,7 @@ img { max-width: 100%; height: auto; display: block; }
 .showcase details.dub-demo > p { color: var(--muted); font-size: 15px; margin: 16px auto 0; }
 
 /* Sections */
-section { padding: 84px 0; }
+section { padding: 64px 0; }
 section.alt {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.018) 18%, rgba(255, 255, 255, 0.018) 82%, transparent);
 }
@@ -345,7 +345,7 @@ h2 {
   background-clip: text;
   color: transparent;
 }
-.section-lead { color: var(--muted); max-width: 720px; margin: 0 0 38px; font-size: 18px; text-wrap: pretty; }
+.section-lead { color: var(--muted); max-width: 720px; margin: 0 0 30px; font-size: 18px; text-wrap: pretty; }
 
 .grid { display: grid; gap: 18px; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -691,8 +691,8 @@ details.lang .globe { flex: none; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .nav { display: none; }
-  section { padding: 56px 0; }
-  .hero { padding: 56px 0 30px; }
+  section { padding: 42px 0; }
+  .hero { padding: 44px 0 24px; }
   .showcase a { border-radius: 18px; }
   .showcase .play-btn { width: 64px; height: 64px; }
   .showcase .play-btn::after { left: 25px; top: 19px; border-width: 13px 0 13px 21px; }
