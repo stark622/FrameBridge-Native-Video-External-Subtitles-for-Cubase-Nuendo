@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ko/", "inLanguage": "ko", "description": "FrameBridge는 Windows용 Cubase와 Nuendo의 네이티브 비디오 엔진을 확장합니다. 최신 비디오 포맷을 내장 비디오 트랙에서 사용하고, 외부 자막을 화면 위에 표시합니다. 트랜스코딩이 필요 없습니다.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117d">
+  <link rel="stylesheet" href="/style.css?v=20261117e">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -95,11 +95,6 @@
 
   <div class="showcase">
     <div class="wrap">
-      <a id="demo" class="player" href="https://youtu.be/qJqN0ybHV8E" target="_blank" rel="noopener" data-yt="qJqN0ybHV8E" aria-label="FrameBridge 데모 영상 재생">
-        <img src="/poster.jpg?v=20261114" alt="Nuendo 기본 비디오 트랙에서 외부 자막을 화면 위에 표시하며 작동하는 FrameBridge" width="1600" height="900">
-        <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">비디오 가이드 보기</span></span>
-      </a>
-      <p class="caption">위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">YouTube 확장판</a>은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식.</p>
       <figure class="ba" style="--pos:50%">
         <div class="ba-legend" aria-hidden="true"><span class="ba-l">FrameBridge 없이</span><span class="ba-r">FrameBridge 사용</span></div>
         <div class="ba-box">
@@ -111,8 +106,19 @@
         </div>
         <figcaption>Cubase에서 연 같은 .mov 파일(DNxHD)입니다. Cubase는 MOV를 받아들이지만, FrameBridge 없이는 이 코덱을 표시하지 못해 플레이어는 검고 썸네일은 비어 있습니다. FrameBridge를 쓰면 영상, 썸네일, 자막이 모두 나옵니다. 경계선을 끌어 보세요.</figcaption>
       </figure>
-      <details class="dub-demo">
-        <summary>ADR와 더빙을 위한 두 개의 비디오 창: 배우에게는 전체 화면, 여러분에게는 사본</summary>
+      <div class="media-tabs">
+        <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-guide"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.3v7.4l6-3.7z" fill="currentColor"/></svg><span>영상 가이드</span></button>
+        <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-adr"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="1.8" y="5" width="9.4" height="7.4" rx="1.3"/><rect x="12.8" y="5" width="9.4" height="7.4" rx="1.3"/><path d="M6.5 12.4v3.4M4.5 15.8h4M17.5 12.4v3.4M15.5 15.8h4"/></svg><span>ADR용 두 번째 창</span></button>
+      </div>
+      <div class="mt-panel" id="mt-guide" hidden>
+        <a id="demo" class="player" href="https://youtu.be/qJqN0ybHV8E" target="_blank" rel="noopener" data-yt="qJqN0ybHV8E" aria-label="FrameBridge 데모 영상 재생">
+        <img src="/poster.jpg?v=20261114" alt="Nuendo 기본 비디오 트랙에서 외부 자막을 화면 위에 표시하며 작동하는 FrameBridge" width="1600" height="900">
+        <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">비디오 가이드 보기</span></span>
+      </a>
+        <p class="caption">위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">YouTube 확장판</a>은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식.</p>
+      </div>
+      <div class="mt-panel dub-demo" id="mt-adr" hidden>
+        <h3>ADR와 더빙을 위한 두 개의 비디오 창: 배우에게는 전체 화면, 여러분에게는 사본</h3>
         <p>Cubase와 Nuendo는 비디오를 하나의 비디오 플레이어 창에만 표시합니다. FrameBridge는 그 실시간 사본을 추가합니다. 배우는 자신의 화면에서 비디오 플레이어를 보고, 여러분은 프로젝트 옆에 사본을 둡니다. HDMI 분배기도, Blackmagic 출력 카드도 필요 없습니다.</p>
         <svg class="dub-anim" viewBox="0 0 760 330" role="img" aria-label="Cubase와 Nuendo는 비디오를 하나의 비디오 플레이어 창에만 표시합니다. FrameBridge는 그 실시간 사본을 추가합니다. 배우는 자신의 화면에서 비디오 플레이어를 보고, 여러분은 프로젝트 옆에 사본을 둡니다. HDMI 분배기도, Blackmagic 출력 카드도 필요 없습니다.">
         <!-- labels -->
@@ -156,8 +162,9 @@
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
-      </details>
+      </div>
     </div>
+  </div>
   </div>
 
   <section id="how">
@@ -438,6 +445,33 @@
     setTimeout(function () { requestAnimationFrame(step); }, 400);
   }, { threshold: 0.6 });
   io.observe(box);
+})();
+(function () {
+  var btns = document.querySelectorAll('.mt-btn');
+  if (!btns.length) return;
+  var demo = document.getElementById('demo'), demoHtml = demo ? demo.innerHTML : '';
+  function close(b) {
+    var p = document.getElementById(b.getAttribute('aria-controls'));
+    b.setAttribute('aria-expanded', 'false'); p.hidden = true;
+    if (demo && p.contains(demo) && demo.querySelector('iframe')) { demo.innerHTML = demoHtml; demo.setAttribute('href', 'https://youtu.be/' + demo.getAttribute('data-yt')); }
+  }
+  Array.prototype.forEach.call(btns, function (b) {
+    b.addEventListener('click', function () {
+      var open = b.getAttribute('aria-expanded') === 'true';
+      Array.prototype.forEach.call(btns, close);
+      if (!open) { b.setAttribute('aria-expanded', 'true'); document.getElementById(b.getAttribute('aria-controls')).hidden = false; }
+    });
+  });
+})();
+(function () {
+  var v = document.querySelector('.clip video');
+  if (!v) return;
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still) { v.controls = true; return; }
+  if (!('IntersectionObserver' in window)) { v.autoplay = true; return; }
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { var r = v.play(); if (r && r.catch) r.catch(function () {}); } else v.pause(); });
+  }, { threshold: 0.4 }).observe(v);
 })();
 (function () {
   var d = document.querySelector('details.lang');

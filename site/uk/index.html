@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/uk/", "inLanguage": "uk", "description": "FrameBridge розширює штатний відеорушій Cubase і Nuendo у Windows: сучасні відеоформати та зовнішні субтитри на відеодоріжці, без перекодування.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117d">
+  <link rel="stylesheet" href="/style.css?v=20261117e">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -95,11 +95,6 @@
 
   <div class="showcase">
     <div class="wrap">
-      <a id="demo" class="player" href="https://youtu.be/qJqN0ybHV8E" target="_blank" rel="noopener" data-yt="qJqN0ybHV8E" aria-label="Відтворити демонстраційне відео FrameBridge">
-        <img src="/poster.jpg?v=20261114" alt="FrameBridge на штатному відеотреку Nuendo із зовнішніми субтитрами поверх зображення" width="1600" height="900">
-        <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">Дивитися відеогайд</span></span>
-      </a>
-      <p class="caption">Вище — короткий відеогайд у Cubase 11 Pro: MKV із парним SRT-файлом субтитрів і HDR-MKV, показаний у SDR. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Розширена версія на YouTube</a> — один дубль без монтажу, наживо імпортуються MKV (HEVC 4K 10 біт, зокрема HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) і субтитри різних форматів.</p>
       <figure class="ba" style="--pos:50%">
         <div class="ba-legend" aria-hidden="true"><span class="ba-l">Без FrameBridge</span><span class="ba-r">З FrameBridge</span></div>
         <div class="ba-box">
@@ -111,8 +106,19 @@
         </div>
         <figcaption>Той самий файл .mov (DNxHD) у Cubase. MOV Cubase приймає, але без FrameBridge цей кодек не показує: чорний плеєр і порожні мініатюри. З FrameBridge — картинка, мініатюри та субтитри. Потягніть шторку.</figcaption>
       </figure>
-      <details class="dub-demo">
-        <summary>Два вікна відео для ADR та озвучення: на весь екран — актору, копія — вам</summary>
+      <div class="media-tabs">
+        <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-guide"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.3v7.4l6-3.7z" fill="currentColor"/></svg><span>Відеогайд</span></button>
+        <button type="button" class="mt-btn" aria-expanded="false" aria-controls="mt-adr"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="1.8" y="5" width="9.4" height="7.4" rx="1.3"/><rect x="12.8" y="5" width="9.4" height="7.4" rx="1.3"/><path d="M6.5 12.4v3.4M4.5 15.8h4M17.5 12.4v3.4M15.5 15.8h4"/></svg><span>Друге вікно для ADR</span></button>
+      </div>
+      <div class="mt-panel" id="mt-guide" hidden>
+        <a id="demo" class="player" href="https://youtu.be/qJqN0ybHV8E" target="_blank" rel="noopener" data-yt="qJqN0ybHV8E" aria-label="Відтворити демонстраційне відео FrameBridge">
+        <img src="/poster.jpg?v=20261114" alt="FrameBridge на штатному відеотреку Nuendo із зовнішніми субтитрами поверх зображення" width="1600" height="900">
+        <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">Дивитися відеогайд</span></span>
+      </a>
+        <p class="caption">Вище — короткий відеогайд у Cubase 11 Pro: MKV із парним SRT-файлом субтитрів і HDR-MKV, показаний у SDR. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Розширена версія на YouTube</a> — один дубль без монтажу, наживо імпортуються MKV (HEVC 4K 10 біт, зокрема HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) і субтитри різних форматів.</p>
+      </div>
+      <div class="mt-panel dub-demo" id="mt-adr" hidden>
+        <h3>Два вікна відео для ADR та озвучення: на весь екран — актору, копія — вам</h3>
         <p>Cubase і Nuendo показують відео в одному вікні відеоплеєра. FrameBridge додає його живу копію: актор дивиться відеоплеєр на своєму моніторі, а копія лишається у вас поруч із проєктом — без HDMI-спліттера й без окремої карти відеовиводу Blackmagic.</p>
         <svg class="dub-anim" viewBox="0 0 760 330" role="img" aria-label="Cubase і Nuendo показують відео в одному вікні відеоплеєра. FrameBridge додає його живу копію: актор дивиться відеоплеєр на своєму моніторі, а копія лишається у вас поруч із проєктом — без HDMI-спліттера й без окремої карти відеовиводу Blackmagic.">
         <!-- labels -->
@@ -156,8 +162,9 @@
         <!-- cursor (tip at 0,0) -->
         <g class="cursor"><path d="M0 0 l0 16 l4.5 -4 l3 7 l3 -1.4 l-3 -6.8 l6 0 z" fill="#fff" stroke="#000" stroke-width="1"/></g>
         </svg>
-      </details>
+      </div>
     </div>
+  </div>
   </div>
 
   <section id="how">
@@ -438,6 +445,33 @@
     setTimeout(function () { requestAnimationFrame(step); }, 400);
   }, { threshold: 0.6 });
   io.observe(box);
+})();
+(function () {
+  var btns = document.querySelectorAll('.mt-btn');
+  if (!btns.length) return;
+  var demo = document.getElementById('demo'), demoHtml = demo ? demo.innerHTML : '';
+  function close(b) {
+    var p = document.getElementById(b.getAttribute('aria-controls'));
+    b.setAttribute('aria-expanded', 'false'); p.hidden = true;
+    if (demo && p.contains(demo) && demo.querySelector('iframe')) { demo.innerHTML = demoHtml; demo.setAttribute('href', 'https://youtu.be/' + demo.getAttribute('data-yt')); }
+  }
+  Array.prototype.forEach.call(btns, function (b) {
+    b.addEventListener('click', function () {
+      var open = b.getAttribute('aria-expanded') === 'true';
+      Array.prototype.forEach.call(btns, close);
+      if (!open) { b.setAttribute('aria-expanded', 'true'); document.getElementById(b.getAttribute('aria-controls')).hidden = false; }
+    });
+  });
+})();
+(function () {
+  var v = document.querySelector('.clip video');
+  if (!v) return;
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still) { v.controls = true; return; }
+  if (!('IntersectionObserver' in window)) { v.autoplay = true; return; }
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { var r = v.play(); if (r && r.catch) r.catch(function () {}); } else v.pause(); });
+  }, { threshold: 0.4 }).observe(v);
 })();
 (function () {
   var d = document.querySelector('details.lang');

@@ -295,7 +295,7 @@ img { max-width: 100%; height: auto; display: block; }
 .showcase .caption { text-align: center; color: var(--muted); font-size: 14px; margin: 16px auto 0; max-width: 860px; text-wrap: pretty; }
 
 /* Under the demo video: the dubbing set-up animation (second video window), folded; was in the FAQ */
-.showcase details.dub-demo { max-width: 860px; margin: 18px auto 0; text-align: center; }
+.showcase .dub-demo { max-width: 860px; margin: 18px auto 0; text-align: center; }
 .showcase details.dub-demo summary {
   cursor: pointer;
   list-style: none;
@@ -326,7 +326,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .showcase details.dub-demo summary:hover { border-color: var(--accent); background: rgba(58, 168, 255, 0.16); }
 .showcase details.dub-demo[open] summary::after { transform: rotate(225deg); margin-top: 3px; }
-.showcase details.dub-demo > p { color: var(--muted); font-size: 15px; margin: 16px auto 0; }
+.showcase .dub-demo > p { color: var(--muted); font-size: 15px; margin: 10px auto 0; }
 
 /* Sections */
 section { padding: 64px 0; }
@@ -866,3 +866,31 @@ details.lang .globe { flex: none; }
   .ba-handle::after { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 17px; }
   .ba figcaption { font-size: 14px; }
 }
+
+/* Under the before/after slider: one long two-part button - video guide | second window for ADR */
+.showcase .ba { margin-top: 0; }
+.media-tabs { display: flex; max-width: 620px; margin: 22px auto 0; border: 1px solid rgba(58, 168, 255, 0.55); border-radius: 999px;
+  overflow: hidden; background: rgba(58, 168, 255, 0.06); box-shadow: 0 0 22px -8px rgba(58, 168, 255, 0.6); }
+.mt-btn { flex: 1 1 50%; display: flex; align-items: center; justify-content: center; gap: 9px; min-width: 0; padding: 11px 16px;
+  font: inherit; font-size: 15px; font-weight: 600; line-height: 1.25; color: var(--text); background: none; border: 0; cursor: pointer;
+  transition: background 0.2s, color 0.2s; }
+.mt-btn + .mt-btn { border-left: 1px solid rgba(58, 168, 255, 0.35); }
+.mt-btn svg { flex: none; color: var(--accent); }
+.mt-btn::after { content: ""; flex: none; width: 7px; height: 7px; margin: -4px 0 0 2px; border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent); transform: rotate(45deg); transition: transform 0.3s var(--ease); }
+.mt-btn:hover { background: rgba(58, 168, 255, 0.14); }
+.mt-btn[aria-expanded="true"] { background: rgba(58, 168, 255, 0.24); color: #fff; }
+.mt-btn[aria-expanded="true"]::after { transform: rotate(225deg); margin-top: 3px; }
+.mt-panel { margin: 18px auto 0; }
+.mt-panel[hidden] { display: none; }
+#mt-guide { max-width: 960px; }
+.showcase .dub-demo h3 { margin: 0; font-size: 17px; }
+@media (max-width: 700px) {
+  .media-tabs { margin-top: 18px; }
+  .mt-btn { padding: 10px 10px; gap: 7px; font-size: 14px; }
+}
+
+/* "What you get": short silent loop instead of reading */
+.clip { max-width: 680px; margin: 0 auto 30px; }
+.clip video { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--hair-2); box-shadow: var(--shadow-3); background: #05070d; }
+.clip figcaption { margin-top: 12px; text-align: center; color: var(--muted); font-size: 15px; line-height: 1.5; }
