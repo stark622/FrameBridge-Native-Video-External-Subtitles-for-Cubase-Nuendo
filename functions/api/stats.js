@@ -6,7 +6,7 @@ const OWNER_COUNTRIES = ['UA'];
 // single visits by the owner's friends (start time of the visit), left out like the owner's own
 const FRIEND_VISITS = ['2026-11-14T08:41:11.360Z', '2026-11-14T08:53:55.705Z', '2026-11-14T18:45:23.236Z', '2026-11-14T20:01:06.090Z'].map(Date.parse);
 const FRIEND_COUNTRY = 'CA'; // the same visits in the Cloudflare list: this country, from 10 min before to 2 h after
-const SECTIONS = ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'];
+const SECTIONS = ['how', 'features', 'formats', 'check', 'compatibility', 'pricing', 'faq'];
 
 // Every visitor Cloudflare saw (it keeps request details for 31 days), including those before this counter existed.
 // A person = a browser that loaded the site's stylesheet; bots, data-centre crawlers, faked Chrome strings and
@@ -178,13 +178,15 @@ export async function onRequestGet({ request, env }) {
     if (engaged.includes(s)) perDay[d][1]++;
     if (s.buy) perDay[d][2]++;
   }
-  const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {};
+  const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {};
   for (const r of results) {
     if (!keep.has(r.sid)) continue;
     if (r.ev === 'faq') inc(faq, FAQ[+r.val - 1] || r.val);
     else if (r.ev === 'lang') inc(langSw, r.val);
     else if (r.ev === 'out') inc(out, r.val);
     else if (r.ev === 'buy') inc(buyFrom, r.val);
+    else if (r.ev === 'check') inc(checks, r.val);
+    else if (r.ev === 'clip' || r.ev === 'zoom') inc(clips, r.ev + ': ' + r.val);
     if (r.ev !== 'see' && r.ev !== 'leave' && r.ev !== 'pv') inc(ev, r.ev);
   }
   for (const s of human) for (const id of s.sees) inc(seen, id);
@@ -281,6 +283,8 @@ ${table('Sections seen', SECTIONS.map((id) => [id, seen[id] || 0, pct(seen[id] |
 ${table('Clicks', sorted(ev), ['Action', 'Count'])}
 ${table('Buy clicked from', sorted(buyFrom), ['Button', 'Count'])}
 </div><div class="grid">
+${table('File checks (kind:result, no file names)', sorted(checks), ['Check', 'Count'])}
+${table('Demo clips (tab / enlarge)', sorted(clips), ['Clip', 'Count'])}
 ${table('FAQ opened', sorted(faq), ['Question', 'Count'])}
 ${table('Language switched to', sorted(langSw), ['Language', 'Count'])}
 ${table('Outbound links', sorted(out), ['Site', 'Count'])}

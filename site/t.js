@@ -30,6 +30,7 @@
     queue.push([name, val == null ? '' : String(val).slice(0, 120)]);
     if (!timer) timer = setTimeout(function () { timer = null; send(false); }, 1500);
   }
+  window.fbTrack = ev; // the file check reports the kind of file and the result (never its name or contents)
 
   var ref = '';
   try { if (document.referrer) { var r = new URL(document.referrer); if (r.host !== location.host) ref = r.host; } } catch (e) {}
@@ -37,11 +38,23 @@
 
   // clicks
   document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a, summary') : null;
+    var a = e.target.closest ? e.target.closest('a, summary, button') : null;
     if (!a) return;
+    if (a.tagName === 'BUTTON') {
+      var clip = function (fig) { var v = fig && fig.querySelector('video'); return v ? (v.getAttribute('src') || '').replace(/^.*\/|\.mp4.*$/g, '') : ''; };
+      if (a.classList.contains('mt-btn')) { if (a.getAttribute('aria-expanded') !== 'true') ev('guide'); }
+      else if (a.classList.contains('dt')) {
+        var tabs = Array.prototype.slice.call(document.querySelectorAll('.dt')), figs = document.querySelectorAll('.demo');
+        ev('clip', clip(figs[tabs.indexOf(a)]));
+      }
+      else if (a.classList.contains('demo-zoom')) ev('zoom', clip(a.parentNode));
+      else if (a.classList.contains('fmt-toggle')) { if (a.getAttribute('aria-expanded') !== 'true') ev('formats_all'); }
+      return;
+    }
     if (a.tagName === 'SUMMARY') {
       var d = a.parentNode;
       if (d.classList.contains('lang')) { if (!d.open) ev('lang_menu'); return; }
+      if (d.classList.contains('likely')) { if (!d.open) ev('likely'); return; }
       if (!d.open) {
         var all = document.querySelectorAll('#faq details');
         for (var i = 0; i < all.length; i++) if (all[i] === d) ev('faq', i + 1);
@@ -50,12 +63,19 @@
     }
     var h = a.getAttribute('href') || '';
     if (a.id === 'demo') ev('play');
+    else if (h === '#check') ev('to_check', a.classList.contains('hero-check') ? 'hero' : (a.closest('.tabbar') ? 'tabbar' : 'menu'));
     else if (h.indexOf('creem.io') >= 0) ev('buy', a.id === 'buy' ? 'pricing' : (a.closest('.site-header') ? 'header' : 'hero'));
     else if (a.hasAttribute('data-lang')) ev('lang', a.getAttribute('data-lang'));
     else if (h.indexOf('NjNHtkc8-OE') >= 0) ev('ext_video');
     else if (/^https?:/.test(h)) { try { ev('out', new URL(h).host); } catch (x) {} }
     else if (h.charAt(0) === '/' && h.indexOf('#') < 0) ev('nav', h);
   }, true);
+
+  // the before/after slider was moved (once per page)
+  var slid = false;
+  function slider(e) { if (!slid && e.target.closest && e.target.closest('.ba-box')) { slid = true; ev('slider'); } }
+  document.addEventListener('pointerdown', slider, true);
+  document.addEventListener('keydown', slider, true);
 
   // which sections were actually seen
   if ('IntersectionObserver' in window) {
@@ -65,7 +85,7 @@
         if (x.isIntersecting && !seen[x.target.id]) { seen[x.target.id] = 1; ev('see', x.target.id); io.unobserve(x.target); }
       });
     }, { threshold: 0.35 });
-    ['how', 'features', 'formats', 'compatibility', 'pricing', 'faq'].forEach(function (id) {
+    ['how', 'features', 'formats', 'check', 'compatibility', 'pricing', 'faq'].forEach(function (id) {
       var el = document.getElementById(id); if (el) io.observe(el);
     });
   }

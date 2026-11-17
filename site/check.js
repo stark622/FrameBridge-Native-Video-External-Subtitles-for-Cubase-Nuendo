@@ -584,6 +584,7 @@
   }
 
   var out = root.querySelector('.check-out'), pcSel = root.querySelector('.check-pc'), lastVideo = null;
+  function track(v) { try { if (window.fbTrack) window.fbTrack('check', v); } catch (e) {} } // kind of file + result only
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function show(html) { out.innerHTML = html; out.hidden = false; }
 
@@ -626,6 +627,7 @@
       var tracks = (res && res.media && res.media.track) || [];
       var v = tracks.filter(function (t) { return t['@type'] === 'Video'; })[0];
       if (!v) {
+        track('video:' + ext + ':notrack');
         show(/^(wtv|dvr-ms)$/.test(ext) ? '<div class="ck-row ck-good"><span class="ck-k">' + L.fb + '</span><span>' + L.noTrackOk + '</span></div>'
                                        : '<p class="ck-bad">' + L.noVideo + '</p>');
         return;
@@ -633,7 +635,9 @@
       lastVideo = { ext: ext, c: codec(v), w: v.Width, h: v.Height, bit: v.BitDepth, chroma: v.ChromaSubsampling,
                     fps: +(v.FrameRate_Original || v.FrameRate_Nominal || (v.FrameRate_Mode === 'VFR' ? 0 : v.FrameRate)) || 0, vfr: v.FrameRate_Mode === 'VFR', hdr: !!v.HDR_Format };
       renderVideo();
-    }).catch(function () { show('<p class="ck-bad">' + L.readFail + '</p>'); });
+      var st = EXT.indexOf(ext) < 0 ? 'extension' : lastVideo.c.status, sm = st === 'verified' || st === 'likely' ? smoothness(lastVideo, profile(pcSel.value)).lv : '';
+      track('video:' + ext + ':' + st + (sm ? ':' + sm : ''));
+    }).catch(function () { track('video:fail'); show('<p class="ck-bad">' + L.readFail + '</p>'); });
   }
 
   // ---------------- Cubase / Nuendo ----------------
@@ -678,6 +682,7 @@
         var prod = /nuendo/i.test(name) ? 'nuendo' : /cubase/i.test(name) ? 'cubase' : '';
         if (!prod || !/^\d+\.\d+/.test(ver)) { show('<p class="ck-bad">' + L.notExe + '</p>'); return; }
         var v = verVerdict(prod, ver.trim());
+        track('exe:' + prod + ' ' + ver.trim().split('.').slice(0, 2).join('.') + ':' + v);
         show('<div class="ck-row"><span class="ck-k">' + L.found + '</span><span>' + esc(name.replace(/ for Windows$/i, '') + ' ' + ver) + '</span></div>' +
              '<div class="ck-row ck-' + (v === 'verified' || v === 'near' ? 'good' : v === 'old' ? 'bad' : 'warn') + '"><span class="ck-k">' + L.fb + '</span><span>' + L.ver[v] + '</span></div>');
       });
@@ -699,6 +704,7 @@
       var m = re.exec(u) || re.exec(a);
       if (!m) { show('<p class="ck-bad">' + L.notExe + '</p>'); return; }
       var path = m[0], prod = /nuendo/i.test(m[1]) ? 'nuendo' : 'cubase';
+      track('lnk:' + prod);
       var mv = /(?:cubase|nuendo)[^0-9\\]*?(\d+(?:\.\d+)?)/i.exec(m[1]) || /(?:cubase|nuendo)[^0-9\\]*?(\d+(?:\.\d+)?)/i.exec(path);
       var cut = path.lastIndexOf('\\'), rows = '<p class="ck-note">' + esc(L.lnk(path.slice(0, cut), path.slice(cut + 1))) + '</p>';
       if (mv) {
@@ -760,6 +766,7 @@
       if (best.ok && cues.length) rows.push('<div class="ck-row"><span class="ck-k">' + L.found + '</span><span>' + esc(L.subFound(kind, best.count, tc(cues[0].s), tc(cues[cues.length - 1].e))) + '</span></div>');
       else rows.push('<div class="ck-row"><span class="ck-k">' + L.found + '</span><span>' + esc(main.name) + '</span></div>');
       var curOk = cur && cur.ok, pdfStep = !curOk && ext === 'pdf' && cur && /text filter/.test(cur.diag);
+      track('subs:' + ext + ':' + (curOk ? 'current' : pdfStep ? 'pdf-filter' : next && next.ok ? 'next-only' : 'no'));
       var noType = cur && /unsupported( document)? extension/.test(cur.diag);
       var curTxt = curOk ? (cur.bitmap ? L.subBmp(cur.count) : L.subOk(cur.count)) : pdfStep ? L.subPdf : noType && next && next.ok ? L.subNoType(ext.toUpperCase())
                  : next && next.ok ? L.subNo : L.subNoBoth;
