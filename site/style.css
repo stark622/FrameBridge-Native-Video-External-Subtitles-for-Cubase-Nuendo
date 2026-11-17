@@ -832,3 +832,6 @@ details.lang .globe { flex: none; }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .tabbar { background: rgba(5, 7, 13, 0.96); }
 }
+
+/* "Check my file" in the hero: the check needs a dropped file, so touch devices do not get the button */
+@media (hover: none) and (pointer: coarse) { .hero .actions .hero-check { display: none; } }
