@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/pt-br/", "inLanguage": "pt-BR", "description": "O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windows: formatos de vídeo modernos e legendas externas, sem transcodificar.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117b">
+  <link rel="stylesheet" href="/style.css?v=20261117c">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -100,6 +100,17 @@
         <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">Assista ao guia em vídeo</span></span>
       </a>
       <p class="caption">Acima, um guia em vídeo curto no Cubase 11 Pro: um MKV com seu arquivo de legenda SRT e um MKV HDR exibido em SDR. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Versão estendida no YouTube</a>: uma única tomada sem cortes, importada ao vivo — MKV (HEVC 4K 10 bits, inclusive HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) e vários formatos de legenda.</p>
+      <figure class="ba" style="--pos:50%">
+        <div class="ba-legend" aria-hidden="true"><span class="ba-l">Sem FrameBridge</span><span class="ba-r">Com FrameBridge</span></div>
+        <div class="ba-box">
+          <picture><source media="(max-width: 700px)" srcset="/img/ba/after-m.webp" width="900" height="580"><img src="/img/ba/after.webp" alt="Com FrameBridge" width="1400" height="781" loading="lazy" decoding="async"></picture>
+          <div class="ba-before"><picture><source media="(max-width: 700px)" srcset="/img/ba/before-m.webp" width="900" height="580"><img src="/img/ba/before.webp" alt="Sem FrameBridge" width="1400" height="781" loading="lazy" decoding="async"></picture></div>
+          <span class="ba-tag ba-tag-l" aria-hidden="true">Sem FrameBridge</span><span class="ba-tag ba-tag-r" aria-hidden="true">Com FrameBridge</span>
+          <span class="ba-handle" aria-hidden="true"></span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparação: sem e com FrameBridge">
+        </div>
+        <figcaption>O mesmo arquivo .mov (DNxHD) no Cubase. O Cubase aceita MOV, mas sem o FrameBridge não mostra este codec: player preto e miniaturas vazias. Com o FrameBridge: imagem, miniaturas e legendas. Arraste a cortina.</figcaption>
+      </figure>
       <details class="dub-demo">
         <summary>Duas janelas de vídeo para ADR e dublagem: tela cheia para o ator, uma cópia para você</summary>
         <p>O Cubase e o Nuendo mostram o vídeo em uma única janela do Player de Vídeo. O FrameBridge adiciona uma cópia ao vivo: o ator assiste ao Player de Vídeo na tela dele, e você mantém a cópia ao lado do projeto — sem splitter HDMI, sem placa de saída Blackmagic.</p>
@@ -400,6 +411,33 @@
     for (var k in links) links[k].classList.toggle('on', k === cur);
   }, { rootMargin: '-45% 0px -50% 0px' });
   for (var id in links) { var el = document.getElementById(id); if (el) io.observe(el); }
+})();
+(function () {
+  var f = document.querySelector('figure.ba');
+  if (!f) return;
+  var box = f.querySelector('.ba-box'), r = f.querySelector('.ba-range'), drag = false;
+  function set(v) { v = Math.max(0, Math.min(100, v)); f.style.setProperty('--pos', v + '%'); r.value = Math.round(v); }
+  function at(e) { var b = box.getBoundingClientRect(); set((e.clientX - b.left) / b.width * 100); }
+  box.addEventListener('pointerdown', function (e) { drag = true; try { box.setPointerCapture(e.pointerId); } catch (x) {} at(e); });
+  box.addEventListener('pointermove', function (e) { if (drag) at(e); });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function (t) { box.addEventListener(t, function () { drag = false; }); });
+  r.addEventListener('input', function () { set(+r.value); });
+  // one gentle swing the first time it scrolls into view, so it reads as something to drag
+  if (!('IntersectionObserver' in window) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var io = new IntersectionObserver(function (es) {
+    if (!es[0].isIntersecting) return;
+    io.disconnect();
+    var t0 = null;
+    function step(t) {
+      if (drag) return;
+      t0 = t0 || t; var k = (t - t0) / 1400;
+      if (k >= 1) { set(50); return; }
+      set(50 - 22 * Math.sin(k * Math.PI));
+      requestAnimationFrame(step);
+    }
+    setTimeout(function () { requestAnimationFrame(step); }, 400);
+  }, { threshold: 0.6 });
+  io.observe(box);
 })();
 (function () {
   var d = document.querySelector('details.lang');

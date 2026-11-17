@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ru/", "inLanguage": "ru", "description": "FrameBridge расширяет штатный видеодвижок Cubase и Nuendo в Windows: современные видеоформаты и внешние субтитры на видеотреке, без перекодирования.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117b">
+  <link rel="stylesheet" href="/style.css?v=20261117c">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -100,6 +100,17 @@
         <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">Смотреть видеогайд</span></span>
       </a>
       <p class="caption">Выше — короткий видеогайд в Cubase 11 Pro: MKV с парным SRT-файлом субтитров и HDR-MKV, показанный в SDR. <a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">Расширенная версия на YouTube</a> — один дубль без монтажа, вживую импортируются MKV (HEVC 4K 10 бит, в том числе HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) и субтитры разных форматов.</p>
+      <figure class="ba" style="--pos:50%">
+        <div class="ba-legend" aria-hidden="true"><span class="ba-l">Без FrameBridge</span><span class="ba-r">С FrameBridge</span></div>
+        <div class="ba-box">
+          <picture><source media="(max-width: 700px)" srcset="/img/ba/after-m.webp" width="900" height="580"><img src="/img/ba/after.webp" alt="С FrameBridge" width="1400" height="781" loading="lazy" decoding="async"></picture>
+          <div class="ba-before"><picture><source media="(max-width: 700px)" srcset="/img/ba/before-m.webp" width="900" height="580"><img src="/img/ba/before.webp" alt="Без FrameBridge" width="1400" height="781" loading="lazy" decoding="async"></picture></div>
+          <span class="ba-tag ba-tag-l" aria-hidden="true">Без FrameBridge</span><span class="ba-tag ba-tag-r" aria-hidden="true">С FrameBridge</span>
+          <span class="ba-handle" aria-hidden="true"></span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Сравнение: без FrameBridge и с FrameBridge">
+        </div>
+        <figcaption>Один и тот же файл .mov (DNxHD) в Cubase. MOV Cubase принимает, но без FrameBridge этот кодек не показывает: чёрный плеер и пустые миниатюры. С FrameBridge — картинка, миниатюры и субтитры. Потяните шторку.</figcaption>
+      </figure>
       <details class="dub-demo">
         <summary>Два окна видео для ADR и озвучания: на весь экран — актёру, копия — вам</summary>
         <p>Cubase и Nuendo показывают видео в одном окне Видеоплеера. FrameBridge добавляет его живую копию: актёр смотрит Видеоплеер на своём мониторе, а копия остаётся у вас рядом с проектом — без HDMI-сплиттера и без отдельной карты видеовывода Blackmagic.</p>
@@ -400,6 +411,33 @@
     for (var k in links) links[k].classList.toggle('on', k === cur);
   }, { rootMargin: '-45% 0px -50% 0px' });
   for (var id in links) { var el = document.getElementById(id); if (el) io.observe(el); }
+})();
+(function () {
+  var f = document.querySelector('figure.ba');
+  if (!f) return;
+  var box = f.querySelector('.ba-box'), r = f.querySelector('.ba-range'), drag = false;
+  function set(v) { v = Math.max(0, Math.min(100, v)); f.style.setProperty('--pos', v + '%'); r.value = Math.round(v); }
+  function at(e) { var b = box.getBoundingClientRect(); set((e.clientX - b.left) / b.width * 100); }
+  box.addEventListener('pointerdown', function (e) { drag = true; try { box.setPointerCapture(e.pointerId); } catch (x) {} at(e); });
+  box.addEventListener('pointermove', function (e) { if (drag) at(e); });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function (t) { box.addEventListener(t, function () { drag = false; }); });
+  r.addEventListener('input', function () { set(+r.value); });
+  // one gentle swing the first time it scrolls into view, so it reads as something to drag
+  if (!('IntersectionObserver' in window) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var io = new IntersectionObserver(function (es) {
+    if (!es[0].isIntersecting) return;
+    io.disconnect();
+    var t0 = null;
+    function step(t) {
+      if (drag) return;
+      t0 = t0 || t; var k = (t - t0) / 1400;
+      if (k >= 1) { set(50); return; }
+      set(50 - 22 * Math.sin(k * Math.PI));
+      requestAnimationFrame(step);
+    }
+    setTimeout(function () { requestAnimationFrame(step); }, 400);
+  }, { threshold: 0.6 });
+  io.observe(box);
 })();
 (function () {
   var d = document.querySelector('details.lang');

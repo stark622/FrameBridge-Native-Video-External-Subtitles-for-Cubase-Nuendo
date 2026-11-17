@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ja/", "inLanguage": "ja", "description": "FrameBridge は Windows 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットを内蔵のビデオトラックで扱い、外部字幕を映像の上に表示。トランスコードは不要です。", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117b">
+  <link rel="stylesheet" href="/style.css?v=20261117c">
   <script src="/t.js?v=2" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=1" defer></script>
@@ -100,6 +100,17 @@
         <span class="play"><span class="play-btn" aria-hidden="true"></span><span class="play-label">ビデオガイドを見る</span></span>
       </a>
       <p class="caption">上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。<a href="https://youtu.be/NjNHtkc8-OE" target="_blank" rel="noopener">YouTube の拡張版</a>は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。</p>
+      <figure class="ba" style="--pos:50%">
+        <div class="ba-legend" aria-hidden="true"><span class="ba-l">FrameBridge なし</span><span class="ba-r">FrameBridge あり</span></div>
+        <div class="ba-box">
+          <picture><source media="(max-width: 700px)" srcset="/img/ba/after-m.webp" width="900" height="580"><img src="/img/ba/after.webp" alt="FrameBridge あり" width="1400" height="781" loading="lazy" decoding="async"></picture>
+          <div class="ba-before"><picture><source media="(max-width: 700px)" srcset="/img/ba/before-m.webp" width="900" height="580"><img src="/img/ba/before.webp" alt="FrameBridge なし" width="1400" height="781" loading="lazy" decoding="async"></picture></div>
+          <span class="ba-tag ba-tag-l" aria-hidden="true">FrameBridge なし</span><span class="ba-tag ba-tag-r" aria-hidden="true">FrameBridge あり</span>
+          <span class="ba-handle" aria-hidden="true"></span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="比較: FrameBridge なし / あり">
+        </div>
+        <figcaption>Cubase で同じ .mov ファイル（DNxHD）を開いた状態です。Cubase は MOV を受け付けますが、FrameBridge なしではこのコーデックを表示できず、プレーヤーは黒、サムネイルは空のままです。FrameBridge ありでは映像、サムネイル、字幕が表示されます。境界線をドラッグしてください。</figcaption>
+      </figure>
       <details class="dub-demo">
         <summary>ADR と吹き替えのための 2 つのビデオウィンドウ：役者には全画面、あなたにはコピー</summary>
         <p>Cubase と Nuendo では、ビデオは 1 つのビデオプレーヤーウィンドウにしか表示されません。FrameBridge はそのライブコピーを追加します。役者は自分の画面でビデオプレーヤーを見て、あなたはプロジェクトの横にコピーを置いておけます。HDMI スプリッターも、Blackmagic の出力カードも不要です。</p>
@@ -400,6 +411,33 @@
     for (var k in links) links[k].classList.toggle('on', k === cur);
   }, { rootMargin: '-45% 0px -50% 0px' });
   for (var id in links) { var el = document.getElementById(id); if (el) io.observe(el); }
+})();
+(function () {
+  var f = document.querySelector('figure.ba');
+  if (!f) return;
+  var box = f.querySelector('.ba-box'), r = f.querySelector('.ba-range'), drag = false;
+  function set(v) { v = Math.max(0, Math.min(100, v)); f.style.setProperty('--pos', v + '%'); r.value = Math.round(v); }
+  function at(e) { var b = box.getBoundingClientRect(); set((e.clientX - b.left) / b.width * 100); }
+  box.addEventListener('pointerdown', function (e) { drag = true; try { box.setPointerCapture(e.pointerId); } catch (x) {} at(e); });
+  box.addEventListener('pointermove', function (e) { if (drag) at(e); });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function (t) { box.addEventListener(t, function () { drag = false; }); });
+  r.addEventListener('input', function () { set(+r.value); });
+  // one gentle swing the first time it scrolls into view, so it reads as something to drag
+  if (!('IntersectionObserver' in window) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var io = new IntersectionObserver(function (es) {
+    if (!es[0].isIntersecting) return;
+    io.disconnect();
+    var t0 = null;
+    function step(t) {
+      if (drag) return;
+      t0 = t0 || t; var k = (t - t0) / 1400;
+      if (k >= 1) { set(50); return; }
+      set(50 - 22 * Math.sin(k * Math.PI));
+      requestAnimationFrame(step);
+    }
+    setTimeout(function () { requestAnimationFrame(step); }, 400);
+  }, { threshold: 0.6 });
+  io.observe(box);
 })();
 (function () {
   var d = document.querySelector('details.lang');
