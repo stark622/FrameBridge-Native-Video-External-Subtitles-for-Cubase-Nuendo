@@ -239,7 +239,7 @@ h1{margin:0 0 4px}h2{margin:28px 0 8px;font-size:18px}.muted{color:#9fb0c8}
 .tiles{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}.tile{background:#101a2e;border:1px solid #1d2a44;border-radius:12px;padding:12px 16px;min-width:150px}
 .tile b{display:block;font-size:26px}table{border-collapse:collapse;background:#101a2e;border:1px solid #1d2a44;border-radius:10px;min-width:320px}
 th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-align:top}th{color:#9fb0c8;font-weight:600}
-.grid{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}.layout{display:flex;flex-direction:column;gap:8px}@media(min-width:1500px){.layout{display:grid;grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:start}.col-summary{grid-column:1;grid-row:1}.col-visits{grid-column:2;grid-row:1}}.col-visits{min-width:0;overflow-x:auto}td:first-child,td:nth-child(2){white-space:nowrap}.box{min-width:0}.trail{color:#9fb0c8;font-size:13px}a{color:#2ea8ff}</style></head><body>
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:4px 24px;align-items:start}.cards table{width:100%;min-width:0}.wide{overflow-x:auto}.wide table{width:100%}td:first-child,td:nth-child(2){white-space:nowrap}.box{min-width:0}.trail{color:#9fb0c8;font-size:13px}a{color:#2ea8ff}</style></head><body>
 <h1>FrameBridge — visit statistics</h1>
 <div class="muted">${allTime ? 'All time' : `Last ${days} day(s)`} · counted only from real browsers that ran the page script ·
 <a href="?key=${esc(url.searchParams.get('key'))}&days=1">1 day</a> · <a href="?key=${esc(url.searchParams.get('key'))}&days=7">7 days</a> ·
@@ -252,8 +252,24 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 <div class="tile"><b>${avgTime} s</b>avg active time (engaged)</div>
 <div class="tile"><b>${summary.sessions_flagged_bot}</b>flagged as bots<br><span class="muted">excluded</span></div>
 </div>
-<div class="layout">
-<div class="col-visits">
+<div class="cards">
+${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
+${table('Sections seen', SECTIONS.map((id) => [id, seen[id] || 0, pct(seen[id] || 0)]), ['Section', 'Visits', 'Share'])}
+${table('Clicks', sorted(ev), ['Action', 'Count'])}
+${table('File checks (kind:result, no file names)', sorted(checks), ['Check', 'Count'])}
+${table('Demo clips (tab / enlarge)', sorted(clips), ['Clip', 'Count'])}
+${table('Buy clicked from', sorted(buyFrom), ['Button', 'Count'])}
+${table('FAQ opened', sorted(faq), ['Question', 'Count'])}
+${table('Country', by('country'), ['Country', 'Visits', 'Engaged'])}
+${table('Site language', by('lang'), ['Language', 'Visits', 'Engaged'])}
+${table('Came from', by('ref'), ['Referrer', 'Visits', 'Engaged'])}
+${table('Operating system', by('os'), ['OS', 'Visits', 'Engaged'])}
+${table('Browser', by('br'), ['Browser', 'Visits', 'Engaged'])}
+${table('Device', by('dev'), ['Device', 'Visits', 'Engaged'])}
+${table('Language switched to', sorted(langSw), ['Language', 'Count'])}
+${table('Outbound links', sorted(out), ['Site', 'Count'])}
+</div>
+<div class="wide">
 ${table('Recent visits (newest first, Kyiv time)', human.slice(-100).reverse().map((s) => [
     kyiv(s.t0).slice(5), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
     `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : ''),
@@ -267,29 +283,6 @@ ${!env.CF_API_TOKEN
             v.country, v.net, v.sys, v.time, v.pages.length ? v.pages.join(' → ') : '—', v.counter ? 'yes' : '']),
           ['Start', 'Type', 'Country', 'Network', 'System', 'On site', 'Pages', 'In this counter']) +
         `<div class="muted" style="margin-top:6px">${cf.visits.filter((v) => v.k === 'human').length} people · ${cf.visits.filter((v) => v.k === 'vpn').length} via VPN/servers (person or bot, unclear) · left out: ${cf.bots} bot loads (${cf.farm} from farms: 4+ countries in one minute) · "unknown" time = one page, reading time not recorded before 4 Nov · Buy clicks and video plays are only in this counter</div>`}
-</div>
-<div class="col-summary">
-${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
-<div class="grid">
-${table('Operating system', by('os'), ['OS', 'Visits', 'Engaged'])}
-${table('Browser', by('br'), ['Browser', 'Visits', 'Engaged'])}
-${table('Device', by('dev'), ['Device', 'Visits', 'Engaged'])}
-</div><div class="grid">
-${table('Country', by('country'), ['Country', 'Visits', 'Engaged'])}
-${table('Site language', by('lang'), ['Language', 'Visits', 'Engaged'])}
-${table('Came from', by('ref'), ['Referrer', 'Visits', 'Engaged'])}
-</div><div class="grid">
-${table('Sections seen', SECTIONS.map((id) => [id, seen[id] || 0, pct(seen[id] || 0)]), ['Section', 'Visits', 'Share'])}
-${table('Clicks', sorted(ev), ['Action', 'Count'])}
-${table('Buy clicked from', sorted(buyFrom), ['Button', 'Count'])}
-</div><div class="grid">
-${table('File checks (kind:result, no file names)', sorted(checks), ['Check', 'Count'])}
-${table('Demo clips (tab / enlarge)', sorted(clips), ['Clip', 'Count'])}
-${table('FAQ opened', sorted(faq), ['Question', 'Count'])}
-${table('Language switched to', sorted(langSw), ['Language', 'Count'])}
-${table('Outbound links', sorted(out), ['Site', 'Count'])}
-</div>
-</div>
 </div>
 </body></html>`;
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
