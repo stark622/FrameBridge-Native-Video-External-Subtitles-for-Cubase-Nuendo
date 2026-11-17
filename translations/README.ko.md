@@ -6,7 +6,7 @@
 
 [![Nuendo 기본 비디오 트랙에서 작동하는 FrameBridge — 클릭하여 데모 보기](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식. FrameBridge 없이는 Cubase가 MKV와 OGV를 열지 못하고 MXF에서는 소리만 가져옵니다.
+위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식.
 
 **[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 

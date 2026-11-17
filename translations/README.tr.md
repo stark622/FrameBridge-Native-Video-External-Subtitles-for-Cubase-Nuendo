@@ -6,7 +6,7 @@
 
 [![Nuendo’nun yerel video kanalında çalışan FrameBridge — demoyu izlemek için tıklayın](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): tek bir kesintisiz çekim, canlı içe aktarma — MKV (HEVC 4K 10-bit, HDR dahil), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) ve birkaç altyazı formatı. FrameBridge olmadan Cubase MKV ve OGV’yi açmaz, MXF’ten ise yalnızca sesi alır.
+Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): tek bir kesintisiz çekim, canlı içe aktarma — MKV (HEVC 4K 10-bit, HDR dahil), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) ve birkaç altyazı formatı.
 
 **[Web sitesi](https://framebridge.cc/tr/)** · **[Satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 

@@ -6,7 +6,7 @@
 
 [![Nuendo 標準のビデオトラックで動作する FrameBridge — クリックでデモを再生](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。FrameBridge なしでは、Cubase は MKV と OGV を開けず、MXF からは音声しか読み込みません。
+上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。
 
 **[Web サイト](https://framebridge.cc/ja/)** · **[購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 

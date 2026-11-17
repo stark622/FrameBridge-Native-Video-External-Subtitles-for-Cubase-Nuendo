@@ -6,7 +6,7 @@
 
 [![FrameBridge na natywnej ścieżce wideo Nuendo — kliknij, aby obejrzeć demo](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-Powyżej krótki poradnik wideo w Cubase 11 Pro: plik MKV z napisami SRT oraz MKV HDR wyświetlany w SDR. [Wersja rozszerzona na YouTube](https://youtu.be/NjNHtkc8-OE): jedno ujęcie bez cięć, importowane na żywo: MKV (HEVC 4K 10-bit, także HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) i kilka formatów napisów. Bez FrameBridge Cubase nie otwiera MKV i OGV, a z MXF bierze tylko dźwięk.
+Powyżej krótki poradnik wideo w Cubase 11 Pro: plik MKV z napisami SRT oraz MKV HDR wyświetlany w SDR. [Wersja rozszerzona na YouTube](https://youtu.be/NjNHtkc8-OE): jedno ujęcie bez cięć, importowane na żywo: MKV (HEVC 4K 10-bit, także HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) i kilka formatów napisów.
 
 **[Strona](https://framebridge.cc/pl/)** · **[Kup](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 

@@ -6,7 +6,7 @@
 
 [![FrameBridge 在 Nuendo 原生视频轨上运行 — 点击观看演示](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
-上方是 Cubase 11 Pro 中的简短视频指南：带 SRT 字幕文件的 MKV，以及以 SDR 显示的 HDR MKV。[YouTube 上的加长版](https://youtu.be/NjNHtkc8-OE)：一镜到底、无剪辑，现场导入 MKV（HEVC 4K 10 位，含 HDR）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）和多种字幕格式。没有 FrameBridge 时，Cubase 打不开 MKV 和 OGV，MXF 只能导入声音。
+上方是 Cubase 11 Pro 中的简短视频指南：带 SRT 字幕文件的 MKV，以及以 SDR 显示的 HDR MKV。[YouTube 上的加长版](https://youtu.be/NjNHtkc8-OE)：一镜到底、无剪辑，现场导入 MKV（HEVC 4K 10 位，含 HDR）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）和多种字幕格式。
 
 **[网站](https://framebridge.cc/zh/)** · **[购买](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
