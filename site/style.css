@@ -980,10 +980,10 @@ details.lang .globe { flex: none; }
   .hc:hover .hc-tip, .hc:focus-within .hc-tip { opacity: 1; visibility: visible; transform: translate(0, -50%); }
 }
 /* not enough room on the right: show it under the button */
-@media (max-width: 1339px) {
+@media (max-width: 1439px) {
   .hc-tip { left: 50%; top: calc(100% + 12px); transform: translate(-50%, 4px); }
   .hc-tip::before { left: 50%; top: -6px; transform: translateX(-50%) rotate(135deg); }
 }
-@media (hover: hover) and (max-width: 1339px) {
+@media (hover: hover) and (max-width: 1439px) {
   .hc:hover .hc-tip, .hc:focus-within .hc-tip { transform: translate(-50%, 0); }
 }
