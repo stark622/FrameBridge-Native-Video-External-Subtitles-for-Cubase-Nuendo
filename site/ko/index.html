@@ -149,24 +149,11 @@
       <h2>주요 기능</h2>
       <p class="section-lead">더빙과 보이스오버, 포스트 프로덕션, 그리고 영화와 게임 음악을 쓰는 작곡가를 위해 만들었습니다.</p>
       <div class="demos">
-        <div class="demo-tabs"><button type="button" class="dt" aria-pressed="true">두 번째 창 (ADR)</button><button type="button" class="dt" aria-pressed="false">자막</button><button type="button" class="dt" aria-pressed="false">더빙 대본</button></div>
-        <figure class="demo demo-wide"><video src="/img/clip/adr.mp4?v=4" data-small="/img/clip/adr-s.mp4?v=1" poster="/img/clip/adr.webp?v=4" width="2560" height="944" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase만으로는 열리지 않습니다. 왼쪽은 프로젝트와 플레이어의 실시간 사본이 있는 내 화면, 오른쪽은 Video Player를 전체 화면으로 띄운 성우의 화면입니다. HDMI 분배기도, Blackmagic 카드도 필요 없습니다.</figcaption></figure>
-        <figure class="demo" hidden><video src="/img/clip/subs.mp4?v=2" data-small="/img/clip/subs-s.mp4?v=1" poster="/img/clip/subs.webp?v=2" width="1440" height="1376" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>3GP · H.264 4K</b> — Cubase만으로는 열리지 않습니다. 같은 이름의 .vtt를 영상 옆에 두면 같은 구간이 자막과 함께 재생됩니다. SRT, ASS, TTML 등도 마찬가지이며, Blu-ray PGS/SUP와 DVD VobSub 이미지 자막까지 모두 같은 깔끔한 모양으로 표시됩니다.</figcaption></figure>
-        <figure class="demo" hidden><video src="/img/clip/script.mp4?v=2" data-small="/img/clip/script-s.mp4?v=1" poster="/img/clip/script.webp?v=2" width="1440" height="1498" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>AVI · Xvid</b> — Cubase만으로는 열리지 않습니다. 옆에 같은 이름의 PDF 더빙 대본을 두면 배역이 붙은 대사가 자막으로 나옵니다. DOCX, XLSX, TXT, CSV도 됩니다.</figcaption></figure>
-      </div>
-      <div class="grid grid-2">
-        <div class="card">
-          <ul class="checks">
-            <li>함께 제공되는 FFmpeg 라이브러리(LGPL)로 기본 비디오 트랙에서 바로 더 많은 컨테이너와 코덱을 쓸 수 있습니다.</li>
-            <li>지원되는 HDR 소스의 HDR→SDR 변환을 육안으로 검증했습니다.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="checks">
-            <li>표준 “Extract Audio From Video”로 오디오도 가져올 수 있습니다. Cubase와 Nuendo가 자체적으로 열지 못하는 MKV 등의 파일에서도 가능합니다.</li>
-            <li><strong>UNINSTALL.cmd</strong>는 검증된 백업에서 프로그램 원본 파일을 바이트 단위까지 그대로 복원합니다. 프로젝트, 환경 설정, 플러그인은 건드리지 않습니다.</li>
-          </ul>
-        </div>
+        <div class="demo-tabs"><button type="button" class="dt" aria-pressed="true">영상</button><button type="button" class="dt" aria-pressed="false">자막</button><button type="button" class="dt" aria-pressed="false">두 번째 창 (ADR)</button><button type="button" class="dt" aria-pressed="false">더빙 대본</button></div>
+        <figure class="demo demo-wide"><video src="/img/clip/video.mp4?v=2" data-small="/img/clip/video-s.mp4?v=2" poster="/img/clip/video.webp?v=2" width="2240" height="1532" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>MTS · WebM · MKV</b> — Cubase만으로는 열리지 않습니다. 파일을 프로젝트로 끌어오면 H.264, VP9, 10비트 HEVC 영상이 기본 비디오 트랙에 놓이고, HDR은 바로 일반 색(SDR)으로 보이며, AC-3, Opus, TrueHD 오디오는 오디오 트랙에 들어갑니다.</figcaption></figure>
+        <figure class="demo demo-wide" hidden><video src="/img/clip/subs.mp4?v=4" data-small="/img/clip/subs-s.mp4?v=3" poster="/img/clip/subs.webp?v=4" width="2240" height="1522" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>3GP · H.264</b> — Cubase만으로는 열리지 않습니다. 같은 이름의 .vtt를 영상 옆에 두면 같은 구간이 자막과 함께 재생됩니다. SRT, ASS, TTML 등도 마찬가지이며, Blu-ray PGS/SUP와 DVD VobSub 이미지 자막까지 모두 같은 깔끔한 모양으로 표시됩니다.</figcaption></figure>
+        <figure class="demo demo-wide" hidden><video src="/img/clip/adr.mp4?v=4" data-small="/img/clip/adr-s.mp4?v=1" poster="/img/clip/adr.webp?v=4" width="2560" height="944" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase만으로는 열리지 않습니다. 왼쪽은 프로젝트와 플레이어의 실시간 사본이 있는 내 화면, 오른쪽은 Video Player를 전체 화면으로 띄운 성우의 화면입니다. HDMI 분배기도, Blackmagic 카드도 필요 없습니다.</figcaption></figure>
+        <figure class="demo demo-wide" hidden><video src="/img/clip/script.mp4?v=4" data-small="/img/clip/script-s.mp4?v=3" poster="/img/clip/script.webp?v=4" width="2240" height="1320" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="확대"></button><figcaption><b>AVI · Xvid</b> — Cubase만으로는 열리지 않습니다. 옆에 같은 이름의 PDF 더빙 대본을 두면 대사가 자막으로 나옵니다. DOCX, XLSX, TXT, CSV도 됩니다.</figcaption></figure>
       </div>
       <div class="demo-box" hidden><button type="button" class="demo-close" aria-label="닫기"></button><video muted loop playsinline></video></div>
     </div>
@@ -273,6 +260,7 @@
           <li>위에 나열된 검증된 모든 Cubase 및 Nuendo 버전</li>
           <li>구매 직후 ZIP 즉시 다운로드</li>
           <li>이메일 지원</li>
+          <li><strong>UNINSTALL.cmd</strong>는 검증된 백업에서 프로그램 원본 파일을 바이트 단위까지 그대로 복원합니다.</li>
           <li>시스템에서 작동하지 않으면 14일 이내 전액 환불</li>
         </ul>
         <a class="btn btn-primary" id="buy" href="https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1" target="_blank" rel="noopener">FrameBridge 구매</a>
@@ -336,7 +324,7 @@
     </div>
     <p>법률 문서와 호환성 안내는 영문으로만 제공되며, 영문판이 우선합니다.</p>
     <p>지원: stark622@ukr.net</p>
-    <p>FrameBridge는 독립 소프트웨어이며 Steinberg와 제휴 관계가 없고, Steinberg의 후원이나 승인을 받지 않았습니다. Cubase와 Nuendo는 각 소유자의 상표입니다. FFmpeg는 Fabrice Bellard의 상표입니다. 제3자 영상은 동영상 호환성과 자막 표시를 보여 주기 위한 목적으로만 사용되었습니다. 원본 자료에 대한 모든 권리는 각 저작권자에게 있습니다. FrameBridge에는 제3자 영상이 포함되어 있지 않습니다.</p>
+    <p>FrameBridge는 독립 소프트웨어이며 Steinberg와 제휴 관계가 없고, Steinberg의 후원이나 승인을 받지 않았습니다. Cubase와 Nuendo는 각 소유자의 상표입니다. FFmpeg는 Fabrice Bellard의 상표입니다. 제3자 영상은 동영상 호환성과 자막 표시를 보여 주기 위한 목적으로만 사용되었습니다. 원본 자료에 대한 모든 권리는 각 저작권자에게 있습니다. FrameBridge에는 제3자 영상이 포함되어 있지 않습니다. 클립에 사용된 공개 라이선스 영화: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</p>
     <p>© 2026 FrameBridge</p>
   </div>
 </footer>
