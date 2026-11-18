@@ -35,7 +35,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/tr/", "inLanguage": "tr", "description": "FrameBridge, Windows’taki Cubase ve Nuendo’nun yerel video motorunu genişletir: modern video formatları ve harici altyazılar, dönüştürme olmadan.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261117f">
+  <link rel="stylesheet" href="/style.css?v=20261118a">
   <script src="/t.js?v=3" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=2" defer></script>
@@ -150,9 +150,9 @@
       <p class="section-lead">Dublaj ve seslendirme, post prodüksiyon ve film ile oyun müziği yazan besteciler için.</p>
       <div class="demos">
         <div class="demo-tabs"><button type="button" class="dt" aria-pressed="true">İkinci pencere (ADR)</button><button type="button" class="dt" aria-pressed="false">Altyazılar</button><button type="button" class="dt" aria-pressed="false">Dublaj metni</button></div>
-        <figure class="demo demo-wide"><video src="/img/clip/adr.mp4?v=3" poster="/img/clip/adr.webp?v=3" width="1440" height="532" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Büyüt"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase bunu kendisi açmaz. Solda proje ve oynatıcının canlı kopyasıyla sizin ekranınız, sağda Video Player’ın tam ekran olduğu oyuncunun ekranı. HDMI bölücü ve Blackmagic kartı gerekmez.</figcaption></figure>
-        <figure class="demo" hidden><video src="/img/clip/subs.mp4?v=1" poster="/img/clip/subs.webp?v=1" width="960" height="916" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Büyüt"></button><figcaption><b>3GP · H.264 4K</b> — Cubase bunu kendisi açmaz. Videonun yanına aynı adlı bir .vtt koyun; aynı saniyeler artık altyazılı oynar. SRT, ASS, TTML ve diğerleri, hatta Blu-ray PGS/SUP ve DVD VobSub görüntü altyazıları da aynı temiz görünümle gösterilir.</figcaption></figure>
-        <figure class="demo" hidden><video src="/img/clip/script.mp4?v=1" poster="/img/clip/script.webp?v=1" width="960" height="1000" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Büyüt"></button><figcaption><b>AVI · Xvid</b> — Cubase bunu kendisi açmaz. Yanında aynı adlı bir PDF dublaj metni var; rollerle birlikte satırlar altyazı olarak görünür. DOCX, XLSX, TXT ve CSV de çalışır.</figcaption></figure>
+        <figure class="demo demo-wide"><video src="/img/clip/adr.mp4?v=4" data-small="/img/clip/adr-s.mp4?v=1" poster="/img/clip/adr.webp?v=4" width="2560" height="944" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Büyüt"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase bunu kendisi açmaz. Solda proje ve oynatıcının canlı kopyasıyla sizin ekranınız, sağda Video Player’ın tam ekran olduğu oyuncunun ekranı. HDMI bölücü ve Blackmagic kartı gerekmez.</figcaption></figure>
+        <figure class="demo" hidden><video src="/img/clip/subs.mp4?v=2" data-small="/img/clip/subs-s.mp4?v=1" poster="/img/clip/subs.webp?v=2" width="1440" height="1376" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Büyüt"></button><figcaption><b>3GP · H.264 4K</b> — Cubase bunu kendisi açmaz. Videonun yanına aynı adlı bir .vtt koyun; aynı saniyeler artık altyazılı oynar. SRT, ASS, TTML ve diğerleri, hatta Blu-ray PGS/SUP ve DVD VobSub görüntü altyazıları da aynı temiz görünümle gösterilir.</figcaption></figure>
+        <figure class="demo" hidden><video src="/img/clip/script.mp4?v=2" data-small="/img/clip/script-s.mp4?v=1" poster="/img/clip/script.webp?v=2" width="1440" height="1498" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Büyüt"></button><figcaption><b>AVI · Xvid</b> — Cubase bunu kendisi açmaz. Yanında aynı adlı bir PDF dublaj metni var; rollerle birlikte satırlar altyazı olarak görünür. DOCX, XLSX, TXT ve CSV de çalışır.</figcaption></figure>
       </div>
       <div class="grid grid-2">
         <div class="card">
@@ -437,6 +437,9 @@
   var box = document.querySelector('.demos');
   if (!box) return;
   var tabs = box.querySelectorAll('.dt'), figs = box.querySelectorAll('.demo'), cur = 0, seen = false;
+  // phones and small screens get the light copies (nothing is downloaded before the first play: preload=none)
+  if (Math.min(screen.width || 9999, innerWidth) * (window.devicePixelRatio || 1) <= 1400)
+    Array.prototype.forEach.call(box.querySelectorAll('video[data-small]'), function (v) { v.src = v.getAttribute('data-small'); });
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   function play() { var v = figs[cur].querySelector('video'); if (still) { v.controls = true; return; } var r = v.play(); if (r && r.catch) r.catch(function () {}); }
   function show(i) {
@@ -446,6 +449,15 @@
     if (seen) play();
   }
   Array.prototype.forEach.call(tabs, function (t, i) { t.addEventListener('click', function () { show(i); }); });
+  // while the page scrolls the clip waits (some browsers stutter decoding video under the blurred header while scrolling)
+  var rest = null, lb = document.querySelector('.demo-box');
+  window.addEventListener('scroll', function () {
+    if (!seen || still) return;
+    var v = figs[cur].querySelector('video');
+    if (!v.paused) v.pause();
+    clearTimeout(rest);
+    rest = setTimeout(function () { if (seen && (!lb || lb.hidden)) play(); }, 250);
+  }, { passive: true });
   if (!('IntersectionObserver' in window)) { seen = true; play(); return; }
   new IntersectionObserver(function (es) {
     seen = es[0].isIntersecting;
@@ -466,11 +478,20 @@
   var lb = document.querySelector('.demo-box');
   if (!lb) return;
   var big = lb.querySelector('video');
-  function close() { lb.hidden = true; big.pause(); big.removeAttribute('src'); big.load(); document.documentElement.classList.remove('lb-open'); }
+  var inline = null;
+  function close() {
+    lb.hidden = true; big.pause(); big.removeAttribute('src'); big.load(); document.documentElement.classList.remove('lb-open');
+    if (inline) { var r = inline.play(); if (r && r.catch) r.catch(function () {}); inline = null; }
+  }
   Array.prototype.forEach.call(document.querySelectorAll('.demo-zoom'), function (b) {
     b.addEventListener('click', function () {
       var v = b.parentNode.querySelector('video');
       big.src = v.currentSrc || v.getAttribute('src'); big.currentTime = 0;
+      // fit the clip to the screen (it is larger than its place on the page)
+      var w = v.videoWidth || +v.getAttribute('width'), h = v.videoHeight || +v.getAttribute('height');
+      var k = Math.min(innerWidth * 0.96 / w, innerHeight * 0.9 / h);
+      big.style.width = Math.round(w * k) + 'px'; big.style.height = Math.round(h * k) + 'px';
+      inline = v; v.pause();
       lb.hidden = false; document.documentElement.classList.add('lb-open');
       var r = big.play(); if (r && r.catch) r.catch(function () {});
     });

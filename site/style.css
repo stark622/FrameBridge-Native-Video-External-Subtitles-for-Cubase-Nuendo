@@ -329,7 +329,7 @@ img { max-width: 100%; height: auto; display: block; }
 .showcase .dub-demo > p { color: var(--muted); font-size: 15px; margin: 10px auto 0; }
 
 /* Sections */
-section { padding: 64px 0; }
+section { padding: 52px 0; }
 section.alt {
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.018) 18%, rgba(255, 255, 255, 0.018) 82%, transparent);
 }
@@ -691,7 +691,7 @@ details.lang .globe { flex: none; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .nav { display: none; }
-  section { padding: 42px 0; }
+  section { padding: 36px 0; }
   .hero { padding: 44px 0 24px; }
   .showcase a { border-radius: 18px; }
   .showcase .play-btn { width: 64px; height: 64px; }
@@ -924,9 +924,9 @@ details.lang .globe { flex: none; }
   background: rgba(11, 17, 29, 0.78) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7'/%3E%3C/svg%3E") center / 20px no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.35); opacity: 0.85; transition: opacity 0.2s, border-color 0.2s; }
 .demo-zoom:hover { opacity: 1; border-color: var(--accent); }
-.demo-box { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 3vh 3vw; background: rgba(3, 5, 10, 0.88); cursor: zoom-out; }
+.demo-box { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: rgba(3, 5, 10, 0.9); cursor: zoom-out; }
 .demo-box[hidden] { display: none; }
-.demo-box video { max-width: min(94vw, 1800px); max-height: 88vh; width: auto; height: auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); cursor: default; }
+.demo-box video { max-width: 97vw; max-height: 92vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); cursor: default; } /* size set by the script: fills the screen */
 .demo-close { position: absolute; top: 14px; right: 14px; width: 42px; height: 42px; border-radius: 50%; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(11, 17, 29, 0.85) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='white' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center / 20px no-repeat; }
 .lb-open, .lb-open body { overflow: hidden; }
