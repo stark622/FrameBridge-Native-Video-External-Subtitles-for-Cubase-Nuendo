@@ -936,3 +936,54 @@ details.lang .globe { flex: none; }
 @media (max-width: 700px) {
   .mt-btn, .fmt-toggle, .dt, .showcase .dub-demo summary, details.likely summary { text-align: center; justify-content: center; }
 }
+
+/* Hero "Check my file": hint card on the right (mouse only; the button is hidden on touch) */
+.hero .actions { position: relative; z-index: 5; }
+.hc { position: relative; display: inline-flex; }
+.hc-tip {
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  z-index: 30;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 12px 16px;
+  background: #0b111d;
+  border: 1px solid var(--hair-2);
+  border-radius: 14px;
+  box-shadow: var(--shadow-3);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: left;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-4px, -50%);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+.hc-tip::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: #0b111d;
+  border-left: 1px solid var(--hair-2);
+  border-bottom: 1px solid var(--hair-2);
+  transform: translateY(-50%) rotate(45deg);
+}
+.hc-tip span { display: block; position: relative; padding-left: 22px; margin: 3px 0; white-space: nowrap; }
+.hc-tip span::before { content: "\2713"; position: absolute; left: 0; color: var(--ok); font-weight: 700; }
+@media (hover: hover) {
+  .hc:hover .hc-tip, .hc:focus-within .hc-tip { opacity: 1; visibility: visible; transform: translate(0, -50%); }
+}
+/* not enough room on the right: show it under the button */
+@media (max-width: 1339px) {
+  .hc-tip { left: 50%; top: calc(100% + 12px); transform: translate(-50%, 4px); }
+  .hc-tip::before { left: 50%; top: -6px; transform: translateX(-50%) rotate(135deg); }
+}
+@media (hover: hover) and (max-width: 1339px) {
+  .hc:hover .hc-tip, .hc:focus-within .hc-tip { transform: translate(-50%, 0); }
+}
