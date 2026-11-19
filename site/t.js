@@ -63,7 +63,7 @@
     }
     var h = a.getAttribute('href') || '';
     if (a.id === 'demo') ev('play');
-    else if (h === '#check') ev('to_check', a.classList.contains('hero-check') ? 'hero' : (a.closest('.tabbar') ? 'tabbar' : 'menu'));
+    else if (h === '#check') ev('to_check', a.classList.contains('hero-check') ? 'hero' : a.closest('.tabbar') ? 'tabbar' : a.closest('#faq') ? 'faq' : 'menu');
     else if (h.indexOf('creem.io') >= 0) ev('buy', a.id === 'buy' ? 'pricing' : (a.closest('.site-header') ? 'header' : 'hero'));
     else if (a.hasAttribute('data-lang')) ev('lang', a.getAttribute('data-lang'));
     else if (h.indexOf('NjNHtkc8-OE') >= 0) ev('ext_video');
@@ -93,9 +93,17 @@
   // active time and scroll depth, sent once each time the page is hidden or closed (values are cumulative per page load)
   var active = 0, last = Date.now(), visible = !document.hidden, maxScroll = 0, reported = false;
   function tick() { if (visible) active += Date.now() - last; last = Date.now(); }
+  // the section on screen when the page is closed or hidden: the last one whose top is above the middle of the window
+  function where() {
+    var at = 'top', mid = innerHeight / 2;
+    ['how', 'features', 'formats', 'check', 'compatibility', 'pricing', 'faq'].forEach(function (id) {
+      var el = document.getElementById(id); if (el && el.getBoundingClientRect().top < mid) at = id;
+    });
+    return at;
+  }
   function bye() {
     tick(); visible = false;
-    if (!reported) { reported = true; ev('leave', Math.round(active / 1000) + 's/' + maxScroll + '%'); }
+    if (!reported) { reported = true; ev('leave', Math.round(active / 1000) + 's/' + maxScroll + '%/' + where()); }
     send(true);
   }
   window.addEventListener('scroll', function () {

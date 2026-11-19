@@ -1,12 +1,26 @@
 // Private statistics report: /api/stats?key=<STATS_KEY>&days=7|all   (&format=json for aggregates, &full=1 adds every visit and event)
 import { ensureTable } from './e.js';
 
-const FAQ = ['Invalid or not supported file', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update'];
+// A FAQ click is stored as the question's position on the page; the order changed over time (UTC, from site history).
+// Reordering the FAQ again = add a row here.
+const FAQ_ERAS = [
+  [0, ['Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update']],
+  [Date.UTC(2026, 10, 7, 1, 30), ['Invalid or not supported file', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update']],
+  [Date.UTC(2026, 10, 14, 8, 0), ['Invalid or not supported file', 'Second video window', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update', 'Which dubbing scripts are read']],
+  [Date.UTC(2026, 10, 16, 12, 37), ['Invalid or not supported file', 'Changes video files?', 'How to remove', 'Steinberg files?', 'Antivirus warning', 'Plugin? Mac version?', 'Which subtitle file', 'Refund if it does not work', 'After a Cubase/Nuendo update', 'Which dubbing scripts are read']],
+  [Date.UTC(2026, 10, 16, 14, 58), ['Invalid or not supported file', 'Changes video files?', 'Safe? Antivirus warning', 'Plugin? Mac version?', 'After a Cubase/Nuendo update', 'Which dubbing scripts are read']],
+];
+function faqName(ts, val) {
+  let list = FAQ_ERAS[0][1];
+  for (const [t, l] of FAQ_ERAS) if (ts >= t) list = l;
+  return list[+val - 1] || val;
+}
 const OWNER_COUNTRIES = ['UA'];
 // single visits by the owner's friends (start time of the visit), left out like the owner's own
 const FRIEND_VISITS = ['2026-11-14T08:41:11.360Z', '2026-11-14T08:53:55.705Z', '2026-11-14T18:45:23.236Z', '2026-11-14T20:01:06.090Z'].map(Date.parse);
 const FRIEND_COUNTRY = 'CA'; // the same visits in the Cloudflare list: this country, from 10 min before to 2 h after
 const SECTIONS = ['how', 'features', 'formats', 'check', 'compatibility', 'pricing', 'faq'];
+const LEFT_AT = ['top', ...SECTIONS]; // section on screen when the page was closed or hidden (counter from 19.11)
 
 // Every visitor Cloudflare saw (it keeps request details for 31 days), including those before this counter existed.
 // A person = a browser that loaded the site's stylesheet; bots, data-centre crawlers, faked Chrome strings and
@@ -127,7 +141,7 @@ export async function onRequestGet({ request, env }) {
     let s = S.get(r.sid);
     if (!s) {
       s = { sid: r.sid, t0: r.ts, t1: r.ts, os: r.os, br: r.br, dev: r.dev, country: r.country, ref: '', lang: r.lang,
-            bot: r.bot, pages: new Set(), trail: [], acts: 0, sees: new Set(), time: 0, scroll: 0, buy: 0, play: 0, views: [] };
+            bot: r.bot, pages: new Set(), trail: [], acts: 0, sees: new Set(), time: 0, scroll: 0, buy: 0, play: 0, views: [], at: '' };
       S.set(r.sid, s);
     }
     s.t1 = r.ts;
@@ -139,14 +153,14 @@ export async function onRequestGet({ request, env }) {
     if (r.ev === 'pv') { if (r.ref && !s.ref) s.ref = r.ref; s.trail.push('open ' + r.path); continue; }
     if (r.ev === 'see') { s.sees.add(r.val); continue; }
     if (r.ev === 'leave') {
-      const m = /^(\d+)s\/(\d+)%$/.exec(r.val || '');
-      if (m) { v.leave = Math.max(v.leave, +m[1]); s.scroll = Math.min(100, Math.max(s.scroll, +m[2])); }
+      const m = /^(\d+)s\/(\d+)%(?:\/([a-z]+))?$/.exec(r.val || '');
+      if (m) { v.leave = Math.max(v.leave, +m[1]); s.scroll = Math.min(100, Math.max(s.scroll, +m[2])); if (m[3]) s.at = m[3]; }
       continue;
     }
     s.acts++;
     if (r.ev === 'buy') s.buy++;
     if (r.ev === 'play') s.play++;
-    s.trail.push(r.ev === 'faq' ? 'faq: ' + (FAQ[+r.val - 1] || r.val) : (r.val ? r.ev + ':' + r.val : r.ev));
+    s.trail.push(r.ev === 'faq' ? 'faq: ' + faqName(r.ts, r.val) : (r.val ? r.ev + ':' + r.val : r.ev));
   }
   // active time: measured value per page load; when the browser sent none (tab killed), the span of its events
   for (const s of S.values()) s.time = s.views.reduce((a, v) => a + (v.leave || Math.round((v.t1 - v.t0) / 1000)), 0);
@@ -181,7 +195,7 @@ export async function onRequestGet({ request, env }) {
   const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {};
   for (const r of results) {
     if (!keep.has(r.sid)) continue;
-    if (r.ev === 'faq') inc(faq, FAQ[+r.val - 1] || r.val);
+    if (r.ev === 'faq') inc(faq, faqName(r.ts, r.val));
     else if (r.ev === 'lang') inc(langSw, r.val);
     else if (r.ev === 'out') inc(out, r.val);
     else if (r.ev === 'buy') inc(buyFrom, r.val);
@@ -190,6 +204,8 @@ export async function onRequestGet({ request, env }) {
     if (r.ev !== 'see' && r.ev !== 'leave' && r.ev !== 'pv') inc(ev, r.ev);
   }
   for (const s of human) for (const id of s.sees) inc(seen, id);
+  const leftAt = {};
+  for (const s of human) if (s.at) inc(leftAt, s.at);
   const avgTime = engaged.length ? Math.round(engaged.reduce((a, s) => a + s.time, 0) / engaged.length) : 0;
 
   const summary = {
@@ -212,7 +228,7 @@ export async function onRequestGet({ request, env }) {
         visits: human.map((s) => ({
           visit: num.get(s.sid), start: new Date(s.t0).toISOString(), end: new Date(s.t1).toISOString(), country: s.country,
           os: s.os, br: s.br, dev: s.dev, lang: s.lang, ref: s.ref, pages: [...s.pages], active_s: s.time, scroll: s.scroll,
-          actions: s.acts, buy: s.buy, play: s.play, sections: [...s.sees], trail: s.trail,
+          actions: s.acts, buy: s.buy, play: s.play, sections: [...s.sees], left_at: s.at, trail: s.trail,
         })),
         event_log: results.filter((r) => num.has(r.sid)).map((r) => ({
           visit: num.get(r.sid), time: new Date(r.ts).toISOString(), path: r.path, ev: r.ev, val: r.ev === 'pv' ? r.ref : r.val,
@@ -221,9 +237,10 @@ export async function onRequestGet({ request, env }) {
       cf_visitors: cf ? cf.visits.map((v) => ({ ...v, start: new Date(v.t).toISOString() })) : null, cf_error: cfError || undefined,
       summary, per_day: perDay, os: by('os'), browser: by('br'), device: by('dev'), country: by('country'),
       language: by('lang'), referrer: by('ref'), events: ev, buy_from: buyFrom, faq, lang_switch: langSw, outbound: out, sections_seen: seen,
+      left_at: leftAt,
       recent: human.slice(-200).reverse().map((s) => ({
         start: new Date(s.t0).toISOString(), country: s.country, os: s.os, br: s.br, dev: s.dev, lang: s.lang, ref: s.ref,
-        active_s: s.time, scroll: s.scroll, sections: [...s.sees], trail: s.trail,
+        active_s: s.time, scroll: s.scroll, sections: [...s.sees], left_at: s.at, trail: s.trail,
       })),
     }, { headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
   }
@@ -256,7 +273,7 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 <div class="col-visits">
 ${table('Recent visits (newest first, Kyiv time)', human.slice(-100).reverse().map((s) => [
     kyiv(s.t0).slice(5), s.country || '—', `${s.os} · ${s.br} · ${s.dev}`, s.lang, s.ref || '—',
-    `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : ''),
+    `${s.time} s · ${s.scroll}%`, s.trail.join(' → ') + (s.sees.size ? `  [saw: ${[...s.sees].join(', ')}]` : '') + (s.at ? `  [left at: ${s.at}]` : ''),
   ]), ['Start', 'Country', 'System', 'Lang', 'From', 'Active · scroll', 'What they did'])}
 ${!env.CF_API_TOKEN
     ? '<h2>All visitors seen by Cloudflare</h2><p class="muted">Add the Pages secret CF_API_TOKEN (read-only analytics token) to list here every visitor of the last 31 days, including those before this counter.</p>'
@@ -272,6 +289,7 @@ ${!env.CF_API_TOKEN
 <div class="cards">
 ${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
 ${table('Sections seen', SECTIONS.map((id) => [id, seen[id] || 0, pct(seen[id] || 0)]), ['Section', 'Visits', 'Share'])}
+${table('Left the page at (section on screen, from 19 Nov)', LEFT_AT.filter((id) => leftAt[id]).map((id) => [id, leftAt[id]]), ['Section', 'Visits'])}
 ${table('Clicks', sorted(ev), ['Action', 'Count'])}
 ${table('File checks (kind:result, no file names)', sorted(checks), ['Check', 'Count'])}
 ${table('Demo clips (tab / enlarge)', sorted(clips), ['Clip', 'Count'])}
