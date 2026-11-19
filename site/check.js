@@ -742,7 +742,7 @@
   var SUB = 'srt ass ssa vtt smi sami sub idx sup ttml dfxp xml stl scc docx xlsx csv txt pdf doc xls rtf odt ods'.split(' ');
   var subMods = {};
   function subModule(name) {
-    if (!subMods[name]) subMods[name] = fetch('/vendor/fbsubs/' + name + '.wasm?v=1').then(function (r) { return r.arrayBuffer(); }).then(function (b) { return WebAssembly.compile(b); });
+    if (!subMods[name]) subMods[name] = fetch('/vendor/fbsubs/' + name + '.wasm?v=2').then(function (r) { return r.arrayBuffer(); }).then(function (b) { return WebAssembly.compile(b); });
     return subMods[name];
   }
   function subParse(name, files, main) {
