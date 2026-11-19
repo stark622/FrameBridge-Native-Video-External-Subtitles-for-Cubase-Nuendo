@@ -35,10 +35,10 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/fr/", "inLanguage": "fr", "description": "FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows : formats vidéo modernes et sous-titres externes, sans transcodage.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "stark622"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <link rel="stylesheet" href="/style.css?v=20261118c">
+  <link rel="stylesheet" href="/style.css?v=20261119a">
   <script src="/t.js?v=3" defer></script>
   <script src="/fx.js?v=1" defer></script>
-  <script src="/check.js?v=2" defer></script>
+  <script src="/check.js?v=3" defer></script>
   <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
@@ -300,7 +300,7 @@
       </details>
       <details>
         <summary>Quelles mises en page de script de doublage sont lues ?</summary>
-        <p>Le script porte le nom de la vidéo (film.mkv + film.docx) ; un fichier de sous-titres ordinaire du même nom est prioritaire.<br><b>DOCX</b> — un tableau avec une ligne d’en-têtes : Start, End, Text (Role et No. facultatifs ; aussi In / Out, Subtitle, Speaker ou Начало / Конец / Текст / Роль). Une ligne = une réplique.<br><b>XLSX</b> — les mêmes colonnes sur la première feuille ; temps en texte ou en heure Excel.<br><b>CSV</b> — en-têtes Начало;Конец;Текст (+ Роль), séparateur ; , ou tabulation. Un CSV aux en-têtes anglais n’est pas pris en compte dans cette bêta — enregistrez-le en XLSX.<br><b>TXT</b> — une réplique par ligne : <code>00:00:01,000 - 00:00:03,500 Anna: …</code> ; tout en haut, la ligne <code>Начало - Конец - Текст</code>.<br><b>PDF</b> — uniquement un tableau texte simple No / Start / End / Role / Text ou des lignes comme en TXT. Les PDF imprimés depuis un navigateur ou Word ne sont généralement pas lisibles — utilisez DOCX, XLSX ou TXT.<br><b>Temps</b> — hh:mm:ss,mmm avec millisecondes, début et fin pour chaque ligne. Images (hh:mm:ss:ii) seulement si le fichier indique la cadence, p. ex. « 25 fps » (pas en XLSX).<br><b>Non lu</b> — début seul, mm:ss, temps sans millisecondes, texte sur la ligne sous le timecode, DOCX sans tableau, .doc / .rtf / .odt, PDF scannés.</p>
+        <p>Nommez le script comme la vidéo (film.mkv + film.docx) ; un fichier de sous-titres ordinaire du même nom est prioritaire. DOCX, XLSX, PDF, TXT, CSV et d’autres. Déposez votre script dans <a href="#check">« Vérifiez avant d’acheter »</a> ci-dessus : vous voyez aussitôt si la version actuelle le lit et si la prochaine mise à jour (en test) le lit.</p>
       </details>
     </div>
   </section>
@@ -332,7 +332,7 @@
 <nav class="tabbar">
   <a href="#features"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg><span>Fonctions</span></a>
   <a href="#formats"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9.5h4M3 14.5h4M17 9.5h4M17 14.5h4"/></svg><span>Formats</span></a>
-  <a href="#compatibility"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16.2 9.4"/></svg><span>Versions</span></a>
+  <a href="#compatibility"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16.2 9.4"/></svg><span>Compati­bilité</span></a>
   <a href="#pricing"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1 1 0 0 1 0 1.4l-7.4 7.4a1 1 0 0 1-1.4 0z"/><circle cx="8.3" cy="8.3" r="1.5"/></svg><span>Prix</span></a>
   <a href="#faq"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.4 2.5c-.6.2-.9.7-.9 1.3v.6"/><circle cx="12" cy="16.8" r=".6" fill="currentColor"/></svg><span>FAQ</span></a>
 </nav>

@@ -456,7 +456,7 @@
     if (f === 'canopus hq' || f === 'canopus hqx') return c(v.Format, 'verified', 'intra');
     if (f === 'canopus lossless') return c('Canopus Lossless', 'likely', 'heavy');
     if (/^shq/.test(id)) return c('SpeedHQ', 'verified', 'intra');
-    if (f === 'hap' || f === 'hap q' || /^hap/.test(id)) return c(v.Format || 'HAP', 'verified', 'light');
+    if (f === 'hap' || f === 'hap q' || /^hap/.test(id)) return c(v.Format || 'HAP', 'verified', /q/i.test(f + id) ? 'intra' : 'light');   // Hap Q: dense intra
     if (f === 'theora') return c('Theora', 'verified', 'light');
     if (f === 'wmv1' || f === 'wmv2') return c(v.Format.replace('WMV', 'WMV '), 'verified', 'light');
     if (f === 'vc-1') return c(id === 'wmv3' ? 'WMV 9' : 'VC-1', 'likely', 'light');
@@ -470,7 +470,7 @@
     if (/^av1x|^avd1|^avdn/.test(id) && f !== 'vc-3') return c('Avid 1:1', 'verified', 'intra');
     if (f === 'lagarith' || id === 'lags') return c('Lagarith', 'likely', 'heavy');
     if (f === 'jpeg 2000') return c('JPEG 2000', 'likely', 'jp2k');
-    if (id === 'nlc1' || f === 'notchlc') return c('NotchLC', 'likely', 'intra');
+    if (id === 'nlc1' || id === 'nclc' || f === 'notchlc') return c('NotchLC', 'verified', 'intra');   // files from Notch: nclc
     if (/meridien/.test(f) || id === 'avui') return c('Avid Meridien', 'likely', 'heavy');
     if (/sheer/.test(f) || /^sh\d/.test(id)) return c('SheerVideo', 'likely', 'intra');
     if (id === 'icod' || /intermediate/.test(f)) return c('Apple Intermediate', 'likely', 'intra');
@@ -539,8 +539,30 @@
     return { tier: threads >= 12 || strong ? 'high' : threads >= 6 ? 'mid' : 'low', caps: autoCaps };
   }
 
-  // smoothness rules (our runs: full PC = Desktop\1234 on beta 3; weak PC = 4 threads @60 % and 2 threads)
+  // Full PC (Ryzen 7 7700X + RTX 4090), 4K: the live run through all of Desktop\1234 in Cubase / Nuendo (19.11, beta 3,
+  // every frame request logged), calibrated on the user's own verdicts from that run. Log rule: heavy = 40 %+ of the
+  // jumps / scrub steps slower than 250 ms or under 90 % of the play frames on time; hitches = the slowest tenth of
+  // the jumps over 280 ms. It reproduces every verdict the log can see (JPEG 2000, VVC, Lagarith heavy; AV1 hitches;
+  // all smooth ones smooth) and adds HEVC 4:2:2 (53 % slow jumps) heavy, HEVC 4:4:4 (32 %) and Canopus Lossless
+  // (92 % on time) hitches. The user's word where the log cannot see it: FFV1 heavy (scrubbing), H.264 High 10,
+  // CineForm, Hap Q occasional hitches. null = nothing measured beyond the runs below.
+  function liveFull(info) {
+    var n = info.c.name;
+    if (info.c.cls === 'jp2k' || /^(FFV1|VVC|Lagarith)|^HEVC .*4:2:2/.test(n)) return 'heavy';
+    if (/^AV1$|High 10|^CineForm|^Hap Q|^Canopus Lossless|^HEVC .*4:4:4/i.test(n)) return 'ok';
+    return null;
+  }
+  var SEV = { smooth: 0, ok: 1, heavy: 2 };
+  // the live verdict decides on the full PC; a weaker PC is never rated better than the full one
   function smoothness(info, pc) {
+    var r = smoothnessRuns(info, pc);
+    var full = (+info.w || 1920) * (+info.h || 1080) > 2.3e6 ? liveFull(info) : null;
+    if (!full || (pc.tier !== 'high' && SEV[full] <= SEV[r.lv])) return r;
+    return { lv: full, why: r.why };
+  }
+
+  // smoothness rules (our runs: full PC = Desktop\1234 on beta 3; weak PC = 4 threads @60 % and 2 threads)
+  function smoothnessRuns(info, pc) {
     var px = (+info.w || 1920) * (+info.h || 1080), uhd = px > 2.3e6, t = pc.tier, cls = info.c.cls;
     var R = function (lv, why) { return { lv: lv, why: why }; };
     var pick = function (hi, mid, lo) { return t === 'high' ? hi : t === 'mid' ? mid : lo; };
