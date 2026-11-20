@@ -8,7 +8,7 @@
 
 Above is a short video guide in Cubase 11 Pro: an MKV with its SRT subtitle file, and an HDR MKV shown in SDR. [Extended version on YouTube](https://youtu.be/NjNHtkc8-OE): one uncut take, imported live — MKV (HEVC 4K 10-bit, incl. HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) and several subtitle formats.
 
-**[Website](https://framebridge.cc)** · **[Buy](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
+**[Website](https://framebridge.cc)** · **[Buy](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Check before you buy](https://framebridge.cc/#check)**
 
 FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Modern video formats open on the native video track and play in the built-in Video Player, and external subtitle files are shown over the picture automatically — without converting the media and without burning subtitles into the video.
 
@@ -33,9 +33,26 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 - No separate video player, codec pack or LAV Filters required.
 - Not a VST plugin: no plug-in slot, nothing to load in each project, no MTC sync — FrameBridge extends the native video engine itself.
 - Audio comes in with the standard “Extract Audio From Video” — also from MKV and other files Cubase and Nuendo can't open on their own.
-- Visually verified HDR-to-SDR conversion for supported HDR media. No quantitative color-accuracy claim is made.
+- HDR video is shown in normal colors (SDR); verified visually, no quantitative color-accuracy claim is made.
 
 </details>
+
+## See it in Cubase
+
+Click a picture to watch the clip (60 fps, from the website).
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase does not open them on its own. Drag a file into the project: H.264, VP9 or 10-bit HEVC picture on the native video track, HDR in normal colors (SDR) right away, AC-3, Opus and TrueHD audio on an audio track.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="media/clips/subs.webp" alt="Subtitles"></a><br><b>Subtitles</b> · <b>3GP · H.264</b> — Cubase does not open it on its own. Put a .vtt with the same name next to the video — and the same seconds play with subtitles. The same goes for SRT, ASS, TTML and others, even Blu-ray PGS/SUP and DVD VobSub pictures — all in one clean look.</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="media/clips/adr.webp" alt="Second window (ADR)"></a><br><b>Second window (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase does not open it on its own. Left: your screen with the project and a live copy of the player. Right: the actor’s screen with the Video Player in full screen. No HDMI splitter, no Blackmagic card.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="media/clips/script.webp" alt="Dubbing script"></a><br><b>Dubbing script</b> · <b>AVI · Xvid</b> — Cubase does not open it on its own. A PDF dubbing script with the same name sits next to it — the lines play as subtitles. DOCX, XLSX, TXT and CSV work too.</td>
+</tr>
+</table>
+
+<sub>Open films in the clips: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
 
 ## Second video window for dubbing
 
@@ -93,7 +110,7 @@ Decoded by the same FFmpeg 9.0.2 inside FrameBridge. These usually open and may 
 
 ## Performance
 
-Playback speed depends on the media and the hardware. For everyday work, plan for a current mid-range CPU and a graphics card that decodes the formats you use (HEVC, AV1) in hardware. On older PCs — for example a 2012 test PC (Intel Core i5-2550K + GeForce GTX 660) — heavy 4K 10-bit video (HEVC Main10, H.264 High10) stutters, because a GPU of that generation cannot decode these formats in hardware. On weak PCs, switching off video thumbnails in the DAW and using H.264 8-bit working copies up to 1080p helps. Known issues are listed in [READ_ME_FIRST.txt](docs/READ_ME_FIRST.txt).
+Ordinary video up to 1080p plays smoothly on most computers. For 4K 10-bit (HEVC, AV1) a graphics card from 2016 or newer is better: it decodes such video itself. [Check before you buy](https://framebridge.cc/#check) above gives a rough idea of how smoothly your file will play on your computer. Known issues are listed in [READ_ME_FIRST.txt](docs/READ_ME_FIRST.txt).
 
 ## Installation and rollback
 

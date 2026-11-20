@@ -8,7 +8,7 @@
 
 上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。
 
-**[Web サイト](https://framebridge.cc/ja/)** · **[購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
+**[Web サイト](https://framebridge.cc/ja/)** · **[購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[購入前にチェック](https://framebridge.cc/ja/#check)**
 
 FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットが標準のビデオトラックで開き、内蔵のビデオプレーヤーで再生されます。外部字幕ファイルは自動的に映像の上に表示されます。素材の変換も、字幕の焼き込みも必要ありません。
 
@@ -33,9 +33,26 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 - 別のビデオプレーヤー、コーデックパック、LAV Filters は不要です。
 - VST プラグインではありません。プラグインスロットは不要で、プロジェクトごとに何かを読み込む必要も、MTC 同期も要りません。FrameBridge が標準のビデオエンジン自体を拡張します。
 - 標準の「ビデオからオーディオを抽出」でオーディオも読み込めます。Cubase や Nuendo 単体では開けない MKV などのファイルからも可能です。
-- 対応する HDR 素材の HDR から SDR への変換を目視で確認済みです。色再現の正確さについて定量的な保証はしていません。
+- HDR 映像は通常の色（SDR）で表示されます。目視で確認済みで、色再現の正確さについて定量的な保証はしていません。
 
 </details>
+
+## Cubase での動作
+
+画像をクリックするとクリップを再生します（60 fps、Web サイト）。
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="動画"></a><br><b>動画</b> · <b>MTS · WebM · MKV</b> — Cubase 単体では開けません。ファイルをプロジェクトにドラッグするだけで、H.264、VP9、10 ビット HEVC の映像が標準のビデオトラックに並び、HDR はすぐに通常の色（SDR）で表示され、AC-3、Opus、TrueHD の音声はオーディオトラックに入ります。</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="字幕"></a><br><b>字幕</b> · <b>3GP · H.264</b> — Cubase 単体では開けません。同じ名前の .vtt を動画の隣に置くだけで、同じ場面が字幕付きで再生されます。SRT、ASS、TTML なども同様で、Blu-ray の PGS/SUP や DVD の VobSub といった画像字幕も、すべて同じ見やすい表示になります。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="2つ目のウィンドウ（ADR）"></a><br><b>2つ目のウィンドウ（ADR）</b> · <b>M2TS · MPEG-2</b> — Cubase 単体では開けません。左はプロジェクトとプレーヤーのライブコピーがあるあなたの画面、右はビデオプレーヤーを全画面表示した声優の画面です。HDMI スプリッターも Blackmagic カードも不要です。</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="吹き替え台本"></a><br><b>吹き替え台本</b> · <b>AVI · Xvid</b> — Cubase 単体では開けません。同じ名前の PDF 吹き替え台本を隣に置くと、セリフが字幕として表示されます。DOCX、XLSX、TXT、CSV にも対応しています。</td>
+</tr>
+</table>
+
+<sub>クリップ内のオープンライセンス映画: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
 
 ## 吹き替え用の 2 つ目のビデオウィンドウ
 
@@ -93,7 +110,7 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 ## パフォーマンス
 
-再生のスムーズさは素材とハードウェアによって変わります。日常の作業には、最近のミドルクラスの CPU と、使用するフォーマット（HEVC、AV1）をハードウェアでデコードできるグラフィックカードをおすすめします。古い PC（たとえば 2012 年のテスト PC：Intel Core i5-2550K + GeForce GTX 660）では、その世代の GPU がこれらのフォーマットをハードウェアでデコードできないため、重い 4K 10 ビット映像（HEVC Main10、H.264 High10）はカクつきます。性能の低い PC では、DAW でビデオのサムネイルをオフにし、1080p 以下の H.264 8 ビットの作業用コピーを使うと改善します。既知の問題は [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) にまとめています。
+1080p までの一般的な映像は、ほとんどのコンピューターでスムーズに再生されます。4K 10 ビット（HEVC、AV1）には 2016 年以降のグラフィックカードが向いています。こうした映像をカード自身がデコードするためです。お使いのファイルとコンピューターでのおおよその滑らかさは、上の[「購入前にチェック」](https://framebridge.cc/ja/#check)で分かります。 既知の問題は [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) にまとめています。
 
 ## インストールと復元
 

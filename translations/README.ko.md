@@ -8,7 +8,7 @@
 
 위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식.
 
-**[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
+**[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[구매 전에 확인하세요](https://framebridge.cc/ko/#check)**
 
 FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진을 확장합니다. 최신 비디오 포맷이 기본 비디오 트랙에서 열리고 내장 비디오 플레이어에서 재생되며, 외부 자막 파일은 화면 위에 자동으로 표시됩니다. 소스를 트랜스코딩할 필요도, 자막을 영상에 입힐 필요도 없습니다.
 
@@ -33,9 +33,26 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 - 별도의 비디오 플레이어, 코덱 팩, LAV Filters가 필요 없습니다.
 - VST 플러그인이 아닙니다. 플러그인 슬롯도, 프로젝트마다 불러올 것도, MTC 동기화도 필요 없으며, FrameBridge가 기본 비디오 엔진 자체를 확장합니다.
 - 표준 “Extract Audio From Video”로 오디오도 가져올 수 있습니다. Cubase와 Nuendo가 자체적으로 열지 못하는 MKV 등의 파일에서도 가능합니다.
-- 지원되는 HDR 소스의 HDR→SDR 변환을 육안으로 검증했습니다. 색 정확도에 대한 정량적 보증은 하지 않습니다.
+- HDR 영상은 일반 색상(SDR)으로 표시됩니다. 육안으로 검증했으며, 색 정확도에 대한 정량적 보증은 하지 않습니다.
 
 </details>
+
+## Cubase에서 실제로 보기
+
+이미지를 클릭하면 클립을 볼 수 있습니다(60fps, 웹사이트).
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="영상"></a><br><b>영상</b> · <b>MTS · WebM · MKV</b> — Cubase만으로는 열리지 않습니다. 파일을 프로젝트로 끌어오면 H.264, VP9, 10비트 HEVC 영상이 기본 비디오 트랙에 놓이고, HDR은 바로 일반 색(SDR)으로 보이며, AC-3, Opus, TrueHD 오디오는 오디오 트랙에 들어갑니다.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="자막"></a><br><b>자막</b> · <b>3GP · H.264</b> — Cubase만으로는 열리지 않습니다. 같은 이름의 .vtt를 영상 옆에 두면 같은 구간이 자막과 함께 재생됩니다. SRT, ASS, TTML 등도 마찬가지이며, Blu-ray PGS/SUP와 DVD VobSub 이미지 자막까지 모두 같은 깔끔한 모양으로 표시됩니다.</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="두 번째 창 (ADR)"></a><br><b>두 번째 창 (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase만으로는 열리지 않습니다. 왼쪽은 프로젝트와 플레이어의 실시간 사본이 있는 내 화면, 오른쪽은 Video Player를 전체 화면으로 띄운 성우의 화면입니다. HDMI 분배기도, Blackmagic 카드도 필요 없습니다.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="더빙 대본"></a><br><b>더빙 대본</b> · <b>AVI · Xvid</b> — Cubase만으로는 열리지 않습니다. 옆에 같은 이름의 PDF 더빙 대본을 두면 대사가 자막으로 나옵니다. DOCX, XLSX, TXT, CSV도 됩니다.</td>
+</tr>
+</table>
+
+<sub>클립에 사용된 공개 라이선스 영화: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
 
 ## 더빙용 두 번째 비디오 창
 
@@ -93,7 +110,7 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 ## 성능
 
-재생의 부드러움은 소스와 하드웨어에 따라 달라집니다. 일상 작업에는 최신 중급 CPU와 사용하는 포맷(HEVC, AV1)을 하드웨어로 디코딩하는 그래픽 카드를 권장합니다. 오래된 PC(예: 2012년 테스트 PC, Intel Core i5-2550K + GeForce GTX 660)에서는 해당 세대의 GPU가 이 포맷을 하드웨어로 디코딩하지 못해 무거운 4K 10비트 영상(HEVC Main10, H.264 High10)이 끊깁니다. 성능이 낮은 PC에서는 DAW에서 비디오 썸네일을 끄고 1080p 이하의 H.264 8비트 작업용 사본을 사용하면 도움이 됩니다. 알려진 문제는 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)에 정리되어 있습니다.
+1080p 이하의 일반 영상은 대부분의 컴퓨터에서 부드럽게 재생됩니다. 4K 10비트(HEVC, AV1)에는 2016년 이후의 그래픽카드가 좋습니다. 이런 영상을 카드가 직접 디코딩하기 때문입니다. 내 파일이 내 컴퓨터에서 대략 얼마나 부드럽게 재생될지는 위의 [구매 전에 확인하세요](https://framebridge.cc/ko/#check)에서 볼 수 있습니다. 알려진 문제는 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)에 정리되어 있습니다.
 
 ## 설치 및 복원
 

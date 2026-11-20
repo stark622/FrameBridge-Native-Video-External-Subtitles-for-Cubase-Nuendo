@@ -8,7 +8,7 @@
 
 上方是 Cubase 11 Pro 中的简短视频指南：带 SRT 字幕文件的 MKV，以及以 SDR 显示的 HDR MKV。[YouTube 上的加长版](https://youtu.be/NjNHtkc8-OE)：一镜到底、无剪辑，现场导入 MKV（HEVC 4K 10 位，含 HDR）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）和多种字幕格式。
 
-**[网站](https://framebridge.cc/zh/)** · **[购买](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
+**[网站](https://framebridge.cc/zh/)** · **[购买](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[购买前先检查](https://framebridge.cc/zh/#check)**
 
 FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。现代视频格式可直接在原生视频轨上打开，并在内置视频播放器中播放；外挂字幕文件会自动显示在画面上——无需转码素材，也无需将字幕压制进视频。
 
@@ -33,9 +33,26 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 - 无需单独的视频播放器、解码器包或 LAV Filters。
 - 不是 VST 插件：不占插件槽位，无需在每个工程中加载任何东西，也不需要 MTC 同步，FrameBridge 直接扩展原生视频引擎。
 - 音频通过标准的“从视频中提取音频”导入——包括 Cubase 和 Nuendo 自身无法打开的 MKV 等文件。
-- 对受支持的 HDR 素材进行 HDR 到 SDR 的转换，效果经过目视验证。不对色彩准确度作任何量化声明。
+- HDR 视频以普通色彩（SDR）显示；效果经过目视验证，不对色彩准确度作任何量化声明。
 
 </details>
+
+## 在 Cubase 中的实际效果
+
+点击图片观看片段（60 fps，来自网站）。
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="视频"></a><br><b>视频</b> · <b>MTS · WebM · MKV</b> — Cubase 本身无法打开。把文件拖进工程：H.264、VP9 或 10 位 HEVC 画面出现在原生视频轨上，HDR 直接以正常色彩（SDR）显示，AC-3、Opus 和 TrueHD 音频进入音频轨。</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="字幕"></a><br><b>字幕</b> · <b>3GP · H.264</b> — Cubase 本身无法打开。把同名的 .vtt 放在视频旁边，同样的片段就带字幕播放。SRT、ASS、TTML 等格式同样适用，连 Blu-ray PGS/SUP 和 DVD VobSub 图像字幕也以同样清晰的样式显示。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="第二视频窗口（ADR）"></a><br><b>第二视频窗口（ADR）</b> · <b>M2TS · MPEG-2</b> — Cubase 本身无法打开。左边是您的屏幕：工程和播放器的实时副本；右边是配音演员的屏幕：视频播放器全屏显示。无需 HDMI 分配器，也无需 Blackmagic 采集卡。</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="配音台本"></a><br><b>配音台本</b> · <b>AVI · Xvid</b> — Cubase 本身无法打开。旁边放着同名的 PDF 配音台本，台词会以字幕形式显示。DOCX、XLSX、TXT 和 CSV 也同样支持。</td>
+</tr>
+</table>
+
+<sub>片段中使用的开放授权影片：Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
 
 ## 配音用的第二个视频窗口
 
@@ -93,7 +110,7 @@ PGS/SUP 和 VobSub 的文字识别使用 Windows 中已安装的 OCR 语言（�
 
 ## 性能
 
-播放流畅度取决于素材和硬件。日常工作建议使用当代中端 CPU，以及能对您所用格式（HEVC、AV1）进行硬件解码的显卡。在较旧的电脑上（例如 2012 年的测试电脑：Intel Core i5-2550K + GeForce GTX 660），高负载的 4K 10 位视频（HEVC Main10、H.264 High10）会卡顿，因为这一代显卡无法对这些格式进行硬件解码。在性能较弱的电脑上，在 DAW 中关闭视频缩略图并使用 1080p 及以下的 H.264 8 位工作副本会有帮助。已知问题列于 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)。
+1080p 及以下的普通视频在大多数电脑上都能流畅播放。4K 10 位（HEVC、AV1）最好配 2016 年及以后的显卡，它能自行解码这类视频。您的文件在您的电脑上大致有多流畅，可在上方的[“购买前先检查”](https://framebridge.cc/zh/#check)中查看。 已知问题列于 [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt)。
 
 ## 安装与还原
 

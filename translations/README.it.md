@@ -8,7 +8,7 @@
 
 Qui sopra, una breve guida video in Cubase 11 Pro: un MKV con il suo file di sottotitoli SRT e un MKV HDR visualizzato in SDR. [Versione estesa su YouTube](https://youtu.be/NjNHtkc8-OE): un’unica ripresa senza tagli, importata dal vivo — MKV (HEVC 4K a 10 bit, anche HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) e diversi formati di sottotitoli.
 
-**[Sito web](https://framebridge.cc/it/)** · **[Acquista](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
+**[Sito web](https://framebridge.cc/it/)** · **[Acquista](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Verifica prima di acquistare](https://framebridge.cc/it/#check)**
 
 FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I formati video moderni si aprono sulla traccia video nativa e vengono riprodotti nel Riproduttore video integrato, mentre i file di sottotitoli esterni vengono mostrati automaticamente sopra l’immagine — senza convertire il materiale e senza imprimere i sottotitoli nel video.
 
@@ -33,9 +33,26 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 - Non servono player video separati, codec pack o LAV Filters.
 - Non è un plugin VST: nessuno slot plugin, niente da caricare in ogni progetto, nessuna sincronizzazione MTC — FrameBridge estende direttamente il motore video nativo.
 - L’audio arriva con l’opzione standard «Estrai l’audio dal video», anche da MKV e da altri file che Cubase e Nuendo da soli non aprono.
-- Conversione da HDR a SDR verificata visivamente per i contenuti HDR supportati. Non viene dichiarata alcuna misura quantitativa della fedeltà cromatica.
+- Il video HDR viene mostrato in colori normali (SDR); verificato visivamente, non viene dichiarata alcuna misura quantitativa della fedeltà cromatica.
 
 </details>
+
+## Come funziona in Cubase
+
+Clicca su un’immagine per guardare il clip (60 fps, dal sito).
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase non li apre da solo. Trascina un file nel progetto: immagine H.264, VP9 o HEVC 10 bit sulla traccia video nativa, HDR subito in colori normali (SDR), audio AC-3, Opus e TrueHD su una traccia audio.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Sottotitoli"></a><br><b>Sottotitoli</b> · <b>3GP · H.264</b> — Cubase non lo apre da solo. Metti un .vtt con lo stesso nome accanto al video: gli stessi secondi scorrono con i sottotitoli. Lo stesso vale per SRT, ASS, TTML e altri, persino i sottotitoli immagine Blu-ray PGS/SUP e DVD VobSub — tutti con lo stesso aspetto pulito.</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="Seconda finestra (ADR)"></a><br><b>Seconda finestra (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase non lo apre da solo. A sinistra il tuo schermo con il progetto e una copia dal vivo del player; a destra lo schermo dell’attore con il Video Player a schermo intero. Senza splitter HDMI né scheda Blackmagic.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Copione di doppiaggio"></a><br><b>Copione di doppiaggio</b> · <b>AVI · Xvid</b> — Cubase non lo apre da solo. Accanto c’è un copione di doppiaggio PDF con lo stesso nome: le battute scorrono come sottotitoli. Funzionano anche DOCX, XLSX, TXT e CSV.</td>
+</tr>
+</table>
+
+<sub>Film liberi nelle clip: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
 
 ## Seconda finestra video per il doppiaggio
 
@@ -93,7 +110,7 @@ Decodificati dallo stesso FFmpeg 9.0.2 incluso in FrameBridge. Di solito si apro
 
 ## Prestazioni
 
-La fluidità della riproduzione dipende dal materiale e dall’hardware. Per il lavoro quotidiano conviene una CPU di fascia media attuale e una scheda video che decodifichi in hardware i formati che usi (HEVC, AV1). Sui PC più vecchi — ad esempio un PC di prova del 2012 (Intel Core i5-2550K + GeForce GTX 660) — il video 4K a 10 bit pesante (HEVC Main10, H.264 High10) scatta, perché una GPU di quella generazione non sa decodificare questi formati in hardware. Sui PC poco potenti aiuta disattivare le miniature video nella DAW e usare copie di lavoro H.264 a 8 bit fino a 1080p. I problemi noti sono elencati in [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
+Il video normale fino a 1080p scorre fluido sulla maggior parte dei computer. Per il 4K a 10 bit (HEVC, AV1) è meglio una scheda video del 2016 o più recente: decodifica da sé questo tipo di video. [«Verifica prima di acquistare»](https://framebridge.cc/it/#check) qui sopra dà un’idea di quanto fluido sarà il tuo file sul tuo computer. I problemi noti sono elencati in [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt).
 
 ## Installazione e ripristino
 

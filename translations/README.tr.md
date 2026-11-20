@@ -8,7 +8,7 @@
 
 Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): tek bir kesintisiz çekim, canlı içe aktarma — MKV (HEVC 4K 10-bit, HDR dahil), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) ve birkaç altyazı formatı.
 
-**[Web sitesi](https://framebridge.cc/tr/)** · **[Satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
+**[Web sitesi](https://framebridge.cc/tr/)** · **[Satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Satın almadan önce kontrol edin](https://framebridge.cc/tr/#check)**
 
 FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu genişletir. Modern video formatları yerel video kanalında (Video Track) açılır ve yerleşik Video Player’da oynatılır; harici altyazı dosyaları ise görüntünün üzerinde otomatik olarak gösterilir — medyayı dönüştürmeden ve altyazıları videoya gömmeden.
 
@@ -33,9 +33,26 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 - Ayrı bir video oynatıcı, codec paketi veya LAV Filters gerekmez.
 - VST eklentisi değildir: eklenti yuvası, her projede bir şey yüklemek ya da MTC senkronu gerekmez; FrameBridge doğrudan yerel video motorunu genişletir.
 - Ses, standart “Extract Audio From Video” seçeneğiyle gelir — Cubase ve Nuendo’nun tek başına açamadığı MKV ve diğer dosyalardan da.
-- Desteklenen HDR içerikler için görsel olarak doğrulanmış HDR’den SDR’ye dönüştürme. Renk doğruluğuna dair ölçüme dayalı bir iddiada bulunulmaz.
+- HDR video normal renklerde (SDR) gösterilir; görsel olarak doğrulandı, renk doğruluğuna dair ölçüme dayalı bir iddiada bulunulmaz.
 
 </details>
+
+## Cubase’de nasıl çalışır
+
+Klibi izlemek için bir resme tıklayın (60 fps, web sitesinden).
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase bunları kendisi açmaz. Dosyayı projeye sürükleyin: H.264, VP9 veya 10 bit HEVC görüntü yerel video kanalında, HDR hemen normal renklerde (SDR), AC-3, Opus ve TrueHD ses bir ses kanalında.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Altyazılar"></a><br><b>Altyazılar</b> · <b>3GP · H.264</b> — Cubase bunu kendisi açmaz. Videonun yanına aynı adlı bir .vtt koyun; aynı saniyeler artık altyazılı oynar. SRT, ASS, TTML ve diğerleri, hatta Blu-ray PGS/SUP ve DVD VobSub görüntü altyazıları da aynı temiz görünümle gösterilir.</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="İkinci pencere (ADR)"></a><br><b>İkinci pencere (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase bunu kendisi açmaz. Solda proje ve oynatıcının canlı kopyasıyla sizin ekranınız, sağda Video Player’ın tam ekran olduğu oyuncunun ekranı. HDMI bölücü ve Blackmagic kartı gerekmez.</td>
+<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Dublaj metni"></a><br><b>Dublaj metni</b> · <b>AVI · Xvid</b> — Cubase bunu kendisi açmaz. Yanında aynı adlı bir PDF dublaj metni var; satırlar altyazı olarak görünür. DOCX, XLSX, TXT ve CSV de çalışır.</td>
+</tr>
+</table>
+
+<sub>Kliplerdeki serbest lisanslı filmler: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
 
 ## Dublaj için ikinci video penceresi
 
@@ -93,7 +110,7 @@ FrameBridge içindeki aynı FFmpeg 9.0.2 ile çözülür. Bu formatlar genellikl
 
 ## Performans
 
-Oynatma akıcılığı materyale ve donanıma bağlıdır. Günlük çalışma için güncel, orta sınıf bir işlemci ve kullandığınız formatları (HEVC, AV1) donanımsal olarak çözebilen bir ekran kartı düşünün. Daha eski bilgisayarlarda — örneğin 2012 tarihli bir test bilgisayarında (Intel Core i5-2550K + GeForce GTX 660) — ağır 4K 10-bit video (HEVC Main10, H.264 High10) takılır, çünkü o neslin GPU’su bu formatları donanımsal olarak çözemez. Zayıf bilgisayarlarda DAW’da video küçük resimlerini kapatmak ve 1080p’ye kadar H.264 8-bit çalışma kopyaları kullanmak yardımcı olur. Bilinen sorunlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) dosyasında listelenmiştir.
+Normal video 1080p’ye kadar çoğu bilgisayarda akıcı oynar. 4K 10-bit (HEVC, AV1) için 2016 veya daha yeni bir ekran kartı daha iyidir: bu tür videoyu kendisi çözer. Dosyanızın bilgisayarınızda yaklaşık ne kadar akıcı oynayacağını yukarıdaki [“Satın almadan önce kontrol edin”](https://framebridge.cc/tr/#check) gösterir. Bilinen sorunlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) dosyasında listelenmiştir.
 
 ## Kurulum ve geri alma
 
