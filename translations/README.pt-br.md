@@ -10,13 +10,13 @@ Acima, um guia em vídeo curto no Cubase 11 Pro: um MKV com seu arquivo de legen
 
 **[Site](https://framebridge.cc/pt-br/)** · **[Comprar](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windows x64. Formatos de vídeo modernos abrem na pista de vídeo nativa e são reproduzidos no Player de Vídeo integrado, e arquivos de legenda externos são exibidos automaticamente sobre a imagem — sem transcodificar a mídia e sem gravar as legendas no vídeo.
+O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windows x64. Formatos de vídeo modernos abrem na pista de vídeo nativa e são reproduzidos no Player de Vídeo integrado, e arquivos de legenda externos são exibidos automaticamente sobre a imagem — sem converter a mídia e sem gravar as legendas no vídeo.
 
 **O Cubase ou o Nuendo mostra “Arquivo inválido ou não suportado.”?** O FrameBridge foi feito justamente para essa mensagem. O Cubase e o Nuendo a mostram quando o mecanismo de vídeo nativo não consegue lidar com o contêiner, o codec ou a taxa de quadros do arquivo — MKV, WebM, MXF, HEVC de celulares como o iPhone, vídeo com taxa de quadros variável. O FrameBridge lê esses arquivos com o próprio decodificador. Se o seu arquivo ainda assim não abrir, você recebe o reembolso integral em até 14 dias.
 
 ## Principais vantagens
 
-- **Formatos modernos na pista de vídeo nativa** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 e muitos outros tocam no Player de Vídeo integrado, sem transcodificação.
+- **Formatos modernos na pista de vídeo nativa** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 e muitos outros tocam no Player de Vídeo integrado, sem conversão.
 - **Legendas externas sobre a imagem** — coloque `film.srt` ao lado de `film.mkv`; as alterações no arquivo de legenda aparecem na hora. O arquivo de vídeo nunca é alterado.
 - **Feito para dublagem** — uma segunda janela de vídeo para o técnico de som e legendas direto de roteiros de dublagem com papéis.
 - **Não é um plugin** — sem slot de plugin, nada para carregar em cada projeto, sem sincronização MTC, sem pacote de codecs. Restauração exata com UNINSTALL.cmd.

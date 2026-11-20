@@ -10,13 +10,13 @@ Oben eine kurze Videoanleitung in Cubase 11 Pro: eine MKV mit ihrer SRT-Untertit
 
 **[Website](https://framebridge.cc/de/)** · **[Kaufen](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Windows x64. Moderne Videoformate öffnen sich auf der nativen Videospur und laufen im integrierten Video-Player, und externe Untertiteldateien werden automatisch über dem Bild angezeigt — ohne Transcodierung des Materials und ohne Einbrennen der Untertitel ins Video.
+FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Windows x64. Moderne Videoformate öffnen sich auf der nativen Videospur und laufen im integrierten Video-Player, und externe Untertiteldateien werden automatisch über dem Bild angezeigt — ohne Konvertierung des Materials und ohne Einbrennen der Untertitel ins Video.
 
 **Cubase oder Nuendo meldet „Datei ist entweder fehlerhaft oder Medientyp wird nicht unterstützt!“?** Genau für diese Meldung ist FrameBridge gemacht. Cubase und Nuendo zeigen sie, wenn die integrierte Video-Engine mit Container, Codec oder Bildrate der Datei nicht zurechtkommt – MKV, WebM, MXF, HEVC von Smartphones wie dem iPhone, Video mit variabler Bildrate. FrameBridge liest solche Dateien mit einem eigenen Decoder. Öffnet sich Ihre Datei trotzdem nicht, erhalten Sie innerhalb von 14 Tagen den vollen Kaufpreis zurück.
 
 ## Die wichtigsten Vorteile
 
-- **Moderne Formate auf der nativen Videospur** – MKV, WebM, MXF, HEVC, AV1, ProRes 4444 und viele mehr laufen im integrierten Video-Player, ohne Transkodierung.
+- **Moderne Formate auf der nativen Videospur** – MKV, WebM, MXF, HEVC, AV1, ProRes 4444 und viele mehr laufen im integrierten Video-Player, ohne Konvertierung.
 - **Externe Untertitel über dem Bild** – `film.srt` neben `film.mkv` legen; Änderungen an der Untertiteldatei erscheinen sofort. Die Videodatei wird nie verändert.
 - **Für die Synchronisation gemacht** – ein zweites Videofenster für den Toningenieur, Untertitel direkt aus Synchronbüchern mit Rollen.
 - **Kein Plug-in** – kein Plug-in-Slot, nichts in jedem Projekt zu laden, keine MTC-Synchronisation, kein Codec-Pack. Exakte Wiederherstellung mit UNINSTALL.cmd.

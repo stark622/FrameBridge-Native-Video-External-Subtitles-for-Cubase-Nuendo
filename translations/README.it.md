@@ -10,13 +10,13 @@ Qui sopra, una breve guida video in Cubase 11 Pro: un MKV con il suo file di sot
 
 **[Sito web](https://framebridge.cc/it/)** · **[Acquista](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I formati video moderni si aprono sulla traccia video nativa e vengono riprodotti nel Riproduttore video integrato, mentre i file di sottotitoli esterni vengono mostrati automaticamente sopra l’immagine — senza transcodificare il materiale e senza imprimere i sottotitoli nel video.
+FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I formati video moderni si aprono sulla traccia video nativa e vengono riprodotti nel Riproduttore video integrato, mentre i file di sottotitoli esterni vengono mostrati automaticamente sopra l’immagine — senza convertire il materiale e senza imprimere i sottotitoli nel video.
 
 **Cubase o Nuendo mostra «File non valido o non supportato!»?** FrameBridge è fatto proprio per questo messaggio. Cubase e Nuendo lo mostrano quando il motore video integrato non riesce a gestire il contenitore, il codec o il frame rate del file: MKV, WebM, MXF, HEVC da smartphone come l’iPhone, video con frame rate variabile. FrameBridge legge questi file con un proprio decoder. Se il tuo file continua a non aprirsi, ricevi il rimborso completo entro 14 giorni.
 
 ## Vantaggi principali
 
-- **Formati moderni sulla traccia video nativa**: MKV, WebM, MXF, HEVC, AV1, ProRes 4444 e molti altri vengono riprodotti nel Riproduttore video integrato, senza transcodifica.
+- **Formati moderni sulla traccia video nativa**: MKV, WebM, MXF, HEVC, AV1, ProRes 4444 e molti altri vengono riprodotti nel Riproduttore video integrato, senza conversione.
 - **Sottotitoli esterni sull’immagine**: metti `film.srt` accanto a `film.mkv`; le modifiche al file dei sottotitoli compaiono subito. Il file video non viene mai modificato.
 - **Pensato per il doppiaggio**: una seconda finestra video per il fonico, sottotitoli direttamente dai copioni di doppiaggio con i ruoli.
 - **Non è un plugin**: nessuno slot plugin, niente da caricare in ogni progetto, nessuna sincronizzazione MTC, nessun codec pack. Ripristino esatto con UNINSTALL.cmd.

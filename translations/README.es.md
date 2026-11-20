@@ -10,13 +10,13 @@ Arriba, una breve guía en video en Cubase 11 Pro: un MKV con su archivo de subt
 
 **[Sitio web](https://framebridge.cc/es/)** · **[Comprar](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-FrameBridge amplía el motor de video nativo de Cubase y Nuendo en Windows x64. Los formatos de video modernos se abren en la pista de video nativa y se reproducen en el Reproductor de video integrado, y los archivos de subtítulos externos se muestran sobre la imagen automáticamente, sin transcodificar el material y sin incrustar los subtítulos en el video.
+FrameBridge amplía el motor de video nativo de Cubase y Nuendo en Windows x64. Los formatos de video modernos se abren en la pista de video nativa y se reproducen en el Reproductor de video integrado, y los archivos de subtítulos externos se muestran sobre la imagen automáticamente, sin convertir el material y sin incrustar los subtítulos en el video.
 
 **¿Cubase o Nuendo muestra «¡El archivo no se soporta o no es válido!»?** Justo para ese mensaje está hecho FrameBridge. Cubase y Nuendo lo muestran cuando su motor de video integrado no puede manejar el contenedor, el códec o la frecuencia de fotogramas del archivo: MKV, WebM, MXF, HEVC de teléfonos como el iPhone, video con frecuencia de fotogramas variable. FrameBridge lee esos archivos con su propio decodificador. Si su archivo aun así no se abre, recibe el reembolso completo en un plazo de 14 días.
 
 ## Ventajas principales
 
-- **Formatos modernos en la pista de video nativa**: MKV, WebM, MXF, HEVC, AV1, ProRes 4444 y muchos más se reproducen en el Reproductor de video integrado, sin transcodificar.
+- **Formatos modernos en la pista de video nativa**: MKV, WebM, MXF, HEVC, AV1, ProRes 4444 y muchos más se reproducen en el Reproductor de video integrado, sin convertir.
 - **Subtítulos externos sobre la imagen**: ponga `film.srt` junto a `film.mkv`; los cambios en el archivo de subtítulos se ven al instante. El archivo de video nunca se modifica.
 - **Hecho para el doblaje**: una segunda ventana de video para el ingeniero de sonido y subtítulos directamente desde guiones de doblaje con roles.
 - **No es un plugin**: sin ranura de plugin, sin cargar nada en cada proyecto, sin sincronización MTC y sin paquete de códecs. Restauración exacta con UNINSTALL.cmd.

@@ -10,13 +10,13 @@ Above is a short video guide in Cubase 11 Pro: an MKV with its SRT subtitle file
 
 **[Website](https://framebridge.cc)** · **[Buy](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Modern video formats open on the native video track and play in the built-in Video Player, and external subtitle files are shown over the picture automatically — without transcoding the media and without burning subtitles into the video.
+FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Modern video formats open on the native video track and play in the built-in Video Player, and external subtitle files are shown over the picture automatically — without converting the media and without burning subtitles into the video.
 
 **Cubase or Nuendo says “Invalid or not supported file!”?** That is the message FrameBridge is made for. Cubase and Nuendo show it when their built-in video engine cannot handle the file’s container, codec or frame rate — MKV, WebM, MXF, HEVC from phones such as the iPhone, video with a variable frame rate. FrameBridge reads such files with its own decoder. If your file still does not open, you get a full refund within 14 days.
 
 ## Key benefits
 
-- **Modern formats on the native video track** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 and many more play in the built-in Video Player, no transcoding.
+- **Modern formats on the native video track** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 and many more play in the built-in Video Player, no conversion.
 - **External subtitles over the picture** — put `film.srt` next to `film.mkv`; edits to the subtitle file show up live. The video file is never changed.
 - **Built for dubbing** — a second video window for the sound engineer, subtitles straight from dubbing scripts with roles.
 - **Not a plugin** — no plug-in slot, nothing to load in each project, no MTC sync, no codec pack. Exact rollback with UNINSTALL.cmd.

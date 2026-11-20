@@ -10,13 +10,13 @@ Ci-dessus, un court guide vidéo dans Cubase 11 Pro : un MKV avec son fichier d
 
 **[Site web](https://framebridge.cc/fr/)** · **[Acheter](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows x64. Les formats vidéo modernes s’ouvrent sur la piste vidéo native et sont lus dans le Lecteur vidéo intégré, et les fichiers de sous-titres externes s’affichent automatiquement sur l’image — sans transcoder le média et sans incruster les sous-titres dans la vidéo.
+FrameBridge étend le moteur vidéo natif de Cubase et Nuendo sous Windows x64. Les formats vidéo modernes s’ouvrent sur la piste vidéo native et sont lus dans le Lecteur vidéo intégré, et les fichiers de sous-titres externes s’affichent automatiquement sur l’image — sans convertir le média et sans incruster les sous-titres dans la vidéo.
 
 **Cubase ou Nuendo affiche « Fichier non valide ou non supporté ! » ?** C’est précisément pour ce message que FrameBridge existe. Cubase et Nuendo l’affichent lorsque leur moteur vidéo intégré ne gère pas le conteneur, le codec ou la fréquence d’images du fichier — MKV, WebM, MXF, HEVC de smartphones comme l’iPhone, vidéo à fréquence d’images variable. FrameBridge lit ces fichiers avec son propre décodeur. Si votre fichier ne s’ouvre toujours pas, vous êtes intégralement remboursé sous 14 jours.
 
 ## Principaux avantages
 
-- **Formats modernes sur la piste vidéo native** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 et bien d’autres sont lus dans le Lecteur vidéo intégré, sans transcodage.
+- **Formats modernes sur la piste vidéo native** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 et bien d’autres sont lus dans le Lecteur vidéo intégré, sans conversion.
 - **Sous-titres externes sur l’image** — placez `film.srt` à côté de `film.mkv` ; les modifications du fichier de sous-titres apparaissent en direct. Le fichier vidéo n’est jamais modifié.
 - **Conçu pour le doublage** — une deuxième fenêtre vidéo pour l’ingénieur du son, des sous-titres directement depuis les scripts de doublage avec les rôles.
 - **Pas un plug-in** — aucun slot de plug-in, rien à charger dans chaque projet, aucune synchro MTC, aucun pack de codecs. Restauration exacte avec UNINSTALL.cmd.

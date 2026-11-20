@@ -10,13 +10,13 @@ Powyżej krótki poradnik wideo w Cubase 11 Pro: plik MKV z napisami SRT oraz MK
 
 **[Strona](https://framebridge.cc/pl/)** · **[Kup](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)**
 
-FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x64. Nowoczesne formaty wideo otwierają się na natywnej ścieżce wideo (Video Track) i są odtwarzane we wbudowanym Video Playerze, a pliki napisów zewnętrznych wyświetlają się na obrazie automatycznie — bez transkodowania materiału i bez wypalania napisów w wideo.
+FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x64. Nowoczesne formaty wideo otwierają się na natywnej ścieżce wideo (Video Track) i są odtwarzane we wbudowanym Video Playerze, a pliki napisów zewnętrznych wyświetlają się na obrazie automatycznie — bez konwersji materiału i bez wypalania napisów w wideo.
 
 **Cubase lub Nuendo pokazuje „Invalid or not supported file!”?** FrameBridge powstał właśnie z myślą o tym komunikacie. Cubase i Nuendo pokazują go, gdy wbudowany silnik wideo nie radzi sobie z kontenerem, kodekiem lub liczbą klatek pliku — MKV, WebM, MXF, HEVC z telefonów takich jak iPhone, wideo o zmiennej liczbie klatek. FrameBridge czyta takie pliki własnym dekoderem. Jeśli Twój plik nadal się nie otworzy, otrzymasz pełny zwrot pieniędzy w ciągu 14 dni.
 
 ## Najważniejsze zalety
 
-- **Nowoczesne formaty na natywnej ścieżce wideo** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 i wiele innych odtwarza się we wbudowanym Video Playerze, bez transkodowania.
+- **Nowoczesne formaty na natywnej ścieżce wideo** — MKV, WebM, MXF, HEVC, AV1, ProRes 4444 i wiele innych odtwarza się we wbudowanym Video Playerze, bez konwersji.
 - **Zewnętrzne napisy na obrazie** — połóż `film.srt` obok `film.mkv`; zmiany w pliku napisów widać od razu. Plik wideo nigdy nie jest zmieniany.
 - **Stworzony do dubbingu** — drugie okno wideo dla realizatora dźwięku, napisy prosto ze scenariuszy dubbingowych z rolami.
 - **To nie wtyczka** — bez slotu wtyczki, bez ładowania czegokolwiek w każdym projekcie, bez synchronizacji MTC, bez pakietu kodeków. Dokładne przywracanie przez UNINSTALL.cmd.
