@@ -37,23 +37,6 @@ FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x6
 
 </details>
 
-## Zobacz w Cubase
-
-Kliknij obrazek, aby obejrzeć klip (60 kl./s, ze strony).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Wideo"></a><br><b>Wideo</b> · <b>MTS · WebM · MKV</b> — Cubase sam ich nie otwiera. Przeciągnij plik do projektu: obraz H.264, VP9 lub HEVC 10 bit na natywnej ścieżce wideo, HDR od razu w zwykłych kolorach (SDR), dźwięk AC-3, Opus i TrueHD na ścieżce audio.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Napisy"></a><br><b>Napisy</b> · <b>3GP · H.264</b> — Cubase sam go nie otwiera. Połóż plik .vtt o tej samej nazwie obok wideo — te same sekundy grają już z napisami. Tak samo SRT, ASS, TTML i inne, nawet napisy-obrazki Blu-ray PGS/SUP i DVD VobSub — wszystkie w jednym czystym wyglądzie.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="Drugie okno (ADR)"></a><br><b>Drugie okno (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase sam go nie otwiera. Po lewej Twój ekran z projektem i kopią odtwarzacza na żywo, po prawej ekran aktora z odtwarzaczem wideo na pełnym ekranie. Bez splittera HDMI i karty Blackmagic.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Lista dialogowa"></a><br><b>Lista dialogowa</b> · <b>AVI · Xvid</b> — Cubase sam go nie otwiera. Obok leży lista dialogowa PDF o tej samej nazwie — kwestie wyświetlają się jako napisy. Działają też DOCX, XLSX, TXT i CSV.</td>
-</tr>
-</table>
-
-<sub>Wolne filmy w klipach: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Drugie okno wideo do dubbingu
 
 Cubase i Nuendo pokazują wideo w jednym oknie Video Player. FrameBridge dodaje jego kopię na żywo: aktor ogląda Video Player na swoim monitorze, a Ty masz kopię obok projektu — bez splittera HDMI i bez karty wyjściowej Blackmagic.

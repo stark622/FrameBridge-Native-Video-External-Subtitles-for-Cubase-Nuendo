@@ -37,23 +37,6 @@ FrameBridge extends the native video engine of Windows x64 Cubase and Nuendo. Mo
 
 </details>
 
-## See it in Cubase
-
-Click a picture to watch the clip (60 fps, from the website).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase does not open them on its own. Drag a file into the project: H.264, VP9 or 10-bit HEVC picture on the native video track, HDR in normal colors (SDR) right away, AC-3, Opus and TrueHD audio on an audio track.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="media/clips/subs.webp" alt="Subtitles"></a><br><b>Subtitles</b> · <b>3GP · H.264</b> — Cubase does not open it on its own. Put a .vtt with the same name next to the video — and the same seconds play with subtitles. The same goes for SRT, ASS, TTML and others, even Blu-ray PGS/SUP and DVD VobSub pictures — all in one clean look.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="media/clips/adr.webp" alt="Second window (ADR)"></a><br><b>Second window (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase does not open it on its own. Left: your screen with the project and a live copy of the player. Right: the actor’s screen with the Video Player in full screen. No HDMI splitter, no Blackmagic card.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="media/clips/script.webp" alt="Dubbing script"></a><br><b>Dubbing script</b> · <b>AVI · Xvid</b> — Cubase does not open it on its own. A PDF dubbing script with the same name sits next to it — the lines play as subtitles. DOCX, XLSX, TXT and CSV work too.</td>
-</tr>
-</table>
-
-<sub>Open films in the clips: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Second video window for dubbing
 
 Cubase and Nuendo show video in a single Video Player window. FrameBridge adds a live copy of it: the actor watches the Video Player on the actor's screen, and you keep the copy next to your project — no HDMI splitter, no Blackmagic output card.

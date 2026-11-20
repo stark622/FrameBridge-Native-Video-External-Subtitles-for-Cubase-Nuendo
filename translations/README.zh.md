@@ -37,23 +37,6 @@ FrameBridge 扩展了 Windows x64 版 Cubase 和 Nuendo 的原生视频引擎。
 
 </details>
 
-## 在 Cubase 中的实际效果
-
-点击图片观看片段（60 fps，来自网站）。
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="视频"></a><br><b>视频</b> · <b>MTS · WebM · MKV</b> — Cubase 本身无法打开。把文件拖进工程：H.264、VP9 或 10 位 HEVC 画面出现在原生视频轨上，HDR 直接以正常色彩（SDR）显示，AC-3、Opus 和 TrueHD 音频进入音频轨。</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="字幕"></a><br><b>字幕</b> · <b>3GP · H.264</b> — Cubase 本身无法打开。把同名的 .vtt 放在视频旁边，同样的片段就带字幕播放。SRT、ASS、TTML 等格式同样适用，连 Blu-ray PGS/SUP 和 DVD VobSub 图像字幕也以同样清晰的样式显示。</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="第二视频窗口（ADR）"></a><br><b>第二视频窗口（ADR）</b> · <b>M2TS · MPEG-2</b> — Cubase 本身无法打开。左边是您的屏幕：工程和播放器的实时副本；右边是配音演员的屏幕：视频播放器全屏显示。无需 HDMI 分配器，也无需 Blackmagic 采集卡。</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="配音台本"></a><br><b>配音台本</b> · <b>AVI · Xvid</b> — Cubase 本身无法打开。旁边放着同名的 PDF 配音台本，台词会以字幕形式显示。DOCX、XLSX、TXT 和 CSV 也同样支持。</td>
-</tr>
-</table>
-
-<sub>片段中使用的开放授权影片：Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## 配音用的第二个视频窗口
 
 Cubase 和 Nuendo 只在一个视频播放器窗口中显示视频。FrameBridge 为它添加一个实时副本：演员在自己的屏幕上观看视频播放器，您则在工程旁边保留副本——无需 HDMI 分配器，也无需 Blackmagic 输出卡。

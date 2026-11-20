@@ -37,23 +37,6 @@ FrameBridge расширяет штатный видеодвижок Cubase и N
 
 </details>
 
-## Как это выглядит в Cubase
-
-Нажмите на картинку, чтобы посмотреть клип (60 кадров/с, с сайта).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Видео"></a><br><b>Видео</b> · <b>MTS · WebM · MKV</b> — Cubase сам не открывает. Перетащили файл в проект — картинка H.264, VP9 или HEVC 10 бит на штатном видеотреке, HDR сразу в обычных цветах (SDR), звук AC-3, Opus и TrueHD — на аудиодорожке.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Субтитры"></a><br><b>Субтитры</b> · <b>3GP · H.264</b> — Cubase сам не открывает. Положили .vtt с тем же именем рядом с видео — и те же секунды уже с субтитрами. Так же SRT, ASS, TTML и другие, даже картинки Blu-ray PGS/SUP и DVD VobSub — всё в одном чистом виде.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="Второе окно (ADR)"></a><br><b>Второе окно (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase сам не открывает. Слева ваш экран: проект и живая копия плеера. Справа экран актёра: Видеоплеер на весь экран. Без HDMI-сплиттера и карты Blackmagic.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Монтажный лист"></a><br><b>Монтажный лист</b> · <b>AVI · Xvid</b> — Cubase сам не открывает. Рядом монтажный лист PDF с тем же именем — реплики идут субтитрами. Также DOCX, XLSX, TXT, CSV.</td>
-</tr>
-</table>
-
-<sub>Свободные фильмы в клипах: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Второе окно видео для озвучания
 
 Cubase и Nuendo показывают видео в одном окне Видеоплеера. FrameBridge добавляет его живую копию: актёр смотрит Видеоплеер на своём мониторе, а копия остаётся у вас рядом с проектом — без HDMI-сплиттера и без отдельной карты видеовывода Blackmagic.

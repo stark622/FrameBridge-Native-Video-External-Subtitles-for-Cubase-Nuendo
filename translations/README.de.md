@@ -37,23 +37,6 @@ FrameBridge erweitert die native Video-Engine von Cubase und Nuendo unter Window
 
 </details>
 
-## So sieht es in Cubase aus
-
-Klicken Sie auf ein Bild, um den Clip anzusehen (60 fps, von der Website).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase öffnet sie nicht von selbst. Datei ins Projekt ziehen: Bild in H.264, VP9 oder HEVC 10 Bit auf der nativen Videospur, HDR sofort in normalen Farben (SDR), Ton in AC-3, Opus und TrueHD auf einer Audiospur.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Untertitel"></a><br><b>Untertitel</b> · <b>3GP · H.264</b> — Cubase öffnet es nicht von selbst. Eine .vtt mit demselben Namen neben das Video legen — und dieselben Sekunden laufen mit Untertiteln. Ebenso SRT, ASS, TTML und weitere, sogar Bilduntertitel von Blu-ray (PGS/SUP) und DVD (VobSub) — alle im selben sauberen Look.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="Zweites Fenster (ADR)"></a><br><b>Zweites Fenster (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase öffnet es nicht von selbst. Links Ihr Bildschirm mit dem Projekt und einer Live-Kopie des Players, rechts der Bildschirm des Sprechers mit dem Video-Player im Vollbild. Ohne HDMI-Splitter, ohne Blackmagic-Karte.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Synchronbuch"></a><br><b>Synchronbuch</b> · <b>AVI · Xvid</b> — Cubase öffnet es nicht von selbst. Daneben liegt ein PDF-Synchronbuch mit demselben Namen — die Takes laufen als Untertitel. DOCX, XLSX, TXT und CSV funktionieren ebenso.</td>
-</tr>
-</table>
-
-<sub>Freie Filme in den Clips: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Zweites Videofenster für die Synchronisation
 
 Cubase und Nuendo zeigen Video in einem einzigen Video-Player-Fenster. FrameBridge fügt eine Live-Kopie davon hinzu: Der Sprecher sieht den Video-Player auf seinem Bildschirm, und Sie behalten die Kopie neben Ihrem Projekt – ohne HDMI-Splitter, ohne Blackmagic-Ausgabekarte.

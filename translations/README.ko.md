@@ -37,23 +37,6 @@ FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진�
 
 </details>
 
-## Cubase에서 실제로 보기
-
-이미지를 클릭하면 클립을 볼 수 있습니다(60fps, 웹사이트).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="영상"></a><br><b>영상</b> · <b>MTS · WebM · MKV</b> — Cubase만으로는 열리지 않습니다. 파일을 프로젝트로 끌어오면 H.264, VP9, 10비트 HEVC 영상이 기본 비디오 트랙에 놓이고, HDR은 바로 일반 색(SDR)으로 보이며, AC-3, Opus, TrueHD 오디오는 오디오 트랙에 들어갑니다.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="자막"></a><br><b>자막</b> · <b>3GP · H.264</b> — Cubase만으로는 열리지 않습니다. 같은 이름의 .vtt를 영상 옆에 두면 같은 구간이 자막과 함께 재생됩니다. SRT, ASS, TTML 등도 마찬가지이며, Blu-ray PGS/SUP와 DVD VobSub 이미지 자막까지 모두 같은 깔끔한 모양으로 표시됩니다.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="두 번째 창 (ADR)"></a><br><b>두 번째 창 (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase만으로는 열리지 않습니다. 왼쪽은 프로젝트와 플레이어의 실시간 사본이 있는 내 화면, 오른쪽은 Video Player를 전체 화면으로 띄운 성우의 화면입니다. HDMI 분배기도, Blackmagic 카드도 필요 없습니다.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="더빙 대본"></a><br><b>더빙 대본</b> · <b>AVI · Xvid</b> — Cubase만으로는 열리지 않습니다. 옆에 같은 이름의 PDF 더빙 대본을 두면 대사가 자막으로 나옵니다. DOCX, XLSX, TXT, CSV도 됩니다.</td>
-</tr>
-</table>
-
-<sub>클립에 사용된 공개 라이선스 영화: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## 더빙용 두 번째 비디오 창
 
 Cubase와 Nuendo는 비디오를 하나의 비디오 플레이어 창에만 표시합니다. FrameBridge는 그 실시간 사본을 추가합니다. 배우는 자신의 화면에서 비디오 플레이어를 보고, 여러분은 프로젝트 옆에 사본을 둡니다. HDMI 분배기도, Blackmagic 출력 카드도 필요 없습니다.

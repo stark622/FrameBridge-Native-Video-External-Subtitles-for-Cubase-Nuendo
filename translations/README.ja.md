@@ -37,23 +37,6 @@ FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエ
 
 </details>
 
-## Cubase での動作
-
-画像をクリックするとクリップを再生します（60 fps、Web サイト）。
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="動画"></a><br><b>動画</b> · <b>MTS · WebM · MKV</b> — Cubase 単体では開けません。ファイルをプロジェクトにドラッグするだけで、H.264、VP9、10 ビット HEVC の映像が標準のビデオトラックに並び、HDR はすぐに通常の色（SDR）で表示され、AC-3、Opus、TrueHD の音声はオーディオトラックに入ります。</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="字幕"></a><br><b>字幕</b> · <b>3GP · H.264</b> — Cubase 単体では開けません。同じ名前の .vtt を動画の隣に置くだけで、同じ場面が字幕付きで再生されます。SRT、ASS、TTML なども同様で、Blu-ray の PGS/SUP や DVD の VobSub といった画像字幕も、すべて同じ見やすい表示になります。</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="2つ目のウィンドウ（ADR）"></a><br><b>2つ目のウィンドウ（ADR）</b> · <b>M2TS · MPEG-2</b> — Cubase 単体では開けません。左はプロジェクトとプレーヤーのライブコピーがあるあなたの画面、右はビデオプレーヤーを全画面表示した声優の画面です。HDMI スプリッターも Blackmagic カードも不要です。</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="吹き替え台本"></a><br><b>吹き替え台本</b> · <b>AVI · Xvid</b> — Cubase 単体では開けません。同じ名前の PDF 吹き替え台本を隣に置くと、セリフが字幕として表示されます。DOCX、XLSX、TXT、CSV にも対応しています。</td>
-</tr>
-</table>
-
-<sub>クリップ内のオープンライセンス映画: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## 吹き替え用の 2 つ目のビデオウィンドウ
 
 Cubase と Nuendo では、ビデオは 1 つのビデオプレーヤーウィンドウにしか表示されません。FrameBridge はそのライブコピーを追加します。役者は自分の画面でビデオプレーヤーを見て、あなたはプロジェクトの横にコピーを置いておけます。HDMI スプリッターも、Blackmagic の出力カードも不要です。

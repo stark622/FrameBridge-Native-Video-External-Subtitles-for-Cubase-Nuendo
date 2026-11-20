@@ -37,23 +37,6 @@ FrameBridge estende il motore video nativo di Cubase e Nuendo su Windows x64. I 
 
 </details>
 
-## Come funziona in Cubase
-
-Clicca su un’immagine per guardare il clip (60 fps, dal sito).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase non li apre da solo. Trascina un file nel progetto: immagine H.264, VP9 o HEVC 10 bit sulla traccia video nativa, HDR subito in colori normali (SDR), audio AC-3, Opus e TrueHD su una traccia audio.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Sottotitoli"></a><br><b>Sottotitoli</b> · <b>3GP · H.264</b> — Cubase non lo apre da solo. Metti un .vtt con lo stesso nome accanto al video: gli stessi secondi scorrono con i sottotitoli. Lo stesso vale per SRT, ASS, TTML e altri, persino i sottotitoli immagine Blu-ray PGS/SUP e DVD VobSub — tutti con lo stesso aspetto pulito.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="Seconda finestra (ADR)"></a><br><b>Seconda finestra (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase non lo apre da solo. A sinistra il tuo schermo con il progetto e una copia dal vivo del player; a destra lo schermo dell’attore con il Video Player a schermo intero. Senza splitter HDMI né scheda Blackmagic.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Copione di doppiaggio"></a><br><b>Copione di doppiaggio</b> · <b>AVI · Xvid</b> — Cubase non lo apre da solo. Accanto c’è un copione di doppiaggio PDF con lo stesso nome: le battute scorrono come sottotitoli. Funzionano anche DOCX, XLSX, TXT e CSV.</td>
-</tr>
-</table>
-
-<sub>Film liberi nelle clip: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Seconda finestra video per il doppiaggio
 
 Cubase e Nuendo mostrano il video in un’unica finestra Riproduttore video. FrameBridge ne aggiunge una copia dal vivo: l’attore guarda il Riproduttore video sul suo schermo e tu tieni la copia accanto al progetto, senza splitter HDMI e senza scheda di uscita Blackmagic.

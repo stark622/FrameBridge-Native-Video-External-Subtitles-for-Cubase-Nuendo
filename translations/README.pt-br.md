@@ -37,23 +37,6 @@ O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windo
 
 </details>
 
-## Veja funcionando no Cubase
-
-Clique em uma imagem para ver o clipe (60 fps, no site).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Vídeo"></a><br><b>Vídeo</b> · <b>MTS · WebM · MKV</b> — o Cubase não abre sozinho. Arraste um arquivo para o projeto: imagem H.264, VP9 ou HEVC 10 bits na pista de vídeo nativa, HDR na hora em cores normais (SDR), áudio AC-3, Opus e TrueHD em uma pista de áudio.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Legendas"></a><br><b>Legendas</b> · <b>3GP · H.264</b> — o Cubase não abre sozinho. Coloque um .vtt com o mesmo nome ao lado do vídeo e os mesmos segundos tocam com legendas. O mesmo vale para SRT, ASS, TTML e outros, até legendas em imagem de Blu-ray (PGS/SUP) e DVD (VobSub) — todas com o mesmo visual limpo.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="Segunda janela (ADR)"></a><br><b>Segunda janela (ADR)</b> · <b>M2TS · MPEG-2</b> — o Cubase não abre sozinho. À esquerda, a sua tela com o projeto e uma cópia ao vivo do player; à direita, a tela do ator com o Video Player em tela cheia. Sem divisor HDMI nem placa Blackmagic.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Roteiro de dublagem"></a><br><b>Roteiro de dublagem</b> · <b>AVI · Xvid</b> — o Cubase não abre sozinho. Ao lado há um roteiro de dublagem em PDF com o mesmo nome: as falas aparecem como legendas. DOCX, XLSX, TXT e CSV também funcionam.</td>
-</tr>
-</table>
-
-<sub>Filmes livres nos clipes: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Segunda janela de vídeo para dublagem
 
 O Cubase e o Nuendo mostram o vídeo em uma única janela do Player de Vídeo. O FrameBridge adiciona uma cópia ao vivo: o ator assiste ao Player de Vídeo na tela dele, e você mantém a cópia ao lado do projeto — sem splitter HDMI, sem placa de saída Blackmagic.

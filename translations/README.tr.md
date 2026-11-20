@@ -37,23 +37,6 @@ FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu geni
 
 </details>
 
-## Cubase’de nasıl çalışır
-
-Klibi izlemek için bir resme tıklayın (60 fps, web sitesinden).
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/video.mp4"><img src="../media/clips/video.webp" alt="Video"></a><br><b>Video</b> · <b>MTS · WebM · MKV</b> — Cubase bunları kendisi açmaz. Dosyayı projeye sürükleyin: H.264, VP9 veya 10 bit HEVC görüntü yerel video kanalında, HDR hemen normal renklerde (SDR), AC-3, Opus ve TrueHD ses bir ses kanalında.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/subs.mp4"><img src="../media/clips/subs.webp" alt="Altyazılar"></a><br><b>Altyazılar</b> · <b>3GP · H.264</b> — Cubase bunu kendisi açmaz. Videonun yanına aynı adlı bir .vtt koyun; aynı saniyeler artık altyazılı oynar. SRT, ASS, TTML ve diğerleri, hatta Blu-ray PGS/SUP ve DVD VobSub görüntü altyazıları da aynı temiz görünümle gösterilir.</td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/adr.mp4"><img src="../media/clips/adr.webp" alt="İkinci pencere (ADR)"></a><br><b>İkinci pencere (ADR)</b> · <b>M2TS · MPEG-2</b> — Cubase bunu kendisi açmaz. Solda proje ve oynatıcının canlı kopyasıyla sizin ekranınız, sağda Video Player’ın tam ekran olduğu oyuncunun ekranı. HDMI bölücü ve Blackmagic kartı gerekmez.</td>
-<td width="50%" valign="top"><a href="https://framebridge.cc/img/clip/script.mp4"><img src="../media/clips/script.webp" alt="Dublaj metni"></a><br><b>Dublaj metni</b> · <b>AVI · Xvid</b> — Cubase bunu kendisi açmaz. Yanında aynı adlı bir PDF dublaj metni var; satırlar altyazı olarak görünür. DOCX, XLSX, TXT ve CSV de çalışır.</td>
-</tr>
-</table>
-
-<sub>Kliplerdeki serbest lisanslı filmler: Tears of Steel, Spring, Sprite Fright — (CC) Blender Foundation, CC BY; Meridian — © Netflix, CC BY 4.0.</sub>
-
 ## Dublaj için ikinci video penceresi
 
 Cubase ve Nuendo videoyu tek bir Video Player penceresinde gösterir. FrameBridge bunun canlı bir kopyasını ekler: oyuncu Video Player’ı kendi ekranında izler, kopya ise projenizin yanında sizde kalır — HDMI çoklayıcı ya da Blackmagic çıkış kartı gerekmez.
