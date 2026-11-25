@@ -434,6 +434,7 @@
   function show(i) {
     figs[cur].querySelector('video').pause();
     cur = i;
+    try { figs[i].querySelector('video').currentTime = 0; } catch (e) {} // a switched-to clip starts from the beginning
     for (var k = 0; k < figs.length; k++) { figs[k].hidden = k !== i; tabs[k].setAttribute('aria-pressed', String(k === i)); }
     if (seen) play();
   }
