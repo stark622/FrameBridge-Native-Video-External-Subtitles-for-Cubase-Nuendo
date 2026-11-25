@@ -112,7 +112,7 @@ Cubase и Nuendo показывают видео в одном окне Виде
 
 ## Кто делает FrameBridge
 
-Я stark622, звукорежиссёр дубляжа и озвучания, разработчик FrameBridge. Сделал его для своей работы: видео от клиентов часто приходят в форматах, которые Cubase не открывает, а субтитры — отдельными файлами, и конвертировать каждую поставку или вшивать субтитры в картинку — это потеря времени. Вопросы и отзывы приходят напрямую мне: stark622@ukr.net.
+Я Roman Aksonov, звукорежиссёр дубляжа и озвучания, разработчик FrameBridge. Сделал его для своей работы: видео от клиентов часто приходят в форматах, которые Cubase не открывает, а субтитры — отдельными файлами, и конвертировать каждую поставку или вшивать субтитры в картинку — это потеря времени. Вопросы и отзывы приходят напрямую мне: stark622@ukr.net.
 
 Также на: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 

@@ -112,7 +112,7 @@ Pełna instrukcja jest w plikach [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) 
 
 ## Kto tworzy FrameBridge
 
-Tu stark622, jestem realizatorem dźwięku w dubbingu i nagraniach lektorskich oraz twórcą FrameBridge. Zrobiłem go do własnej pracy: wideo od klientów często przychodzi w formatach, których Cubase nie otwiera, a napisy w osobnych plikach – i konwertowanie każdej dostawy albo wypalanie napisów w obrazie kosztuje czas. Pytania i opinie trafiają prosto do mnie: stark622@ukr.net.
+Tu Roman Aksonov, jestem realizatorem dźwięku w dubbingu i nagraniach lektorskich oraz twórcą FrameBridge. Zrobiłem go do własnej pracy: wideo od klientów często przychodzi w formatach, których Cubase nie otwiera, a napisy w osobnych plikach – i konwertowanie każdej dostawy albo wypalanie napisów w obrazie kosztuje czas. Pytania i opinie trafiają prosto do mnie: stark622@ukr.net.
 
 Również na: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 

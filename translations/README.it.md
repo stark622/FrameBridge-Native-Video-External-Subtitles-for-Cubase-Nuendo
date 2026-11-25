@@ -112,7 +112,7 @@ Le istruzioni complete sono in [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) e 
 
 ## Chi sviluppa FrameBridge
 
-Sono stark622, fonico di doppiaggio e voice-over e sviluppatore di FrameBridge. L’ho creato per il mio lavoro: i video dei clienti arrivano spesso in formati che Cubase non apre, con i sottotitoli in file separati, e convertire ogni consegna o imprimere i sottotitoli nell’immagine fa perdere tempo. Domande e feedback arrivano direttamente a me: stark622@ukr.net.
+Sono Roman Aksonov, fonico di doppiaggio e voice-over e sviluppatore di FrameBridge. L’ho creato per il mio lavoro: i video dei clienti arrivano spesso in formati che Cubase non apre, con i sottotitoli in file separati, e convertire ogni consegna o imprimere i sottotitoli nell’immagine fa perdere tempo. Domande e feedback arrivano direttamente a me: stark622@ukr.net.
 
 Anche su: [KVR Audio](https://www.kvraudio.com/news/framebridge-brings-modern-video-formats-and-external-subtitles-to-the-native-cubase-and-nuendo-video-player-69505) · [Gearspace](https://gearspace.com/threads/framebridge-beta-released-native-video-formats-and-external-subtitles-in-cubase-nuendo.1470656/) · [Noizefield](https://www.noizefield.com/news/framebridge-beta-extends-cubase-nuendo-video-engine)
 
