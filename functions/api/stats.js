@@ -285,8 +285,8 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 <div class="tile"><b>${human.length}</b>visits (browsers)</div>
 <div class="tile"><b>${engaged.length}</b>engaged visits<br><span class="muted">clicked, read 2+ sections or stayed 15 s+</span></div>
 <div class="tile"><b>${summary.buy_click_sessions}</b>visits clicked Buy</div>
-<div class="tile"><b>${summary.demo_click_sessions}</b>visits clicked Download demo</div>
-<div class="tile"><b>${downloads.length}</b>demo downloads<br><span class="muted">the file itself, also from GitHub; from 26 Nov</span></div>
+<div class="tile"><b>${summary.demo_click_sessions}</b>pressed "Download demo"<br><span class="muted">the button on the site</span></div>
+<div class="tile"><b>${downloads.length}</b>demo actually downloaded<br><span class="muted">from the site or a direct link (GitHub README, e-mail)</span></div>
 <div class="tile"><b>${summary.video_play_sessions}</b>visits played the video</div>
 <div class="tile"><b>${avgTime} s</b>avg active time (engaged)</div>
 <div class="tile"><b>${summary.sessions_flagged_bot}</b>flagged as bots<br><span class="muted">excluded</span></div>
