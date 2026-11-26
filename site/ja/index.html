@@ -36,8 +36,8 @@
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/ja/", "inLanguage": "ja", "description": "FrameBridge は Windows 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットを内蔵のビデオトラックで扱い、外部字幕を映像の上に表示。変換は不要です。", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 3", "datePublished": "2026-11-26", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "Roman Aksonov"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cubase や Nuendo で「形式が不適切であるか、対応していないファイルです。」と表示されます。FrameBridge なら開けますか？", "acceptedAnswer": {"@type": "Answer", "text": "多くの場合、開けます。このメッセージは、標準のビデオエンジンがファイルのコンテナ、コーデック、フレームレートに対応できないときに表示されます。たとえば MKV、WebM、MXF、iPhone などのスマートフォンで撮影した HEVC、可変フレームレートのビデオです。FrameBridge は独自のデコーダーでこれらのファイルを読み込みます。検証済みのフォーマットは上記のとおりです。それでもファイルが開けない場合は、14日以内なら全額返金します。"}}, {"@type": "Question", "name": "FrameBridge はビデオファイルを変更しますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。字幕は再生時に映像の上に表示されるだけで、ビデオファイルも字幕ファイルもそのまま変わりません。 Cubase の Export Video で動画を保存する場合、字幕は書き出した動画に焼き込まれる点に注意してください（Cubase 15 で確認）。字幕なしの映像が必要なら、書き出し前に字幕ファイルの名前を変更してください。"}}, {"@type": "Question", "name": "インストーラーがプログラムのファイルを置き換えても安全ですか？ウイルス対策ソフトが警告したら？", "acceptedAnswer": {"@type": "Answer", "text": "インストーラーは元どおりに戻せるように作られています。置き換える前に元のファイルを検証して保存し、UNINSTALL.cmd でバイト単位まで同じ状態に戻します。ネットワーク接続、サービス、自動起動はなく、パッケージに Steinberg のファイルは一切含まれません。VirusTotal：0/61（レポート、2026 年 11 月 26 日時点）。ファイルにはまだデジタル署名がないため、ヒューリスティック型のスキャナーが DLL の置き換えに反応することはありますが、これは手順のパターンへの反応であり、脅威が見つかったわけではありません。PC で何が変わるか、ご自身での確認方法は SECURITY.md（英語）をご覧ください。"}}, {"@type": "Question", "name": "VST プラグインですか？Mac 版はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "どちらもいいえです。FrameBridge はプラグインではなく、Cubase と Nuendo 標準のビデオエンジンを拡張します。そのため、ビデオは内蔵のビデオプレーヤーで再生されます。プラグインスロットは不要で、プロジェクトごとに何かを読み込む必要も、MTC 同期も要りません。Windows x64 専用です。"}}, {"@type": "Question", "name": "Cubase や Nuendo をアップデートしても動作しますか？", "acceptedAnswer": {"@type": "Answer", "text": "FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.40 まで）で検証済みです。新しいメジャーバージョンでビデオエンジンが変わった場合、インストーラーはそのインストールを候補に出さず、何も変更しません。Cubase / Nuendo をアップデートしたら、もう一度 INSTALL.cmd を実行するだけです。Cubase / Nuendo のアップデート後に FrameBridge が動作しなくなった場合は、サポートまでご連絡ください。"}}, {"@type": "Question", "name": "どの形式の吹き替え台本が読み込めますか？", "acceptedAnswer": {"@type": "Answer", "text": "吹き替え台本は動画と同じ名前にします（film.mkv + film.docx）。同じ名前の通常の字幕ファイルがあればそちらが優先されます。DOCX、DOC、XLSX、XLS、PDF、RTF、ODT、ODS、TXT、CSV — 見出しの有無を問わない表、開始時間のみ、テイク形式にも対応。上の「購入前にチェック」に台本をドラッグすると、FrameBridge がどう読むかがすぐに分かります。"}}]}</script>
-  <link rel="stylesheet" href="/style.css?v=20261126d">
-  <script src="/t.js?v=5" defer></script>
+  <link rel="stylesheet" href="/style.css?v=20261126e">
+  <script src="/t.js?v=6" defer></script>
   <script src="/fx.js?v=1" defer></script>
   <script src="/check.js?v=5" defer></script>
   <link rel="stylesheet" href="/check.css?v=1">
@@ -88,7 +88,7 @@
       <p class="lead">FrameBridge は Windows 版 Cubase と Nuendo の内蔵ビデオエンジンを拡張します。最新のビデオフォーマットが標準のビデオトラックで開き、外部字幕ファイルは自動的に映像の上に表示されます。変換も、字幕の焼き込みも必要ありません。</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1" target="_blank" rel="noopener">FrameBridge を購入</a>
-        <span class="hc hc-below"><a class="btn btn-ghost" href="/download/FrameBridge-trial.zip" aria-describedby="tc-tip">デモをダウンロード</a><span class="hc-tip" id="tc-tip" role="tooltip"><span>Beta 2 で動作 — 1つ前の、実用できるバージョン</span><span>お使いの Cubase / Nuendo に FrameBridge が入るか確認できます</span><span>開けなかったファイルが開いて再生できます</span><span class="hc-more">デモ：透かし入り、1ファイルにつき再生 40 秒</span><span class="hc-more">製品版（Beta 3）：より高速で、不具合も修正。</span></span></span>
+        <span class="hc hc-below"><a class="btn btn-ghost" href="/download/FrameBridge-trial.zip" aria-describedby="tc-tip"><span class="lbl-d">デモをダウンロード</span><span class="lbl-t">Windows PC 用デモ</span></a><span class="hc-tip" id="tc-tip" role="tooltip"><span class="hc-more tc-pc">Windows PC でダウンロードしてください — デモは Cubase / Nuendo にインストールされます</span><span>Beta 2 で動作 — 1つ前の、実用できるバージョン</span><span>お使いの Cubase / Nuendo に FrameBridge が入るか確認できます</span><span>開けなかったファイルが開いて再生できます</span><span class="hc-more">デモ：透かし入り、1ファイルにつき再生 40 秒</span><span class="hc-more">製品版（Beta 3）：より高速で、不具合も修正。</span></span></span>
         <span class="hc"><a class="btn btn-ghost hero-check" href="#check" aria-describedby="hc-tip">ファイルをチェック</a><span class="hc-tip" id="hc-tip" role="tooltip"><span>FrameBridge で動画が開けるか</span><span>どれくらい滑らかに再生されるか</span><span>字幕や吹き替え台本を読み込めるか</span><span>お使いの Cubase / Nuendo に FrameBridge を導入できるか</span></span></span>
       </div>
       <p class="price-note">買い切り · US$29<br>お使いのシステムで動作しない場合、14日以内なら全額返金</p>
@@ -266,9 +266,7 @@
           <li>お使いのシステムで動作しない場合、14日以内なら全額返金</li>
         </ul>
         <a class="btn btn-primary" id="buy" href="https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1" target="_blank" rel="noopener">FrameBridge を購入</a>
-        <span class="hc hc-below" style="margin-top:12px"><a class="btn btn-ghost" href="/download/FrameBridge-trial.zip" aria-describedby="tc-tip2">デモをダウンロード</a><span class="hc-tip" id="tc-tip2" role="tooltip"><span>Beta 2 で動作 — 1つ前の、実用できるバージョン</span><span>お使いの Cubase / Nuendo に FrameBridge が入るか確認できます</span><span>開けなかったファイルが開いて再生できます</span><span class="hc-more">デモ：透かし入り、1ファイルにつき再生 40 秒</span><span class="hc-more">製品版（Beta 3）：より高速で、不具合も修正。</span></span></span>
-        <p class="fine touch-only">デモ：透かし入り、1ファイルにつき再生 40 秒</p>
-        <p class="fine touch-only">デモは 1つ前の Beta 2 で動作し、FrameBridge がお使いの環境に入り、ファイルを開けるかを確認できます。 製品版（Beta 3）：より高速で、不具合も修正。</p>
+        <span class="hc hc-below" style="margin-top:12px"><a class="btn btn-ghost" href="/download/FrameBridge-trial.zip" aria-describedby="tc-tip2"><span class="lbl-d">デモをダウンロード</span><span class="lbl-t">Windows PC 用デモ</span></a><span class="hc-tip" id="tc-tip2" role="tooltip"><span class="hc-more tc-pc">Windows PC でダウンロードしてください — デモは Cubase / Nuendo にインストールされます</span><span>Beta 2 で動作 — 1つ前の、実用できるバージョン</span><span>お使いの Cubase / Nuendo に FrameBridge が入るか確認できます</span><span>開けなかったファイルが開いて再生できます</span><span class="hc-more">デモ：透かし入り、1ファイルにつき再生 40 秒</span><span class="hc-more">製品版（Beta 3）：より高速で、不具合も修正。</span></span></span>
         <p class="fine">決済は販売代理店（Merchant of Record）である Creem が行います。適用される税金と最終価格は決済画面に表示されます。購入前に<a href="#compatibility">互換性リスト</a>をご確認ください。返金については<a href="/terms">利用規約</a>（英語）をご覧ください。</p>
       </div>
       <div id="author" style="max-width:680px;margin:56px auto 0;text-align:center">
@@ -507,6 +505,16 @@
   document.querySelectorAll('.hc-below, .b2').forEach(function (h) {
     ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { h.addEventListener(ev, function () { fit(h); }, { passive: true }); });
   });
+})();
+// phones and tablets: the demo is for a Windows PC, so its button opens the card instead of downloading
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+  var hs = document.querySelectorAll('a[href^="/download/"]');
+  function closeAll(except) { hs.forEach(function (a) { if (a.parentNode !== except) a.parentNode.classList.remove('open'); }); }
+  hs.forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); var h = a.parentNode; closeAll(h); h.classList.toggle('open'); });
+  });
+  document.addEventListener('click', function (e) { if (!(e.target.closest && e.target.closest('a[href^="/download/"]'))) closeAll(null); });
 })();
 (function () {
   var d = document.querySelector('details.lang');

@@ -200,6 +200,7 @@ export async function onRequestGet({ request, env }) {
   for (const r of results) {
     if (!keep.has(r.sid)) continue;
     if (r.ev === 'demo_dl') inc(demoFrom, r.val);
+    else if (r.ev === 'demo_phone') inc(demoFrom, 'phone (card only): ' + r.val);
     else if (r.ev === 'nav' && /^\/download\//.test(r.val)) inc(demoFrom, 'button (before 26 Nov, place not recorded)');
     else if (r.ev === 'card') inc(cards, r.val);
     if (r.ev === 'faq') inc(faq, faqName(r.ts, r.val));

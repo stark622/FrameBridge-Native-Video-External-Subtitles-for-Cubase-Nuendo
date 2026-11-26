@@ -1005,3 +1005,21 @@ details.lang .globe { flex: none; }
 /* the same text as a paragraph only where there is no mouse to open the card */
 .touch-only { display: none; }
 @media (hover: none) and (pointer: coarse) { .price-card .touch-only { display: block; } }
+/* phones and tablets: the demo is for a Windows PC — the button says so and opens its card on tap instead of downloading */
+.lbl-t { display: none; }
+.hc-tip span.tc-pc { display: none; color: var(--text); margin: 0 0 8px; }
+@media (hover: none) and (pointer: coarse) {
+  .lbl-d { display: none; }
+  .lbl-t { display: inline; }
+  .hc-tip span.tc-pc { display: block; }
+  .hc.open .hc-tip { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
+}
+/* narrow screens: Buy and Demo one under another, the same width, the card wraps its lines */
+@media (max-width: 600px) {
+  .hero .actions { flex-direction: column; align-items: center; }
+  .hero .actions > .btn, .hero .actions > .hc,
+  .price-card #buy, .price-card .hc { display: flex; justify-content: center; width: 100%; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .hero .actions .hc > .btn, .price-card .hc > .btn { width: 100%; text-align: center; }
+  .hc-tip { width: min(340px, calc(100vw - 32px)); }
+  .hc-tip span { white-space: normal; }
+}

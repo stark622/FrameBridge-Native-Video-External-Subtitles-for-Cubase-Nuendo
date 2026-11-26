@@ -65,7 +65,12 @@
     }
     var h = a.getAttribute('href') || '';
     if (a.id === 'demo') ev('play');
-    else if (h.indexOf('/download/') === 0) ev('demo_dl', a.getAttribute('aria-describedby') === 'tc-tip' ? 'hero' : 'pricing');
+    else if (h.indexOf('/download/') === 0) {
+      // on a phone the button only opens the card ("download it on your Windows PC"), counted when the card opens
+      var place = a.getAttribute('aria-describedby') === 'tc-tip' ? 'hero' : 'pricing';
+      if (window.matchMedia && matchMedia('(hover: none) and (pointer: coarse)').matches) { if (!a.parentNode.classList.contains('open')) ev('demo_phone', place); }
+      else ev('demo_dl', place);
+    }
     else if (h === '#check') ev('to_check', a.classList.contains('hero-check') ? 'hero' : a.closest('.tabbar') ? 'tabbar' : a.closest('#faq') ? 'faq' : 'menu');
     else if (h.indexOf('creem.io') >= 0) ev('buy', a.id === 'buy' ? 'pricing' : (a.closest('.site-header') ? 'header' : 'hero'));
     else if (a.hasAttribute('data-lang')) ev('lang', a.getAttribute('data-lang'));
