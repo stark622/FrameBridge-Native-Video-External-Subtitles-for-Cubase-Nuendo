@@ -49,6 +49,8 @@
       }
       else if (a.classList.contains('demo-zoom')) ev('zoom', clip(a.parentNode));
       else if (a.classList.contains('fmt-toggle')) { if (a.getAttribute('aria-expanded') !== 'true') ev('formats_all'); }
+      else if (a.classList.contains('more-btn')) { if (a.getAttribute('aria-expanded') !== 'true') ev('nearby_builds'); }
+      else if (a.classList.contains('b2-btn')) { if (a.getAttribute('aria-expanded') !== 'true') ev('whats_new'); }
       return;
     }
     if (a.tagName === 'SUMMARY') {
@@ -63,6 +65,7 @@
     }
     var h = a.getAttribute('href') || '';
     if (a.id === 'demo') ev('play');
+    else if (h.indexOf('/download/') === 0) ev('demo_dl', a.getAttribute('aria-describedby') === 'tc-tip' ? 'hero' : 'pricing');
     else if (h === '#check') ev('to_check', a.classList.contains('hero-check') ? 'hero' : a.closest('.tabbar') ? 'tabbar' : a.closest('#faq') ? 'faq' : 'menu');
     else if (h.indexOf('creem.io') >= 0) ev('buy', a.id === 'buy' ? 'pricing' : (a.closest('.site-header') ? 'header' : 'hero'));
     else if (a.hasAttribute('data-lang')) ev('lang', a.getAttribute('data-lang'));
@@ -76,6 +79,24 @@
   function slider(e) { if (!slid && e.target.closest && e.target.closest('.ba-box')) { slid = true; ev('slider'); } }
   document.addEventListener('pointerdown', slider, true);
   document.addEventListener('keydown', slider, true);
+
+  // hover cards (demo, file check, what's new in Beta 3): counted once per page when the mouse stays on the button 0.6 s
+  var cardSeen = {}, cardTimer = null;
+  function cardName(el) {
+    var t = el.querySelector('[aria-describedby]');
+    var id = t ? t.getAttribute('aria-describedby') : '';
+    return id === 'tc-tip' ? 'demo_hero' : id === 'tc-tip2' ? 'demo_pricing' : id === 'hc-tip' ? 'check' : id === 'b2-tip' ? 'whats_new' : '';
+  }
+  document.addEventListener('pointerover', function (e) {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
+    var el = e.target.closest ? e.target.closest('.hc, .b2') : null;
+    var n = el ? cardName(el) : '';
+    if (!n || cardSeen[n] || cardTimer) return;
+    cardTimer = setTimeout(function () { cardTimer = null; if (!cardSeen[n] && el.matches(':hover')) { cardSeen[n] = 1; ev('card', n); } }, 600);
+  }, true);
+  document.addEventListener('pointerout', function (e) {
+    if (cardTimer && e.target.closest && e.target.closest('.hc, .b2') && !(e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest('.hc, .b2'))) { clearTimeout(cardTimer); cardTimer = null; }
+  }, true);
 
   // which sections were actually seen
   if ('IntersectionObserver' in window) {

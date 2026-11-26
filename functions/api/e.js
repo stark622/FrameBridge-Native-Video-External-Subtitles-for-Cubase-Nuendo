@@ -12,7 +12,7 @@ export async function ensureTable(db) {
   ready = true;
 }
 
-function parseUA(ua) {
+export function parseUA(ua) {
   let os = 'Other';
   if (/Windows NT/.test(ua)) os = 'Windows';
   else if (/iPhone|iPad|iPod/.test(ua)) os = 'iOS';

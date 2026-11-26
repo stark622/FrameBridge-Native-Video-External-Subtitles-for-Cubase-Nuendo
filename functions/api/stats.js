@@ -135,9 +135,10 @@ export async function onRequestGet({ request, env }) {
     'SELECT rowid, ts, sid, path, lang, ev, val, os, br, dev, country, ref, bot FROM events WHERE ts >= ? ORDER BY ts, rowid LIMIT 200000'
   ).bind(since).all();
 
-  // build sessions
+  // build sessions (file downloads from functions/download are not page visits: listed separately)
   const S = new Map();
   for (const r of results) {
+    if (r.ev === 'dl') continue;
     let s = S.get(r.sid);
     if (!s) {
       s = { sid: r.sid, t0: r.ts, t1: r.ts, os: r.os, br: r.br, dev: r.dev, country: r.country, ref: '', lang: r.lang,
@@ -192,9 +193,15 @@ export async function onRequestGet({ request, env }) {
     if (engaged.includes(s)) perDay[d][1]++;
     if (s.buy) perDay[d][2]++;
   }
-  const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {};
+  // demo file downloads (counted from 26.11, also from direct links such as the GitHub README); the owner's are left out like his visits
+  const downloads = results.filter((r) => r.ev === 'dl' && !r.bot && (showOwner || !OWNER_COUNTRIES.includes(r.country)));
+  const dlBots = results.filter((r) => r.ev === 'dl' && r.bot).length;
+  const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {}, demoFrom = {}, cards = {};
   for (const r of results) {
     if (!keep.has(r.sid)) continue;
+    if (r.ev === 'demo_dl') inc(demoFrom, r.val);
+    else if (r.ev === 'nav' && /^\/download\//.test(r.val)) inc(demoFrom, 'button (before 26 Nov, place not recorded)');
+    else if (r.ev === 'card') inc(cards, r.val);
     if (r.ev === 'faq') inc(faq, faqName(r.ts, r.val));
     else if (r.ev === 'lang') inc(langSw, r.val);
     else if (r.ev === 'out') inc(out, r.val);
@@ -212,6 +219,8 @@ export async function onRequestGet({ request, env }) {
     days, sessions_all: sessions.length, sessions_real_browser: human.length, sessions_engaged: engaged.length,
     sessions_flagged_bot: sessions.filter((s) => s.bot).length, sessions_owner_excluded: owner.length, buy_click_sessions: human.filter((s) => s.buy).length,
     video_play_sessions: human.filter((s) => s.play).length, avg_active_seconds_engaged: avgTime,
+    demo_downloads: downloads.length, demo_download_bots: dlBots,
+    demo_click_sessions: human.filter((s) => s.trail.some((x) => /^demo_dl|^nav:\/download\//.test(x))).length,
   };
 
   let cf = null, cfError = '';
@@ -237,7 +246,8 @@ export async function onRequestGet({ request, env }) {
       cf_visitors: cf ? cf.visits.map((v) => ({ ...v, start: new Date(v.t).toISOString() })) : null, cf_error: cfError || undefined,
       summary, per_day: perDay, os: by('os'), browser: by('br'), device: by('dev'), country: by('country'),
       language: by('lang'), referrer: by('ref'), events: ev, buy_from: buyFrom, faq, lang_switch: langSw, outbound: out, sections_seen: seen,
-      left_at: leftAt,
+      left_at: leftAt, demo_button: demoFrom, hover_cards: cards,
+      demo_downloads: downloads.map((r) => ({ time: new Date(r.ts).toISOString(), file: r.path, country: r.country, os: r.os, br: r.br, dev: r.dev, ref: r.ref })),
       recent: human.slice(-200).reverse().map((s) => ({
         start: new Date(s.t0).toISOString(), country: s.country, os: s.os, br: s.br, dev: s.dev, lang: s.lang, ref: s.ref,
         active_s: s.time, scroll: s.scroll, sections: [...s.sees], left_at: s.at, trail: s.trail,
@@ -265,6 +275,8 @@ th,td{padding:6px 12px;border-bottom:1px solid #1d2a44;text-align:left;vertical-
 <div class="tile"><b>${human.length}</b>visits (browsers)</div>
 <div class="tile"><b>${engaged.length}</b>engaged visits<br><span class="muted">clicked, read 2+ sections or stayed 15 s+</span></div>
 <div class="tile"><b>${summary.buy_click_sessions}</b>visits clicked Buy</div>
+<div class="tile"><b>${summary.demo_click_sessions}</b>visits clicked Download demo</div>
+<div class="tile"><b>${downloads.length}</b>demo downloads<br><span class="muted">the file itself, also from GitHub; from 26 Nov</span></div>
 <div class="tile"><b>${summary.video_play_sessions}</b>visits played the video</div>
 <div class="tile"><b>${avgTime} s</b>avg active time (engaged)</div>
 <div class="tile"><b>${summary.sessions_flagged_bot}</b>flagged as bots<br><span class="muted">excluded</span></div>
@@ -288,6 +300,10 @@ ${!env.CF_API_TOKEN
 <div class="col-summary">
 <div class="cards">
 ${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
+${table(`Demo downloads (file requests, Kyiv time; from 26 Nov${dlBots ? `; ${dlBots} by bots left out` : ''})`, downloads.slice().reverse().map((r) => [
+    kyiv(r.ts).slice(5), r.country || '—', `${r.os} · ${r.br} · ${r.dev}`, r.ref || 'direct']), ['Time', 'Country', 'System', 'From'])}
+${table('Download demo clicked from', sorted(demoFrom), ['Button', 'Count'])}
+${table('Hover cards opened (mouse 0.6 s+, from 26 Nov)', sorted(cards), ['Card', 'Count'])}
 ${table('Sections seen', SECTIONS.map((id) => [id, seen[id] || 0, pct(seen[id] || 0)]), ['Section', 'Visits', 'Share'])}
 ${table('Left the page at (section on screen, from 19 Nov)', LEFT_AT.filter((id) => leftAt[id]).map((id) => [id, leftAt[id]]), ['Section', 'Visits'])}
 ${table('Clicks', sorted(ev), ['Action', 'Count'])}
