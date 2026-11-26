@@ -1,5 +1,5 @@
 FrameBridge — Native Video for Cubase & Nuendo
-Beta 2
+Beta 3 (test version)
 ================================================
 
 FrameBridge adds an FFmpeg-based native video path to selected Windows x64
@@ -24,17 +24,38 @@ MAIN FEATURES
   - Automatic loading and rendering of supported external subtitle sidecars, all
     in one look (the SRT look); PGS/SUP and VobSub pictures are read as text with
     the Windows OCR.
-  - Subtitles straight from dubbing scripts / dialogue lists with roles: PDF,
-    DOCX, TXT, XLSX and CSV.
+  - Subtitles straight from dubbing scripts / dialogue lists with roles: DOCX,
+    DOC, XLSX, XLS, ODT, ODS, RTF, TXT, CSV and PDF; optional next-line hint for
+    the actor.
   - Sound engineer copy of the Video Player for dubbing and voice-over sessions:
     a live copy made by Windows, the same frame at the same moment.
-  - Supported files can be used without preliminary transcoding.
+  - Supported files can be used without converting them first.
   - No separate external video player.
   - No need to burn subtitles into the source video in advance.
-  - Visually verified HDR-to-SDR conversion for supported HDR media.
+  - HDR media shown in SDR (visually verified).
 
-WHAT'S NEW IN BETA 2
+WHAT'S NEW IN BETA 3
 --------------------
+
+  - Nuendo 15.0.40 is supported (verified).
+  - Dubbing scripts: many more layouts are read - also old .doc / .xls, .rtf, .odt, .ods,
+    PDFs exported from Word or a browser, column headers in 12 languages, start-only
+    times, takes, frame timecodes (see SUBTITLES FROM DUBBING SCRIPTS below).
+  - Optional next-line hint for the actor: the next line under the current one in the main
+    Video Player while the sound engineer copy is open. Off by default (see below).
+  - Phone videos recorded upright or rotated are shown the right way up.
+  - Faster 4K: when the graphics card decodes the video, the 4K -> 1080p step runs on the
+    graphics card too; faster picture hand-over to Cubase/Nuendo.
+  - Weak PCs: when the Video Player falls far behind, FrameBridge skips frames by itself
+    instead of stalling for seconds.
+  - While video plays, thumbnails wait, so heavy formats play without hitches; thumbnails
+    continue about 3 seconds after you stop.
+  - Faster JPEG 2000 (also 4K DCP / scope), Canopus HQ / HQX and HDR video.
+  - The installer recognises every earlier FrameBridge build, so any of them can be
+    updated or uninstalled.
+
+NEW IN BETA 2 (also included)
+-----------------------------
 
   - Cubase 16.0.5 support (verified with the full test collection).
   - Sound engineer copy of the Video Player for dubbing (see below).
@@ -54,11 +75,11 @@ WHAT'S NEW IN BETA 2
   - VVC/H.266 opens and plays.
   - Log file limited to 5 MB (one previous log kept).
 
-UPDATING FROM BETA 1
---------------------
+UPDATING FROM BETA 1 OR BETA 2
+------------------------------
 
-Close Cubase and Nuendo and run INSTALL.cmd from the Beta 2 package. Beta 1 is
-recognised and replaced in place; uninstalling it first is not needed.
+Close Cubase and Nuendo and run INSTALL.cmd from the Beta 3 package. The earlier
+beta is recognised and replaced in place; uninstalling it first is not needed.
 
 INSTALL
 -------
@@ -83,9 +104,10 @@ Cancellation exits without changing files. Exit codes: 0 success, 1 error,
 UPDATING CUBASE / NUENDO
 ------------------------
 
-Recommended order: run UNINSTALL.cmd, update Cubase/Nuendo with the Steinberg
-installer, then run INSTALL.cmd. INSTALL backs up the new original files and
-installs FrameBridge if the new version is compatible.
+After updating Cubase/Nuendo with the Steinberg installer, simply run INSTALL.cmd again.
+The installer sees the update over FrameBridge, backs up the new original files and
+installs FrameBridge if the new version is compatible. A new major version with a
+different video engine is simply not offered, and nothing is changed.
 
 ROLLBACK
 --------
@@ -133,7 +155,7 @@ known product hashes and preserves user replacements.
 FrameBridge writes a local log, %TEMP%\cubase_dsreader.log (program and media
 paths, formats, timings). It is never sent anywhere, is limited to 5 MB (one
 previous log is kept as cubase_dsreader.log.old) and can be deleted at any time.
-The sound engineer copy window remembers its position in
+The sound engineer copy window remembers its position and the next-line hint switch in
 %APPDATA%\FrameBridge\booth.ini.
 
 SUPPORTED MEDIA
@@ -161,12 +183,28 @@ cannot be read, or a language that is not installed in Windows, keep the origina
 pictures. Rare single-letter recognition errors are possible. Setting the
 environment variable CUBASE_DSREADER_SUBOCR=0 keeps the original pictures.
 
-Dubbing scripts and dialogue lists with timecodes and roles are read as subtitles
-too: PDF, DOCX, TXT, XLSX and CSV with the video's name. Lines appear in the SRT
-look with the role as a prefix; an ordinary subtitle file with the same name takes
-priority.
+Dubbing scripts and dialogue lists:
+A dialogue list / dubbing script with timecodes can be used directly: give it the
+video's name (film.mkv + film.docx). Lines are shown like SRT with the role as a
+prefix. An ordinary subtitle file with the same name takes priority.
+Files: DOCX, DOC, XLSX, XLS, ODT, ODS, RTF, TXT, CSV and PDF (also PDFs exported from
+Word or a browser). Scanned PDFs are pictures and cannot be read.
+Layouts:
+- tables with or without a header row; headers in 12 languages, e.g. Start / End /
+  Text / Role, Netflix IN-TIMECODE / OUT-TIMECODE / DIALOGUE, ADR cue sheets Cue /
+  Character / TC In / TC Out, Rolle / Einsatz, Personnage / Réplique, Personaje /
+  Diálogo, Personaggio / Battuta, Postać / Kwestia, Роль / Реплика; in XLSX the
+  first sheet with lines is used;
+- start and end times, or start only (the line then lasts until the next one);
+- takes / loops (Take 12, ANELLO 1, BOUCLE 3) with several lines inside;
+- text on the line under the timecode; screenplay layout (role on its own line);
+- with an original and a translation column, the translation is shown.
+Times: 00:00:01,000 / 00:00:01.000 / 00:00:01 / 01:35, and frames 00:00:01:12 at the
+video's frame rate (drop-frame with ;). A broadcast start hour (01:00:00:00 or
+10:00:00:00) is removed when the script would otherwise run past the end of the video.
+The file check on framebridge.cc shows how a script is read.
 
-HDR-to-SDR conversion was visually verified. No quantitative color-accuracy
+HDR shown in SDR was visually verified. No quantitative color-accuracy
 claim is made.
 
 SOUND ENGINEER COPY OF THE VIDEO PLAYER
@@ -184,7 +222,13 @@ screen on the booth screen, and use the copy for the sound engineer. The copy ca
 be sharper than the Video Player it copies. The copy stays above Cubase/Nuendo
 without taking the keyboard; double-click toggles full screen; the close button
 hides it until the next click on the icon. Windows may hide new tray icons under the
-"^" arrow next to the clock. Windows 7 needs Aero for the copy. Setting the
+"^" arrow next to the clock. Windows 7 needs Aero for the copy.
+
+Next-line hint (optional, off by default): right-click the icon and tick "Next line
+under the subtitle in the main player (while the second window is open)". While the
+copy window is open, the actor's Video Player shows the next line, grey, under the current subtitle;
+the sound engineer's copy leaves it out, and thumbnails never show it. Export Video
+made while it is on includes that line. Setting the
 environment variable CUBASE_DSREADER_BOOTH=0 removes the icon.
 
 KNOWN BETA LIMITATIONS
@@ -217,6 +261,8 @@ KNOWN BETA LIMITATIONS
   - Some MKV files with an incomplete seek index (seen on a 4K Blu-ray REMUX) can
     pause for about 1-2 s on an occasional jump while scrubbing; the following
     jumps are fast again.
+  - Nuendo 15.0.40 itself shows the picture 16:9 with black sides in a small Video
+    Player window (the same without FrameBridge).
 
 See COMPATIBILITY.txt for the verified host and format matrix.
 See END_USER_LICENSE.txt and LICENSE_AND_NOTICE.txt for licensing information.

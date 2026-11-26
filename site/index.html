@@ -50,13 +50,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/", "inLanguage": "en", "description": "FrameBridge extends the native Cubase and Nuendo video engine on Windows: modern video formats and external subtitles on the video track, no conversion.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 2", "datePublished": "2026-11-14", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "Roman Aksonov"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FrameBridge", "url": "https://framebridge.cc/", "inLanguage": "en", "description": "FrameBridge extends the native Cubase and Nuendo video engine on Windows: modern video formats and external subtitles on the video track, no conversion.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows (x64)", "softwareVersion": "Beta 3", "datePublished": "2026-11-26", "image": "https://framebridge.cc/og.jpg?v=20261114", "author": {"@type": "Person", "name": "Roman Aksonov"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "url": "https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1", "availability": "https://schema.org/InStock"}}
   </script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cubase or Nuendo says “Invalid or not supported file!” — will FrameBridge open the video?", "acceptedAnswer": {"@type": "Answer", "text": "Often, yes. Cubase and Nuendo show this message when their built-in video engine cannot handle the file’s container, codec or frame rate — for example MKV, WebM, MXF, HEVC from phones such as the iPhone, or video with a variable frame rate. FrameBridge reads such files with its own decoder; the verified formats are listed above. If your file still does not open, you get a full refund within 14 days."}}, {"@type": "Question", "name": "Does FrameBridge change my video files?", "acceptedAnswer": {"@type": "Answer", "text": "No. Subtitles are displayed over the picture at playback time; the video file and the subtitle file stay exactly as they are. If you save a video with Cubase’s Export Video, keep in mind that the subtitles are burned into the exported video (checked in Cubase 15); rename the subtitle file before exporting if you need a clean picture."}}, {"@type": "Question", "name": "Is it safe that the installer replaces a program file? What if my antivirus warns?", "acceptedAnswer": {"@type": "Answer", "text": "The installer is built for exact rollback: the original file is checked and saved before it is replaced, and UNINSTALL.cmd puts it back byte for byte. No network access, no services, no autostart, and no Steinberg file in the package. VirusTotal: 0/61 (report, 14 November 2026). The files are not code-signed yet, so a heuristic scanner may still react to the DLL replacement — a reaction to the pattern, not a found threat. What exactly changes on your PC and how to check it yourself: SECURITY.md"}}, {"@type": "Question", "name": "Is it a VST plugin? Is there a Mac version?", "acceptedAnswer": {"@type": "Answer", "text": "No to both. FrameBridge is not a plugin: it extends the native video engine of Cubase and Nuendo, so video plays in the built-in Video Player — no plug-in slot, nothing to load in each project, no MTC sync. It runs on Windows x64 only."}}, {"@type": "Question", "name": "Will it work after a Cubase or Nuendo update?", "acceptedAnswer": {"@type": "Answer", "text": "FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.30. A new major version may change the video engine — then the installer simply does not offer that installation and changes nothing. After updating Cubase or Nuendo, just run INSTALL.cmd again. If FrameBridge stops working after you update your Cubase or Nuendo, write to support."}}, {"@type": "Question", "name": "Which dubbing script layouts are read?", "acceptedAnswer": {"@type": "Answer", "text": "Name the script like the video (film.mkv + film.docx); an ordinary subtitle file with the same name takes priority. DOCX, XLSX, PDF, TXT, CSV and more. Drop your script into Check before you buy above: it shows at once whether the current version of FrameBridge reads it and whether the next update (being tested) does."}}]}</script>
-  <link rel="stylesheet" href="/style.css?v=20261119a">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cubase or Nuendo says “Invalid or not supported file!” — will FrameBridge open the video?", "acceptedAnswer": {"@type": "Answer", "text": "Often, yes. Cubase and Nuendo show this message when their built-in video engine cannot handle the file’s container, codec or frame rate — for example MKV, WebM, MXF, HEVC from phones such as the iPhone, or video with a variable frame rate. FrameBridge reads such files with its own decoder; the verified formats are listed above. If your file still does not open, you get a full refund within 14 days."}}, {"@type": "Question", "name": "Does FrameBridge change my video files?", "acceptedAnswer": {"@type": "Answer", "text": "No. Subtitles are displayed over the picture at playback time; the video file and the subtitle file stay exactly as they are. If you save a video with Cubase’s Export Video, keep in mind that the subtitles are burned into the exported video (checked in Cubase 15); rename the subtitle file before exporting if you need a clean picture."}}, {"@type": "Question", "name": "Is it safe that the installer replaces a program file? What if my antivirus warns?", "acceptedAnswer": {"@type": "Answer", "text": "The installer is built for exact rollback: the original file is checked and saved before it is replaced, and UNINSTALL.cmd puts it back byte for byte. No network access, no services, no autostart, and no Steinberg file in the package. VirusTotal: 0/61 (report, 26 November 2026). The files are not code-signed yet, so a heuristic scanner may still react to the DLL replacement — a reaction to the pattern, not a found threat. What exactly changes on your PC and how to check it yourself: SECURITY.md"}}, {"@type": "Question", "name": "Is it a VST plugin? Is there a Mac version?", "acceptedAnswer": {"@type": "Answer", "text": "No to both. FrameBridge is not a plugin: it extends the native video engine of Cubase and Nuendo, so video plays in the built-in Video Player — no plug-in slot, nothing to load in each project, no MTC sync. It runs on Windows x64 only."}}, {"@type": "Question", "name": "Will it work after a Cubase or Nuendo update?", "acceptedAnswer": {"@type": "Answer", "text": "FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.40. A new major version may change the video engine — then the installer simply does not offer that installation and changes nothing. After updating Cubase or Nuendo, just run INSTALL.cmd again. If FrameBridge stops working after you update your Cubase or Nuendo, write to support."}}, {"@type": "Question", "name": "Which dubbing script layouts are read?", "acceptedAnswer": {"@type": "Answer", "text": "Name the script like the video (film.mkv + film.docx); an ordinary subtitle file with the same name takes priority. DOCX, DOC, XLSX, XLS, PDF, RTF, ODT, ODS, TXT, CSV — tables with or without headers, start-only times, takes. Drop your script into Check before you buy above: it shows at once how FrameBridge reads it."}}]}</script>
+  <link rel="stylesheet" href="/style.css?v=20261126d">
   <script src="/t.js?v=4" defer></script>
   <script src="/fx.js?v=1" defer></script>
-  <script src="/check.js?v=4" defer></script>
+  <script src="/check.js?v=5" defer></script>
   <link rel="stylesheet" href="/check.css?v=1">
 </head>
 <body>
@@ -100,11 +100,12 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="badge">Beta 2 · Windows x64 · Cubase &amp; Nuendo</span>
+      <span class="badge">Beta 3 · Windows x64 · Cubase &amp; Nuendo</span>
       <h1>Many video and subtitle formats.<br><span>Right in the native Cubase &amp; Nuendo Video Player.</span></h1>
       <p class="lead">FrameBridge extends the built-in video engine of Cubase and Nuendo on Windows. Modern video formats open on the native video track, and external subtitle files appear over the picture automatically — without converting and without burning subtitles into the video.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1" target="_blank" rel="noopener">Buy FrameBridge</a>
+        <span class="hc hc-below"><a class="btn btn-ghost" href="/download/FrameBridge-trial.zip" aria-describedby="tc-tip">Download demo</a><span class="hc-tip" id="tc-tip" role="tooltip"><span>Runs on Beta 2 — the previous, working version</span><span>Shows that FrameBridge installs on your Cubase / Nuendo</span><span>Your files that wouldn't open — open and play</span><span class="hc-more">Demo: watermarked, 40 seconds of playback per file</span><span class="hc-more">Full version (Beta 3): faster and with fixes.</span></span></span>
         <span class="hc"><a class="btn btn-ghost hero-check" href="#check" aria-describedby="hc-tip">Check my file</a><span class="hc-tip" id="hc-tip" role="tooltip"><span>Will FrameBridge open your video?</span><span>How smoothly will it play?</span><span>Will it read your subtitles or dubbing script?</span><span>Will FrameBridge install on your Cubase or Nuendo?</span></span></span>
       </div>
       <p class="price-note">One-time purchase · US$29<br>Full refund within 14 days if it doesn't work on your system</p>
@@ -171,7 +172,7 @@
         <figure class="demo demo-wide"><video src="/img/clip/video.mp4?v=2" data-small="/img/clip/video-s.mp4?v=2" poster="/img/clip/video.webp?v=2" width="2240" height="1532" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Enlarge"></button><figcaption><b>MTS · WebM · MKV</b> — Cubase does not open them on its own. Drag a file into the project: H.264, VP9 or 10-bit HEVC picture on the native video track, HDR in normal colors (SDR) right away, AC-3, Opus and TrueHD audio on an audio track.</figcaption></figure>
         <figure class="demo demo-wide" hidden><video src="/img/clip/subs.mp4?v=4" data-small="/img/clip/subs-s.mp4?v=3" poster="/img/clip/subs.webp?v=4" width="2240" height="1522" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Enlarge"></button><figcaption><b>3GP · H.264</b> — Cubase does not open it on its own. Put a .vtt with the same name next to the video — and the same seconds play with subtitles. The same goes for SRT, ASS, TTML and others, even Blu-ray PGS/SUP and DVD VobSub pictures — all in one clean look.</figcaption></figure>
         <figure class="demo demo-wide" hidden><video src="/img/clip/adr.mp4?v=4" data-small="/img/clip/adr-s.mp4?v=1" poster="/img/clip/adr.webp?v=4" width="2560" height="944" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Enlarge"></button><figcaption><b>M2TS · MPEG-2</b> — Cubase does not open it on its own. Left: your screen with the project and a live copy of the player. Right: the actor’s screen with the Video Player in full screen. No HDMI splitter, no Blackmagic card.</figcaption></figure>
-        <figure class="demo demo-wide" hidden><video src="/img/clip/script.mp4?v=4" data-small="/img/clip/script-s.mp4?v=3" poster="/img/clip/script.webp?v=4" width="2240" height="1320" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Enlarge"></button><figcaption><b>AVI · Xvid</b> — Cubase does not open it on its own. A PDF dubbing script with the same name sits next to it — the lines play as subtitles. DOCX, XLSX, TXT and CSV work too.</figcaption></figure>
+        <figure class="demo demo-wide" hidden><video src="/img/clip/script.mp4?v=4" data-small="/img/clip/script-s.mp4?v=3" poster="/img/clip/script.webp?v=4" width="2240" height="1320" muted loop playsinline preload="none"></video><button type="button" class="demo-zoom" aria-label="Enlarge"></button><figcaption><b>AVI · Xvid</b> — Cubase does not open it on its own. A PDF dubbing script with the same name sits next to it — the lines play as subtitles. DOCX, DOC, XLSX, XLS, RTF, ODT, TXT and CSV work too.</figcaption></figure>
       </div>
       <div class="demo-box" hidden><button type="button" class="demo-close" aria-label="Close"></button><video muted loop playsinline></video></div>
     </div>
@@ -199,7 +200,7 @@
       <div class="card" style="margin-top:18px">
         <h3>Video codecs</h3>
         <div class="chips">
-          <span class="chip chip-more">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main / Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip chip-more">ProRes Proxy / LT / 422 HQ / 4444</span><span class="chip chip-more">DNxHR / DNxHD</span><span class="chip chip-more">CineForm</span><span class="chip chip-more">XDCAM</span><span class="chip chip-more">XAVC / AVC-Intra</span><span class="chip chip-more">DV / DVCPRO50 / DVCPRO HD</span><span class="chip chip-more">Avid 1:1</span><span class="chip chip-more">MPEG-1</span><span class="chip chip-more">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 8/10-bit</span><span class="chip chip-more">APV</span><span class="chip">FFV1</span><span class="chip chip-more">HuffYUV / FFVHuff</span><span class="chip chip-more">UtVideo</span><span class="chip chip-more">MagicYUV</span><span class="chip chip-more">Uncompressed v210</span><span class="chip chip-more">QuickTime Animation</span><span class="chip chip-more">PNG</span><span class="chip chip-more">TIFF</span><span class="chip">Canopus HQ / HQX</span><span class="chip chip-more">SpeedHQ</span><span class="chip">HAP / HAP Q</span><span class="chip">Theora</span><span class="chip">WMV 7 / 8</span><span class="chip">Xvid</span><span class="chip">DivX / MS MPEG-4</span><span class="chip chip-more">H.263</span><span class="chip chip-more">Sorenson Spark</span><span class="chip chip-more">RealVideo</span><span class="chip chip-more">Cinepak</span><span class="chip chip-more">Sorenson Video</span><span class="chip chip-more">Microsoft Video 1</span>
+          <span class="chip chip-more">H.264 (Main, High10, B-frames, VFR)</span><span class="chip">HEVC Main / Main10</span><span class="chip">AV1 8/10-bit</span><span class="chip chip-more">ProRes Proxy / LT / 422 HQ / 4444</span><span class="chip chip-more">DNxHR / DNxHD</span><span class="chip chip-more">CineForm</span><span class="chip chip-more">XDCAM</span><span class="chip chip-more">XAVC / AVC-Intra</span><span class="chip chip-more">DV / DVCPRO50 / DVCPRO HD</span><span class="chip chip-more">Avid 1:1</span><span class="chip chip-more">MPEG-1</span><span class="chip chip-more">MPEG-2</span><span class="chip">VP8</span><span class="chip">VP9 8/10-bit</span><span class="chip chip-more">APV</span><span class="chip">FFV1</span><span class="chip chip-more">HuffYUV / FFVHuff</span><span class="chip chip-more">UtVideo</span><span class="chip chip-more">MagicYUV</span><span class="chip chip-more">Uncompressed v210</span><span class="chip chip-more">QuickTime Animation</span><span class="chip chip-more">PNG</span><span class="chip chip-more">TIFF</span><span class="chip">Canopus HQ / HQX</span><span class="chip chip-more">SpeedHQ</span><span class="chip">HAP / HAP Q</span><span class="chip">Theora</span><span class="chip">WMV 7 / 8</span><span class="chip">WMV 9</span><span class="chip">VC-1</span><span class="chip chip-more">NotchLC</span><span class="chip">Xvid</span><span class="chip">DivX / MS MPEG-4</span><span class="chip chip-more">H.263</span><span class="chip chip-more">Sorenson Spark</span><span class="chip chip-more">RealVideo</span><span class="chip chip-more">Cinepak</span><span class="chip chip-more">Sorenson Video</span><span class="chip chip-more">Microsoft Video 1</span>
         </div>
       </div>
       </div>
@@ -209,7 +210,7 @@
         <summary>Likely to play too</summary>
         <div class="card" style="margin-top:16px">
             <h3>Video codecs</h3>
-            <div class="chips"><span class="chip chip-dim">HEVC 4:2:2 / 4:4:4</span><span class="chip chip-dim">JPEG 2000</span><span class="chip chip-dim">Lagarith</span><span class="chip chip-dim">Canopus Lossless</span><span class="chip chip-dim">Avid Meridian</span><span class="chip chip-dim">NotchLC</span><span class="chip chip-dim">SheerVideo</span><span class="chip chip-dim">Apple Intermediate</span><span class="chip chip-dim">Uncompressed r210 / R10k / 2vuy</span><span class="chip chip-dim">WMV 9</span><span class="chip chip-dim">VC-1</span><span class="chip chip-dim">VP6</span><span class="chip chip-dim">TechSmith / Camtasia</span><span class="chip chip-dim">Fraps</span><span class="chip chip-dim">CamStudio</span><span class="chip chip-dim">Indeo</span><span class="chip chip-dim">VVC / H.266</span></div>
+            <div class="chips"><span class="chip chip-dim">HEVC 4:2:2 / 4:4:4</span><span class="chip chip-dim">JPEG 2000</span><span class="chip chip-dim">Lagarith</span><span class="chip chip-dim">Canopus Lossless</span><span class="chip chip-dim">Avid Meridian</span><span class="chip chip-dim">SheerVideo</span><span class="chip chip-dim">Apple Intermediate</span><span class="chip chip-dim">Uncompressed r210 / R10k / 2vuy</span><span class="chip chip-dim">VP6</span><span class="chip chip-dim">TechSmith / Camtasia</span><span class="chip chip-dim">Fraps</span><span class="chip chip-dim">CamStudio</span><span class="chip chip-dim">Indeo</span><span class="chip chip-dim">VVC / H.266</span></div>
           </div>
         <p class="note">Decoded by the same FFmpeg 9.0.2 inside FrameBridge. These usually open and may well play smoothly, but only the formats above are verified for smooth playback and seeking. The 14-day refund applies.</p>
       </details>
@@ -236,23 +237,23 @@
           <div><dt>Cubase</dt>
           <dd>8.0.10 and 9.0.0 (LE / AI / Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5</dd></div>
           <div><dt>Nuendo</dt>
-          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30</dd></div>
+          <dd>10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40</dd></div>
         </dl>
         <p class="note" style="margin-top:0">Pro, Artist, Elements, AI and LE editions are found the same way. Thumbnails on the video track are shown in all verified builds.</p>
         <p class="perf-line"><strong>Performance.</strong> Ordinary video up to 1080p plays smoothly on most computers. For 4K 10-bit (HEVC, AV1) a graphics card from 2016 or newer is better: it decodes such video itself. <a href="#check">Check before you buy</a> above gives a rough idea of how smoothly your file will play on your computer.</p>
       </div>
       <div class="comp-actions">
         <div class="b2">
-          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">What's new in Beta 2</button>
+          <button type="button" class="b2-btn" aria-describedby="b2-tip" aria-expanded="false" onclick="var b=this.parentNode;b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))">What's new in Beta 3</button>
           <div class="b2-tip" id="b2-tip" role="tooltip">
-            <strong>Beta 2 · 14 November 2026</strong>
+            <strong>Beta 3 · 26 November 2026</strong>
             <ul>
-              <li>Verified on Cubase 16.0.5 and all builds listed above</li>
-              <li>Second video window for dubbing: a live copy of the Video Player for the sound engineer, while the actor watches the player on another screen</li>
-              <li>Subtitles straight from dubbing scripts with roles: PDF, DOCX, TXT, XLSX, CSV</li>
-              <li>More files import: MPEG-1, DV and DivX on more Cubase/Nuendo versions; correct proportions for DV and DVCPRO</li>
-              <li>General playback speed optimizations</li>
-              <li>Player colours match your system media player</li>
+              <li>Nuendo 15.0.40 supported (verified)</li>
+              <li>Faster playback and smoother handling on weaker computers</li>
+              <li>Fixes: thumbnails load reliably, phone videos are no longer shown turned on their side</li>
+              <li>Dubbing scripts and dialogue lists in many more formats — DOC, DOCX, XLS, XLSX, RTF, ODT, ODS, PDF, TXT, CSV — with roles</li>
+              <li>Next-line hint: the next line under the current subtitle in the actor's player (optional, off by default)</li>
+              <li>Everything from Beta 2 included: second video window, external subtitles, audio from video</li>
             </ul>
           </div>
           <script>document.addEventListener('click',function(e){var b=document.querySelector('.b2.open');if(b&&!b.contains(e.target)){b.classList.remove('open');b.querySelector('.b2-btn').setAttribute('aria-expanded','false');}});</script>
@@ -274,7 +275,7 @@
         <div class="amount">US$29</div>
         <div class="sub">US$29 · one-time purchase</div>
         <ul class="checks">
-          <li>FrameBridge Beta 2 for Windows x64 · released 14 November 2026</li>
+          <li>FrameBridge Beta 3 for Windows x64 · released 26 November 2026</li>
           <li>All verified Cubase and Nuendo builds listed above</li>
           <li>Instant ZIP download after purchase</li>
           <li>Email support</li>
@@ -282,6 +283,9 @@
           <li>Full refund within 14 days if it doesn't work on your system</li>
         </ul>
         <a class="btn btn-primary" id="buy" href="https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1" target="_blank" rel="noopener">Buy FrameBridge</a>
+        <span class="hc hc-below" style="margin-top:12px"><a class="btn btn-ghost" href="/download/FrameBridge-trial.zip" aria-describedby="tc-tip2">Download demo</a><span class="hc-tip" id="tc-tip2" role="tooltip"><span>Runs on Beta 2 — the previous, working version</span><span>Shows that FrameBridge installs on your Cubase / Nuendo</span><span>Your files that wouldn't open — open and play</span><span class="hc-more">Demo: watermarked, 40 seconds of playback per file</span><span class="hc-more">Full version (Beta 3): faster and with fixes.</span></span></span>
+        <p class="fine touch-only">Demo: watermarked, 40 seconds of playback per file</p>
+        <p class="fine touch-only">The demo runs on Beta 2, the previous working version: it shows that FrameBridge installs on your system and opens your files. Full version (Beta 3): faster and with fixes.</p>
         <p class="fine">Checkout is handled by Creem, our merchant of record. Applicable taxes and the final price are shown at checkout. Please check the <a href="#compatibility">compatibility list</a> before buying. See the <a href="/terms">Terms of Service</a> for refunds.</p>
       </div>
       <div id="author" style="max-width:680px;margin:56px auto 0;text-align:center">
@@ -305,8 +309,8 @@
       </details>
       <details>
         <summary>Is it safe that the installer replaces a program file? What if my antivirus warns?</summary>
-        <p>The installer is built for exact rollback: the original file is checked and saved before it is replaced, and UNINSTALL.cmd puts it back byte for byte. No network access, no services, no autostart, and no Steinberg file in the package. VirusTotal: 0/61 (<a href="https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection" target="_blank" rel="noopener">report</a>, 14 November 2026). The files are not code-signed yet, so a heuristic scanner may still react to the DLL replacement — a reaction to the pattern, not a found threat. What exactly changes on your PC and how to check it yourself: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a></p>
-        <p>Release file SHA-256: <code style="word-break:break-all">714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc</code></p>
+        <p>The installer is built for exact rollback: the original file is checked and saved before it is replaced, and UNINSTALL.cmd puts it back byte for byte. No network access, no services, no autostart, and no Steinberg file in the package. VirusTotal: 0/61 (<a href="https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection" target="_blank" rel="noopener">report</a>, 26 November 2026). The files are not code-signed yet, so a heuristic scanner may still react to the DLL replacement — a reaction to the pattern, not a found threat. What exactly changes on your PC and how to check it yourself: <a href="https://github.com/stark622/FrameBridge-Native-Video-External-Subtitles-for-Cubase-Nuendo/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a></p>
+        <p>Release file SHA-256: <code style="word-break:break-all">e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436</code></p>
       </details>
       <details>
         <summary>Is it a VST plugin? Is there a Mac version?</summary>
@@ -314,11 +318,11 @@
       </details>
       <details>
         <summary>Will it work after a Cubase or Nuendo update?</summary>
-        <p>FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.30. A new major version may change the video engine — then the installer simply does not offer that installation and changes nothing. After updating Cubase or Nuendo, just run INSTALL.cmd again. If FrameBridge stops working after you update your Cubase or Nuendo, write to support.</p>
+        <p>FrameBridge is verified with the builds listed above, up to Cubase 16.0.5 and Nuendo 15.0.40. A new major version may change the video engine — then the installer simply does not offer that installation and changes nothing. After updating Cubase or Nuendo, just run INSTALL.cmd again. If FrameBridge stops working after you update your Cubase or Nuendo, write to support.</p>
       </details>
       <details>
         <summary>Which dubbing script layouts are read?</summary>
-        <p>Name the script like the video (film.mkv + film.docx); an ordinary subtitle file with the same name takes priority. DOCX, XLSX, PDF, TXT, CSV and more. Drop your script into <a href="#check">Check before you buy</a> above: it shows at once whether the current version of FrameBridge reads it and whether the next update (being tested) does.</p>
+        <p>Name the script like the video (film.mkv + film.docx); an ordinary subtitle file with the same name takes priority. DOCX, DOC, XLSX, XLS, PDF, RTF, ODT, ODS, TXT, CSV — tables with or without headers, start-only times, takes. Drop your script into <a href="#check">Check before you buy</a> above: it shows at once how FrameBridge reads it.</p>
       </details>
     </div>
   </section>
@@ -504,6 +508,21 @@
   });
   lb.addEventListener('click', function (e) { if (e.target !== big) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
+})();
+// hint cards open where they fit: "Try it free" flips above, "What's new" flips below the sticky header
+(function () {
+  var hdr = document.querySelector('.site-header');
+  function fit(h) {
+    var t = h.querySelector('.hc-tip, .b2-tip'); if (!t) return;
+    h.classList.remove('up', 'down');
+    var r = h.getBoundingClientRect(), top = hdr ? hdr.getBoundingClientRect().bottom : 0;
+    var above = r.top - top, below = window.innerHeight - r.bottom, need = t.offsetHeight + 16;
+    if (h.classList.contains('b2')) { if (need > above && below > above) h.classList.add('down'); }
+    else if (need > below && above > below) h.classList.add('up');
+  }
+  document.querySelectorAll('.hc-below, .b2').forEach(function (h) {
+    ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { h.addEventListener(ev, function () { fit(h); }, { passive: true }); });
+  });
 })();
 (function () {
   var d = document.querySelector('details.lang');

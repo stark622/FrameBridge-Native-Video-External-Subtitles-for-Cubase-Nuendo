@@ -2,13 +2,13 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · **Русский** · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#проверка-релизного-файла) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#проверка-релизного-файла)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#проверка-релизного-файла) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#поддерживаемые-версии-cubase-и-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#проверка-релизного-файла)
 
 [![FrameBridge на штатном видеотреке Nuendo — нажмите, чтобы посмотреть демо](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Выше — короткий видеогайд в Cubase 11 Pro: MKV с парным SRT-файлом субтитров и HDR-MKV, показанный в SDR. [Расширенная версия на YouTube](https://youtu.be/NjNHtkc8-OE) — один дубль без монтажа, вживую импортируются MKV (HEVC 4K 10 бит, в том числе HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) и субтитры разных форматов.
 
-**[Сайт](https://framebridge.cc/ru/)** · **[Купить](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Проверьте до покупки](https://framebridge.cc/ru/#check)**
+**[Сайт](https://framebridge.cc/ru/)** · **[Купить](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Проверьте до покупки](https://framebridge.cc/ru/#check)** · **[Скачать демо](https://framebridge.cc/download/FrameBridge-trial.zip)**
 
 FrameBridge расширяет штатный видеодвижок Cubase и Nuendo в Windows x64. Современные видеоформаты открываются на штатном видеотреке и воспроизводятся во встроенном Видеоплеере, а внешние файлы субтитров автоматически показываются поверх изображения — без конвертации материала и без прожига субтитров в видео.
 
@@ -48,7 +48,7 @@ Cubase и Nuendo показывают видео в одном окне Виде
 | | Проверенные сборки |
 |---|---|
 | **Cubase** | 8.0.10 и 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
-| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40 |
 
 Редакции Cubase Pro, Artist, Elements, AI и LE определяются так же. Полная таблица — в [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) (на английском). Миниатюры на видеотреке есть во всех проверенных версиях.
 
@@ -57,7 +57,7 @@ Cubase и Nuendo показывают видео в одном окне Виде
 
 **Соседние сборки с высокой вероятностью работают.** Видеодвижок почти не меняется в пределах одного поколения продукта: если, например, проверена Nuendo 12.0.52, то 12.0.20 или 12.0.70 с высокой вероятностью тоже будут работать. Установщик сам проверяет видеодвижок каждой установки: совместимая предлагается к установке, несовместимая не попадает в список, и ничего не меняется. Более старые редакции с тем же поколением движка (например, Nuendo 7–9, Cubase 8.5 / 9.5) тоже могут подойти, но не тестировались.
 
-**Будет ли работать после обновления Cubase или Nuendo?** FrameBridge проверен на сборках из списка выше, до Cubase 16.0.5 и Nuendo 15.0.30 включительно. Новая основная версия может изменить видеодвижок — тогда установщик просто не предложит такую установку и ничего не изменит. После обновления Cubase или Nuendo просто снова запустите INSTALL.cmd. Если после обновления вашего Cubase или Nuendo FrameBridge перестал работать, напишите в поддержку.
+**Будет ли работать после обновления Cubase или Nuendo?** FrameBridge проверен на сборках из списка выше, до Cubase 16.0.5 и Nuendo 15.0.40 включительно. Новая основная версия может изменить видеодвижок — тогда установщик просто не предложит такую установку и ничего не изменит. После обновления Cubase или Nuendo просто снова запустите INSTALL.cmd. Если после обновления вашего Cubase или Nuendo FrameBridge перестал работать, напишите в поддержку.
 
 </details>
 
@@ -105,9 +105,9 @@ Cubase и Nuendo показывают видео в одном окне Виде
 
 ## Проверка релизного файла
 
-- Текущий релиз: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
-- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
-- [Отчёт VirusTotal](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (по состоянию на 14 ноября 2026 года): 0/61 — ни один движок ничего не находит, в том числе Microsoft Defender, ESET, Malwarebytes, Sophos и Symantec.
+- Текущий релиз: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`
+- SHA-256: `e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`
+- [Отчёт VirusTotal](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) (по состоянию на 26 ноября 2026 года): 0/61 — ни один движок ничего не находит, в том числе Microsoft Defender, ESET, Malwarebytes, Sophos и Symantec.
 - Что именно установщик меняет на компьютере и как проверить это самому: [SECURITY.md](../SECURITY.md)
 
 ## Кто делает FrameBridge

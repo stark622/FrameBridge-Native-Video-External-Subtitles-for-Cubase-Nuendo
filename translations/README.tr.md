@@ -2,13 +2,13 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · **Türkçe** · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#sürüm-dosyası-kontrolü) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#sürüm-dosyası-kontrolü)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#sürüm-dosyası-kontrolü) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#desteklenen-cubase-ve-nuendo-sürümleri) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#sürüm-dosyası-kontrolü)
 
 [![Nuendo’nun yerel video kanalında çalışan FrameBridge — demoyu izlemek için tıklayın](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Yukarıda Cubase 11 Pro’da kısa bir video rehberi var: SRT altyazı dosyasıyla birlikte bir MKV ve SDR olarak gösterilen bir HDR MKV. [YouTube’daki uzun sürüm](https://youtu.be/NjNHtkc8-OE): tek bir kesintisiz çekim, canlı içe aktarma — MKV (HEVC 4K 10-bit, HDR dahil), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) ve birkaç altyazı formatı.
 
-**[Web sitesi](https://framebridge.cc/tr/)** · **[Satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Satın almadan önce kontrol edin](https://framebridge.cc/tr/#check)**
+**[Web sitesi](https://framebridge.cc/tr/)** · **[Satın al](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Satın almadan önce kontrol edin](https://framebridge.cc/tr/#check)** · **[Demoyu indir](https://framebridge.cc/download/FrameBridge-trial.zip)**
 
 FrameBridge, Windows x64’teki Cubase ve Nuendo’nun yerel video motorunu genişletir. Modern video formatları yerel video kanalında (Video Track) açılır ve yerleşik Video Player’da oynatılır; harici altyazı dosyaları ise görüntünün üzerinde otomatik olarak gösterilir — medyayı dönüştürmeden ve altyazıları videoya gömmeden.
 
@@ -48,7 +48,7 @@ Cubase ve Nuendo videoyu tek bir Video Player penceresinde gösterir. FrameBridg
 | | Doğrulanmış sürümler |
 |---|---|
 | **Cubase** | 8.0.10 ve 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
-| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40 |
 
 Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Tam tablo [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) dosyasındadır (İngilizce). Video kanalındaki küçük resimler tüm doğrulanmış sürümlerde görünür.
 
@@ -57,7 +57,7 @@ Cubase Pro, Artist, Elements, AI ve LE sürümleri de aynı şekilde bulunur. Ta
 
 **Yakın sürümlerin çalışması çok olasıdır.** Video motoru bir ürün kuşağı içinde neredeyse hiç değişmez: örneğin Nuendo 12.0.52 doğrulandıysa, 12.0.20 veya 12.0.70 de büyük olasılıkla çalışır. Yükleyici her kurulumun video motorunu kendisi kontrol eder: uyumlu olan kurulum için önerilir, uyumsuz olan listede yer almaz ve hiçbir şey değiştirilmez. Aynı motor kuşağına sahip daha eski sürümler (örneğin Nuendo 7–9, Cubase 8.5 / 9.5) de uygun olabilir, ancak test edilmemiştir.
 
-**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.30’a kadar doğrulanmıştır. Yeni bir ana sürüm video motorunu değiştirebilir; bu durumda yükleyici o kurulumu sunmaz ve hiçbir şeyi değiştirmez. Cubase veya Nuendo’yu güncelledikten sonra INSTALL.cmd’yi yeniden çalıştırmanız yeterli. Cubase veya Nuendo’nuzu güncelledikten sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
+**Cubase veya Nuendo güncellemesinden sonra çalışır mı?** FrameBridge, yukarıda listelenen sürümlerle, Cubase 16.0.5 ve Nuendo 15.0.40’a kadar doğrulanmıştır. Yeni bir ana sürüm video motorunu değiştirebilir; bu durumda yükleyici o kurulumu sunmaz ve hiçbir şeyi değiştirmez. Cubase veya Nuendo’yu güncelledikten sonra INSTALL.cmd’yi yeniden çalıştırmanız yeterli. Cubase veya Nuendo’nuzu güncelledikten sonra FrameBridge çalışmayı bırakırsa desteğe yazın.
 
 </details>
 
@@ -105,9 +105,9 @@ Ayrıntılı talimatlar [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) ve [READM
 
 ## Sürüm dosyası kontrolü
 
-- Güncel sürüm: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
-- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
-- [VirusTotal raporu](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (14 Kasım 2026 itibarıyla): 0/61 — Microsoft Defender, ESET, Malwarebytes, Sophos ve Symantec dahil hiçbir motor bir şey bulmadı.
+- Güncel sürüm: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`
+- SHA-256: `e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`
+- [VirusTotal raporu](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) (26 Kasım 2026 itibarıyla): 0/61 — Microsoft Defender, ESET, Malwarebytes, Sophos ve Symantec dahil hiçbir motor bir şey bulmadı.
 - Yükleyicinin bilgisayarınızda neyi değiştirdiği ve bunu kendiniz nasıl kontrol edeceğiniz: [SECURITY.md](../SECURITY.md)
 
 ## FrameBridge’i kim geliştiriyor

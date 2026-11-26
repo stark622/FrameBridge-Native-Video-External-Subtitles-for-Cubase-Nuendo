@@ -2,13 +2,13 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · **한국어**
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#릴리스-파일-확인) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#지원되는-cubase-및-nuendo-버전) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#지원되는-cubase-및-nuendo-버전) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#릴리스-파일-확인)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#릴리스-파일-확인) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#지원되는-cubase-및-nuendo-버전) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#지원되는-cubase-및-nuendo-버전) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#릴리스-파일-확인)
 
 [![Nuendo 기본 비디오 트랙에서 작동하는 FrameBridge — 클릭하여 데모 보기](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 위 영상은 Cubase 11 Pro에서 진행하는 짧은 비디오 가이드로, SRT 자막 파일과 함께 있는 MKV와 SDR로 표시되는 HDR MKV를 보여 줍니다. [YouTube 확장판](https://youtu.be/NjNHtkc8-OE)은 편집 없이 한 번에 실시간으로 가져오는 모습을 담았습니다: MKV(HEVC 4K 10비트, HDR 포함), OGV(Theora), MXF(DNxHR 4K), MOV(ProRes 4444 4K)와 여러 자막 형식.
 
-**[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[구매 전에 확인하세요](https://framebridge.cc/ko/#check)**
+**[웹사이트](https://framebridge.cc/ko/)** · **[구매](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[구매 전에 확인하세요](https://framebridge.cc/ko/#check)** · **[데모 다운로드](https://framebridge.cc/download/FrameBridge-trial.zip)**
 
 FrameBridge는 Windows x64용 Cubase와 Nuendo의 네이티브 비디오 엔진을 확장합니다. 최신 비디오 포맷이 기본 비디오 트랙에서 열리고 내장 비디오 플레이어에서 재생되며, 외부 자막 파일은 화면 위에 자동으로 표시됩니다. 소스를 트랜스코딩할 필요도, 자막을 영상에 입힐 필요도 없습니다.
 
@@ -48,7 +48,7 @@ Cubase와 Nuendo는 비디오를 하나의 비디오 플레이어 창에만 표�
 | | 검증된 버전 |
 |---|---|
 | **Cubase** | 8.0.10 및 9.0.0(LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
-| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40 |
 
 Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩니다. 전체 목록은 [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt)(영문)를 참고하세요. 비디오 트랙 썸네일은 모든 검증된 버전에서 표시됩니다.
 
@@ -57,7 +57,7 @@ Cubase Pro, Artist, Elements, AI, LE 에디션도 같은 방식으로 인식됩�
 
 **인접 버전도 작동할 가능성이 매우 높습니다.** 비디오 엔진은 같은 제품 세대 안에서는 거의 바뀌지 않습니다. 예를 들어 Nuendo 12.0.52가 검증되었다면 12.0.20이나 12.0.70도 작동할 가능성이 매우 높습니다. 설치 프로그램이 각 설치의 비디오 엔진을 직접 확인하여, 호환되는 설치는 설치 대상으로 표시하고 호환되지 않는 설치는 목록에 표시하지 않으며 아무것도 변경하지 않습니다. 같은 엔진 세대의 이전 에디션(예: Nuendo 7–9, Cubase 8.5 / 9.5)도 해당될 수 있지만 테스트하지는 않았습니다.
 
-**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 16.0.5 및 Nuendo 15.0.30까지)에서 검증되었습니다. 새 메이저 버전에서 비디오 엔진이 바뀌면 설치 프로그램은 그 설치를 제안하지 않고 아무것도 변경하지 않습니다. Cubase나 Nuendo를 업데이트한 뒤에는 INSTALL.cmd를 다시 실행하기만 하면 됩니다. Cubase나 Nuendo 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
+**Cubase나 Nuendo를 업데이트해도 작동하나요?** FrameBridge는 위에 나열된 빌드(Cubase 16.0.5 및 Nuendo 15.0.40까지)에서 검증되었습니다. 새 메이저 버전에서 비디오 엔진이 바뀌면 설치 프로그램은 그 설치를 제안하지 않고 아무것도 변경하지 않습니다. Cubase나 Nuendo를 업데이트한 뒤에는 INSTALL.cmd를 다시 실행하기만 하면 됩니다. Cubase나 Nuendo 업데이트 후 FrameBridge가 작동하지 않으면 지원팀에 문의하세요.
 
 </details>
 
@@ -105,9 +105,9 @@ FrameBridge에 내장된 동일한 FFmpeg 9.0.2로 디코딩됩니다. 보통 �
 
 ## 릴리스 파일 확인
 
-- 현재 릴리스: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
-- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
-- [VirusTotal 보고서](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection)(2026년 11월 14일 기준). 결과는 0/61로, Microsoft Defender, ESET, Malwarebytes, Sophos, Symantec을 포함해 어떤 엔진에서도 탐지되지 않았습니다.
+- 현재 릴리스: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`
+- SHA-256: `e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`
+- [VirusTotal 보고서](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection)(2026년 11월 26일 기준). 결과는 0/61로, Microsoft Defender, ESET, Malwarebytes, Sophos, Symantec을 포함해 어떤 엔진에서도 탐지되지 않았습니다.
 - 설치 프로그램이 PC에서 무엇을 변경하는지, 직접 확인하는 방법: [SECURITY.md](../SECURITY.md)
 
 ## FrameBridge를 만든 사람

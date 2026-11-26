@@ -2,13 +2,13 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · **日本語** · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#リリースファイルの確認) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#リリースファイルの確認)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#リリースファイルの確認) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#対応する-cubase--nuendo-のバージョン) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#リリースファイルの確認)
 
 [![Nuendo 標準のビデオトラックで動作する FrameBridge — クリックでデモを再生](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 上の動画は Cubase 11 Pro での短いビデオガイドで、SRT 字幕ファイル付きの MKV と、SDR で表示される HDR の MKV を紹介しています。[YouTube の拡張版](https://youtu.be/NjNHtkc8-OE)は、ノーカットのワンテイクでその場で読み込んでいます：MKV（HEVC 4K 10 ビット、HDR を含む）、OGV（Theora）、MXF（DNxHR 4K）、MOV（ProRes 4444 4K）と複数の字幕形式。
 
-**[Web サイト](https://framebridge.cc/ja/)** · **[購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[購入前にチェック](https://framebridge.cc/ja/#check)**
+**[Web サイト](https://framebridge.cc/ja/)** · **[購入](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[購入前にチェック](https://framebridge.cc/ja/#check)** · **[デモをダウンロード](https://framebridge.cc/download/FrameBridge-trial.zip)**
 
 FrameBridge は Windows x64 版 Cubase と Nuendo のネイティブビデオエンジンを拡張します。最新のビデオフォーマットが標準のビデオトラックで開き、内蔵のビデオプレーヤーで再生されます。外部字幕ファイルは自動的に映像の上に表示されます。素材の変換も、字幕の焼き込みも必要ありません。
 
@@ -48,7 +48,7 @@ Cubase と Nuendo では、ビデオは 1 つのビデオプレーヤーウィ�
 | | 検証済みバージョン |
 |---|---|
 | **Cubase** | 8.0.10 および 9.0.0（LE AI Elements）、10.5.0.68、11、12.0.10 / 12.0.51 / 12.0.52、13.0.21、14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40、15.0.5 / 15.0.21 / 15.0.30、16.0.5 |
-| **Nuendo** | 10、12.0.52、13.0.10 / 13.0.50、14.0.32 / 14.0.40、15.0.21 / 15.0.30 |
+| **Nuendo** | 10、12.0.52、13.0.10 / 13.0.50、14.0.32 / 14.0.40、15.0.21 / 15.0.30 / 15.0.40 |
 
 Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法で検出されます。完全な一覧は [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt)（英語）をご覧ください。 ビデオトラックのサムネイルは、すべての検証済みバージョンで表示されます。
 
@@ -57,7 +57,7 @@ Cubase Pro、Artist、Elements、AI、LE の各エディションも同じ方法
 
 **近いバージョンでも動作する可能性が非常に高いと考えられます。** ビデオエンジンは同じ製品世代の中ではほとんど変わりません。たとえば Nuendo 12.0.52 で検証済みなら、12.0.20 や 12.0.70 でも動作する可能性が非常に高いです。インストーラーは各インストールのビデオエンジンを自ら確認し、互換性があればインストール候補として表示し、互換性がなければ一覧に表示せず、何も変更しません。同じ世代のエンジンを持つ古いエディション（Nuendo 7–9、Cubase 8.5 / 9.5 など）も対象になる場合がありますが、テストはしていません。
 
-**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.30 まで）で検証済みです。新しいメジャーバージョンでビデオエンジンが変わった場合、インストーラーはそのインストールを候補に出さず、何も変更しません。Cubase / Nuendo をアップデートしたら、もう一度 INSTALL.cmd を実行するだけです。Cubase / Nuendo のアップデート後に FrameBridge が動作しなくなった場合は、サポートまでご連絡ください。
+**Cubase や Nuendo をアップデートしても動作しますか？** FrameBridge は上記のビルド（Cubase 16.0.5 / Nuendo 15.0.40 まで）で検証済みです。新しいメジャーバージョンでビデオエンジンが変わった場合、インストーラーはそのインストールを候補に出さず、何も変更しません。Cubase / Nuendo をアップデートしたら、もう一度 INSTALL.cmd を実行するだけです。Cubase / Nuendo のアップデート後に FrameBridge が動作しなくなった場合は、サポートまでご連絡ください。
 
 </details>
 
@@ -105,9 +105,9 @@ FrameBridge に内蔵された同じ FFmpeg 9.0.2 でデコードされます。
 
 ## リリースファイルの確認
 
-- 現在のリリース：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
-- SHA-256：`714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
-- [VirusTotal のレポート](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection)（2026 年 11 月 14 日時点）：0/61 — Microsoft Defender、ESET、Malwarebytes、Sophos、Symantec を含め、どのエンジンも検出なしです。
+- 現在のリリース：`FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`
+- SHA-256：`e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`
+- [VirusTotal のレポート](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection)（2026 年 11 月 26 日時点）：0/61 — Microsoft Defender、ESET、Malwarebytes、Sophos、Symantec を含め、どのエンジンも検出なしです。
 - インストーラーが PC で何を変更するか、またそれを自分で確認する方法: [SECURITY.md](../SECURITY.md)
 
 ## FrameBridge の開発者

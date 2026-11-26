@@ -35,8 +35,8 @@
     <h1>Compatibility and Known Limitations</h1>
     <p class="meta">The same text is included in the FrameBridge download package.</p>
     <pre>FrameBridge — Native Video for Cubase &amp; Nuendo
-Beta 2
-COMPATIBILITY AND KNOWN LIMITATIONS - 2026-11-14
+Beta 3
+COMPATIBILITY AND KNOWN LIMITATIONS - 2026-11-26
 ================================================
 
 PLATFORM
@@ -63,11 +63,12 @@ Nuendo:
   12.0.52
   13.0.10 / 13.0.50
   14.0.32 / 14.0.40
-  15.0.21 / 15.0.30
+  15.0.21 / 15.0.30 / 15.0.40
 
 These are specifically tested builds, not a claim for every release in the
 Cubase 8-16 or Nuendo 10-15 generations. Cubase 16.0.5 passed the user&#x27;s full
-video, subtitle, audio and thumbnail test collection. Cubase 9 passed the full
+video, subtitle, audio and thumbnail test collection. Nuendo 15.0.40 passed the
+user&#x27;s live test with Beta 3. Cubase 9 passed the full
 video and subtitle collection; Cubase 8 passed three previously unsupported video
 formats. Cubase Pro 12.0.51 was independently verified on a weak Windows 11 PC:
 installation, MKV playback with external subtitles, and restoration by uninstall.
@@ -96,9 +97,9 @@ Codec coverage:
   ProRes Proxy/LT/422 HQ/4444, DNxHR/DNxHD, CineForm, XDCAM, XAVC/AVC-Intra,
   DV, DVCPRO50, DVCPRO HD, MPEG-1, MPEG-2, VP8, VP9 8-bit/10-bit, APV, FFV1,
   HuffYUV/FFVHuff, UtVideo, MagicYUV, Uncompressed v210, QuickTime Animation,
-  PNG, TIFF, Canopus HQ/HQX, SpeedHQ, HAP/HAP Q, Theora, WMV 7/8, Xvid,
-  DivX/MS MPEG-4, Sorenson Spark, Sorenson Video, RealVideo, Microsoft Video 1,
-  MJPEG, H.263, Avid 1:1 and Cinepak.
+  PNG, TIFF, Canopus HQ/HQX, SpeedHQ, HAP/HAP Q, Theora, WMV 7/8, WMV 9, VC-1,
+  NotchLC, Xvid, DivX/MS MPEG-4, Sorenson Spark, Sorenson Video, RealVideo,
+  Microsoft Video 1, MJPEG, H.263, Avid 1:1 and Cinepak.
 
 Video with non-square pixels (DV, DVCPRO50, DVCPRO HD) is shown in its correct
 wide proportions. Small videos (below 720 lines) that have a subtitle file are
@@ -106,7 +107,7 @@ shown enlarged to 720 lines so that the subtitles stay sharp.
 
 LIKELY TO PLAY TOO (opens; smooth playback not guaranteed):
   VVC/H.266, HEVC 4:2:2 and 4:4:4, JPEG 2000, Lagarith, Canopus Lossless,
-  WMV 9, VC-1, NotchLC, uncompressed r210/R10k/2vuy; not tested: Avid Meridian,
+  uncompressed r210/R10k/2vuy; not tested: Avid Meridian,
   SheerVideo, Apple Intermediate, VP6, TechSmith/Camtasia, Fraps, CamStudio,
   Indeo.
 
@@ -127,8 +128,11 @@ Supported external subtitle formats:
   DCP XML, PGS/SUP and VobSub.
 
 Dubbing scripts and dialogue lists with timecodes and roles:
-  PDF, DOCX, TXT, XLSX and CSV (named like the video; shown in the SRT look
-  with the role as a prefix; an ordinary subtitle file takes priority).
+  DOCX, DOC, XLSX, XLS, ODT, ODS, RTF, TXT, CSV and PDF, also PDFs exported from
+  Word or a browser (named like the video; shown in the SRT look with the role as
+  a prefix; an ordinary subtitle file takes priority). Scanned PDFs are pictures
+  and cannot be read. Tables with or without headers (12 languages), start-only
+  times, takes / loops, frame timecodes at the video&#x27;s frame rate.
 
 Text and bitmap subtitle paths are active across the verified video formats.
 All formats share the SRT look. PGS/SUP and VobSub are read as text with the

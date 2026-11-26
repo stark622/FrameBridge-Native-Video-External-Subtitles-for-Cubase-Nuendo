@@ -2,13 +2,13 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · **Português (Brasil)** · [Polski](README.pl.md) · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#verificação-do-arquivo-da-versão) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#versões-do-cubase-e-do-nuendo-compatíveis) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#versões-do-cubase-e-do-nuendo-compatíveis) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#verificação-do-arquivo-da-versão)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#verificação-do-arquivo-da-versão) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#versões-do-cubase-e-do-nuendo-compatíveis) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#versões-do-cubase-e-do-nuendo-compatíveis) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#verificação-do-arquivo-da-versão)
 
 [![FrameBridge na pista de vídeo nativa do Nuendo — clique para ver a demonstração](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Acima, um guia em vídeo curto no Cubase 11 Pro: um MKV com seu arquivo de legenda SRT e um MKV HDR exibido em SDR. [Versão estendida no YouTube](https://youtu.be/NjNHtkc8-OE): uma única tomada sem cortes, importada ao vivo — MKV (HEVC 4K 10 bits, inclusive HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) e vários formatos de legenda.
 
-**[Site](https://framebridge.cc/pt-br/)** · **[Comprar](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Confira antes de comprar](https://framebridge.cc/pt-br/#check)**
+**[Site](https://framebridge.cc/pt-br/)** · **[Comprar](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Confira antes de comprar](https://framebridge.cc/pt-br/#check)** · **[Baixar demo](https://framebridge.cc/download/FrameBridge-trial.zip)**
 
 O FrameBridge amplia o mecanismo de vídeo nativo do Cubase e do Nuendo no Windows x64. Formatos de vídeo modernos abrem na pista de vídeo nativa e são reproduzidos no Player de Vídeo integrado, e arquivos de legenda externos são exibidos automaticamente sobre a imagem — sem converter a mídia e sem gravar as legendas no vídeo.
 
@@ -48,7 +48,7 @@ O Cubase e o Nuendo mostram o vídeo em uma única janela do Player de Vídeo. O
 | | Versões verificadas |
 |---|---|
 | **Cubase** | 8.0.10 e 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
-| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40 |
 
 As edições Cubase Pro, Artist, Elements, AI e LE são encontradas da mesma forma. A matriz completa está em [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) (em inglês). As miniaturas na pista de vídeo aparecem em todas as versões verificadas.
 
@@ -57,7 +57,7 @@ As edições Cubase Pro, Artist, Elements, AI e LE são encontradas da mesma for
 
 **Versões próximas muito provavelmente funcionam.** O mecanismo de vídeo quase não muda dentro de uma mesma geração do produto: se, por exemplo, o Nuendo 12.0.52 foi verificado, o 12.0.20 ou o 12.0.70 muito provavelmente também funcionarão. O próprio instalador verifica o mecanismo de vídeo de cada instalação: a compatível é oferecida para instalação, a incompatível não aparece na lista e nada é alterado. Edições mais antigas com a mesma geração de mecanismo (por exemplo, Nuendo 7–9, Cubase 8.5 / 9.5) também podem ser compatíveis, mas não foram testadas.
 
-**Vai funcionar depois de uma atualização do Cubase ou do Nuendo?** O FrameBridge é verificado com as versões listadas acima, até o Cubase 16.0.5 e o Nuendo 15.0.30. Uma nova versão principal pode alterar o mecanismo de vídeo — nesse caso o instalador simplesmente não oferece essa instalação e não altera nada. Depois de atualizar o Cubase ou o Nuendo, basta executar o INSTALL.cmd novamente. Se o FrameBridge parar de funcionar após atualizar seu Cubase ou Nuendo, escreva para o suporte.
+**Vai funcionar depois de uma atualização do Cubase ou do Nuendo?** O FrameBridge é verificado com as versões listadas acima, até o Cubase 16.0.5 e o Nuendo 15.0.40. Uma nova versão principal pode alterar o mecanismo de vídeo — nesse caso o instalador simplesmente não oferece essa instalação e não altera nada. Depois de atualizar o Cubase ou o Nuendo, basta executar o INSTALL.cmd novamente. Se o FrameBridge parar de funcionar após atualizar seu Cubase ou Nuendo, escreva para o suporte.
 
 </details>
 
@@ -105,9 +105,9 @@ As instruções completas estão em [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.tx
 
 ## Verificação do arquivo da versão
 
-- Versão atual: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
-- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
-- [Relatório do VirusTotal](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (em 14 de novembro de 2026): 0/61 — nenhum mecanismo detecta nada, incluindo Microsoft Defender, ESET, Malwarebytes, Sophos e Symantec.
+- Versão atual: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`
+- SHA-256: `e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`
+- [Relatório do VirusTotal](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) (em 26 de novembro de 2026): 0/61 — nenhum mecanismo detecta nada, incluindo Microsoft Defender, ESET, Malwarebytes, Sophos e Symantec.
 - O que o instalador altera no seu PC e como verificar você mesmo: [SECURITY.md](../SECURITY.md)
 
 ## Quem desenvolve o FrameBridge

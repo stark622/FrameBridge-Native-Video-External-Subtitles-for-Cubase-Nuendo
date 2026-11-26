@@ -459,7 +459,7 @@
     if (f === 'hap' || f === 'hap q' || /^hap/.test(id)) return c(v.Format || 'HAP', 'verified', /q/i.test(f + id) ? 'intra' : 'light');   // Hap Q: dense intra
     if (f === 'theora') return c('Theora', 'verified', 'light');
     if (f === 'wmv1' || f === 'wmv2') return c(v.Format.replace('WMV', 'WMV '), 'verified', 'light');
-    if (f === 'vc-1') return c(id === 'wmv3' ? 'WMV 9' : 'VC-1', 'likely', 'light');
+    if (f === 'vc-1') return c(id === 'wmv3' ? 'WMV 9' : 'VC-1', 'verified', 'light');   // beta 3: smooth live on real WMV HD / VC-1 files
     if (f === 'mpeg-4 visual' || id === 'xvid' || id === 'divx' || id === 'div3') return c('MPEG-4 Visual (DivX / Xvid)', 'verified', 'light');
     if (f === 'h.263') return c('H.263', 'verified', 'light');
     if (f === 'sorenson spark') return c('Sorenson Spark', 'verified', 'light');
@@ -664,7 +664,7 @@
 
   // ---------------- Cubase / Nuendo ----------------
   var VERIFIED = { cubase: ['8.0.10', '9.0.0', '10.5.0', '11.*', '12.0.10', '12.0.51', '12.0.52', '13.0.21', '14.0.5', '14.0.10', '14.0.20', '14.0.32', '14.0.40', '15.0.5', '15.0.21', '15.0.30', '16.0.5'],
-                   nuendo: ['10.*', '12.0.52', '13.0.10', '13.0.50', '14.0.32', '14.0.40', '15.0.21', '15.0.30'] };
+                   nuendo: ['10.*', '12.0.52', '13.0.10', '13.0.50', '14.0.32', '14.0.40', '15.0.21', '15.0.30', '15.0.40'] };
   var MAYBE = { cubase: ['8.5', '9.5'], nuendo: ['7', '8', '9', '11', '16'] };
   function verVerdict(prod, ver) {
     var p = ver.split('.'), major = +p[0], mm = p[0] + '.' + (p[1] || '0');
@@ -738,7 +738,7 @@
       show(rows);
     }).catch(function () { show('<p class="ck-bad">' + L.readFail + '</p>'); });
   }
-  // Subtitles and dubbing scripts: the product's own readers (beta 2 = current, beta 3 = next) built to WebAssembly.
+  // Subtitles and dubbing scripts: the product's own reader (beta 3 = current) built to WebAssembly.
   var SUB = 'srt ass ssa vtt smi sami sub idx sup ttml dfxp xml stl scc docx xlsx csv txt pdf doc xls rtf odt ods'.split(' ');
   var subMods = {};
   function subModule(name) {
@@ -778,7 +778,7 @@
     Promise.all(list.map(function (f) {
       return f.size > 64 * 1048576 ? Promise.reject() : f.arrayBuffer().then(function (b) { return { name: f.name, data: new Uint8Array(b) }; });
     })).then(function (files) {
-      return Promise.all([subParse('subs_b2', files, main.name), subParse('subs_b3', files, main.name)]);
+      return Promise.all([subParse('subs_b3', files, main.name), Promise.resolve(null)]);
     }).then(function (r) {
       var cur = r[0], next = r[1], best = cur && cur.ok ? cur : next && next.ok ? next : cur || next;
       if (!best) { show('<p class="ck-bad">' + L.readFail + '</p>'); return; }

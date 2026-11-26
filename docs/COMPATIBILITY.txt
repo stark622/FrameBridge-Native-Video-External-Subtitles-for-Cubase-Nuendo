@@ -1,6 +1,6 @@
 FrameBridge — Native Video for Cubase & Nuendo
-Beta 2
-COMPATIBILITY AND KNOWN LIMITATIONS - 2026-11-14
+Beta 3 (test version)
+COMPATIBILITY AND KNOWN LIMITATIONS - 2026-11-26
 ================================================
 
 PLATFORM
@@ -27,11 +27,12 @@ Nuendo:
   12.0.52
   13.0.10 / 13.0.50
   14.0.32 / 14.0.40
-  15.0.21 / 15.0.30
+  15.0.21 / 15.0.30 / 15.0.40
 
 These are specifically tested builds, not a claim for every release in the
 Cubase 8-16 or Nuendo 10-15 generations. Cubase 16.0.5 passed the user's full
-video, subtitle, audio and thumbnail test collection. Cubase 9 passed the full
+video, subtitle, audio and thumbnail test collection. Nuendo 15.0.40 passed the
+user's live test with Beta 3. Cubase 9 passed the full
 video and subtitle collection; Cubase 8 passed three previously unsupported video
 formats. Cubase Pro 12.0.51 was independently verified on a weak Windows 11 PC:
 installation, MKV playback with external subtitles, and restoration by uninstall.
@@ -91,8 +92,24 @@ Supported external subtitle formats:
   DCP XML, PGS/SUP and VobSub.
 
 Dubbing scripts and dialogue lists with timecodes and roles:
-  PDF, DOCX, TXT, XLSX and CSV (named like the video; shown in the SRT look
-  with the role as a prefix; an ordinary subtitle file takes priority).
+  DOCX, DOC, XLSX, XLS, ODT, ODS, RTF, TXT, CSV and PDF, also PDFs exported from
+  Word or a browser (named like the video; shown in the SRT look with the role as
+  a prefix; an ordinary subtitle file takes priority). Scanned PDFs are pictures
+  and cannot be read.
+  Layouts:
+  - tables with or without a header row; headers in 12 languages, e.g. Start / End /
+    Text / Role, Netflix IN-TIMECODE / OUT-TIMECODE / DIALOGUE, ADR cue sheets Cue /
+    Character / TC In / TC Out, Rolle / Einsatz, Personnage / Réplique, Personaje /
+    Diálogo, Personaggio / Battuta, Postać / Kwestia, Роль / Реплика; in XLSX the
+    first sheet with lines is used;
+  - start and end times, or start only (the line then lasts until the next one);
+  - takes / loops (Take 12, ANELLO 1, BOUCLE 3) with several lines inside;
+  - text on the line under the timecode; screenplay layout (role on its own line);
+  - with an original and a translation column, the translation is shown.
+  Times: 00:00:01,000 / 00:00:01.000 / 00:00:01 / 01:35, and frames 00:00:01:12 at
+  the video's frame rate (drop-frame with ;). A broadcast start hour (01:00:00:00 or
+  10:00:00:00) is removed when the script would otherwise run past the end of the
+  video.
 
 Text and bitmap subtitle paths are active across the verified video formats.
 All formats share the SRT look. PGS/SUP and VobSub are read as text with the
@@ -110,12 +127,14 @@ A tray icon opens a live copy of the host's own Video Player, drawn by Windows
 second decoding and no separate playback. Verified on Cubase 8-15 and Nuendo 10.
 The copy is as sharp as the Video Player it copies: show the actor the Video Player
 itself in full screen and use the copy for the sound engineer. Windows 7 needs Aero.
+Optional next-line hint (off by default, tray icon right-click): the next line under the
+current one in the actor's Video Player while the copy is open; the copy leaves it out.
 
 WORKFLOW
 --------
 
 Supported files use the native Cubase/Nuendo video track and built-in Video
-Player. They do not require preliminary transcoding or a separate external
+Player. They do not require converting first or a separate external
 video player.
 
 PERFORMANCE NOTES
@@ -154,5 +173,6 @@ rollback removes only known product hashes. Product cleanup is limited to
 by this product. Projects, preferences, plug-ins and unrelated data are outside
 the installer scope.
 
-Recommended order when updating Cubase/Nuendo: UNINSTALL.cmd, the Steinberg
-update, then INSTALL.cmd.
+After a Cubase/Nuendo update simply run INSTALL.cmd again: the installer sees the
+update over FrameBridge and backs up the new original. A new major version with a
+different video engine is not offered, and nothing is changed.

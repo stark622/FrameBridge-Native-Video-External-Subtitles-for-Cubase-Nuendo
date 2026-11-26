@@ -2,13 +2,13 @@
 
 [English](../README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Italiano](README.it.md) · [Português (Brasil)](README.pt-br.md) · **Polski** · [Türkçe](README.tr.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [한국어](README.ko.md)
 
-[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#weryfikacja-pliku-wydania) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#obsługiwane-wersje-cubase-i-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#obsługiwane-wersje-cubase-i-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#weryfikacja-pliku-wydania)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-2b6cb0)](#weryfikacja-pliku-wydania) [![Cubase 8–16](https://img.shields.io/badge/Cubase-8%E2%80%9316-2b6cb0)](#obsługiwane-wersje-cubase-i-nuendo) [![Nuendo 10–15](https://img.shields.io/badge/Nuendo-10%E2%80%9315-2b6cb0)](#obsługiwane-wersje-cubase-i-nuendo) [![VirusTotal 0/61](https://img.shields.io/badge/VirusTotal-0%2F61-2f9e5b)](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) [![Beta 2](https://img.shields.io/badge/release-Beta%202-6b7280)](#weryfikacja-pliku-wydania)
 
 [![FrameBridge na natywnej ścieżce wideo Nuendo — kliknij, aby obejrzeć demo](../media/poster.png)](https://youtu.be/qJqN0ybHV8E)
 
 Powyżej krótki poradnik wideo w Cubase 11 Pro: plik MKV z napisami SRT oraz MKV HDR wyświetlany w SDR. [Wersja rozszerzona na YouTube](https://youtu.be/NjNHtkc8-OE): jedno ujęcie bez cięć, importowane na żywo: MKV (HEVC 4K 10-bit, także HDR), OGV (Theora), MXF (DNxHR 4K), MOV (ProRes 4444 4K) i kilka formatów napisów.
 
-**[Strona](https://framebridge.cc/pl/)** · **[Kup](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Sprawdź przed zakupem](https://framebridge.cc/pl/#check)**
+**[Strona](https://framebridge.cc/pl/)** · **[Kup](https://www.creem.io/payment/prod_vhrQNgibUBvDcUt13M0f1)** · **[Sprawdź przed zakupem](https://framebridge.cc/pl/#check)** · **[Pobierz demo](https://framebridge.cc/download/FrameBridge-trial.zip)**
 
 FrameBridge rozszerza natywny silnik wideo Cubase i Nuendo w systemie Windows x64. Nowoczesne formaty wideo otwierają się na natywnej ścieżce wideo (Video Track) i są odtwarzane we wbudowanym Video Playerze, a pliki napisów zewnętrznych wyświetlają się na obrazie automatycznie — bez konwersji materiału i bez wypalania napisów w wideo.
 
@@ -48,7 +48,7 @@ Cubase i Nuendo pokazują wideo w jednym oknie Video Player. FrameBridge dodaje 
 | | Sprawdzone wersje |
 |---|---|
 | **Cubase** | 8.0.10 i 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52, 13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30, 16.0.5 |
-| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 |
+| **Nuendo** | 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40 |
 
 Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pełna tabela jest w pliku [COMPATIBILITY.txt](../docs/COMPATIBILITY.txt) (po angielsku). Miniatury na ścieżce wideo są widoczne we wszystkich sprawdzonych wersjach.
 
@@ -57,7 +57,7 @@ Edycje Cubase Pro, Artist, Elements, AI i LE są wykrywane w ten sam sposób. Pe
 
 **Pokrewne wersje najprawdopodobniej działają.** Silnik wideo prawie się nie zmienia w obrębie jednej generacji produktu: jeśli na przykład sprawdzono Nuendo 12.0.52, to 12.0.20 czy 12.0.70 najprawdopodobniej też zadziałają. Instalator sam sprawdza silnik wideo każdej instalacji: zgodna jest proponowana do instalacji, niezgodna nie pojawia się na liście i nic nie jest zmieniane. Starsze edycje z tą samą generacją silnika (na przykład Nuendo 7–9, Cubase 8.5 / 9.5) również mogą się nadawać, ale nie były testowane.
 
-**Czy zadziała po aktualizacji Cubase lub Nuendo?** FrameBridge jest sprawdzony z wersjami wymienionymi wyżej, do Cubase 16.0.5 i Nuendo 15.0.30. Nowa główna wersja może zmienić silnik wideo — wtedy instalator po prostu nie zaproponuje takiej instalacji i niczego nie zmieni. Po aktualizacji Cubase lub Nuendo wystarczy ponownie uruchomić INSTALL.cmd. Jeśli po aktualizacji Twojego Cubase lub Nuendo FrameBridge przestanie działać, napisz do wsparcia.
+**Czy zadziała po aktualizacji Cubase lub Nuendo?** FrameBridge jest sprawdzony z wersjami wymienionymi wyżej, do Cubase 16.0.5 i Nuendo 15.0.40. Nowa główna wersja może zmienić silnik wideo — wtedy instalator po prostu nie zaproponuje takiej instalacji i niczego nie zmieni. Po aktualizacji Cubase lub Nuendo wystarczy ponownie uruchomić INSTALL.cmd. Jeśli po aktualizacji Twojego Cubase lub Nuendo FrameBridge przestanie działać, napisz do wsparcia.
 
 </details>
 
@@ -105,9 +105,9 @@ Pełna instrukcja jest w plikach [READ_ME_FIRST.txt](../docs/READ_ME_FIRST.txt) 
 
 ## Weryfikacja pliku wydania
 
-- Aktualne wydanie: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`
-- SHA-256: `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`
-- [Raport VirusTotal](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection) (stan na 14 listopada 2026): 0/61 — żaden silnik niczego nie wykrywa, w tym Microsoft Defender, ESET, Malwarebytes, Sophos i Symantec.
+- Aktualne wydanie: `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`
+- SHA-256: `e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`
+- [Raport VirusTotal](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection) (stan na 26 listopada 2026): 0/61 — żaden silnik niczego nie wykrywa, w tym Microsoft Defender, ESET, Malwarebytes, Sophos i Symantec.
 - Co instalator zmienia na komputerze i jak samodzielnie to sprawdzić: [SECURITY.md](../SECURITY.md)
 
 ## Kto tworzy FrameBridge

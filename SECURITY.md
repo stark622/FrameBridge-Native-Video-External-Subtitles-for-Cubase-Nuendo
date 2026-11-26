@@ -1,6 +1,6 @@
 # Security — what FrameBridge changes on your PC
 
-FrameBridge Beta 2 is installed by `INSTALL.cmd` and removed by `UNINSTALL.cmd`. This page lists exactly what the installer touches, what it never does, and how you can check it yourself. It describes the public release `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip` (SHA-256 below).
+FrameBridge Beta 3 is installed by `INSTALL.cmd` and removed by `UNINSTALL.cmd`. This page lists exactly what the installer touches, what it never does, and how you can check it yourself. It describes the public release `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip` (SHA-256 below).
 
 ## What the installer changes
 
@@ -37,7 +37,7 @@ To help diagnose problems, FrameBridge writes a technical log to `%TEMP%\cubase_
 
 ## Check it yourself
 
-- **Release file:** `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v2.zip`, SHA-256 `714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc`. In Windows: `certutil -hashfile "<file>.zip" SHA256`. [VirusTotal report](https://www.virustotal.com/gui/file/714df321641fb5c947244c9b3e55c72e5551bdb2c4b6d546b2cf6afc95931abc/detection).
+- **Release file:** `FrameBridge Native Video and Subtitles for Cubase and Nuendo Beta v3.zip`, SHA-256 `e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436`. In Windows: `certutil -hashfile "<file>.zip" SHA256`. [VirusTotal report](https://www.virustotal.com/gui/file/e79196151d3289c6b99cdc94880cc61db3f26f613051897cca8f482ad5fbb436/detection).
 - **No network libraries:** any PE viewer (for example `dumpbin /imports` from Visual Studio) shows that none of the DLLs or the EXE in `_runtime` import Windows networking libraries (`ws2_32`, `wininet`, `winhttp`).
 - **FFmpeg:** the libraries are built under LGPL 2.1 without network support (`--disable-network`, visible in the build configuration embedded in the DLLs). The exact FFmpeg source and the build recipe are included in the package under `_runtime\ffmpeg\SOURCE`; licences are in `_runtime\ffmpeg\LICENSES`.
 - **Installer script:** `_runtime\setup.ps1` is a plain PowerShell script you can read before running it.

@@ -1,8 +1,29 @@
-﻿FrameBridge — Native Video for Cubase & Nuendo — Beta 2
-==========================================================
+﻿FrameBridge — Native Video for Cubase & Nuendo — Beta 3 (test version)
+=========================================================================
 
-WHAT'S NEW IN BETA 2
+WHAT'S NEW IN BETA 3
 --------------------
+- Nuendo 15.0.40 is supported (verified).
+- Dubbing scripts: many more layouts are read - also old .doc / .xls, .rtf, .odt, .ods,
+  PDFs exported from Word or a browser, column headers in 12 languages, start-only
+  times, takes, frame timecodes (see SUBTITLES FROM DUBBING SCRIPTS below).
+- Optional next-line hint for the actor: the next line under the current one in the main
+  Video Player while the sound engineer copy is open. Off by default (see below).
+- The tray menu speaks the language of Windows (English, German, French, Spanish, Italian,
+  Portuguese, Polish, Turkish, Japanese, Chinese, Korean).
+- Phone videos recorded upright or rotated are shown the right way up.
+- Faster 4K: when the graphics card decodes the video, the 4K -> 1080p step runs on the
+  graphics card too; faster picture hand-over to Cubase/Nuendo.
+- Weak PCs: when the Video Player falls far behind, FrameBridge skips frames by itself
+  instead of stalling for seconds.
+- While video plays, thumbnails wait, so heavy formats play without hitches; thumbnails
+  continue about 3 seconds after you stop.
+- Faster JPEG 2000 (also 4K DCP / scope), Canopus HQ / HQX and HDR video.
+- The installer recognises every earlier FrameBridge build, so any of them can be
+  updated or uninstalled.
+
+NEW IN BETA 2 (also included)
+-----------------------------
 - Cubase 16.0.5 is supported (verified).
 - Second video window for dubbing: a live copy of the Video Player for the sound engineer
   (see SOUND ENGINEER COPY below).
@@ -20,9 +41,9 @@ WHAT'S NEW IN BETA 2
 - VVC/H.266 opens (slower formats are listed under "Likely to play too").
 - The log file is limited to 5 MB.
 
-UPDATING FROM BETA 1
---------------------
-Close Cubase and Nuendo and run INSTALL.cmd from this package. Beta 1 is replaced in place;
+UPDATING FROM BETA 1 OR BETA 2
+------------------------------
+Close Cubase and Nuendo and run INSTALL.cmd from this package. The earlier beta is replaced in place;
 no need to uninstall it first. Your projects and settings are not touched.
 
 INSTALL
@@ -49,16 +70,17 @@ importing new video (the DAW's own engine can stumble over the removed clip othe
 
 UPDATING CUBASE / NUENDO
 ------------------------
-Recommended order: UNINSTALL.cmd -> update Cubase/Nuendo with the Steinberg installer ->
-INSTALL.cmd. INSTALL then backs up the new original files and installs FrameBridge if the
-new version is compatible.
+After updating Cubase/Nuendo with the Steinberg installer, simply run INSTALL.cmd again.
+The installer sees the update over FrameBridge, backs up the new original files and
+installs FrameBridge if the new version is compatible. A new major version with a
+different video engine is simply not offered, and nothing is changed.
 
 VERIFIED VERSIONS
 -----------------
 Cubase: 8.0.10 and 9.0.0 (LE AI Elements), 10.5.0.68, 11, 12.0.10 / 12.0.51 / 12.0.52,
         13.0.21, 14.0.5 / 14.0.10 / 14.0.20 / 14.0.32 / 14.0.40, 15.0.5 / 15.0.21 / 15.0.30,
         16.0.5
-Nuendo: 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30
+Nuendo: 10, 12.0.52, 13.0.10 / 13.0.50, 14.0.32 / 14.0.40, 15.0.21 / 15.0.30 / 15.0.40
 
 NEARBY VERSIONS VERY LIKELY WORK
 --------------------------------
@@ -80,6 +102,11 @@ moment, with subtitles, and almost no extra load.
   should get the Video Player itself, not the copy.
 - The copy stays above Cubase/Nuendo and never takes the keyboard. Double-click = full
   screen / window. The close button hides it; click the icon to open it again.
+- Next-line hint (optional, off by default): right-click the FrameBridge icon and tick
+  "Next line under the subtitle in the main player (while the second window is open)".
+  While the copy window is open, the actor's Video Player then shows the next line, grey, under
+  the current subtitle; the sound engineer's copy leaves it out. Export Video made while
+  it is on includes that line. The setting is remembered.
 - Windows may hide new tray icons under the "^" arrow next to the clock: open the arrow
   and drag the FrameBridge icon onto the taskbar.
 - On Windows 7 the copy needs Aero (a Basic/Classic theme shows a black window).
@@ -115,11 +142,27 @@ are shown. Rare single-letter recognition errors are possible.
 VobSub is always a pair of files: keep the .idx and the .sub together, both with the video's
 name (e.g. film.mkv + film.idx + film.sub). Either file alone shows no subtitles.
 
-SUBTITLES FROM DUBBING SCRIPTS (PDF, DOCX, TXT, XLSX, CSV)
-----------------------------------------------------------
-A dialogue list / dubbing script with timecodes and roles can be used directly: give it the
-video's name (film.mkv + film.pdf / .docx / .txt / .xlsx / .csv). Lines are shown like SRT
-with the role as a prefix. An ordinary subtitle file with the same name takes priority.
+SUBTITLES FROM DUBBING SCRIPTS
+------------------------------
+A dialogue list / dubbing script with timecodes can be used directly: give it the
+video's name (film.mkv + film.docx). Lines are shown like SRT with the role as a
+prefix. An ordinary subtitle file with the same name takes priority.
+Files: DOCX, DOC, XLSX, XLS, ODT, ODS, RTF, TXT, CSV and PDF (also PDFs exported from
+Word or a browser). Scanned PDFs are pictures and cannot be read.
+Layouts:
+- tables with or without a header row; headers in 12 languages, e.g. Start / End /
+  Text / Role, Netflix IN-TIMECODE / OUT-TIMECODE / DIALOGUE, ADR cue sheets Cue /
+  Character / TC In / TC Out, Rolle / Einsatz, Personnage / Réplique, Personaje /
+  Diálogo, Personaggio / Battuta, Postać / Kwestia, Роль / Реплика; in XLSX the
+  first sheet with lines is used;
+- start and end times, or start only (the line then lasts until the next one);
+- takes / loops (Take 12, ANELLO 1, BOUCLE 3) with several lines inside;
+- text on the line under the timecode; screenplay layout (role on its own line);
+- with an original and a translation column, the translation is shown.
+Times: 00:00:01,000 / 00:00:01.000 / 00:00:01 / 01:35, and frames 00:00:01:12 at the
+video's frame rate (drop-frame with ;). A broadcast start hour (01:00:00:00 or
+10:00:00:00) is removed when the script would otherwise run past the end of the video.
+The file check on framebridge.cc shows how a script is read.
 
 KNOWN ISSUES
 ------------
@@ -131,6 +174,8 @@ KNOWN ISSUES
   project import ("create new project"). Drop it onto the event display or a video
   track, or use File > Import > Video File.
 - A few MKV files with an incomplete seek index can pause ~1-2 s on an occasional jump.
+- Nuendo 15.0.40 itself shows the picture 16:9 with black sides in a small Video Player
+  window (the same without FrameBridge).
 
 DOCUMENTATION AND LICENSES
 --------------------------

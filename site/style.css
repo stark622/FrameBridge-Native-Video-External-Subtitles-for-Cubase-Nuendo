@@ -988,3 +988,20 @@ details.lang .globe { flex: none; }
 @media (hover: hover) and (max-width: 1439px) {
   .hc:hover .hc-tip, .hc:focus-within .hc-tip { transform: translate(-50%, 0); }
 }
+/* "Try it free": the same card, always under the button (the check button sits to its right) */
+.hc-below .hc-tip { left: 50%; top: calc(100% + 12px); transform: translate(-50%, 4px); }
+.hc-below .hc-tip::before { left: 50%; top: -6px; transform: translateX(-50%) rotate(135deg); }
+@media (hover: hover) {
+  .hc-below:hover .hc-tip, .hc-below:focus-within .hc-tip { transform: translate(-50%, 0); }
+}
+.hc-tip span.hc-more { padding-left: 0; margin-top: 8px; color: var(--muted); white-space: normal; width: 0; min-width: 100%; }
+.hc-tip span.hc-more::before { content: none; }
+.hc-tip span.hc-more + span.hc-more { margin-top: 2px; }
+/* no room under the button: the card opens above it (class set by the page script) */
+.hc-below.up .hc-tip { top: auto; bottom: calc(100% + 12px); }
+.hc-below.up .hc-tip::before { top: auto; bottom: -6px; transform: translateX(-50%) rotate(-45deg); }
+/* "What's new" card: under the button when the header leaves no room above */
+.b2.down .b2-tip { bottom: auto; top: calc(100% + 10px); }
+/* the same text as a paragraph only where there is no mouse to open the card */
+.touch-only { display: none; }
+@media (hover: none) and (pointer: coarse) { .price-card .touch-only { display: block; } }
