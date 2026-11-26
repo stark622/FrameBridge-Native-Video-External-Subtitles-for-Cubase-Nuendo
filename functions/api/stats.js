@@ -194,8 +194,17 @@ export async function onRequestGet({ request, env }) {
     if (s.buy) perDay[d][2]++;
   }
   // demo file downloads (counted from 26.11, also from direct links such as the GitHub README); the owner's are left out like his visits
-  const downloads = results.filter((r) => r.ev === 'dl' && !r.bot && (showOwner || !OWNER_COUNTRIES.includes(r.country)));
-  const dlBots = results.filter((r) => r.ev === 'dl' && r.bot).length;
+  // link scanners (mail/messenger previews, antivirus URL checks) fetch the file several times within seconds with
+  // different browser strings, or come from cloud networks: such downloads are left out
+  const dlAll = results.filter((r) => r.ev === 'dl');
+  const burst = new Set();
+  for (let i = 0, j = 0; i < dlAll.length; i = j) {
+    for (j = i + 1; j < dlAll.length && dlAll[j].ts - dlAll[j - 1].ts < 60000; j++);
+    if (j - i >= 3) for (let k = i; k < j; k++) burst.add(dlAll[k]);
+  }
+  const dlScanner = (r) => r.bot || burst.has(r) || CLOUD.test(r.val || '') || VPN.test(r.val || '');
+  const downloads = dlAll.filter((r) => !dlScanner(r) && (showOwner || !OWNER_COUNTRIES.includes(r.country)));
+  const dlBots = dlAll.filter(dlScanner).length;
   const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {}, demoFrom = {}, cards = {};
   for (const r of results) {
     if (!keep.has(r.sid)) continue;
@@ -248,7 +257,7 @@ export async function onRequestGet({ request, env }) {
       summary, per_day: perDay, os: by('os'), browser: by('br'), device: by('dev'), country: by('country'),
       language: by('lang'), referrer: by('ref'), events: ev, buy_from: buyFrom, faq, lang_switch: langSw, outbound: out, sections_seen: seen,
       left_at: leftAt, demo_button: demoFrom, hover_cards: cards,
-      demo_downloads: downloads.map((r) => ({ time: new Date(r.ts).toISOString(), file: r.path, country: r.country, os: r.os, br: r.br, dev: r.dev, ref: r.ref })),
+      demo_downloads: downloads.map((r) => ({ time: new Date(r.ts).toISOString(), file: r.path, country: r.country, os: r.os, br: r.br, dev: r.dev, net: r.val, ref: r.ref })),
       recent: human.slice(-200).reverse().map((s) => ({
         start: new Date(s.t0).toISOString(), country: s.country, os: s.os, br: s.br, dev: s.dev, lang: s.lang, ref: s.ref,
         active_s: s.time, scroll: s.scroll, sections: [...s.sees], left_at: s.at, trail: s.trail,
@@ -301,8 +310,8 @@ ${!env.CF_API_TOKEN
 <div class="col-summary">
 <div class="cards">
 ${table('Per day (Kyiv time)', sorted(perDay).sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([d, v]) => [d, v[0], v[1], v[2]]), ['Day', 'Visits', 'Engaged', 'Clicked Buy'])}
-${table(`Demo downloads (file requests, Kyiv time; from 26 Nov${dlBots ? `; ${dlBots} by bots left out` : ''})`, downloads.slice().reverse().map((r) => [
-    kyiv(r.ts).slice(5), r.country || '—', `${r.os} · ${r.br} · ${r.dev}`, r.ref || 'direct']), ['Time', 'Country', 'System', 'From'])}
+${table(`Demo downloads (file requests, Kyiv time; from 26 Nov${dlBots ? `; ${dlBots} by bots and link scanners left out` : ''})`, downloads.slice().reverse().map((r) => [
+    kyiv(r.ts).slice(5), r.country || '—', `${r.os} · ${r.br} · ${r.dev}`, r.val || '—', r.ref || 'direct']), ['Time', 'Country', 'System', 'Network', 'From'])}
 ${table('Download demo clicked from', sorted(demoFrom), ['Button', 'Count'])}
 ${table('Hover cards opened (mouse 0.6 s+, from 26 Nov)', sorted(cards), ['Card', 'Count'])}
 ${table('Sections seen', SECTIONS.map((id) => [id, seen[id] || 0, pct(seen[id] || 0)]), ['Section', 'Visits', 'Share'])}

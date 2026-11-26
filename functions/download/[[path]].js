@@ -15,10 +15,12 @@ export async function onRequestGet({ request, env, waitUntil }) {
     const country = (request.cf && request.cf.country) || '';
     const path = new URL(request.url).pathname.slice(0, 80);
     const sid = 'dl' + Math.random().toString(36).slice(2, 12);
+    // the network's owner name (e.g. a cloud or a home ISP) tells link scanners from people; the IP is not stored
+    const net = String((request.cf && request.cf.asOrganization) || '').slice(0, 120);
     waitUntil((async () => {
       await ensureTable(env.DB);
       await env.DB.prepare('INSERT INTO events VALUES (?,?,?,?,?,?,?,?,?,?,?,?)')
-        .bind(Date.now(), sid, path, '', 'dl', '', u.os, u.br, u.dev, country, ref, u.bot).run();
+        .bind(Date.now(), sid, path, '', 'dl', net, u.os, u.br, u.dev, country, ref, u.bot).run();
     })().catch(() => {}));
   }
   return res;
