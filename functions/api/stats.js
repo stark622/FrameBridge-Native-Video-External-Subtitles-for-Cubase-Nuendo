@@ -31,6 +31,7 @@ const SITE_START = Date.UTC(2026, 9, 29);
 const BOT_UA = /bot|spider|crawl|checker|validator|inspectiontool|google-|headless|lighthouse|preview|curl|wget|python|go-http/i;
 const CLOUD = /google|amazon|aws|microsoft|azure|akamai|oracle|alibaba|tencent|huawei/i;
 const VPN = /digitalocean|ovh|hetzner|linode|scaleway|vultr|choopa|contabo|leaseweb|ionos|hostinger|datacamp|m247|powerhouse|gsl networks|zenlayer|g-core|psychz|cdn77|packethub|tzulo|hostroyale|sondatech|clouvider|performive|quadranet|servers\.com|hosting|server|gthost|estnoc|custodian|datacent/i;
+const SECURITY = /fortinet|palo alto|zscaler|proofpoint|mimecast|barracuda|cisco|forcepoint|sophos|trend micro|kaspersky|\beset\b|bitdefender|check point|symantec|broadcom|mcafee|trellix|netskope|avast|gen digital|virustotal|cofense|abnormal security/i;
 
 async function cfQuery(token, parts) {
   const r = await fetch('https://api.cloudflare.com/client/v4/graphql', {
@@ -202,7 +203,8 @@ export async function onRequestGet({ request, env }) {
     for (j = i + 1; j < dlAll.length && dlAll[j].ts - dlAll[j - 1].ts < 60000; j++);
     if (j - i >= 3) for (let k = i; k < j; k++) burst.add(dlAll[k]);
   }
-  const dlScanner = (r) => r.bot || burst.has(r) || CLOUD.test(r.val || '') || VPN.test(r.val || '');
+  // security vendors' sandboxes (antivirus / mail gateways) and Linux (Cubase/Nuendo do not run there) are scanners too
+  const dlScanner = (r) => r.bot || burst.has(r) || CLOUD.test(r.val || '') || VPN.test(r.val || '') || SECURITY.test(r.val || '') || r.os === 'Linux';
   const downloads = dlAll.filter((r) => !dlScanner(r) && (showOwner || !OWNER_COUNTRIES.includes(r.country)));
   const dlBots = dlAll.filter(dlScanner).length;
   const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {}, demoFrom = {}, cards = {};
