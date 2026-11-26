@@ -7,7 +7,8 @@ export async function onRequestGet({ request, env, waitUntil }) {
   const res = await env.ASSETS.fetch(request);
   // a download manager may fetch one file in several pieces: only the first piece (or the whole file) counts
   const range = request.headers.get('range') || '';
-  if (env.DB && res.status < 400 && (!range || /^bytes=0-/.test(range))) {
+  // HEAD (link checkers) reaches this handler too and is not a download
+  if (env.DB && request.method === 'GET' && res.status < 400 && (!range || /^bytes=0-/.test(range))) {
     const u = parseUA(request.headers.get('user-agent') || '');
     let ref = '';
     try { const r = request.headers.get('referer'); if (r) ref = new URL(r).host; } catch (e) {}
