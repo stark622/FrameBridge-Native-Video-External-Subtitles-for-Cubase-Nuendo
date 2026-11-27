@@ -31,8 +31,16 @@ export function parseUA(ua) {
   const named = /bot|crawl|spider|slurp|headless|lighthouse|preview|inspectiontool|google-|python|curl|wget|phantom|puppeteer|playwright|selenium/i.test(ua);
   // a real Chrome always sends "KHTML, like Gecko" and a four-part version; scrapers often fake a short one
   const fakeChrome = /Chrome\//.test(ua) && (!/KHTML, like Gecko/.test(ua) || /Chrome\/\d+\.\d+ /.test(ua) || (/Windows NT/.test(ua) && !/Win64|WOW64/.test(ua)));
-  const bot = named || fakeChrome ? 1 : 0;
+  const bot = named || fakeChrome || staleUA(ua) ? 1 : 0;
   return { os, br, dev, bot };
+}
+
+// browser strings seen only from crawlers: a Chrome years old (Windows 10/11 Chrome updates itself; 109 is the last for
+// Windows 7/8), or an iPhone version ending in "_0", which iOS never sends
+export function staleUA(ua) {
+  const m = /Chrome\/(\d+)/.exec(ua);
+  if (m && (+m[1] < 109 || (/Windows NT 10\.0/.test(ua) && +m[1] < 128))) return true;
+  return /iPhone OS \d+_\d+_0 /.test(ua);
 }
 
 const clip = (v, n) => String(v == null ? '' : v).slice(0, n);

@@ -1,5 +1,5 @@
 // Private statistics report: /api/stats?key=<STATS_KEY>&days=7|all   (&format=json for aggregates, &full=1 adds every visit and event)
-import { ensureTable } from './e.js';
+import { ensureTable, staleUA } from './e.js';
 
 // A FAQ click is stored as the question's position on the page; the order changed over time (UTC, from site history).
 // Reordering the FAQ again = add a row here.
@@ -19,6 +19,7 @@ const OWNER_COUNTRIES = ['UA'];
 // single visits by the owner's friends (start time of the visit), left out like the owner's own
 const FRIEND_VISITS = ['2026-11-14T08:41:11.360Z', '2026-11-14T08:53:55.705Z', '2026-11-14T18:45:23.236Z', '2026-11-14T20:01:06.090Z'].map(Date.parse);
 const FRIEND_COUNTRY = 'CA'; // the same visits in the Cloudflare list: this country, from 10 min before to 2 h after
+const REAL_PAGE = /^\/([a-z]{2}(-[a-z]{2})?\/)?$|^\/(compatibility|terms|privacy|eula|notice)(\.html)?$/;
 const SECTIONS = ['how', 'features', 'formats', 'check', 'compatibility', 'pricing', 'faq'];
 const LEFT_AT = ['top', ...SECTIONS]; // section on screen when the page was closed or hidden (counter from 19.11)
 
@@ -30,7 +31,8 @@ const ZONE = 'd2f096ab8dda3ff2f77cab796160b463';
 const SITE_START = Date.UTC(2026, 9, 29);
 const BOT_UA = /bot|spider|crawl|checker|validator|inspectiontool|google-|headless|lighthouse|preview|curl|wget|python|go-http/i;
 const CLOUD = /google|amazon|aws|microsoft|azure|akamai|oracle|alibaba|tencent|huawei/i;
-const VPN = /digitalocean|ovh|hetzner|linode|scaleway|vultr|choopa|contabo|leaseweb|ionos|hostinger|datacamp|m247|powerhouse|gsl networks|zenlayer|g-core|psychz|cdn77|packethub|tzulo|hostroyale|sondatech|clouvider|performive|quadranet|servers\.com|hosting|server|gthost|estnoc|custodian|datacent/i;
+const VPN = /digitalocean|ovh|hetzner|linode|scaleway|vultr|choopa|contabo|leaseweb|ionos|hostinger|datacamp|m247|powerhouse|gsl networks|zenlayer|g-core|psychz|cdn77|packethub|tzulo|hostroyale|sondatech|clouvider|performive|quadranet|servers\.com|hosting|server|gthost|estnoc|custodian|datacent|logicweb|aviationai/i;
+const SCANNER_NET = /censys|sprious/i; // internet scanners and proxy sellers for scrapers
 const SECURITY = /fortinet|palo alto|zscaler|proofpoint|mimecast|barracuda|cisco|forcepoint|sophos|trend micro|kaspersky|\beset\b|bitdefender|check point|symantec|broadcom|mcafee|trellix|netskope|avast|gen digital|virustotal|cofense|abnormal security/i;
 
 async function cfQuery(token, parts) {
@@ -61,7 +63,7 @@ async function cfVisitors(token, sinceMs, showOwner) {
   for (const r of rows) {
     const ua = r.userAgent || '', net = r.clientASNDescription || '';
     const fakeChrome = /Chrome\//.test(ua) && (!/KHTML, like Gecko/.test(ua) || /Chrome\/\d+(\.\d+)? /.test(ua) || (/Windows NT/.test(ua) && !/Win64|WOW64/.test(ua)));
-    r.k = BOT_UA.test(ua) || BOT_UA.test(r.userAgentBrowser || '') || fakeChrome || CLOUD.test(net) ? 'bot'
+    r.k = BOT_UA.test(ua) || BOT_UA.test(r.userAgentBrowser || '') || fakeChrome || staleUA(ua) || CLOUD.test(net) || SCANNER_NET.test(net) ? 'bot'
       : !showOwner && OWNER_COUNTRIES.includes(r.clientCountryName) ? 'owner' : VPN.test(net) ? 'vpn' : 'human';
   }
   const perMinute = {};
@@ -172,6 +174,9 @@ export async function onRequestGet({ request, env }) {
     if (!s.bot && ((s.views.length >= 3 && s.time === 0 && !s.acts) || (s.time <= 2 && s.sees.size >= 3))) s.bot = 1;
     // under 4 seconds and no click at all (Buy, video, YouTube, links, language, FAQ): not a person reading the site
     if (!s.bot && s.time < 4 && !s.acts) s.bot = 1;
+    // 5+ sections "seen" within 6 seconds; or only addresses that are not pages of the site (404s such as /download)
+    if (!s.bot && s.sees.size >= 5 && s.time <= 6) s.bot = 1;
+    if (!s.bot && ![...s.pages].some((p) => REAL_PAGE.test(p))) s.bot = 1;
   }
   // the owner tests the site from Ukraine, so those visits are left out of the report (rows stay stored; &owner=1 shows them)
   const showOwner = url.searchParams.get('owner') === '1';
@@ -203,8 +208,10 @@ export async function onRequestGet({ request, env }) {
     for (j = i + 1; j < dlAll.length && dlAll[j].ts - dlAll[j - 1].ts < 60000; j++);
     if (j - i >= 3) for (let k = i; k < j; k++) burst.add(dlAll[k]);
   }
-  // security vendors' sandboxes (antivirus / mail gateways) and Linux (Cubase/Nuendo do not run there) are scanners too
-  const dlScanner = (r) => r.bot || burst.has(r) || CLOUD.test(r.val || '') || VPN.test(r.val || '') || SECURITY.test(r.val || '') || r.os === 'Linux';
+  // security vendors' sandboxes (antivirus / mail gateways), Linux and phones/tablets (the demo installs only into
+  // Cubase/Nuendo on Windows; on phones the site's demo buttons do not download) are scanners too
+  const dlScanner = (r) => r.bot || burst.has(r) || CLOUD.test(r.val || '') || VPN.test(r.val || '') || SECURITY.test(r.val || '')
+    || r.os === 'Linux' || r.os === 'iOS' || r.os === 'Android' || r.dev !== 'desktop';
   const downloads = dlAll.filter((r) => !dlScanner(r) && (showOwner || !OWNER_COUNTRIES.includes(r.country)));
   const dlBots = dlAll.filter(dlScanner).length;
   const ev = {}, faq = {}, langSw = {}, out = {}, seen = {}, buyFrom = {}, checks = {}, clips = {}, demoFrom = {}, cards = {};
